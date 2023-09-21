@@ -1,0 +1,20 @@
+.fellow-heading {
+    margin-bottom: rem-calc(50);
+
+    .title {
+        position: relative;
+        text-transform: capitalize;
+        @include typo('h2');
+        display: inline-block;
+
+        &:after {
+            content: '';
+            width: rem-calc(40);
+            height: rem-calc(15);
+            background: color('primary');
+            display: block;
+            border-radius: rem-calc(15);
+            margin-top: rem-calc(10);
+        }
+    }
+}

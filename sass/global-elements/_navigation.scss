@@ -1,0 +1,25 @@
+.main-navigation {
+    @include breakpoint($medium) {
+        padding: rem-calc(16 0); 
+    }
+
+    .mega-menu {
+        text-align: center !important;
+
+        a {
+            font-weight: 600 !important;
+            transition: color 0.3s !important;
+         
+        }
+    }
+}
+
+
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-item > a.mega-menu-link {
+    text-transform: capitalize;
+    padding: 0 11px;
+
+    @include breakpoint($xlarge) {
+        padding: 0 33px;
+    }
+}
