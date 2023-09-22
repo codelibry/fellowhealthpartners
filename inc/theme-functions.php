@@ -107,7 +107,7 @@ function get_inline_svg_by_path($path)
 function get_inline_svg($name)
 {
   if ($name) :
-    return file_get_contents(esc_url(get_template_directory_uri() . '/assets/images/' . $name));
+    return file_get_contents(esc_url(get_template_directory_uri() . '/assets/icons/' . $name));
   endif;
   return '';
 }

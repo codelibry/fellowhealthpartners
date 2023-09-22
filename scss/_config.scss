@@ -5,9 +5,7 @@
 // spacing('margin')
 // theme('layout', 'width')
 
-$theme: (
-    'colors': (
-        'primary': #F7961F,
+$theme: ('colors': ('primary': #F7961F,
         'white': #fff,
         'black': #000,
         'inverse': #fff,
@@ -15,43 +13,31 @@ $theme: (
         'smoke': #f8f8f8,
         'blue-light': #7BB4C7,
         'grey-dark': #333232,
-        'grey': #A1A7B3
-    ),
-    'breakpoints': (
-        'small': 768,
+        'grey': #A1A7B3,
+        'orange': #FF851F),
+    'breakpoints': ('small': 768,
         'medium': 992,
         'large': 1200,
         'xlarge': 1536,
-        'xxlarge': 1536
-    ),
-    'fontFamily':(
-        'body': 'Lato',
+        'xxlarge': 1536),
+    'fontFamily':('body': 'Lato',
         'headings':'Lato'
     ),
-    'spacing':(
-        'margin': 100,
+    'spacing':('margin': 100,
         'padding': 100,
         'module-margin': 30,
-        'module-padding': 30
-    ),
-    'layout':(
-        'width': 1620,
-        'padding': 30
-    ),
-    'headings': (
-        'h1': 72,
+        'module-padding': 30),
+    'layout':('width': 1620,
+        'padding': 30),
+    'headings': ('h1': 72,
         'h2': 54,
         'h3': 36,
         'h4': 28,
         'h5': 24,
-        'h6': 20
-    ),
-    'extra': (
-        'border-radius': 5,
+        'h6': 20),
+    'extra': ('border-radius': 5,
         'transition-time': 0.3s,
-        'p-margin': 24
-    )
-);
+        'p-margin': 24));
 
 $breakpoints : theme('breakpoints');
 
@@ -60,7 +46,7 @@ $base-padding: spacing('padding');
 $module-margin: spacing('module-margin');
 $module-padding: spacing('module-padding');
 
-$border-radius:  theme('extra', 'border-radius');
+$border-radius: theme('extra', 'border-radius');
 $tr: theme('extra', 'transition-time');
 $p-margin: theme('extra', 'p-margin');
 
@@ -77,8 +63,8 @@ $black: color('black');
 
 $rem-base: 16;
 
-$small: theme('breakpoints','small');
-$medium: theme('breakpoints','medium');
-$large: theme('breakpoints','large');
-$xlarge: theme('breakpoints','xlarge');
-$xxlarge: theme('breakpoints','xxlarge');
+$small: theme('breakpoints', 'small');
+$medium: theme('breakpoints', 'medium');
+$large: theme('breakpoints', 'large');
+$xlarge: theme('breakpoints', 'xlarge');
+$xxlarge: theme('breakpoints', 'xxlarge');

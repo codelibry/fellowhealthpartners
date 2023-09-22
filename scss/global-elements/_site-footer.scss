@@ -1,244 +1,242 @@
-// footer.site-footer {
-//     background: color('blue-light');
-//     color: $white;
-//     font-size: rem-calc(16);
-//     padding-top: rem-calc(40 + 130);
-//     padding-bottom: rem-calc(40);
-// 
-//     @include breakpoint($large){
-//         padding-top: rem-calc(40 + 50 + 130);
-//         padding-bottom: rem-calc(85);
-//     }
-//     
-//     a {
-//         color: $white;
-//     }
-// 
-//     .site-footer__logo {
-//         width: rem-calc(255);
-//         margin-bottom: rem-calc(30);
-//         margin-left: auto;
-//         margin-right: auto;
-// 
-//         @include breakpoint($large){
-//             margin-top: rem-calc(-50);
-//         }
-//     }
-// 
-//     .site-footer__contacts {
-//         margin-bottom: rem-calc(24);
-//         text-align: center;
-//     }
-// 
-//     .site-footer__contacts-call {
-//         margin-bottom: rem-calc(24);
-//         .button {
-//             font-size: rem-calc(14);
-//             width: 100%;
-//             max-width: rem-calc(255);
-//             letter-spacing: 0.04em;
-//             white-space: nowrap;
-//         }
-//     }
-// 
-//     .site-footer__nav {
-//         margin-bottom: rem-calc(24);
-// 
-//         ul {
-//             list-style-type: none;
-//             margin: 0;
-//             padding: 0;
-//             text-align: center;
-// 
-//             li {
-//                 
-//                 margin-bottom: rem-calc(20);
-// 
-//                 a {
-//                     font-weight: 600;
-//                     font-size: rem-calc(16);
-//                 }
-//             }
-//         }
-// 
-//         @include breakpoint($medium) {
-//             margin-bottom: 0;
-// 
-//             ul {
-//                 columns: 3; 
-//                 text-align: left;
-//                 column-gap: 40px;
-// 
-//                 li {
-//                     break-inside: avoid-column;
-//                 }
-//     
-//                 &:after {
-//                     content: '';
-//                     display: block;
-//                     height: rem-calc(100);
-//                 }
-//             }
-//         }
-//     }
-// 
-//     .site-footer__col-right {
-// 
-//         .footer-logos-1 .textwidget,
-//         .footer-logos-2 .textwidget {
-//             width: 100%;
-//             max-width: 19.375rem;
-//             margin: 0 auto;
-// 
-//             @include breakpoint($large){
-//                 margin: 0;
-//             }
-//         }
-// 
-//         .widget {
-//             margin-bottom: rem-calc(24);
-// 
-//             .gallery {
-//                 width: 100%;
-//                 max-width: rem-calc(660);
-//                 margin-left: auto;
-//                 margin-right: auto;
-// 
-//                 &.gallery-columns-3 {
-//                     max-width: rem-calc(310);
-//                 }
-// 
-//                 .gallery-item {
-//                     max-width: 155px;
-// 
-//                     @include breakpoint($large){
-//                         max-width: 100%;
-//                     }
-//                 }
-//             }
-// 
-//             @include breakpoint($medium){
-//                 margin-bottom: rem-calc(40);
-//             }
-// 
-//         }
-//     }
-// 
-//     .site-footer__copyright {
-//         text-align: center;
-//         font-size: rem-calc(16);
-// 
-//         @include breakpoint($large){
-//             text-align: left;
-//             display: flex;
-//             margin-top: rem-calc(-80);
-// 
-//             p {
-//                 margin: 0;
-// 
-//                 + p {
-//                     &:before {
-//                         content: '|';
-//                         margin-left: rem-calc(5);
-//                         margin-right: rem-calc(5);
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// 
-//     .site-footer__col-left {
-//         margin-bottom: rem-calc(40);
-// 
-//         @include breakpoint($medium){
-//             display: flex;
-//             justify-content: space-between;
-// 
-//             .site-footer__contacts {
-//                 margin-right: rem-calc(30);
-//             }
-//         }
-// 
-//         @include breakpoint($large){
-//             margin-bottom: 0;
-//         }
-//     }
-// 
-//     .site-footer__columns {
-//         @include breakpoint($large){
-//             display: flex;
-//             justify-content: between;
-// 
-//             .site-footer__col-left {
-//                 flex-grow: 1;
-//             }
-// 
-//              .site-footer__col-right {
-//                 flex-grow: 1;
-//               
-// 
-//                 .widget  {
-//                     width: 100%;
-//                     display: flex;
-//                     flex-direction: column;
-//                     align-items: flex-end;
-// 
-//                     .gallery {
-//                         margin: 0;
-//                     }
-//                 }
-//              }
-//         }
-//     }
-// }
-// 
-// .pre-footer {
-//     position: relative;
-//     z-index: 1;
-//     margin-bottom: rem-calc(-130);
-//     margin-top: rem-calc(60);
-// 
-//     @include breakpointDown($medium) {
-//         text-align: center;
-//     }
-//     
-//     @include breakpoint($large) {
-//         margin-top: rem-calc(120);
-//     }
-// 
-//     .inner {
-//        border-radius: rem-calc(10);
-//        background: $white; 
-//        padding: rem-calc(30 20);
-//        box-shadow: 0 0 25px rgba(0,0,0,0.12);
-// 
-//         @include breakpoint($medium) {
-//             padding: rem-calc(60 70);
-//         }
-//     }
-// 
-// 
-//     .pre-footer__title {
-//         color: color('grey-dark');
-//         @include responsive-type(53, percent(53, 20));
-//         line-height: 1.075 ;
-//         margin-bottom: rem-calc(20);
-// 
-//         @include breakpoint($medium) {
-//             margin-right: rem-calc(20);
-//             max-width: rem-calc(486);
-//             margin-bottom: 0;
-//         }
-//     }
-// 
-//     .pre-footer__button {
-//         @include breakpoint($xlarge) {
-//            .button {
-//                font-size: rem-calc(24);
-//                min-height: rem-calc(77);
-//            }
-//         }
-//     }
-// 
-// 
-// }
+.pre-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: rem-calc(80);
+    background: color('orange');
+    overflow: hidden;
+
+    .inner {
+        padding: rem-calc(22 0 30);
+        height: 100%;
+
+        @include breakpointDown($xlarge) {
+            padding: rem-calc(10 0 20);
+        }
+
+        @include breakpointDown($medium) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        img {
+            width: rem-calc(227);
+            margin-left: auto;
+            margin-right: auto;
+
+            @include breakpointDown($xlarge) {
+                width: rem-calc(187);
+            }
+        }
+    }
+
+    &__title {
+        margin-right: rem-calc(598);
+        position: relative;
+        z-index: 2;
+
+        @include breakpointDown($xlarge) {
+            margin-right: auto;
+            margin-left: rem-calc(100);
+        }
+
+        @include breakpointDown($large) {
+            margin-left: rem-calc(10);
+        }
+
+        @include breakpointDown($medium) {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+    }
+
+    &__contacts {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: rem-calc(-40);
+        background: linear-gradient(114deg, #FF851F 0%, #FAE331 100%);
+        padding: rem-calc(40 80);
+        height: 100%;
+        gap: 0 rem-calc(80);
+
+        @include breakpointDown($xlarge) {
+            padding: rem-calc(20 40);
+            gap: 0 rem-calc(60);
+            right: rem-calc(-20);
+        }
+
+        @include breakpointDown($medium) {
+            position: relative;
+            top: auto;
+            right: auto;
+            background: color('orange');
+        }
+
+
+
+        &-call {
+            position: relative;
+            display: flex;
+            gap: 0 10px;
+
+            svg {
+                align-self: center;
+            }
+
+            a {
+                align-self: center;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: rem-calc(-40);
+                width: 1px;
+                height: 100%;
+                background: color('white');
+
+                @include breakpointDown($xlarge) {
+                    right: rem-calc(-30);
+                }
+            }
+        }
+
+    }
+
+    &__socials {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 0 rem-calc(40);
+        margin-bottom: 0;
+
+        @include breakpointDown($xlarge) {
+            gap: 0 rem-calc(20);
+        }
+
+        li {
+            align-self: center;
+        }
+
+        a {
+            display: flex;
+            height: 100%;
+        }
+
+        svg,
+        img {
+            align-self: center;
+
+            @include breakpointDown($xlarge) {
+                max-width: 28px;
+            }
+
+        }
+    }
+}
+
+.site-footer {
+    background: color('white');
+
+    a {
+        color: #231F20;
+    }
+
+    .site-footer__nav {
+        padding-top: rem-calc(60);
+        padding-bottom: rem-calc(40);
+
+        @include breakpointDown($xlarge) {
+            padding-top: rem-calc(40);
+            padding-bottom: rem-calc(20);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpointDown($medium) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            li {
+                padding: 0 10px;
+
+                @include breakpointDown($medium) {
+                    padding: 10px 10px;
+                }
+
+                a {
+                    font-weight: 500;
+                    font-size: rem-calc(21);
+
+                    @include breakpointDown($xlarge) {
+                        font-size: rem-calc(18);
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    &__bottom {
+        background: color('blue-light');
+
+        &-wrap {
+            display: flex;
+            gap: 0 rem-calc(40);
+            padding-top: rem-calc(55.5);
+            padding-bottom: rem-calc(75.5);
+            justify-content: space-between;
+
+            @include breakpointDown($xlarge) {
+                padding-top: rem-calc(30);
+                padding-bottom: rem-calc(50);
+            }
+
+            @include breakpointDown($medium) {
+                flex-wrap: wrap;
+                gap: rem-calc(20 40);
+                justify-content: center;
+            }
+
+            div {
+                height: max-content;
+                align-self: center;
+
+                @include breakpointDown($medium) {
+                    max-width: 150px;
+                }
+            }
+        }
+
+
+    }
+
+    &__copyright {
+        width: 100%;
+        padding-top: rem-calc(0);
+        padding-bottom: rem-calc(20);
+
+        div {
+            gap: 0 20px;
+
+            @include breakpointDown($xlarge) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
