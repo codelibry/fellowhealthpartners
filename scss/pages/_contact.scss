@@ -1,0 +1,26 @@
+.contact-form {
+    background: $white;
+    border: 2px solid #DDDDDD;
+    padding: rem-calc(75 20);
+    border-radius: rem-calc(15);
+
+    h3 {
+        @include responsive-type($h5, percent($h5, 20));
+        margin-bottom: rem-calc(60);
+    }
+
+    .inner {
+        max-width: rem-calc(680);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    textarea {
+        height: rem-calc(160);
+    }
+
+    @include breakpoint($medium){
+        margin-left: rem-calc(50);
+    }
+}

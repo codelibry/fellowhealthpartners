@@ -1,0 +1,49 @@
+
+//typography
+$default-font-size: 18px
+$default-line-height: 120%
+$font-family-base: 'Raleway', sans-serif
+$default-text-color: #fff
+
+$default-transition-duration: 0.3s
+$default-transition-function: ease-out
+$default-transition: 0.3s ease-out
+
+//breakpoints
+$breakpoint-xxl: 1921px
+$breakpoint-xm: 1520px
+$breakpoint-xl: 1441px
+$breakpoint-xs: 1368px
+$breakpoint-lg: 992px
+$breakpoint-md: 769px
+$breakpoint-sm: 576px
+
+$grid-gutter: 15px
+
+//colors
+$color-primary: #000
+$color-black: #0F0D16
+$color-grey: rgba(255, 255, 255,.5)
+$color-white: #FFF
+$color-lavander: #C195DF
+$lavander-dark: #8175CC
+$lavander: linear-gradient(180deg, #8175CC 50%, #C195DF 100%)
+
+@keyframes fade
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+@function stripUnit($value)
+    @return $value / ($value * 0 + 1)
+
+@function rem($pxValue)
+    @return #{stripUnit($pxValue) / stripUnit($default-font-size)}rem
+
+@keyframes mover
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(15px)

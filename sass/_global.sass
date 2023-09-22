@@ -1,0 +1,37 @@
+*
+	box-sizing: border-box
+
+	&::after,
+	&::before
+		box-sizing: border-box
+
+#app
+	min-height: calc(100vh - 260px)
+	box-sizing: border-box
+	+max-screen(769px)
+		min-height: 0
+#main
+	width: 100%
+	overflow: hidden
+	padding-top: 98px
+
+.site
+	position: relative
+	overflow: hidden
+	.section-bg
+		background: $color-black
+img
+	width: 100%
+	height: auto
+
+.section-bg,
+	width: 100vw
+	height: 100%
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: calc(-1 * (100vw / 2))
+	z-index: -1
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat

@@ -1,0 +1,311 @@
+html, body
+  -webkit-overflow-scrolling: touch
+
+body
+	position: relative
+	font-family: $font-family-base !important
+	// font-size: $default-font-size
+	font-style: normal
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-backface-visibility: hidden
+	-webkit-tap-highlight-color: transparent
+	font-weight: 400
+
+h1, .h1
+	line-height: 120%
+	font-size: 50px
+	font-family: $font-family-base
+	font-weight: 500
+	+max-screen($breakpoint-xl)
+		font-size: 44px
+	+max-screen($breakpoint-lg)
+		font-size: 30px
+h2, .h2
+	font-size: 50px
+	line-height: 110%
+	font-family: $font-family-base !important
+	font-weight: 500
+	+max-screen($breakpoint-xl)
+		font-size: 44px
+	+max-screen($breakpoint-xs)
+		font-size: 38px
+	+max-screen($breakpoint-lg)
+		font-size: 24px
+h3, .h3
+	font-style: normal
+	font-weight: 500
+	font-size: 30px
+	line-height: 110%
+	font-family: $font-family-base !important
+	+max-screen($breakpoint-xl)
+		font-size: 26px
+
+h4, .h4
+	font-weight: 500
+	font-size: 24px
+	line-height: 150%
+	font-family: $font-family-base !important
+	+max-screen($breakpoint-xl)
+		font-size: 20px
+	+max-screen($breakpoint-sm)
+		font-size: 16px
+
+h5, .h5
+	font-family: $font-family-base !important
+	line-height: 112%
+	font-weight: 500
+	font-size: 20px
+h6, .h6
+	font-family: $font-family-base !important
+	font-weight: 500
+	font-size: 18px
+	line-height: 112%
+
+.text
+	&--style
+	&--size--10,&--size--10 *
+		font-size: 10px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 10px
+	&--size--12,&--size--12 *
+		font-size: 12px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 12px
+	&--size--14,&--size--14 *
+		font-size: 14px
+		line-height: 150%
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 14px
+	&--size--16,&--size--16 *
+		font-size: 16px
+		line-height: 150%
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 14px
+	&--size--18,&--size--18 *
+		font-size: 18px
+		line-height: 110%
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 16px
+	&--size--22,&--size--22 *
+		font-size: 22px
+		line-height: 110%
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 18px
+	&--size--50,&--size--50 *
+		font-size: 50px
+		line-height: 120%
+		+max-screen($breakpoint-xl)
+			font-size: 44px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 34px
+
+	&--size--80,&--size--80 *
+		font-size: 80px
+		line-height: 100%
+		+max-screen(1200px)
+			font-size: 44px
+		+max-screen($breakpoint-md)
+			font-size: 34px
+	&--uppercase
+		text-transform: uppercase
+	&--capitalize
+		text-transform: capitalize
+	&--lowercase
+		text-transform: lowercase
+	&--left
+		text-align: left
+	&--right
+		text-align: right
+	&--center
+		text-align: center
+	&--underline
+		text-decoration: underline
+	&--color
+		&--white
+			color: $color-white
+		&--lavander
+			color: $color-lavander
+		&--grey
+			color: $color-grey
+.font
+	&--italic
+		font-style: italic
+	&--weight
+		&--thin
+			font-weight: 100
+		&--light
+			font-weight: 300
+		&--regular
+			font-weight: 400
+		&--medium
+			font-weight: 600
+		&--700
+			font-weight: 700
+		&--bold
+			font-weight: 800
+		&--black
+			font-weight: 900
+
+.link--underline
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 1px
+		background-color: $color-primary
+		transition: 0.2s ease-out
+	&:hover:before
+		width: 0
+
+.link--underline--2
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 0
+		height: 1px
+		background-color: $color-primary
+		transition: 0.2s ease-out
+	&:hover:before
+		width: 100%
+
+.content-block
+
+	p
+		margin-bottom: 20px
+		&:nth-child(1)
+			padding-top: 0
+
+		&:nth-last-child(1)
+			padding-bottom: 0
+			margin-bottom: 0
+		.single-projects &
+			font-size: 24px
+			+max-screen($breakpoint-xl)
+				font-size: 18px
+	h2,h3,h4,h5,h6
+		margin-top: 20px
+		margin-bottom: 20px
+		+max-screen(1500px)
+			margin-top: 40px
+			margin-bottom: 20px
+		&:first-of-type
+			margin-top: 0
+
+	a
+
+		transition: 0.3s
+		color: $color-white
+		font-weight: 500
+		&:hover
+			opacity: 0.8
+			text-decoration: underline
+	ul
+		margin: rem(15px 0)
+		margin-left: rem(30px)
+		li
+			display: block
+			position: relative
+			margin-bottom: 8px
+			line-height: 1.4
+			padding-left: 14px
+			.single-projects &
+				font-size: 24px
+				+max-screen($breakpoint-xl)
+					font-size: 18px
+			&:nth-last-child(1)
+				margin-bottom: 0
+			&:before
+				position: absolute
+				content: ''
+				background-color: $color-white
+				width: 6px
+				height: 6px
+				min-width: 6px
+				border-radius: 50%
+				margin-bottom: 0.12em
+				display: inline-block
+				left: 0
+				top: 10px
+			ol
+				margin: rem(10px 0)
+			ul
+				margin: rem(10px 0)
+				margin-left: rem(30px)
+	ol
+		list-style: disc
+		// counter-reset: my-counter
+		margin: rem(15px 0)
+		li
+			// counter-increment: my-counter
+			list-style-type: auto
+			padding-left: 25px
+			margin-left: 25px
+			margin-bottom: 8px
+			.single-projects &
+				font-size: 24px
+				+max-screen($breakpoint-xl)
+					font-size: 18px
+			&:nth-last-child(1)
+				margin-bottom: 0
+			// &:before
+			// 	content: counter(my-counter) "."
+			// 	color: $color-primary
+			// 	margin-right: 10px
+			// 	margin-top: 8px
+			ol
+				margin: rem(10px 0)
+			ul
+				margin: rem(10px 0)
+				margin-left: rem(30px)
+	img
+		width: auto
+		height: auto
+	code
+		margin: 11px 0
+		line-height: $default-line-height
+		padding: 2px 4px
+		border: 1px solid #dde4e9
+		background-color: #F6F6F6
+		color: #232527
+		display: inline-block
+	pre
+		white-space: pre-wrap
+	blockquote
+		margin: rem(25px 0)
+		position: relative
+		padding-left: 21px
+		p
+			font-size: 26px
+			line-height: 34px
+			font-weight: 500
+			&:nth-last-child(1)
+				font-size: 16px
+				font-weight: 300
+		+max-screen($breakpoint-md)
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0px
+			width: 11px
+			height: 11px
+			background-image: url(../assets/icons/quote.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			z-index: -1

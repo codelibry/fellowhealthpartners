@@ -1,0 +1,116 @@
+.wpcf7 {
+    @include allInputs() {
+        display: block;
+        width: 100%;
+        width: 100%;
+        display: block;
+        padding: rem-calc(18 20);
+        border: 1px solid #DDDDDD;
+        border-radius: rem-calc(10);
+        font-size: rem-calc(16);
+         height: rem-calc(60);
+    }
+
+
+    .wpcf7-form-control-wrap{
+        display: block;
+
+        +  .wpcf7-submit  {
+            margin-top: rem-calc(40);
+        }
+    }
+
+     .wpcf7-submit  {
+        display: block;
+        width: 100%;
+        @include responsive-type($h5, percent($h5, 20));
+    }
+
+    .ajax-loader {
+        position: absolute;
+    }
+   
+}
+
+.form-row {
+    margin-left: rem-calc(-15);
+    margin-right: rem-calc(-15);
+    margin-bottom: rem-calc(-40);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-col,
+.form-cell {
+    padding: rem-calc(0 15);
+    margin-bottom: rem-calc(40);
+    width: 100%;
+
+    @include breakpoint($large){
+        &.half-width {
+            width: 50%;
+        }
+    }
+
+}
+
+.woocommerce {
+    @include allInputs {
+        display: block !important;
+        width: 100%;
+        width: 100%;
+        display: block;
+        padding: rem-calc(5 20);
+        border: 1px solid #DDDDDD;
+        border-radius: rem-calc(10);
+        font-size: rem-calc(16);
+        height: rem-calc(50);
+    }
+
+    .woocommerce-input-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    #order_review_heading {
+        margin-top: 80px;
+    }
+}
+
+.select2-container .select2-selection--single{
+	height:rem-calc(50);
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: rem-calc(50);
+}
+.woocommerce-terms-and-conditions-wrapper {
+    display: none;
+}
+
+.woocommerce form .form-row-wide, .woocommerce-page form .form-row-wide {
+    display: block;
+}
+
+@include breakpointDown($medium){
+    span.wpcf7-list-item,
+    .application-form .form-inline-field,
+    .application-form .refers .wpcf7-form-control-wrap {
+        display: block !important;
+    }
+
+    span.wpcf7-list-item {
+        margin-bottom: 5px !important;
+    }
+}
+
+.opt-form{
+    max-width: rem-calc(800);
+    label {
+        display: block;
+        margin-bottom: rem-calc(20);
+    }
+
+    input[type="submit"] {
+        width: auto;
+    }
+}

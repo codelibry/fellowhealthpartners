@@ -1,0 +1,46 @@
+.container
+	padding-left: 30px
+	padding-right: 30px
+	width: 100%
+	margin: 0 auto
+	max-width: 1260px
+	+max-screen($breakpoint-xl)
+		max-width: 85%
+	+max-screen($breakpoint-md)
+		padding-left: 20px
+		padding-right: 20px
+	+max-screen($breakpoint-sm)
+		max-width: 100%
+	+max-screen(330px)
+		padding-left: 10px
+		padding-right: 10px
+
+.row
+	&--x
+		&--center
+			justify-content: center
+	&--y
+		&--middle
+			align-items: center
+		&--top
+			align-items: flex-start
+		&--bottom
+			align-items: flex-end
+
+.section
+	position: relative
+	padding-top: 50px
+	padding-bottom: 50px
+
+	&--spacing--lg
+		padding-top: 100px
+		padding-bottom: 50px
+		+max-screen(1050px)
+			padding-top: 50px
+			padding-bottom: 50px
+	&--fullscreen
+		min-height: 70vh
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center

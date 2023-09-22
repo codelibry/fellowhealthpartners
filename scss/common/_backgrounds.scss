@@ -1,0 +1,204 @@
+.bg-dark {
+  color: color('inverse');
+
+  label, 
+  a:not(.button) {
+    color: color('inverse');
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: color('inverse');
+  }
+
+
+}
+
+.bg-md-dark {
+  @include breakpoint($medium){
+  color: color('inverse');
+
+  label, 
+  a:not(.button) {
+    color: color('inverse');
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: color('inverse');
+  }
+}
+}
+
+.bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//video bg
+.bg-video {
+  position: relative;
+
+  .video-overlay {
+    overflow: hidden;
+    @include overlay;
+    z-index: 1;
+  
+    video {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        object-fit: fill;
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.bg-video,
+.bg-image {
+
+  .overlay {
+    @include overlay;
+    background: rgba(0,0,0,0.4);
+  }
+}
+
+.wave-top {
+  clip-path: url(#waveTop);
+  padding-top: rem-calc(80);
+
+  &.no-wave-mobile {
+    @include breakpointDown($medium) {
+        clip-path: none;
+    }
+  }
+}
+
+.wave-bottom {
+  clip-path: url(#waveBottom);
+  padding-bottom: rem-calc(80);
+}
+
+@include breakpointDown($medium){
+  .bg-sm-smoke {
+    background-color: color('smoke') !important;
+  }
+}
+
+.vc_row.vc_row-has-fill {
+  position: relative;
+
+
+  @include breakpointDown($medium){
+    background-image: none !important;
+
+    .mobile-image {
+      margin-top: rem-calc(-80);
+      margin-left: rem-calc(-30);
+      margin-right: rem-calc(-30);
+      width: calc(100% + #{rem-calc(60)});
+      margin-bottom: rem-calc(40);
+    }
+
+    &.pull-top {
+      .mobile-image {
+        margin-top: rem-calc(-112);
+      }
+    }
+  } 
+
+  @include breakpoint($medium){
+    .mobile-image {
+      display: none;
+    }
+  }
+
+
+  &.bg-image-right {
+    background-size: auto 100% !important;
+
+    @include breakpoint($xlarge){
+    background-position: 100% 0 !important;
+    
+    }
+  }
+
+  &.bg-image-left {
+    background-size: auto 100% !important;
+
+    @include breakpoint($xlarge){
+      background-position: 0 0 !important;
+  
+    }
+  }
+
+  @include breakpointDown($medium) {
+    &.mobile-image-left {
+      background-position: 50% 0 !important;
+    }
+  }
+
+  @include breakpoint($medium) {
+      &:before {
+          display: none !important;
+      }
+  }
+}
+
+
+.vc_row.wave-top {
+  margin-top: rem-calc(-80);
+  z-index: 2;
+
+  &.no-wave-mobile {
+    @include breakpointDown($medium) {
+       margin-top: inherit;
+    }
+  }
+}
+
+
+.vc_row.wave-bottom {
+  z-index: 2;
+}
+
+.vc_custom_1613414660647 {
+  @include breakpointDown($large) {
+    background-position: 50% 0 !important;
+  }
+}
+
+.vc_custom_1613414841869  {
+  @include breakpointDown($large) {
+    background-position: 70% 0 !important;
+  }
+}
+
+.vc_custom_1613459937752 
+{
+  @include breakpointDown($large) {
+    background-position: -260px 0 !important;
+  }
+}
+
+.site-main .entry-content > .vc_row.vc_row-has-fill.vc_custom_1613460441888:first-child .mobile-image {
+  @include breakpointDown($large) {
+    margin-top: -11rem;
+  }
+}

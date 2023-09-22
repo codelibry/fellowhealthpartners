@@ -1,0 +1,48 @@
+.error404
+    #app-wrapper
+        width: 100%
+    .error__page
+        &__content
+            padding-top: 60px
+            padding-bottom: 60px
+        &__title
+            text-align: center
+            font-size: 160px
+            line-height: 0.6
+            font-family: $font-family-base
+            margin-bottom: 30px
+            +max-screen(1200px)
+                font-size: 140px
+            +max-screen($breakpoint-lg)
+                font-size: 100px
+                margin-bottom: 28px
+            +max-screen($breakpoint-md)
+                font-size: 80px
+                margin-bottom: 20px
+        &__subtitle
+            font-weight: 700
+            text-align: center
+            font-size: 24px
+            margin-bottom: 12px
+            margin-top: 12px
+            +max-screen($breakpoint-lg)
+                font-size: 20px
+                margin-bottom: 8px
+            +max-screen($breakpoint-md)
+                font-size: 18px
+                margin-bottom: 6px
+        &__text
+            text-align: center
+        &__button
+            text-align: center
+            .button
+                margin-top: 40px
+                +max-screen($breakpoint-lg)
+                    margin-top: 32px
+                +max-screen($breakpoint-md)
+                    margin-top: 24px
+.error404
+    main
+        display: flex
+        align-items: center
+        justify-content: center

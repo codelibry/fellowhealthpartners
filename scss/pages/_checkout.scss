@@ -1,0 +1,46 @@
+.woocommerce-checkout .woocommerce-notices-wrapper .woocommerce-message {
+    display: none !important;
+}
+
+#coursename_field {
+    visibility: hidden;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    height: 50px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: rem-calc(20);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: inherit;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+}
+
+.product {
+    float: none !important;
+    width: 100% !important;
+    * {
+        display: none;
+    }
+
+    .add_to_cart_button {
+        display: inline-flex;
+    }
+}
+
+#add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
+    width: rem-calc(40);
+}
