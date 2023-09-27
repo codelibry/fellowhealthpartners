@@ -1,0 +1,45 @@
+.breadcrumbs {
+    &__block {
+        position: relative;
+        padding-top: 26px;
+        padding-bottom: 0;
+        z-index: auto;
+
+        #breadcrumbs {
+            position: relative;
+
+            a {
+                position: relative;
+                color: #231F20;
+            }
+
+            span {
+                color: #231F20;
+
+                span {
+                    position: relative;
+                    margin-right: 50px;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: calc(50% - 2.5px);
+                        right: -30px;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #7BB4C7;
+                        border-radius: 50%;
+                    }
+
+                    &:last-of-type {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

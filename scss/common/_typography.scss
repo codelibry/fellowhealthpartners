@@ -94,10 +94,10 @@ h6,
 
     &--size--21,
     &--size--21 * {
-        font-size: 21px;
+        font-size: rem-calc(21);
 
         @include breakpointDown($xlarge) {
-            font-size: 18px;
+            font-size: rem-calc(18);
         }
     }
 
@@ -144,6 +144,22 @@ h6,
         &--white * {
             color: color('white') !important;
         }
+
+        &--orange,
+        &--orange * {
+            color: color('orange') !important;
+        }
+
+        &--black,
+        &--black * {
+            color: color('black') !important;
+        }
+
+        &--black_new,
+        &--black_new * {
+            color: color('black_new') !important;
+        }
+
     }
 }
 
@@ -186,3 +202,5 @@ h6,
         }
     }
 }
+
+.content-block {}

@@ -233,7 +233,7 @@
         div {
             gap: 0 20px;
 
-            @include breakpointDown($xlarge) {
+            @include breakpointDown($medium) {
                 width: 100%;
                 text-align: center;
             }

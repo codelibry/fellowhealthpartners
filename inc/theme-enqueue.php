@@ -29,6 +29,7 @@ function fellow_scripts()
 
     wp_enqueue_style('fellow-style', get_stylesheet_uri(), array(), _S_VERSION);
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.min.css');
+    wp_enqueue_style('plyr-css', 'https://cdn.plyr.io/3.7.8/plyr.css',  array());
 }
 
 add_action('wp_enqueue_scripts', 'fellow_scripts');

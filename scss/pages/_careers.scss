@@ -1,32 +1,77 @@
+.careers__hero {
+    padding-top: 90px;
+
+    .column {
+
+        @include breakpoint($medium) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+    }
+
+    .content-block {
+        margin-top: 60px;
+    }
+
+    .video-block {
+        width: 100%;
+        margin-top: 30px;
+
+        @include breakpoint($medium) {
+            padding-left: 70px;
+            margin-top: 0;
+        }
+
+        iframe {}
+
+        --plyr-control-spacing: 20px;
+
+        .plyr__control--overlaid {
+            background: linear-gradient(114deg, #FF851F 0%, #FAE331 100%);
+        }
+    }
+
+}
+
 .careers-item {
     background: $white;
-    padding: rem-calc(25);
-    border: 2px solid #DDDDDD;
-    border-radius: rem-calc(15);
+    padding: rem-calc(20);
+    // border: 2px solid #DDDDDD;
+    // border-radius: rem-calc(15);
     width: calc(100% - #{rem-calc(30)});
     display: flex;
     flex-direction: column;
     margin-left: rem-calc(15);
     margin-right: rem-calc(15);
     margin-bottom: rem-calc(30);
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09);
 
-    @include breakpoint($medium){
-        padding: rem-calc(50);
+    @include breakpoint($medium) {
+        padding: rem-calc(40);
     }
 
     .title {
         @include responsive-type($h5, percent($h5, 20));
         color: color('text');
-        margin-bottom: rem-calc(20);
+        margin-bottom: rem-calc(40);
 
         a {
             color: color('text');
         }
     }
 
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: #C0C0C0;
+    }
+
     .description {
-        margin-bottom: rem-calc(50);
-        font-size: rem-calc(18);
+        margin-top: rem-calc(40);
+        margin-bottom: rem-calc(40);
+
+        color: #555152;
         flex-grow: 1;
     }
 
@@ -34,18 +79,23 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: rem-calc(-15);
+        // gap: 0 30px;
+        justify-content: space-between;
 
         .button {
             margin-bottom: rem-calc(15);
+            width: calc(50% - 15px);
+
+            &.outline {}
 
             &:not(:last-child) {
                 margin-right: rem-calc(25);
-               
+
             }
         }
     }
 
-    @include breakpoint($medium){
+    @include breakpoint($medium) {
         width: calc(50% - #{rem-calc(30)});
     }
 
@@ -60,33 +110,63 @@
 }
 
 .job {
-    @include responsive-type(18,16);
+    @include responsive-type(18, 16);
 
-    .job-description {
-        margin-bottom: rem-calc(20);
+    .job-title__main {
+        margin-right: 0;
+        max-width: none;
 
-        @include breakpoint($medium){
+        @include breakpoint($medium) {
             max-width: rem-calc(695);
             margin-right: rem-calc(20);
             margin-bottom: 0;
         }
     }
-    
+
+    .job-description {
+        max-width: 100%;
+        margin-bottom: 0;
+        margin-top: rem-calc(20);
+        margin-right: 0;
+
+        @include breakpoint($medium) {
+            max-width: rem-calc(695);
+            margin-right: rem-calc(20);
+            margin-bottom: 0;
+        }
+    }
+
+    .job-apply {
+        margin-top: rem-calc(20);
+
+        @include breakpoint($medium) {
+            margin-top: 0;
+        }
+
+        .button {
+            font-weight: 500;
+            padding-left: 74px;
+            padding-right: 74px;
+        }
+    }
+
     .job-header {
-        padding-bottom: rem-calc(60);
-        border-bottom: 1px solid #ddd;
+        // padding-bottom: rem-calc(60);
+        // border-bottom: 1px solid #ddd;
     }
 
     .job-body {
         padding: rem-calc(60 0);
 
         .title {
-            color: #7BB4C7;
+            // color: #7BB4C7;
             @include typo('h3');
+            padding-bottom: rem-calc(40);
             margin-bottom: rem-calc(40);
+            border-bottom: 1px solid #C0C0C0;
         }
 
-        @include breakpoint($medium){
+        @include breakpoint($medium) {
             display: flex;
             margin-left: rem-calc(-40);
             margin-right: rem-calc(-40);
@@ -101,22 +181,25 @@
     .job-footer {
         padding-top: rem-calc(60);
         border-top: 1px solid #ddd;
+        margin-bottom: rem-calc(150);
     }
 
     .job-col {
-        + .job-col {
+        +.job-col {
             margin-top: rem-calc(60);
 
-            @include breakpoint($medium){
+            @include breakpoint($medium) {
                 margin-top: 0;
             }
         }
 
         section {
-            + section {
+            color: #555152;
+
+            +section {
                 margin-top: rem-calc(60);
 
-                @include breakpoint($medium){
+                @include breakpoint($medium) {
                     margin-top: rem-calc(120);
                 }
             }
@@ -126,23 +209,23 @@
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-    
+
                 li {
                     position: relative;
                     padding-left: rem-calc(20);
                     margin-bottom: rem-calc(24);
-              
+
                     &:before {
                         content: '';
                         display: block;
                         position: absolute;
                         left: 0;
-                        top: rem-calc(6);
-                        background: color('primary');
-                        width: rem-calc(10);
-                        height: rem-calc(10);
+                        top: rem-calc(10);
+                        background: #555152;
+                        width: rem-calc(6);
+                        height: rem-calc(6);
                         border-radius: rem-calc(10);
-    
+
                         @include breakpoint(1920) {
                             top: rem-calc(10);
                         }
@@ -151,8 +234,10 @@
 
                 ul {
                     margin-left: rem-calc(10);
+
                     li {
                         margin-bottom: rem-calc(15);
+
                         &:before {
                             background: #7BB4C7;
                         }
@@ -166,19 +251,22 @@
                     margin-bottom: rem-calc(20);
                 }
             }
-    
+
 
         }
     }
 }
 
-
+.back_block {
+    margin-top: rem-calc(80);
+    margin-bottom: rem-calc(80);
+}
 
 /** APPLICATION FORM STYLING **/
 
 .application-form .contact-info,
 .application-form .position-info {
-	padding: 30px;
+    padding: 30px;
     background: color('smoke');
     margin-bottom: 30px;
 }
@@ -196,13 +284,15 @@
     font-weight: 500;
     margin-bottom: 5px;
 }
+
 .application-link {
     display: block;
     text-align: center;
     margin: 20px 0;
 }
-.application-link a{
-    background: #0095b4 ;
+
+.application-link a {
+    background: #0095b4;
     padding: 10px 25px;
     width: auto;
     border-radius: 4px;
@@ -236,14 +326,15 @@
 }
 
 .form-fields.refers p {
- display: inline-block;
- margin: 0;
- vertical-align: top;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
 }
 
-.application-form  h3 {
+.application-form h3 {
     text-align: center;
 }
+
 .application-form input[type="text"],
 .application-form input[type="tel"],
 .application-form input[type="email"],
@@ -254,7 +345,7 @@
     border: 1px solid darkgrey;
     padding: 0 5px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .application-form select[multiple] {
@@ -265,15 +356,17 @@
     text-align: center;
     font-weight: bold;
 }
+
 .application-form .form-submit {
     text-align: center;
     margin-top: 20px;
 }
 
-.application-form .form-inline-field  {
- display: inline-block;
- vertical-align: top;
+.application-form .form-inline-field {
+    display: inline-block;
+    vertical-align: top;
 }
+
 .application-form .form-inline-field br {
     display: none;
 }
@@ -300,7 +393,7 @@
 }
 
 .position-info {
-    .wpcf7-submit  {
+    .wpcf7-submit {
         display: inline-block;
         width: auto;
     }
