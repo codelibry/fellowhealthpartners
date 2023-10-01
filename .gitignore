@@ -50,3 +50,12 @@ gulpfile.js
 /node_modules/
 package-lock.json
 package.json
+assets/.DS_Store
+.DS_Store
+inc/.DS_Store
+js/.DS_Store
+sass/.DS_Store
+js/.DS_Store
+sass/.DS_Store
+js/.DS_Store
+inc/.DS_Store
