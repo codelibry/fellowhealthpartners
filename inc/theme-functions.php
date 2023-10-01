@@ -190,20 +190,8 @@ function removeParam($url, $param)
 }
 
 
-function change_vc_rows()
-{
-
-  // Add parameters we want
-  vc_add_param('vc_row', array(
-    'type' => 'attach_image',
-    'heading' => "Mobile Image",
-    'param_name' => 'mobile_image',
-    'value' => '',
-  ));
-}
-
 // Include our function when all wordpress stuff is loaded
-add_action('wp_loaded', 'change_vc_rows');
+
 
 
 // remove wp version number from scripts and styles
