@@ -45,7 +45,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site<?php if (!$show_hero_unit): ?> no-hero-unit<? endif; ?>">
+<div id="page" class="site<?php if (!$show_hero_unit): ?> no-hero-unit<?php endif; ?>">
 
 
     <header id="masthead" class="site-header">

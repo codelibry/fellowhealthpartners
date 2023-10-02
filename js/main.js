@@ -17,17 +17,17 @@ import { popup } from "./parts/popup";
 import { full_row } from "./parts/full_row";
 import { videoBlock } from "./parts/video";
 
-header();
+// header();
 
-//animations
-appearence();
+// //animations
+// appearence();
 
-//blocks
+// //blocks
 
-// Parts
-sliders();
-videoBlock();
-show_more();
-filter();
-popup();
-full_row();
+// // Parts
+// sliders();
+// videoBlock();
+// show_more();
+// filter();
+// popup();
+// full_row();
