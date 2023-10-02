@@ -29,5 +29,11 @@
     <p class="text-color-default pb-1">.text-color-default</p>
     <p class="text-color-secondary pb-1">.text-color-secondary</p>
     <p class="text-color-white bg--black pb-1">.text-color-white</p>
+    <p class="text-color-secondary-2 pb-1">.text-color-secondary-2</p>
+    <p class="text-color-secondary-3 pb-1">.text-color-secondary-3</p>
+    <p class="text-color-gray pb-1">.text-color-gray</p>
+    <p class="text-color-gray-2 pb-1">.text-color-gray-2</p>
+    <p class="text-color-orange pb-1">.text-color-orange</p>
+    <p class="text-color-orange-2 pb-1">.text-color-orange-2</p>
+    <p class="text-color-orange-3 pb-1">.text-color-orange-3</p>
 </div>
-

@@ -5,27 +5,48 @@
         <h2 class="pb-2">h2 or .h2</h2>
         <h3 class="pb-2">h3 or .h3</h3>
         <h4 class="pb-2">h4 or .h4</h4>
+        <h5 class="pb-2">h5 or .h5</h5>
+        <h6 class="pb-2">h6 or .h6</h6>
         <p class="p1 pb-2">.p1</p>
         <p class="p2 pb-2">.p2</p>
         <p class="p3 pb-2">.p3</p>
         <p class="p4 pb-2">.p4</p>
+        <p class="text--size--13 pb-2">.text--size--13</p>
+        <p class="text--size--17 pb-2">.text--size--17</p>
+        <p class="text--size--18 pb-2">.text--size--18</p>
+        <p class="text--size--19 pb-2">.text--size--19</p>
+        <p class="text--size--22 pb-2">.text--size--22</p>
+        <p class="text--size--24 pb-2">.text--size--24</p>
+        <p class="text--size--26 pb-2">.text--size--26</p>
+        <p class="text--size--27 pb-2">.text--size--27</p>
+        <p class="text--size--32 pb-2">.text--size--32</p>
+        <p class="text--size--42 pb-2">.text--size--42</p>
+        <p class="text--size--50 pb-2">.text--size--50</p>
+        <p class="text--size--100 pb-2">.text--size--100</p>
+        <p class="text--size--113 pb-2">.text--size--113</p>
     </div>
     <div class="col-md-6 pb-4">
         <h3 class="text-color-orange mb-3">Fonts</h3>
         <p class="p2 font--primary pb-1">.font--primary</p>
         <p class="p2 font--secondary pb-1">.font--secondary</p>
         <h3 class="text-color-orange mt-3 mb-3">Font weight</h3>
-        <p class="text-lg font-weight-300 pb-1">.font-weight-300</p>
-        <p class="text-lg font-weight-400 pb-1">.font-weight-400</p>
-        <p class="text-lg font-weight-500 pb-1">.font-weight-500</p>
-        <p class="text-lg font-weight-600 pb-1">.font-weight-600</p>
-        <p class="text-lg font-weight-700 pb-1">.font-weight-700</p>
-        <p class="text-lg font-weight-900 pb-1">.font-weight-900</p>
+        <p class="text-lg font--weight--100 pb-1">.font--weight--100</p>
+        <p class="text-lg font--weight--300 pb-1">.font--weight--300</p>
+        <p class="text-lg font--weight--400 pb-1">.font--weight--400</p>
+        <p class="text-lg font--weight--500 pb-1">.font--weight--500</p>
+        <p class="text-lg font--weight--600 pb-1">.font--weight--600</p>
+        <p class="text-lg font--weight--700 pb-1">.font--weight--700</p>
+        <p class="text-lg font--weight--800 pb-1">.font--weight--800</p>
+        <p class="text-lg font--weight--900 pb-1">.font--weight--900</p>
     </div>
     <div class="col-12 pb-4">
         <div class="content-block">
-            <h1>.content-block</h1>
-            <h2>Subtitle</h2>
+            <h1>.content-block (h1)</h1>
+            <h2>Subtitle (h2)</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6>
             <p>Lorem ipsum dolor sit amet consectetur <a href="#">adipisicing</a> elit. Sequi obcaecati iure odit, esse optio culpa, sunt illum ad quos aliquam veritatis, nulla fugit tempore! Ipsa blanditiis officia ducimus accusantium similique.</p>
             <ul>
                 <li>List 1</li>
@@ -70,7 +91,7 @@ h6
 ----
 
 
-MENU 
+MENU
 
 font-family: Avenir;
 font-size: 17px;
@@ -81,7 +102,7 @@ text-align: left;
 
 
 
-Why Leading Organizations Partner with Us   
+Why Leading Organizations Partner with Us
 
 Revenue Cycle Management Process
 
@@ -170,7 +191,7 @@ text-align: left;
 
 
 
-This includes growing revenue, billings, patient visits, procedures, and surgeries. We can also help you streamline operations, reduce costs, and identify both opportunities and potential pitfalls. 
+This includes growing revenue, billings, patient visits, procedures, and surgeries. We can also help you streamline operations, reduce costs, and identify both opportunities and potential pitfalls.
 
 ADVISORY SERVICES
 
@@ -186,7 +207,7 @@ text-align: left;
 
 
 
-20% 
+20%
 
 font-family: Avenir;
 font-size: 100px;

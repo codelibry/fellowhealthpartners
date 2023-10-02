@@ -18,37 +18,30 @@ h1,
 	line-height: 1.2
 	font-weight: 500
 
-h2
+h2,.h2
 	font-size: 60px
 	line-height: 1.16
 	font-weight: 500
 
-h3
+h3,.h3
 	font-size: 49px
 	line-height: 1.2
 	font-weight: 500
-	
-h4
+
+h4,.h4
 	font-size: 42px
 	line-height: 1.2
 	font-weight: 500
 
-h5
+h5,.h5
 	font-size: 32px
 	line-height: 1.2 // I am not 100% sure
 	font-weight: 500
 
-h6
+h6,.h6
 	font-size: 24px
 	line-height: 1.5
 	font-weight: 500
-
-.h1
-.h2
-.h3
-.h4
-.h5
-.h6
 
 .text
 	&--uppercase
@@ -65,15 +58,55 @@ h6
 		text-align: center
 	&--underline
 		text-decoration: underline
+
+	&--size--13,&--size--13 *
+		font-size: 13px
+
+	&--size--17,&--size--17 *
+		font-size: 17px
+
+	&--size--18,&--size--18 *
+		font-size: 18px
+
+	&--size--19,&--size--19 *
+		font-size: 19px
+
+	&--size--22,&--size--22 *
+		font-size: 22px
+
+	&--size--24,&--size--24 *
+		font-size: 22px
+
+	&--size--26,&--size--26 *
+		font-size: 26px
+
+	&--size--27,&--size--27 *
+		font-size: 27px
+
+	&--size--32,&--size--32 *
+		font-size: 32px
+
+	&--size--42,&--size--42 *
+		font-size: 42px
+
+	&--size--50,&--size--50 *
+		font-size: 50px
+
+	&--size--100,&--size--100 *
+		font-size: 100px
+
+	&--size--113,&--size--113 *
+		font-size: 113px
+
 .font
 	&--italic
 		font-style: italic
 	&--weight
-		&--thin
+		&--thin,&--100
 			font-weight: 100
 		&--light, &--300
 			font-weight: 300
-		&--regular
+		&--regular, &--400
 			font-weight: 400
 		&--500
 			font-weight: 500
@@ -83,7 +116,7 @@ h6
 			font-weight: 700
 		&--bold, &--800
 			font-weight: 800
-		&--black
+		&--black, &--900
 			font-weight: 900
 
 .content-block
@@ -93,26 +126,42 @@ h6
 		line-height: 1.2
 		font-weight: 500
 	h2
-		
-
+		font-size: 32px
+		line-height: 1.2
+		font-weight: 500
+	h3
+		font-size: 24px
+		line-height: 1.5
+		font-weight: 500
+	h4
+		font-size: 22px
+		line-height: 1.5
+		font-weight: 500
+	h5
+		font-size: 18px
+		line-height: 1.5
+		font-weight: 500
+	h6
+		font-size: 16px
+		line-height: 1.5
+		font-weight: 500
 
 	p
-		margin-bottom: 20px
+		margin-bottom: 40px
+		+max-screen($breakpoint-xm)
+			margin-bottom: 20px
 		&:nth-child(1)
 			padding-top: 0
 
 		&:nth-last-child(1)
 			padding-bottom: 0
 			margin-bottom: 0
-		.single-projects &
-			font-size: 24px
-			+max-screen($breakpoint-xl)
-				font-size: 18px
+
 	h2,h3,h4,h5,h6
 		margin-top: 20px
-		margin-bottom: 20px
-		+max-screen(1500px)
-			margin-top: 40px
+		margin-bottom: 40px
+		+max-screen($breakpoint-xm)
+			margin-top: 20px
 			margin-bottom: 20px
 		&:first-of-type
 			margin-top: 0
@@ -120,57 +169,56 @@ h6
 	a
 
 		transition: 0.3s
-		color: $color-white
+		color: $color-primary
 		font-weight: 500
+		text-decoration: underline
 		&:hover
 			opacity: 0.8
-			text-decoration: underline
+
 	ul
-		margin: rem(15px 0)
-		margin-left: rem(30px)
+		margin: rem(40px 0)
+		margin-left: rem(20px)
+		+max-screen($breakpoint-xm)
+			margin: rem(20px 0)
 		li
 			display: block
 			position: relative
 			margin-bottom: 8px
 			line-height: 1.4
 			padding-left: 14px
-			.single-projects &
-				font-size: 24px
-				+max-screen($breakpoint-xl)
-					font-size: 18px
+
 			&:nth-last-child(1)
 				margin-bottom: 0
 			&:before
 				position: absolute
 				content: ''
-				background-color: $color-white
-				width: 6px
-				height: 6px
-				min-width: 6px
+				background-color: $color-gray-1
+				width: 5px
+				height: 5px
+				min-width: 5px
 				border-radius: 50%
 				margin-bottom: 0.12em
 				display: inline-block
 				left: 0
-				top: 10px
+				top: 11px
 			ol
 				margin: rem(10px 0)
 			ul
 				margin: rem(10px 0)
-				margin-left: rem(30px)
+				margin-left: rem(25px)
 	ol
 		list-style: disc
 		// counter-reset: my-counter
-		margin: rem(15px 0)
+		margin: rem(40px 0)
+		+max-screen($breakpoint-xm)
+			margin: rem(20px 0)
 		li
 			// counter-increment: my-counter
 			list-style-type: auto
-			padding-left: 25px
-			margin-left: 25px
+			padding-left: 14px
+			margin-left: rem(20px)
 			margin-bottom: 8px
-			.single-projects &
-				font-size: 24px
-				+max-screen($breakpoint-xl)
-					font-size: 18px
+
 			&:nth-last-child(1)
 				margin-bottom: 0
 			// &:before
@@ -180,9 +228,10 @@ h6
 			// 	margin-top: 8px
 			ol
 				margin: rem(10px 0)
+				margin-left: 25px
 			ul
 				margin: rem(10px 0)
-				margin-left: rem(30px)
+				margin-left: rem(25px)
 	img
 		width: auto
 		height: auto

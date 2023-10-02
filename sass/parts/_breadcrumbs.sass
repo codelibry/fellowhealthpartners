@@ -1,1 +1,41 @@
 .breadcrumbs
+    &__block
+        position: relative
+        z-index: auto
+
+        .container
+            .container &
+                padding: 0
+
+        #breadcrumbs
+            position: relative
+
+            a
+                position: relative
+                color: $color-black
+                transition: all 0.3s
+                opacity: 0.6
+                &:hover
+                    text-decoration: underline
+                    opacity: 1
+
+            span
+                color: $color-black
+
+                span
+                    position: relative
+                    margin-right: 50px
+
+                    &::before
+                        position: absolute
+                        content: ''
+                        top: calc(50% - 2.5px)
+                        right: -30px
+                        width: 10px
+                        height: 10px
+                        background-color: $color-secondary
+                        border-radius: 50%
+
+                    &:last-of-type
+                        &:before
+                            display: none
