@@ -13,8 +13,8 @@ body
 	font-weight: 400
 
 h1, .h1
-	line-height: 120%
-	font-size: 50px
+	line-height: 112%
+	font-size: 80px
 	font-family: $font-family-base
 	font-weight: 500
 	+max-screen($breakpoint-xl)
@@ -22,9 +22,9 @@ h1, .h1
 	+max-screen($breakpoint-lg)
 		font-size: 30px
 h2, .h2
-	font-size: 50px
-	line-height: 110%
-	font-family: $font-family-base !important
+	font-size: 60px
+	line-height: 112%
+	font-family: $font-family-base
 	font-weight: 500
 	+max-screen($breakpoint-xl)
 		font-size: 44px
@@ -35,17 +35,17 @@ h2, .h2
 h3, .h3
 	font-style: normal
 	font-weight: 500
-	font-size: 30px
-	line-height: 110%
-	font-family: $font-family-base !important
+	font-size: 50px
+	line-height: 112%
+	font-family: $font-family-base
 	+max-screen($breakpoint-xl)
 		font-size: 26px
 
 h4, .h4
 	font-weight: 500
-	font-size: 24px
-	line-height: 150%
-	font-family: $font-family-base !important
+	font-size: 42px
+	line-height: 112%
+	font-family: $font-family-base
 	+max-screen($breakpoint-xl)
 		font-size: 20px
 	+max-screen($breakpoint-sm)
@@ -55,7 +55,7 @@ h5, .h5
 	font-family: $font-family-base !important
 	line-height: 112%
 	font-weight: 500
-	font-size: 20px
+	font-size: 21px
 h6, .h6
 	font-family: $font-family-base !important
 	font-weight: 500
@@ -64,56 +64,67 @@ h6, .h6
 
 .text
 	&--style
-	&--size--10,&--size--10 *
-		font-size: 10px
+	&--size--13,&--size--13 *
+		font-size: 13px
 		+max-screen($breakpoint-lg)
 		+max-screen($breakpoint-md)
 			font-size: 10px
-	&--size--12,&--size--12 *
-		font-size: 12px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 12px
-	&--size--14,&--size--14 *
-		font-size: 14px
-		line-height: 150%
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 14px
-	&--size--16,&--size--16 *
-		font-size: 16px
-		line-height: 150%
+	&--size--17,&--size--17 *
+		font-size: 17px
 		+max-screen($breakpoint-lg)
 		+max-screen($breakpoint-md)
 			font-size: 14px
 	&--size--18,&--size--18 *
 		font-size: 18px
-		line-height: 110%
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 15px
+	&--size--19,&--size--19 *
+		font-size: 19px
 		+max-screen($breakpoint-lg)
 		+max-screen($breakpoint-md)
 			font-size: 16px
 	&--size--22,&--size--22 *
 		font-size: 22px
-		line-height: 110%
 		+max-screen($breakpoint-lg)
 		+max-screen($breakpoint-md)
-			font-size: 18px
-	&--size--50,&--size--50 *
-		font-size: 50px
-		line-height: 120%
-		+max-screen($breakpoint-xl)
-			font-size: 44px
+			font-size: 19px
+	&--size--24,&--size--24 *
+		font-size: 22px
 		+max-screen($breakpoint-lg)
 		+max-screen($breakpoint-md)
-			font-size: 34px
+			font-size: 21px
+	&--size--26,&--size--26 *
+		font-size: 26px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 23px
+	&--size--27,&--size--27 *
+		font-size: 27px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 24px
+	&--size--32,&--size--32 *
+		font-size: 32px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 29px
+	&--size--42,&--size--42 *
+		font-size: 42px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 30px
+	&--size--100,&--size--100 *
+		font-size: 100px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 70px
+	&--size--113,&--size--113 *
+		font-size: 113px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 78px
 
-	&--size--80,&--size--80 *
-		font-size: 80px
-		line-height: 100%
-		+max-screen(1200px)
-			font-size: 44px
-		+max-screen($breakpoint-md)
-			font-size: 34px
 	&--uppercase
 		text-transform: uppercase
 	&--capitalize
@@ -129,27 +140,43 @@ h6, .h6
 	&--underline
 		text-decoration: underline
 	&--color
+		&--secondary
+			color: $color-secondary
+		&--secondary_medium
+			color: $color-secondary-medium-dark
+		&--secondary_dark
+			color: $color-secondary-dark
 		&--white
 			color: $color-white
-		&--lavander
-			color: $color-lavander
+		&--black
+			color: $color-black
 		&--grey
 			color: $color-grey
+		&--lightgrey
+			color: $color-lightgrey
+		&--orange
+			color: $color-orange
+		&--orange_2
+			color: $color-orange-2
+		&--orange_3
+			color: $color-orange-3
 .font
 	&--italic
 		font-style: italic
 	&--weight
 		&--thin
 			font-weight: 100
-		&--light
+		&--light, &--300
 			font-weight: 300
 		&--regular
 			font-weight: 400
-		&--medium
+		&--500
+			font-weight: 500
+		&--medium, &--600
 			font-weight: 600
 		&--700
 			font-weight: 700
-		&--bold
+		&--bold, &--800
 			font-weight: 800
 		&--black
 			font-weight: 900
