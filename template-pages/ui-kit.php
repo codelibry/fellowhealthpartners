@@ -8,6 +8,15 @@ Template Name: Ui Kit
 
 <div class="container" style="padding-top: 150px">
 
+	// Pending task
+
+	</br>
+	1. Styles for .h1 - .h6
+	2. Styles for .content-block
+	3. Spacings -> .section / .section--sm / .section--md
+	4. breadcrumbs
+	
+
 	<div class="ui__block py-5">
 		<h2 class="ui__block__title text-color-primary mb-4">Colors</h2>
 		<?php get_template_part( '/template-parts/ui/colors'); ?>
@@ -34,6 +43,8 @@ Template Name: Ui Kit
 		<h2 class="ui__block__title text-color-primary mb-4">Form</h2>
 		<?php get_template_part( '/template-parts/ui/form'); ?>
 	</div>
+
+	
 	
 </div> <!-- .container -->
 
