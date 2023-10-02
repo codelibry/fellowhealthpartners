@@ -14,13 +14,13 @@ Template Name: Ui Kit
 	</div>
 
 	<div class="ui__block py-5">
-		<h2 class="ui__block__title text-color-primary mb-4">Typography</h2>
-		<?php get_template_part( '/template-parts/ui/typography'); ?>
+		<h2 class="ui__block__title text-color-primary mb-4">Buttons</h2>
+		<?php get_template_part( '/template-parts/ui/buttons'); ?>
 	</div>
 
 	<div class="ui__block py-5">
-		<h2 class="ui__block__title text-color-primary mb-4">Buttons</h2>
-		<?php get_template_part( '/template-parts/ui/buttons'); ?>
+		<h2 class="ui__block__title text-color-primary mb-4">Typography</h2>
+		<?php get_template_part( '/template-parts/ui/typography'); ?>
 	</div>
 
 	<?php if(false): ?>

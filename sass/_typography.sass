@@ -3,8 +3,8 @@ html, body
 
 body
 	position: relative
-	font-family: $font-family-base !important
-	// font-size: $default-font-size
+	font-family: $font-family-base
+	ont-size: $default-font-size
 	font-style: normal
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
@@ -12,119 +12,45 @@ body
 	-webkit-tap-highlight-color: transparent
 	font-weight: 400
 
-h1, .h1
-	line-height: 112%
+h1,
+.h1
 	font-size: 80px
-	font-family: $font-family-base
+	line-height: 1.2
 	font-weight: 500
-	+max-screen($breakpoint-xl)
-		font-size: 44px
-	+max-screen($breakpoint-lg)
-		font-size: 30px
-h2, .h2
+
+h2
 	font-size: 60px
-	line-height: 112%
-	font-family: $font-family-base
+	line-height: 1.16
 	font-weight: 500
-	+max-screen($breakpoint-xl)
-		font-size: 44px
-	+max-screen($breakpoint-xs)
-		font-size: 38px
-	+max-screen($breakpoint-lg)
-		font-size: 24px
-h3, .h3
-	font-style: normal
-	font-weight: 500
-	font-size: 50px
-	line-height: 112%
-	font-family: $font-family-base
-	+max-screen($breakpoint-xl)
-		font-size: 26px
 
-h4, .h4
+h3
+	font-size: 49px
+	line-height: 1.2
 	font-weight: 500
+	
+h4
 	font-size: 42px
-	line-height: 112%
-	font-family: $font-family-base
-	+max-screen($breakpoint-xl)
-		font-size: 20px
-	+max-screen($breakpoint-sm)
-		font-size: 16px
+	line-height: 1.2
+	font-weight: 500
 
-h5, .h5
-	font-family: $font-family-base !important
-	line-height: 112%
+h5
+	font-size: 32px
+	line-height: 1.2 // I am not 100% sure
 	font-weight: 500
-	font-size: 21px
-h6, .h6
-	font-family: $font-family-base !important
+
+h6
+	font-size: 24px
+	line-height: 1.5
 	font-weight: 500
-	font-size: 18px
-	line-height: 112%
+
+.h1
+.h2
+.h3
+.h4
+.h5
+.h6
 
 .text
-	&--style
-	&--size--13,&--size--13 *
-		font-size: 13px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 10px
-	&--size--17,&--size--17 *
-		font-size: 17px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 14px
-	&--size--18,&--size--18 *
-		font-size: 18px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 15px
-	&--size--19,&--size--19 *
-		font-size: 19px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 16px
-	&--size--22,&--size--22 *
-		font-size: 22px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 19px
-	&--size--24,&--size--24 *
-		font-size: 22px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 21px
-	&--size--26,&--size--26 *
-		font-size: 26px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 23px
-	&--size--27,&--size--27 *
-		font-size: 27px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 24px
-	&--size--32,&--size--32 *
-		font-size: 32px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 29px
-	&--size--42,&--size--42 *
-		font-size: 42px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 30px
-	&--size--100,&--size--100 *
-		font-size: 100px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 70px
-	&--size--113,&--size--113 *
-		font-size: 113px
-		+max-screen($breakpoint-lg)
-		+max-screen($breakpoint-md)
-			font-size: 78px
-
 	&--uppercase
 		text-transform: uppercase
 	&--capitalize
@@ -139,27 +65,6 @@ h6, .h6
 		text-align: center
 	&--underline
 		text-decoration: underline
-	&--color
-		&--secondary
-			color: $color-secondary
-		&--secondary_medium
-			color: $color-secondary-medium-dark
-		&--secondary_dark
-			color: $color-secondary-dark
-		&--white
-			color: $color-white
-		&--black
-			color: $color-black
-		&--grey
-			color: $color-grey
-		&--lightgrey
-			color: $color-lightgrey
-		&--orange
-			color: $color-orange
-		&--orange_2
-			color: $color-orange-2
-		&--orange_3
-			color: $color-orange-3
 .font
 	&--italic
 		font-style: italic
@@ -181,35 +86,15 @@ h6, .h6
 		&--black
 			font-weight: 900
 
-.link--underline
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		bottom: 0
-		right: 0
-		width: 100%
-		height: 1px
-		background-color: $color-primary
-		transition: 0.2s ease-out
-	&:hover:before
-		width: 0
-
-.link--underline--2
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 0
-		height: 1px
-		background-color: $color-primary
-		transition: 0.2s ease-out
-	&:hover:before
-		width: 100%
-
 .content-block
+
+	h1
+		font-size: 49px
+		line-height: 1.2
+		font-weight: 500
+	h2
+		
+
 
 	p
 		margin-bottom: 20px

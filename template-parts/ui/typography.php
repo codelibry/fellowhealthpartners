@@ -57,3 +57,212 @@
         </div>
     </div>
 </div>
+
+----
+
+h1 - 80px/90
+h2 - 60/67
+h3 - 49/55
+h4 - 42/47
+h5 - 32
+h6
+
+----
+
+
+MENU 
+
+font-family: Avenir;
+font-size: 17px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+Why Leading Organizations Partner with Us   
+
+Revenue Cycle Management Process
+
+font-family: Avenir;
+font-size: 50px;
+font-weight: 500;
+line-height: 56px;
+letter-spacing: 0em;
+text-align: left;
+
+HOMEPAGE SECTION 2
+
+
+Improve efficiency, find new revenue, and build a more sustainable revenue cycle.
+
+font-family: Avenir;
+font-size: 32px;
+font-weight: 500;
+line-height: 45px;
+letter-spacing: 0em;
+text-align: left;
+
+
+CPC TRAINING PAGE
+
+$2395.00
+
+font-family: Avenir;
+font-size: 32px;
+font-weight: 900;
+line-height: 39px;
+letter-spacing: 0em;
+text-align: left;
+
+TEAM
+
+bio
+
+font-family: Avenir;
+font-size: 27px;
+font-weight: 900;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+For Hospital Systems, ASCs, and Physician Groups, the heart of the financial business operations is Revenue Cycle
+
+font-family: Avenir;
+font-size: 21px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+
+Read more testimonials
+
+font-family: Avenir;
+font-size: 21px;
+font-weight: 500;
+line-height: 24px; / 26PX
+letter-spacing: 0em;
+text-align: left;
+
+
+
+We meet this commitment by fusing Technology, Talent, and Training to create a multi-faceted support system to meet our clients’ needs.
+
+Founded by business professionals and clinicians, our end-to-end revenue cycle solutions integrate with our customers’ existing infrastructures to seamlessly streamline billing, collections, coding, unresolved denials, and related workflows.
+
+
+font-family: Avenir;
+font-size: 19px;
+font-weight: 500;
+line-height: 27px; / 24PX
+letter-spacing: 0em;
+text-align: left;
+
+font-family: Articulat CF;
+font-size: 19px;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+This includes growing revenue, billings, patient visits, procedures, and surgeries. We can also help you streamline operations, reduce costs, and identify both opportunities and potential pitfalls. 
+
+ADVISORY SERVICES
+
+font-family: Avenir;
+font-size: 18px;
+font-weight: 500;
+line-height: 25px; / 22PX - FORM PLACEHOLDER // 20PX Phil Marino, RN IN POPUP //27PX LIST ON LAST DESIGN
+letter-spacing: 0em;
+text-align: left;
+
+
+
+
+
+
+20% 
+
+font-family: Avenir;
+font-size: 100px;
+font-weight: 900;
+line-height: 122px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+20%
+
+font-family: Avenir;
+font-size: 70px;
+font-weight: 900;
+line-height: 85px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When it comes to medical billing, compliance is not just a checkbox—it's a fundamental principle that protects your practice, patients, and reputation.
+
+font-family: Avenir;
+font-size: 26px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+
+
+FOOTER MENU TOP
+
+font-family: Avenir;
+font-size: 26px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+
+FORM LABEL
+
+font-family: Avenir;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+
+PRIMARY RESPONSIBILITIES BODY TEXT
+
+font-family: Avenir;
+font-size: 26px;
+font-weight: 500;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+
+/ 1 TIME - ASC Administrator
+
+font-family: Avenir;
+font-size: 13px;
+font-weight: 500;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
