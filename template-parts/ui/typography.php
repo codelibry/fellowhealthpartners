@@ -38,45 +38,48 @@
         <p class="text-lg font--weight--700 pb-1">.font--weight--700</p>
         <p class="text-lg font--weight--800 pb-1">.font--weight--800</p>
         <p class="text-lg font--weight--900 pb-1">.font--weight--900</p>
+
+        <p class="text-lg font--weight--500 font--style--second pb-1">.font--style--second</p>
     </div>
-    <div class="col-12 pb-4">
-        <div class="content-block">
-            <h1>.content-block (h1)</h1>
-            <h2>Subtitle (h2)</h2>
-            <h3>H3</h3>
-            <h4>H4</h4>
-            <h5>H5</h5>
-            <h6>H6</h6>
-            <p>Lorem ipsum dolor sit amet consectetur <a href="#">adipisicing</a> elit. Sequi obcaecati iure odit, esse optio culpa, sunt illum ad quos aliquam veritatis, nulla fugit tempore! Ipsa blanditiis officia ducimus accusantium similique.</p>
-            <ul>
-                <li>List 1</li>
-                <li>List 2</li>
-                <li>List 3</li>
-                <li>
-                    List 4
-                    <ol>
-                        <li>List 1</li>
-                        <li>List 2</li>
-                    </ol>
-                </li>
-                <li>List 5</li>
-            </ul>
-            <ol>
-                <li>List 1</li>
-                <li>List 2</li>
-                <li>List 3</li>
-                <li>
-                    List 4
-                    <ul>
-                        <li>List 1</li>
-                        <li>List 2</li>
-                    </ul>
-                </li>
-                <li>List 5</li>
-            </ol>
-            <blockquote>Lorem ipsum dolor sit amet consectetur <a href="#">adipisicing</a> elit. Sequi obcaecati iure odit, esse optio culpa, sunt illum ad quos aliquam veritatis, nulla fugit tempore! Ipsa blanditiis officia ducimus accusantium similique.</blockquote>
-        </div>
+</div>
+<div class="col-12 pb-4">
+    <div class="content-block">
+        <h1>.content-block (h1)</h1>
+        <h2>Subtitle (h2)</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+        <p>Lorem ipsum dolor sit amet consectetur <a href="#">adipisicing</a> elit. Sequi obcaecati iure odit, esse optio culpa, sunt illum ad quos aliquam veritatis, nulla fugit tempore! Ipsa blanditiis officia ducimus accusantium similique.</p>
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>
+                List 4
+                <ol>
+                    <li>List 1</li>
+                    <li>List 2</li>
+                </ol>
+            </li>
+            <li>List 5</li>
+        </ul>
+        <ol>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>
+                List 4
+                <ul>
+                    <li>List 1</li>
+                    <li>List 2</li>
+                </ul>
+            </li>
+            <li>List 5</li>
+        </ol>
+        <blockquote>Lorem ipsum dolor sit amet consectetur <a href="#">adipisicing</a> elit. Sequi obcaecati iure odit, esse optio culpa, sunt illum ad quos aliquam veritatis, nulla fugit tempore! Ipsa blanditiis officia ducimus accusantium similique.</blockquote>
     </div>
+</div>
 </div>
 
 ----
