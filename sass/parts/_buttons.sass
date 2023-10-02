@@ -1,1 +1,23 @@
-
+.button,
+input[type="button"],
+input[type="submit"]
+    appearance: none
+    display: inline-block
+    padding: 19px 75px
+    text-align: center
+    // Font size pending
+    border: 1px solid transparent
+    svg
+        margin-left: 15px
+    &.button--fluid
+        display: block
+    &.button--outline
+        background-color: $white
+        color: $color-primary
+        border-color: $color-primary
+    &.button--sm
+        padding-left: 40px
+        padding-right: 40px
+    &.button--lg
+        padding-top: 38px
+        padding-bottom: 38px
