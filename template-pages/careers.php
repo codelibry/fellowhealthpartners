@@ -27,9 +27,15 @@ $careers = new WP_Query(array(
                     <div class="row d-md-flex">
                         <div class="col-12 col-lg-6">
                             <div class="title_block">
-                                <h1 class="font--weight--500 text-color-black">
-                                    <?php echo $hero_title; ?>
-                                </h1>
+                                <?php if ($hero_title) : ?>
+                                    <h1 class="font--weight--500 text-color-black">
+                                        <?php echo $hero_title; ?>
+                                    </h1>
+                                <?php else : ?>
+                                    <h1 class="font--weight--500 text-color-black">
+                                        <?php the_title(); ?>
+                                    </h1>
+                                <?php endif; ?>
                             </div>
                             <div class="content-block font--weight--500 text-color-gray">
                                 <?php echo $hero_content; ?>
