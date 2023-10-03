@@ -1,28 +1,41 @@
 <?php
-global $fellow_options;
+// global $fellow_options;
+$footer_logo = get_field('footer_logo', 'options');
+$footer_contact_text = get_field('footer_contact_text', 'options');
+$phone_number = get_field('phone_number', 'options');
+$linkedin_url = get_field('linkedin_url', 'options');
+$footer_email = get_field('footer_email', 'options');
+$copyright = get_field('copyright', 'options');
+$bottom_links = get_field('bottom_links', 'options');
+
 $footer_logos = get_field('footer_logos', 'options');
 ?>
 
-<div class="pre-footer">
+<div class="pre-footer bg--primary">
+    <div class="section-bg bg--gradient-orange"></div>
     <div class="container ">
-        <div class="inner d-md-flex align-items-center justify-content-between">
-            <div class="pre-footer__logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_logo.svg" alt="" class="">
-            </div>
-            <?php if ($fellow_options['footer-contact-text']) : ?>
-                <h2 class="pre-footer__title text--size--32 font--weight--500 text--color--white"><?php echo $fellow_options['footer-contact-text']; ?></h2>
-            <?php endif; ?>
-
-            <div class="pre-footer__contacts">
-                <div class="pre-footer__contacts-call text--size--32 font--weight--bold text--color--white">
-                    <?php echo get_inline_svg('phone-fill.svg'); ?>
-                    <a href="tel:<?php echo $fellow_options['phone']; ?>" class=""><?php echo $fellow_options['footer-contact-button']; ?></a>
+        <div class="inner d-flex align-items-center justify-content-between">
+            <?php if ($footer_logo) : ?>
+                <div class="pre-footer__logo">
+                    <img src="<?php echo $footer_logo['url']; ?>" alt="">
                 </div>
-                <ul class="pre-footer__socials text--color--white">
-                    <li><a href="<?php echo $fellow_options['linkedin']; ?>" target="_blank"><?php echo get_inline_svg('linkedin.svg'); ?></a></li>
-                    <li><a href="mailto:<?php echo $fellow_options['mail']; ?>"><?php echo get_inline_svg('mail.svg'); ?></a></li>
-                </ul>
-            </div>
+            <?php endif; ?>
+            <?php if ($footer_contact_text) : ?>
+                <h2 class="pre-footer__title text--size--32 font--weight--500 text-color-white"><?php echo $footer_contact_text; ?></h2>
+            <?php endif; ?>
+            <div class="empty_block"></div>
+            <?php if ($phone_number || $linkedin_url || $footer_email) : ?>
+                <div class="pre-footer__contacts ">
+                    <div class="pre-footer__contacts-call text--size--32 font--weight--800 text-color-white">
+                        <?php echo get_inline_svg_social('phone-fill.svg'); ?>
+                        <a href="<?php echo get_href_phone($phone_number) ?>"><?php echo $phone_number; ?></a>
+                    </div>
+                    <ul class="pre-footer__socials text--color--white">
+                        <li><a href="<?php echo $linkedin_url['url']; ?>" target="<?php echo $linkedin_url['target']; ?>"><?php echo get_inline_svg_social('linkedin.svg'); ?></a></li>
+                        <li><a href="<?php echo get_href_email($footer_email) ?>"><?php echo get_inline_svg_social('mail.svg'); ?></a></li>
+                    </ul>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -47,7 +60,7 @@ $footer_logos = get_field('footer_logos', 'options');
         <?php
 
         if ($footer_logos) : ?>
-            <div class='site-footer__bottom'>
+            <div class='site-footer__bottom bg--secondary'>
                 <div class='container'>
                     <div class='site-footer__bottom-wrap'>
                         <?php foreach ($footer_logos as $logo) : ?>
@@ -68,15 +81,23 @@ $footer_logos = get_field('footer_logos', 'options');
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
-                    <div class="site-footer__copyright d-md-flex align-items-center justify-content-between">
-                        <div>
-                            <p class="text--size--17 font--weight--500 text--color--white"><?php echo $fellow_options['footer-copyright']; ?></p>
+                    <?php if ($copyright || $bottom_links) : ?>
+                        <div class="site-footer__bottom-copyright d-flex align-items-center justify-content-between">
+                            <?php if ($copyright) : ?>
+                                <div>
+                                    <p class="text--size--17 font--weight--500 text-color-white"><?php echo $copyright; ?></p>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($bottom_links) : ?>
+                                <div class="text--size--21 font--weight--500 text-color-white d-md-flex links">
+                                    <?php foreach ($bottom_links as $link) :
+                                        $url = $link['link']; ?>
+                                        <p><a href="<?php echo $url['url']; ?>" target="<?php echo $url['target']; ?>"><?php echo $url['title']; ?></a></p>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                        <div class="text--size--21 font--weight--500 text--color--white d-md-flex">
-                            <p><a href="/do-not-sell-my-personal-info/#opt-out"> Opt Out</a></p>
-                            <p><a href="/privacy-policy/">Privacy Policy</a></p>
-                        </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div><!-- .site-footer__bottom -->
         <?php endif; ?>

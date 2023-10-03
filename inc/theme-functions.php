@@ -112,6 +112,13 @@ function get_inline_svg($name)
   return '';
 }
 
+function get_inline_svg_social($name)
+{
+  if ($name) :
+    return file_get_contents(esc_url(get_template_directory_uri() . '/assets/icons/social/' . $name));
+  endif;
+  return '';
+}
 /**
  * Clear phone for href
  */

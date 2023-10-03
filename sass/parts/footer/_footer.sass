@@ -1,1 +1,169 @@
+.pre-footer
+    overflow: hidden
+    position: relative
+    padding-top: 18px
+    padding-bottom: 29px
+    .section-bg
+        width: 25vw
+        left: auto
+        right: 25%
+        margin-left: 0
+        margin-right: -25vw
+        z-index: 0
+        +max-screen($breakpoint-lg)
+            width: 100vw
+            right: 50%
+            margin-right: -50vw
+            background: linear-gradient(180.0deg, #FF851F 34.6%, #FAE331 100%)
+    .inner
+        +max-screen($breakpoint-lg)
+            flex-direction: column
+        h2
+            align-self: center
+            margin-top: 10px
+            position: relative
+            z-index: 1
+            +max-screen($breakpoint-lg)
+                text-align: center
+        .empty_block
+            +max-screen($breakpoint-xl)
+                width: 100px
+            +max-screen(1240px)
+                width: 200px
+            +max-screen($breakpoint-lg)
+                display: none
 
+    &__logo
+        position: relative
+        z-index: 1
+        img
+            width: 100%
+            +adaptive-value("width", 227, 140, 0)
+            max-width: 227px
+            // +max-screen($breakpoint-lg)
+            //     width: 12vw
+            // +max-screen($breakpoint-md)
+            //     width: 50vw
+    &__contacts
+        display: flex
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        gap: 0 80px
+        padding: 0 80px
+        width: 30vw
+        max-width: 608px
+        z-index: 1
+        +max-screen(1800px)
+            gap: 0 40px
+            padding: 0 40px
+            // right: -8vw
+            // width: 25vw
+        +max-screen($breakpoint-xm)
+            right: -40px
+        +max-screen($breakpoint-xl)
+            right: 0
+        +max-screen(1240px)
+            right: 40px
+        +max-screen($breakpoint-lg)
+            position: relative
+            top: auto
+            right: auto
+            width: auto
+            margin-top: 10px
+        svg
+            align-self: center
+            +max-screen($breakpoint-xm)
+                max-width: 25px
+            +max-screen(1240px)
+                max-width: 21px
+            path
+                transition: all $default-transition
+                fill: $color-white
+            &:hover
+                path
+                    fill: $color-secondary
+        &-call
+            position: relative
+            display: flex
+            gap: 0 10px
+            &:hover
+                a
+                    color: $color-secondary
+                svg
+                    path
+                        fill: $color-secondary
+
+            a
+                align-self: center
+                transition: all $default-transition
+
+            &::before
+                position: absolute
+                content: ''
+                top: calc( 50% - 20px )
+                right: -40px
+                width: 1px
+                height: 40px
+                background: $color-white
+                +max-screen(1800px)
+                    right: -20px
+    &__socials
+        display: flex
+        gap: 0 40px
+        +max-screen(1800px)
+            gap: 0 20px
+        +max-screen(1240px)
+            gap: 0 15px
+        li
+            align-self: center
+.site-footer
+    &__bottom
+        padding-top: 35.5px
+        padding-bottom: 15px
+        &-wrap
+            display: flex
+            justify-content: space-between
+            +max-screen($breakpoint-lg)
+                flex-wrap: wrap
+                gap: 15px
+            &>div,
+            &>a
+                display: flex
+                height: max-content
+                &:last-of-type
+                    transform: translateY(-20px)
+                    +max-screen($breakpoint-lg)
+                        transform: none
+                +max-screen($breakpoint-xm)
+                +max-screen($breakpoint-lg)
+                    max-width: calc( 33% - 15px )
+                    flex: 0 0 33%
+                    height: auto
+
+            img
+                align-self: center
+                width: max-content
+                +max-screen($breakpoint-xm)
+                    width: 100%
+
+        &-copyright
+            margin-top: 21px
+            +max-screen($breakpoint-md)
+                flex-direction: column
+            .links
+                display: flex
+                gap: 0 20px
+                +max-screen($breakpoint-md)
+                    order: 1
+                    margin-bottom: 10px
+                a
+                    transition: all $default-transition
+                    &:hover
+                        color: $color-primary
+
+            div:not(.links)
+                +max-screen($breakpoint-md)
+                    order: 2
+                    text-align: center
