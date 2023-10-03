@@ -1,33 +1,30 @@
-// import $ from "jquery";
+import $ from "jquery";
 
-// // import { lottie } from './lottie';
+// import { lottie } from './lottie';
 
-// import { header } from "./template-parts/header/header";
+import { header } from "./template-parts/header/header";
 
-// // Animations
-// import { appearence } from "./animations/appearence";
+// Animations
+import { appearence } from "./animations/appearence";
 
-// // Blocks
+// Blocks
 
-// // Parts
-// import { sliders } from "./parts/slider";
-// import { show_more } from "./parts/ajax";
-// import { filter } from "./parts/filter";
-// import { popup } from "./parts/popup";
-// import { full_row } from "./parts/full_row";
-// import { videoBlock } from "./parts/video";
+// Parts
+import { sliders } from "./parts/slider";
+import { show_more } from "./parts/ajax";
+import { filter } from "./parts/filter";
+import { popup } from "./parts/popup";
+import { full_row } from "./parts/full_row";
+import { videoBlock } from "./parts/video";
 
 // header();
 
-// //animations
-// appearence();
+//animations
+appearence();
 
-// //blocks
+//blocks
 
-// // Parts
-// sliders();
-// videoBlock();
-// show_more();
-// filter();
-// popup();
-// full_row();
+// Parts
+
+videoBlock();
+show_more();

@@ -1,0 +1,21 @@
+.card
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 40px
+    +adaptive-value("padding", 40, 20, 0)
+    gap: 40px 0
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09)
+    height: 100%
+    +max-screen($breakpoint-sm)
+        gap: 20px 0
+    &--careers
+        justify-content: flex-start
+        .buttons
+            margin-top: auto
+            margin-right: -15px
+            margin-left: -15px
+            gap: 15px 0
+            .col-lg-6
+                padding-right: 15px
+                padding-left: 15px

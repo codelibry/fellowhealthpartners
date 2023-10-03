@@ -223,3 +223,12 @@ function add_page_name_body_class($classes)
 }
 
 add_filter('body_class', 'add_page_name_body_class');
+
+// for careers page
+
+function encodeURI($uri)
+{
+  return preg_replace_callback("{[^0-9a-z_.!~*'();,/?:@&=+$#-]}i", function ($m) {
+    return sprintf('%%%02X', ord($m[0]));
+  }, $uri);
+}
