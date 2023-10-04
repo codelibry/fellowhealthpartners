@@ -1,12 +1,18 @@
 .button,
 input[type="button"],
-input[type="submit"]
+input[type="submit"],
+button
     appearance: none
     display: inline-block
     padding: 19px 75px
+    +adaptive-value("padding-top", 19, 15, 0)
+    +adaptive-value("padding-bottom", 19, 15, 0)
+    +adaptive-value("padding-left", 75, 15, 0)
+    +adaptive-value("padding-right", 75, 15, 0)
     text-align: center
     // Font size pending
     border: 0
+    +adaptive-value("font-size", 21, 16, 0)
     svg
         margin-left: 15px
     &.button--fluid
