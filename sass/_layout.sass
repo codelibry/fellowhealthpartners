@@ -31,18 +31,23 @@
 	position: relative
 	padding-top: 120px
 	padding-bottom: 120px
+	+adaptive-value("padding-top", 120, 60, 0)
+	+adaptive-value("padding-bottom", 120, 60, 0)
 	&--spacing--sm
 		padding-top: 75px
 		padding-bottom: 75px
+		+adaptive-value("padding-top", 75, 40, 0)
+		+adaptive-value("padding-bottom", 75, 40, 0)
 	&--spacing--md
 		padding-top: 80px
 		padding-bottom: 80px
+		+adaptive-value("padding-top", 80, 40, 0)
+		+adaptive-value("padding-bottom", 80, 40, 0)
 	&--spacing--lg
 		padding-top: 80px
 		padding-bottom: 150px
-		+max-screen(1050px)
-			padding-top: 50px
-			padding-bottom: 100px
+		+adaptive-value("padding-top", 80, 50, 0)
+		+adaptive-value("padding-bottom", 150, 100, 0)
 	&--fullscreen
 		min-height: 70vh
 		display: flex
@@ -50,5 +55,9 @@
 		align-items: center
 		justify-content: center
 
+.mb
+	&-80
+		+adaptive-value("margin-bottom", 80, 40, 0)
 .pb
+	&-80
 	&-150

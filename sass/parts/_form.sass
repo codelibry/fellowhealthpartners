@@ -5,6 +5,9 @@ label
     line-height: 20px
     font-weight: 500
     margin-bottom: 5px
+    color: $color-black
+    span
+        color: $color-primary
 input,
 textarea
     font-family: $font-family-base
@@ -13,15 +16,16 @@ textarea
     width: 100%
     font-size: 18px
     line-height: 1.22
+    box-sizing: border-box
     &::placeholder
         font-weight: 500
+        color: $color-gray-2
 textarea
-    min-height: 184px
+    min-height: 180px
 input[type="submit"]
     font-size: 21px
     color: $color-white
     cursor: pointer
     background: $gradient-orange
-
 
 .form // Specific Styles for input/labels/textarea etc. for whole website

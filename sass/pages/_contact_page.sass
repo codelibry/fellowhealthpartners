@@ -1,0 +1,50 @@
+.contact_page
+    &__top
+        .row
+            +max-screen($breakpoint-lg)
+                row-gap: 30px
+            & > div
+                &:first-of-type
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                &.col-lg-3
+                    &:first-of-type
+
+                        & > div
+                            max-width: 306px
+                            margin-right: auto
+                            +max-screen($breakpoint-lg)
+                                max-width: none
+                                margin-right: 0
+
+                    &:last-of-type
+                        & > div
+                            max-width: 255px
+                            margin-left: auto
+                            +max-screen($breakpoint-lg)
+                                max-width: none
+                                margin-left: 0
+        .title_block
+            +max-screen($breakpoint-lg)
+                margin-bottom: 30px
+        .adress_block
+            display: flex
+            gap: 0 26px
+            +max-screen($breakpoint-xl)
+                flex-direction: column
+            a
+                display: flex
+                gap: 0 15px
+                svg, span
+                    align-self: center
+        &-content
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            // gap: 40px 0
+            +adaptive-value("row-gap", 40, 20, 0)
+    &__form
+        input,
+        textarea
+            margin-bottom: 10px
