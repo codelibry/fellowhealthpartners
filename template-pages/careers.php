@@ -3,7 +3,7 @@
 /* Template Name: Careers */
 get_header();
 
-$hero_title = get_field('title_block');
+$hero_title = get_field('title_block') ? get_field('title_block') : get_the_title();
 $hero_content = get_field('content_block');
 $hero_video = get_field('video_block');
 
@@ -22,32 +22,31 @@ $careers = new WP_Query(array(
     <?php get_template_part('template-parts/breadcrumbs/breadcrumbs'); ?>
     <div class="container">
         <div class="entry-content">
-            <?php if ($careers->have_posts()) : ?>
                 <section class="careers__hero section section--spacing--lg">
                     <div class="row d-md-flex">
                         <div class="col-12 col-lg-6">
                             <div class="title_block">
-                                <?php if ($hero_title) : ?>
-                                    <h1 class="font--weight--500 text-color-black">
-                                        <?php echo $hero_title; ?>
-                                    </h1>
-                                <?php else : ?>
-                                    <h1 class="font--weight--500 text-color-black">
-                                        <?php the_title(); ?>
-                                    </h1>
-                                <?php endif; ?>
+                                <h1 class="font--weight--500 text-color-black">
+                                    <?php echo $hero_title; ?>
+                                </h1>
                             </div>
-                            <div class="content-block font--weight--500 text-color-gray">
-                                <?php echo $hero_content; ?>
-                            </div>
+                            <?php if ($hero_content) : ?>
+                                <div class="content-block font--weight--500 text-color-gray">
+                                    <?php echo $hero_content; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="video-block">
-                                <div class="player-main">
-                                    <?php echo $hero_video; ?>
+
+                        <?php if ($hero_video) : ?>
+                            <div class="col-12 col-lg-6">
+                                <div class="video-block">
+                                    <div class="player-main">
+                                        <?php echo $hero_video; ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
+
                     </div>
                 </section>
 
@@ -63,18 +62,19 @@ $careers = new WP_Query(array(
                                 $salary = 'ds';
                                 $emp = 'full';
 
-                                if ($the_title == 'Account Support Associate' || $the_title == 'Revenue Cycle Associate' ||  $the_title == 'Client Onboarding Associate') {
+                                if ($the_title == 'Account Support Associate' || $the_title == 'Revenue Cycle Associate' ||  $the_title == 'Client Onboarding Associate') :
                                     $salary = 'hr';
-                                }
+                                endif;
 
-                                if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support Associate') {
+                                if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support Associate') :
                                     $emp = 'both';
-                                }
+                                endif; 
                             ?>
                                 <?php echo get_template_part('template-parts/card/block', 'career'); ?>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
                         </div><!-- .careers-grid-->
+
                         <?php if ($careers->max_num_pages > 1) : ?>
                             <script>
                                 var ajaxurl = '<?php echo site_url(); ?>/wp-admin/admin-ajax.php';
@@ -83,20 +83,23 @@ $careers = new WP_Query(array(
                                 var max_pages = '<?php echo $careers->max_num_pages; ?>';
                             </script>
                             <div class="button__block">
-                                <button id="loadmore" class="button button--sm bg--gradient-orange text-color-white font--weight--500">
-                                    <span><?php _e('Show more'); ?></span>
+                                <button id="loadmore" class="button bg--gradient-orange text-color-white">
+                                   <?php _e('Show more'); ?>
                                 </button>
                             </div>
                         <?php endif; ?>
+
                     <?php else : ?>
+
                         <div class="careers__list row">
                             <div class="col-12">
-                                <p class="text--size-32 text-color-black font--weight--500"><?php _e('No jobs'); ?></p>
+                                <p class="text--size-32 text-color-black"><?php _e('No jobs'); ?></p>
                             </div>
                         </div>
+
                     <?php endif; ?>
                 </section><!-- .careers__main -->
-            <?php endif; ?>
+            
         </div><!-- .entry-content -->
 
     </div><!-- .container -->

@@ -4,7 +4,7 @@ html, body
 body
 	position: relative
 	font-family: $font-family-base
-	ont-size: $default-font-size
+	+adaptive-value("font-size", 21, 16, 0)
 	font-style: normal
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
