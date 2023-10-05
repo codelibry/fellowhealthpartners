@@ -25,7 +25,6 @@ appearence();
 //blocks
 
 // Parts
-
+filter();
 videoBlock();
 show_more();
-filter();

@@ -10,7 +10,7 @@ $categories = get_categories(array(
 ));
 
 $args = [
-    'posts_per_page' => 10,
+    'posts_per_page' => -1,
 ];
 
 $query = new WP_Query($args);
@@ -51,55 +51,54 @@ $query = new WP_Query($args);
                                     <div class="fellow-heading mb-80">
                                         <div class="post-filters__titles">
                                             <div class="title-active filter-title title-all">
-                                                <h1 class="text-color-black">
-                                                    <?php _e('News & Thought Leadership'); ?>
-                                                </h1>
+                                                <h2 class="text-color-black">
+                                                    News & Thought Leadership
+                                                </h2>
                                             </div>
-                                            <!-- <?php foreach ($categories as $idx => $category) : ?>
+                                            <?php foreach ($categories as $idx => $category) : ?>
                                                 <div class="filter-title title-<?php echo $category->slug; ?>">
                                                     <?php echo _e($category->description); ?>
                                                 </div>
-                                            <?php endforeach; ?> -->
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
-
-                                    <?php
-                                    $count = 0;
-                                    /* Start the Loop */
-                                    while ($query->have_posts()) :
-                                        $query->the_post(); ?>
-                                        <?php if ($count < 3) : ?>
-                                            <?php $post_class = 'post-item section section--spacing--md filter-show-post show-post'; ?>
-                                        <?php else : ?>
-                                            <?php $post_class = 'post-item section section--spacing--md filter-show-post'; ?>
-                                        <?php endif; ?>
-                                        <div class="line"></div>
-                                        <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
-                                            <h3 class="post-item__title h5">
-                                                <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-                                            </h3>
-                                            <div class="content-block text-color-gray">
-                                                <?php the_excerpt(); ?>
-                                            </div><!-- .post-content -->
-                                            <div class="post-footer d-flex justify-content-between mt-2 mt-sm-4">
-                                                <span class="post-date text--size--17 text-color-gray"><?php echo get_the_date(); ?></span>
-                                                <div class="post-link">
-                                                    <a href="<?php echo get_permalink(); ?>" class="button text-color-primary d-flex align-items-center p-0">
-                                                        <?php _e('Read All'); ?>
-                                                        <?php echo get_inline_svg('arrows/arrow-right.svg'); ?>
-                                                    </a>
-                                                </div>
+                                </div>
+                                <?php
+                                $count = 0;
+                                /* Start the Loop */
+                                while ($query->have_posts()) :
+                                    $query->the_post(); ?>
+                                    <?php if ($count < 3) : ?>
+                                        <?php $post_class = 'post-item section section--spacing--md filter-show-post show-post'; ?>
+                                    <?php else : ?>
+                                        <?php $post_class = 'post-item section section--spacing--md filter-show-post'; ?>
+                                    <?php endif; ?>
+                                    <div class="line"></div>
+                                    <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
+                                        <h3 class="post-item__title h5">
+                                            <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+                                        </h3>
+                                        <div class="content-block text-color-gray">
+                                            <?php the_excerpt(); ?>
+                                        </div><!-- .post-content -->
+                                        <div class="post-footer d-flex justify-content-between mt-2 mt-sm-4">
+                                            <span class="post-date text--size--17 text-color-gray"><?php echo get_the_date(); ?></span>
+                                            <div class="post-link">
+                                                <a href="<?php echo get_permalink(); ?>" class="button text-color-primary d-flex align-items-center p-0">
+                                                    <?php _e('Read All'); ?>
+                                                    <?php echo get_inline_svg('arrows/arrow-right.svg'); ?>
+                                                </a>
                                             </div>
-                                        </article><!-- #post-<?php the_ID(); ?> -->
-                                        <?php $count++; ?>
-                                    <?php endwhile;
-                                    wp_reset_postdata(); ?>
-                                    <div class="post-show-more d-flex">
-                                        <div class="show-more-btn d-flex button button--outline text-color-primary mx-auto">
-                                            <?php echo get_inline_svg('Load.svg'); ?>
-                                            <span class="btn__name"><?php _e('Show more'); ?></span>
-                                            <span class="btn__count">(<?php echo $query->post_count; ?>)</span>
                                         </div>
+                                    </article><!-- #post-<?php the_ID(); ?> -->
+                                    <?php $count++; ?>
+                                <?php endwhile;
+                                wp_reset_postdata(); ?>
+                                <div class="post-show-more d-flex">
+                                    <div class="show-more-btn d-flex button button--outline text-color-primary mx-auto">
+                                        <?php echo get_inline_svg('Load.svg'); ?>
+                                        <span class="btn__name"><?php _e('Show more'); ?></span>
+                                        <span class="btn__count">(<?php echo $query->post_count; ?>)</span>
                                     </div>
                                 </div>
                             </div>
