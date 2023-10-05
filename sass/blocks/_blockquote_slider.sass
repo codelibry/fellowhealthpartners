@@ -1,0 +1,18 @@
+.blockquote_slider
+    &__list
+        +adaptive-value("margin-top", 57, 30, 0)
+        max-width: 1228px
+        margin-left: auto
+        margin-right: auto
+    &__title
+        +max-screen($breakpoint-sm)
+            text-align: center
+    &__button
+        +max-screen($breakpoint-lg)
+            margin-top: 30px
+        a.button
+            margin-left: auto
+            height: max-content
+            +max-screen($breakpoint-lg)
+                margin-left: auto
+                margin-right: auto

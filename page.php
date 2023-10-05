@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,19 +16,21 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 	<div class="container">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-	
-			endwhile; // End of the loop.
-		?>
+		<div class="page-blocks">
+			<?php
+			if (!post_password_required()) :
+				// Your custom code should here
+				the_acf_loop();
+			else :
+				// we will show password form here
+				echo get_the_password_form();
+			endif;
+			?>
+		</div>
 	</div>
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_footer();

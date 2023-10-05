@@ -37,35 +37,33 @@ function sliders() {
     });
   });
 
-  var testimonialsCarousel = $(".js-testimonials-carousel");
+  var testimonialsCarousel = $(".blockquote_slider__list");
   testimonialsCarousel.each(function () {
     var carousel = $(this);
-    var dots = carousel.parent().find(".js-testimonials-carousel-dots");
-    var arrows = carousel.parent().find(".js-testimonials-carousel-arrows");
+    // var dots = carousel.parent().find(".js-testimonials-carousel-dots");
+    // var arrows = carousel.parent().find(".js-testimonials-carousel-arrows");
 
     carousel.slick({
       slidesToShow: 1,
-      mobileFirst: true,
+      mobileFirst: false,
       dots: true,
-      arrows: true,
-      appendDots: dots,
-      appendArrows: arrows,
-      responsive: [
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          },
-        },
-        {
-          breakpoint: 1023,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          },
-        },
-      ],
+      arrows: false,
+      // responsive: [
+      //   {
+      //     breakpoint: 767,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1,
+      //     },
+      //   },
+      //   {
+      //     breakpoint: 1023,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1,
+      //     },
+      //   },
+      // ],
     });
   });
 

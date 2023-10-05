@@ -1,6 +1,6 @@
 <div class="col-12 col-md-6">
     <div class="card card--careers bg--white">
-        <h3 class="h5 text-color-black"><a href=" <?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <h3 class="h5 text-color-black"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
         <div class="line"></div>
         <?php if (get_the_excerpt()) : ?>
             <div class="description text-color-gray">

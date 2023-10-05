@@ -85,3 +85,28 @@ img
 		color: $color-orange-2
 	&-orange-3
 		color: $color-orange-3
+
+/* the slides */
+.slick-slide
+	margin: 0 27px
+
+  /* the parent */
+.slick-list
+	margin: 0 -27px
+
+.slick-dots
+	bottom: 0px
+	li
+		width: auto
+		height: auto
+		&.slick-active
+			button
+				background-color: $color-orange-2
+		button
+			width: 16px
+			height: 16px
+			border-radius: 9999px
+			border: 1px $color-black solid
+			background-color: $color-white
+			&::before
+				display: none

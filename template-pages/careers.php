@@ -46,7 +46,6 @@ $careers = new WP_Query(array(
                             </div>
                         </div>
                     <?php endif; ?>
-
                 </div>
             </section>
 
