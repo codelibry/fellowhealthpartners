@@ -9,13 +9,13 @@
 	+max-screen($breakpoint-lg)
 		max-width: 100%
 	+max-screen($breakpoint-md)
-		padding-left: 20px
-		padding-right: 20px
+		padding-left: 30px
+		padding-right: 30px
 	+max-screen($breakpoint-sm)
 		max-width: 100%
 	+max-screen(330px)
-		padding-left: 10px
-		padding-right: 10px
+		padding-left: 20px
+		padding-right: 20px
 
 .row
 	&--x
@@ -60,6 +60,13 @@
 .mb
 	&-80
 		+adaptive-value("margin-bottom", 80, 40, 0)
+	&-74
+		+adaptive-value("margin-bottom", 74, 40, 0)
+.mt
+	&-80
+		+adaptive-value("margin-top", 80, 40, 0)
+	&-120
+		+adaptive-value("margin-top", 120, 60, 0)
 .pb
 	&-80
 	&-150

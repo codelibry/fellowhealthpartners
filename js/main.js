@@ -28,3 +28,4 @@ appearence();
 
 videoBlock();
 show_more();
+filter();

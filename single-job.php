@@ -67,7 +67,6 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
                     <?php endif; ?>
                 </div>
 
-
                 <div class="job-col col-12 col-lg-6">
                     <?php if (get_field('job_skillsqualifications')) : ?>
                         <section>
@@ -79,9 +78,7 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
                         </section>
                     <?php endif; ?>
                 </div>
-
             </div>
-
 
             <footer class="job-footer pb-4 pb-lg-10">
                 <div class="row pb-4">
