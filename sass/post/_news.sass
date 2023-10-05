@@ -41,59 +41,59 @@
                 +adaptive-value("margin-bottom", 40, 20, 0)
     .show-more-btn
         gap: 0 10px
-    .sidebar
-        width: 100%
-        max-width: 520px
-        margin-left: auto
-        +max-screen($breakpoint-xl)
-            margin-left: 30px
-        +max-screen($breakpoint-lg)
-            max-width: 600px
-            margin-left: auto
-            margin-right: auto
-            margin-top: 60px
 
-        form
-            background: $color-gray-3
-            +adaptive-value("padding", 60, 30, 0)
-            h2
-                +adaptive-value("margin-bottom", 40, 20, 0)
-            input[type=submit]
-                margin-top: 20px
-
-        #tag_cloud-2
-            font-family: $font-family-second
-            color: $color-black
-            opacity: 0.70
-            margin-top: 60px
-            .widget-title
-                display: none
-            .tagcloud
-                display: flex
-                flex-wrap: wrap
-                gap: 20px
-                a
-                    align-self: center
-                    text-transform: uppercase
     .list_logos
         position: relative
         padding: 107px
         +adaptive-value("margin-bottom", 163, 80, 0)
-
-.as-seen-in-grid
-    display: flex
-    flex-wrap: wrap
-
-    &__item
-        padding: 0 30px
-        margin-bottom: 30px
-        +adaptive-value("width", 230, 160, 0)
+    .as-seen-in-grid
         display: flex
-        align-items: center
-        justify-content: center
+        flex-wrap: wrap
 
-        +max-screen($breakpoint-md)
-            width: 25%
+        &__item
+            padding: 0 30px
+            margin-bottom: 30px
+            +adaptive-value("width", 230, 160, 0)
+            display: flex
+            align-items: center
+            justify-content: center
 
-    img
-        mix-blend-mode: multiply
+            +max-screen($breakpoint-md)
+                width: 25%
+
+        img
+            mix-blend-mode: multiply
+.sidebar
+    width: 100%
+    max-width: 520px
+    margin-left: auto
+    +max-screen($breakpoint-xl)
+        margin-left: 30px
+    +max-screen($breakpoint-lg)
+        max-width: 600px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 60px
+
+    form
+        background: $color-gray-3
+        +adaptive-value("padding", 60, 30, 0)
+        h2
+            +adaptive-value("margin-bottom", 40, 20, 0)
+        input[type=submit]
+            margin-top: 20px
+
+    .widget_tag_cloud
+        font-family: $font-family-second
+        color: $color-black
+        opacity: 0.70
+        margin-top: 60px
+        .widget-title
+            display: none
+        .tagcloud
+            display: flex
+            flex-wrap: wrap
+            gap: 20px
+            a
+                align-self: center
+                text-transform: uppercase

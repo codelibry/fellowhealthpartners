@@ -116,6 +116,9 @@ h6,.h6
 
 	&--italic
 		font-style: italic
+	&--normal,
+	&--normal *
+		font-style: normal
 	&--weight
 		&--thin,&--100
 			font-weight: 100
@@ -177,6 +180,8 @@ h6,.h6
 	h2,h3,h4,h5,h6
 		margin-top: 20px
 		margin-bottom: 40px
+		.single-post &
+			color: $color-black
 		+max-screen($breakpoint-xm)
 			margin-top: 20px
 			margin-bottom: 20px
@@ -256,34 +261,38 @@ h6,.h6
 		margin: 11px 0
 		line-height: $default-line-height
 		padding: 2px 4px
-		border: 1px solid #dde4e9
-		background-color: #F6F6F6
-		color: #232527
+		border: 1px solid $color-gray-1
+		background-color: $color-gray-2
+		color: $color-black
 		display: inline-block
 	pre
 		white-space: pre-wrap
 	blockquote
-		margin: rem(25px 0)
+		+adaptive-value("margin-top", 40, 20, 0)
+		+adaptive-value("margin-bottom", 40, 20, 0)
 		position: relative
-		padding-left: 21px
+		+adaptive-value("padding", 60, 30, 0)
+		border: 2px $color-orange-2 solid
 		p
-			font-size: 26px
-			line-height: 34px
-			font-weight: 500
-			&:nth-last-child(1)
-				font-size: 16px
-				font-weight: 300
-		+max-screen($breakpoint-md)
-
-		&:before
-			content: ''
+			margin-bottom: 10px
+			font-style: italic
+			+adaptive-value("font-size", 32, 18, 0)
+			font-weight: 400
+			color: $color-black
+			&:last-of-type
+				margin-bottom: 0
+		cite
+			font-style: normal
+		footer
 			position: absolute
-			top: 0
-			left: 0px
-			width: 11px
-			height: 11px
-			background-image: url(../assets/icons/quote.svg)
-			background-repeat: no-repeat
-			background-size: contain
-			background-position: center
-			z-index: -1
+			content: ''
+			z-index: 2
+			padding: 8px 20px
+			display: flex
+			flex-direction: column
+			+adaptive-value("bottom", -40, -20, 0)
+			+adaptive-value("right", 40, 20, 0)
+			margin-bottom: 10px
+			+max-screen($breakpoint-lg)
+				margin-bottom: 0
+		+max-screen($breakpoint-md)
