@@ -119,6 +119,8 @@ function get_inline_svg_social($name)
   endif;
   return '';
 }
+
+
 /**
  * Clear phone for href
  */
@@ -160,35 +162,6 @@ function display_select_filter()
 
 add_action('restrict_manage_posts', 'display_select_filter');
 
-function my_excerpt_length($length)
-{
-  return 50;
-}
-
-add_filter('excerpt_length', 'my_excerpt_length');
-
-
-
-
-add_filter('woocommerce_add_to_cart_validation', 'bbloomer_only_one_in_cart', 99, 2);
-
-function bbloomer_only_one_in_cart($passed, $added_product_id)
-{
-
-  // empty cart first: new item will replace previous
-  wc_empty_cart();
-
-  return $passed;
-}
-
-
-add_filter('woocommerce_add_to_cart_redirect', 'misha_skip_cart_redirect_checkout');
-
-function misha_skip_cart_redirect_checkout($url)
-{
-  return wc_get_checkout_url();
-}
-
 function removeParam($url, $param)
 {
   $url = preg_replace('/(&|\?)' . preg_quote($param) . '=[^&]*$/', '', $url);
@@ -198,19 +171,6 @@ function removeParam($url, $param)
 
 
 // Include our function when all wordpress stuff is loaded
-
-
-
-// remove wp version number from scripts and styles
-function remove_css_js_version($src)
-{
-  if (strpos($src, '?ver='))
-    $src = remove_query_arg('ver', $src);
-  return $src;
-}
-
-add_filter('style_loader_src', 'remove_css_js_version', 9999);
-add_filter('script_loader_src', 'remove_css_js_version', 9999);
 
 
 function add_page_name_body_class($classes)
