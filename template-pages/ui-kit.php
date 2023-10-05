@@ -8,12 +8,6 @@ Template Name: Ui Kit
 
 <div class="container" style="padding-top: 150px">
 
-	// Pending task
-
-	</br>
-	1. Styles for .h1 - .h6
-	2. Styles for .content-block
-	3. Spacings -> .section / .section--sm / .section--md
 
 	<div class="ui__block py-5">
 		<h2 class="ui__block__title text-color-primary mb-4">Breadcrumbs</h2>
@@ -53,5 +47,10 @@ Template Name: Ui Kit
 
 
 </div> <!-- .container -->
+
+<div class="card card--careers"></div>
+
+<div class="card card--testimonials"></div>
+
 
 <?php get_footer(); ?>
