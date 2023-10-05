@@ -14,6 +14,7 @@
             width: 100vw
             right: 50%
             margin-right: -50vw
+            // new gradient
             background: linear-gradient(180.0deg, #FF851F 34.6%, #FAE331 100%)
     .inner
         +max-screen($breakpoint-lg)
@@ -40,10 +41,6 @@
             width: 100%
             +adaptive-value("width", 227, 140, 0)
             max-width: 227px
-            // +max-screen($breakpoint-lg)
-            //     width: 12vw
-            // +max-screen($breakpoint-md)
-            //     width: 50vw
     &__contacts
         display: flex
         position: absolute
@@ -58,8 +55,6 @@
         +max-screen(1800px)
             gap: 0 40px
             padding: 0 40px
-            // right: -8vw
-            // width: 25vw
         +max-screen($breakpoint-xm)
             right: -40px
         +max-screen($breakpoint-xl)
