@@ -1,0 +1,37 @@
+.employee
+    display: flex
+    flex-direction: column
+    +adaptive-value("width", 350, 250, 0)
+    +adaptive-value("padding-left", 30, 25, 0)
+    +adaptive-value("padding-right", 30, 25, 0)
+    +adaptive-value("padding-bottom", 59, 40, 0)
+    // padding: 0 35px 59px
+    &__image
+        border-radius: 50%
+        overflow: hidden
+        margin-bottom: 30px
+        img
+            width: 100%
+            object-fit: cover
+    &__title
+        min-height: 72px
+        margin-bottom: 10px
+    &__position
+        margin-bottom: 10px
+    .bio_block
+        margin-top: 10px
+        gap: 0 20px
+        justify-content: center
+        a
+            align-self: center
+            display: flex
+            line-height: 100%
+            height: max-content
+            img, svg
+                display: block
+                align-self: center
+                +adaptive-value("width", 30, 20, 0)
+            span
+                transform: translateY(5px)
+            svg
+                transform: translateY(3px)

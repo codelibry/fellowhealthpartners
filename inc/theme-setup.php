@@ -75,6 +75,10 @@ if (!function_exists('fellow_setup')) :
 				'flex-height' => true,
 			)
 		);
+
+		if (function_exists('add_image_size')) {
+			add_image_size('work_img', 300, 300, true);
+		}
 	}
 endif;
 add_action('after_setup_theme', 'fellow_setup');
