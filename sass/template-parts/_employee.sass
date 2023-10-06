@@ -1,0 +1,27 @@
+.employee
+    display: flex
+    flex-direction: column
+    max-width: 350px
+    padding: 0 35px 59px
+    &__image
+        border-radius: 50%
+        overflow: hidden
+        margin-bottom: 30px
+    &__title
+        min-height: 72px
+        margin-bottom: 10px
+    &__position
+        margin-bottom: 10px
+    .bio_block
+        margin-top: 10px
+        gap: 0 20px
+        justify-content: center
+        a
+            align-self: center
+            display: flex
+            line-height: 100%
+            img
+                align-self: center
+                +adaptive-value("width", 30, 20, 0)
+            span
+                transform: translateY(5px)

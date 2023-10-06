@@ -68,5 +68,29 @@ function create_posttypes()
 			'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
 		)
 	);
+
+	register_post_type(
+		'employee',
+		array(
+			'labels' => array(
+				'name' => __('Employees'),
+				'singular_name' => __('Employee')
+			),
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'show_in_menu' => true,
+			'exclude_from_search' => true,
+			'query_var' => true,
+			'rewrite' => array(
+				'slug' => 'client'
+			),
+			'capability_type' => 'post',
+			'has_archive' => false,
+			'hierarchical' => false,
+			'menu_position' => 13,
+			'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+		)
+	);
 }
 add_action('init', 'create_posttypes');
