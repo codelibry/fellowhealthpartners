@@ -27,7 +27,7 @@ function fellow_scripts()
         )
     );
 
-    wp_enqueue_style('fellow-style', get_stylesheet_uri(), array(), _S_VERSION);
+    wp_enqueue_style('fellow-style', get_stylesheet_uri(), array(), '_S_VERSION');
     wp_enqueue_style('slick-theme', get_template_directory_uri() . '/js/libs/slick/slick-theme.css');
     wp_enqueue_style('slick', get_template_directory_uri() . '/js/libs/slick/slick.css');
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.min.css');

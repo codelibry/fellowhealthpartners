@@ -2,6 +2,7 @@ import $ from "jquery";
 import "slick-carousel";
 
 function sliders() {
+  // old code
   $(".hero-unit").each(function () {
     let block = $(this);
     let slider = block.find(".js-hero-unit-images");
@@ -34,36 +35,6 @@ function sliders() {
     });
     slider_2.on("init", function () {
       $(window).trigger("heightChanges");
-    });
-  });
-
-  var testimonialsCarousel = $(".blockquote_slider__list");
-  testimonialsCarousel.each(function () {
-    var carousel = $(this);
-    // var dots = carousel.parent().find(".js-testimonials-carousel-dots");
-    // var arrows = carousel.parent().find(".js-testimonials-carousel-arrows");
-
-    carousel.slick({
-      slidesToShow: 1,
-      mobileFirst: false,
-      dots: true,
-      arrows: false,
-      // responsive: [
-      //   {
-      //     breakpoint: 767,
-      //     settings: {
-      //       slidesToShow: 1,
-      //       slidesToScroll: 1,
-      //     },
-      //   },
-      //   {
-      //     breakpoint: 1023,
-      //     settings: {
-      //       slidesToShow: 1,
-      //       slidesToScroll: 1,
-      //     },
-      //   },
-      // ],
     });
   });
 
@@ -103,6 +74,85 @@ function sliders() {
       $(window).trigger("heightChanges");
     });
   });
+
+  // new code
+  var testimonialsCarousel = $(".blockquote_slider__list");
+  testimonialsCarousel.each(function () {
+    var carousel = $(this);
+
+    carousel.slick({
+      slidesToShow: 1,
+      mobileFirst: false,
+      dots: true,
+      arrows: false,
+    });
+  });
+
+  function tickerSliders() {
+    $(".slider").each(function () {
+      const sliders = $(this).find(".tickers-block__slider");
+
+      sliders.each(function () {
+        const slider = $(this);
+        const sliderwrap = $(this).find(".tickers-block__slider-wrap");
+
+        const wrapWidth = slider[0].scrollWidth;
+
+        slider.append(sliderwrap.clone());
+
+        var reset = function () {
+          if (slider.hasClass("slider-left-direction")) {
+            let margin = slider.css("margin-left");
+            slider.css("margin-left", margin);
+            slider.animate(
+              {
+                "margin-left": "-" + (wrapWidth - parseInt(margin)) + "px",
+              },
+              40000,
+              "linear",
+              reset
+            );
+            console.log(slider.css("margin-left"));
+            slider.append(sliderwrap.clone());
+          }
+
+          if (slider.hasClass("slider-right-direction")) {
+            let margin = slider.css("margin-right");
+            slider.css("margin-right", margin);
+            slider.animate(
+              {
+                "margin-right": "-" + (wrapWidth - parseInt(margin)) + "px",
+              },
+              40000,
+              "linear",
+              reset
+            );
+            console.log(slider.css("margin-left"));
+            slider.append(sliderwrap.clone());
+          }
+        };
+
+        // slider.on('mouseenter', function () {
+        //     slider.stop();
+        //     // slider.css('animation-play-state', )
+
+        // });
+
+        slider.hover(
+          function () {
+            slider.clearQueue();
+            slider.stop();
+          },
+          function () {
+            reset();
+          }
+        );
+
+        reset.call(sliderwrap);
+      });
+    });
+  }
+  tickerSliders();
 }
 
 export { sliders };
