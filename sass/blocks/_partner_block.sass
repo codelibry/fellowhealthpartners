@@ -1,0 +1,30 @@
+.partner
+    .title_block
+        +max-screen($breakpoint-lg)
+            text-align: center
+    .top_content
+        margin-bottom: 38px
+        +adaptive-value("margin-bottom", 38, 30, 0)
+
+    .top_content,.bottom_content
+        max-width: 700px
+        margin-left: auto
+        +max-screen($breakpoint-lg)
+            margin-right: auto
+    .images_list
+        justify-content: flex-start
+        margin-top: 102px
+        align-self: center
+        flex-wrap: wrap
+        +adaptive-value("margin-top", 102, 40, 0)
+        +adaptive-value("column-gap", 42, 30, 0)
+        +max-screen($breakpoint-lg)
+            margin-bottom: 30px
+            justify-content: center
+        img
+            width: max-content
+            +adaptive-value("max-width", 201, 130, 0)
+            +max-screen($breakpoint-xl)
+                width: auto
+            &.second
+                +adaptive-value("max-width", 80, 50, 0)
