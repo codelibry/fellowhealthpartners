@@ -1,0 +1,51 @@
+.number_blocks
+    &__main
+        display: flex
+        justify-content: space-between
+        gap: 0 20px
+        +max-screen(1200px)
+            flex-direction: column
+            gap: 20px 0
+        .vertical_block
+            flex: 0 0 16.66667%
+            max-width: 16.66667%
+            +adaptive-value("padding", 40, 20, 0)
+            +adaptive-value("min-height", 552, 100, 0)
+            justify-content: space-between
+            background-color: $color-gray-3
+            border: 1px transparent solid
+            +max-screen(1200px)
+                flex: 0 0 100%
+                max-width: 100%
+            &.active
+                flex: 0 0 33.3332%
+                max-width: 33.3332%
+                padding: 0
+                border: 1px $color-gray-3 solid
+                justify-content: flex-start
+                background-color: $color-white
+                +max-screen(1200px)
+                    flex: 0 0 100%
+                    max-width: 100%
+                .number
+                    display: none
+                .title
+                    display: none
+                .content
+                    display: block
+                .title_active
+                    display: block
+            .title
+                max-width: 90%
+                h3
+                    font-size: 21px !important
+            .title_active
+                display: none
+                p
+                    gap: 0 10px
+                +adaptive-value("padding", 40, 20, 0)
+            .content
+                display: none
+                +adaptive-value("padding", 40, 20, 0)
+            ol
+                margin: 0
