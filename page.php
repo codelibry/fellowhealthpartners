@@ -28,6 +28,7 @@ get_header();
 				echo get_the_password_form();
 			endif;
 			?>
+			<?php echo get_template_part('template-parts/parts/popup'); ?>
 		</div>
 	</div>
 </main><!-- #main -->

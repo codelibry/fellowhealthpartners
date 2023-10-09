@@ -1,1 +1,189 @@
+.popup
+    +adaptive-value("padding", 80, 40, 0)
+    &Wrapper
+        width: 62%
+        position: fixed
+        top: 0
+        left: 100%
+        bottom: 0
+        background: #fff
+        z-index: 100
+        transition: .5s
+        overflow: scroll
+        overflow-x: hidden
+        +max-screen(1200px)
+            width: 75%
+        +max-screen($breakpoint-lg)
+            width: 80%
+        +max-screen($breakpoint-md)
+            width: 90%
+        +max-screen($breakpoint-sm)
+            width: 100%
+    &__top
+        width: 100%
+        display: flex
+        gap: 0 40px
+        +max-screen($breakpoint-md)
+    &__overlay
+        position: fixed
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: $color-black
+        opacity: 0
+        transition: .5s
+        z-index: -1
+    &__image
+        border-radius: 50%
+        overflow: hidden
+        +max-screen($breakpoint-lg)
+        +max-screen($breakpoint-md)
+        img
+            width: 100%
+            opacity: 0
+            transition: .3s
+            +adaptive-value("min-width", 200, 80, 0)
+            +max-screen($breakpoint-md)
 
+        &.active-image
+            img
+                opacity: 1
+    &__title
+        font-weight: 800
+        width: 100%
+        &Wrapper
+            display: flex
+            width: 100%
+            // flex-direction: column
+            // justify-content: flex-end
+            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-md)
+
+    &__subtitle
+        font-weight: 400
+
+    &__flex
+        display: flex
+        +max-screen($breakpoint-lg)
+            flex-direction: column
+
+    &__content
+        &:not(:empty)
+            margin-top: 0
+            color: $color-black
+            padding-left: 0
+            padding-bottom: 80px
+            +max-screen(1440px)
+                padding-bottom: 64px
+            +max-screen($breakpoint-lg)
+                width: 100%
+                padding-bottom: 48px
+            +max-screen($breakpoint-md)
+                padding-bottom: 32px
+            &Wrapper
+                margin-left: auto
+                +max-screen($breakpoint-lg)
+                    width: 100%
+
+    &__content-title
+        &:not(:empty)
+            flex: 1 1 33%
+            padding: 0 60px
+            width: 33%
+            color: $color-black
+            font-weight: 800
+            line-height: calc(31 / 26)
+            padding-bottom: 10rem
+            margin-top: 50px
+            +max-screen($breakpoint-lg)
+                width: 100%
+                margin-top: 0
+                padding: 0 56px
+            +max-screen($breakpoint-md)
+                padding: 0 32px
+
+    &__text
+        padding: 40px 0px
+        +max-screen($breakpoint-lg)
+        +max-screen($breakpoint-md)
+        &Wrapper
+            margin-left: auto
+            align-self: center
+            width: 100%
+            +max-screen($breakpoint-lg)
+
+    &__close
+        position: absolute
+        top: 60px
+        right: 60px
+        width: 44px
+        height: 44px
+        cursor: pointer
+        border-radius: 50%
+        background: $gradient-orange
+        &::after
+            position: absolute
+            content: ''
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-image: url('../assets/icons/close_icon.svg')
+            background-size: 24px
+            background-position: center
+            background-repeat: no-repeat
+
+        +max-screen($breakpoint-lg)
+            width: 32px
+            height: 32px
+            top: 24px
+            right: 24px
+        +max-screen($breakpoint-md)
+            width: 28px
+            height: 28px
+            top: 24px
+            right: 24px
+.active-popup
+    overflow: hidden
+    .popup
+        &Wrapper
+            left: 38%
+            +max-screen(1200px)
+                left: 25%
+            +max-screen($breakpoint-lg)
+                left: 20%
+            +max-screen($breakpoint-md)
+                left: 10%
+            +max-screen($breakpoint-sm)
+                left: 0
+        &__overlay
+            opacity: 0.4
+            z-index: 99
+.admin-bar
+    .popupWrapper
+        top: 32px
+        +max-screen($breakpoint-md)
+            top: 46px
+
+// Specific for Careers Page
+.popup
+    &-content-links
+        .bio
+            display: none
+    &__title
+        margin-bottom: 10px
+    .line
+        margin: 10px 0
+    .bio_block
+        gap: 0 20px
+        justify-content: flex-start
+        a:not(.bio)
+            align-self: center
+            display: flex
+            line-height: 100%
+            height: max-content
+        img, svg
+            display: block
+            align-self: center
+            +adaptive-value("width", 30, 20, 0)

@@ -13,7 +13,7 @@ import { appearence } from "./animations/appearence";
 import { sliders } from "./parts/slider";
 import { show_more } from "./parts/ajax";
 import { filter } from "./parts/filter";
-import { popup } from "./parts/popup";
+import { initPopups } from "./parts/popup";
 import { full_row } from "./parts/full_row";
 import { videoBlock } from "./parts/video";
 
@@ -29,3 +29,4 @@ filter();
 videoBlock();
 show_more();
 sliders();
+initPopups();
