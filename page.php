@@ -17,7 +17,9 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-
+	<?php if (!is_home()) : ?>
+		<?php get_template_part('template-parts/breadcrumbs/breadcrumbs'); ?>
+	<?php endif; ?>
 	<div class="page-blocks">
 		<?php
 		if (!post_password_required()) :
