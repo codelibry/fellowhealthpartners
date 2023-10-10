@@ -1,0 +1,20 @@
+.price_block
+    &__top
+        span
+            color: $color-secondary
+    &__main
+        .subtitle_block
+            margin-top: 20px
+            +max-screen($breakpoint-lg)
+                margin-top: 0
+            p
+                +adaptive-value("margin-top", 36, 20, 0)
+        .content-block
+            +adaptive-value("margin-top", 76, 40, 0)
+            ul, ol
+                color: $color-gray-1
+    &__inner
+        max-width: 812px
+        margin-left: auto
+        +max-screen($breakpoint-lg)
+            max-width: none

@@ -78,6 +78,7 @@ if (!function_exists('fellow_setup')) :
 
 		if (function_exists('add_image_size')) {
 			add_image_size('work_img', 300, 300, true);
+			add_image_size('full_img', 1920, 580, true);
 		}
 	}
 endif;

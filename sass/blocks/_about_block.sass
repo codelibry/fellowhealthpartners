@@ -1,0 +1,76 @@
+.about_block
+    &__inner
+        max-width: 720px
+        +max-screen($breakpoint-lg)
+            max-width: none
+    .leadeship_block
+        +max-screen($breakpoint-lg)
+            max-width: 720px
+            margin-left: auto
+            margin-right: auto
+        &__inner
+            position: relative
+            +adaptive-value("padding-left", 60, 20, 0)
+            +adaptive-value("padding-right", 60, 20, 0)
+            +adaptive-value("padding-top", 70, 40, 0)
+            +adaptive-value("padding-bottom", 40, 20, 0)
+            border: 2px $color-primary solid
+            p
+                margin-bottom: 10px
+                max-width: 530px
+                margin-left: auto
+                margin-right: auto
+            div:not(.leadeship_block__top)
+                max-width: 530px
+                margin-left: auto
+                margin-right: auto
+        &__top
+            position: absolute
+            top: -45px
+            border-radius: 10px
+            display: block
+            width: 90%
+            +adaptive-value("padding-left", 110, 20, 0)
+            +adaptive-value("padding-right", 110, 20, 0)
+            +adaptive-value("padding-top", 16, 10, 0)
+            +adaptive-value("padding-bottom", 16, 10, 0)
+            left: 50%
+            transform: translateX(-50%)
+            +max-screen($breakpoint-xl)
+                top: -75px
+            +max-screen($breakpoint-lg)
+                top: -45px
+            +max-screen(450px)
+                top: -75px
+
+            h3
+                margin-bottom: 10px
+            p
+                margin-bottom: 0
+        &__image
+            max-width: 280px
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 60px
+            +max-screen($breakpoint-xl)
+                margin-bottom: 90px
+            +max-screen($breakpoint-lg)
+                margin-bottom: 60px
+            +max-screen(450px)
+                margin-bottom: 90px
+            img
+                border-radius: 50%
+        &__phones
+            display: flex
+            justify-content: space-between
+            gap: 15px 0
+            +max-screen($breakpoint-xl)
+                flex-direction: column
+            +max-screen($breakpoint-lg)
+                flex-direction: row
+            +max-screen($breakpoint-sm)
+                flex-direction: column
+            a
+                gap: 0 15px
+                svg
+                    align-self: center
