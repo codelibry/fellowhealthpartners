@@ -17,23 +17,6 @@ if (!defined('_S_VERSION')) {
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if (defined('JETPACK__VERSION')) {
-    require get_template_directory() . '/inc/jetpack.php';
-}
-
-if (!isset($redux_demo)) {
-    require_once(dirname(__FILE__) . '/inc/admin-config.php');
-}
-
 require get_template_directory() . '/inc/aq_resizer.php';
 require get_template_directory() . '/inc/shortcodes.php';
 
