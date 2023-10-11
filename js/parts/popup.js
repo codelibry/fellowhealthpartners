@@ -41,12 +41,20 @@ function popupListeners() {
       .find(".popup-content-links")
       .html();
     var content = $(this).closest(".popup-item").find(".popup-content").html();
+
+    var referenses = $(this)
+      .closest(".popup-item")
+      .find(".popup-referenses")
+      .html();
+    var awards = $(this).closest(".popup-item").find(".popup-awards").html();
     $(".popup__title").html(title);
     $(".popup__subtitle").html(subtitle);
     $(".popup__text").html(text);
     $(".popup__content-title").html(contentTitle);
     $(".popup__content").html(content);
     $(".popup-content-links").html(links);
+    $(".popup__referenses").html(referenses);
+    $(".popup__awards").html(awards);
     $(".popup__image img")
       .attr("src", image)
       .load(function () {

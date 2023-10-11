@@ -54,6 +54,7 @@ $the_query = new WP_Query($args);
                 </div>
             <?php endif; ?>
         </div>
+        <?php echo get_template_part('template-parts/parts/cases_popup'); ?>
     </div>
 </main><!-- #main -->
 <?php

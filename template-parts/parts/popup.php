@@ -1,5 +1,5 @@
 <div class="popupWrapper">
-    <div class="popup">
+    <div class="popup popup--leadership">
         <div class="popup__top">
             <div class="popup__image"><img src="" alt=""></div>
             <div class="popup__titleWrapper">
