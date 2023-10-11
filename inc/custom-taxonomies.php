@@ -16,7 +16,7 @@ function add_custom_taxonomies()
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"show_admin_column" => false,
+		"show_admin_column" => true,
 		"show_in_rest" => true,
 		"show_tagcloud" => false,
 		"rest_base" => "resources_type",

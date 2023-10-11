@@ -228,3 +228,13 @@ function fellow_pingback_header()
   }
 }
 add_action('wp_head', 'fellow_pingback_header');
+
+
+add_filter('get_the_archive_title', function ($title) {
+  if (is_category()) {
+    $title = single_cat_title('', false);
+  } elseif (is_post_type_archive()) {
+    $title = post_type_archive_title('', false);
+  }
+  return $title;
+});
