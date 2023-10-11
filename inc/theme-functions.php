@@ -144,13 +144,13 @@ function get_href_email($email)
 function display_select_filter()
 {
   global $post_type;
-  if ($post_type == 'cases') { // must change post_type to yours
-    $taxonomy = 'Category-type'; // must change taxonomy to yours
+  if ($post_type == 'testimonials_cases') { // must change post_type to yours
+    $taxonomy = 'testimonials_category'; // must change taxonomy to yours
     $terms = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]);
 ?>
-    <label class="screen-reader-text" for="<?= $taxonomy; ?>_filter"><?= esc_html__("Case", 'my-domain'); ?></label>
+    <label class="screen-reader-text" for="<?= $taxonomy; ?>_filter"><?= esc_html__("Testimonials & Cases", 'fhp'); ?></label>
     <select name="<?= $taxonomy; ?>" id="<?= $taxonomy; ?>_filter">
-      <option value=""><?php _e("All cases", 'my-domain'); ?></option>
+      <option value=""><?php _e("All Testimonials & Cases", 'fhp'); ?></option>
       <?php foreach ($terms as $k => $v) : ?>
         <?php $selected = (!empty($_GET[$taxonomy]) && $_GET[$taxonomy] === $v->slug) ? ' selected="selected"' : ''; ?>
         <option value="<?= $v->slug; ?>" <?= $selected; ?>><?= $v->name; ?></option>
