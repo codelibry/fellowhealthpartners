@@ -6,18 +6,18 @@
 */
 function create_posttypes()
 {
-	register_post_type(
-		'testimonials',
-		array(
-			'labels' => array(
-				'name' => __('Testimonials'),
-				'singular_name' => __('Testimonial')
-			),
-			'public' => true,
-			'has_archive' => false,
-			'supports' => array('title', 'editor', 'page-attributes')
-		)
-	);
+	// register_post_type(
+	// 	'testimonials',
+	// 	array(
+	// 		'labels' => array(
+	// 			'name' => __('Testimonials'),
+	// 			'singular_name' => __('Testimonial')
+	// 		),
+	// 		'public' => true,
+	// 		'has_archive' => false,
+	// 		'supports' => array('title', 'editor', 'page-attributes')
+	// 	)
+	// );
 
 	register_post_type(
 		'leadership',
@@ -83,13 +83,37 @@ function create_posttypes()
 			'exclude_from_search' => true,
 			'query_var' => true,
 			'rewrite' => array(
-				'slug' => 'client'
+				'slug' => 'employee'
 			),
 			'capability_type' => 'post',
 			'has_archive' => false,
 			'hierarchical' => false,
 			'menu_position' => 13,
 			'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+		)
+	);
+
+	register_post_type(
+		'testimonials_cases',
+		array(
+			'labels' => array(
+				'name' => __('Testimonials & Case Studies'),
+				'singular_name' => __('Testimonial & Case Study')
+			),
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'show_in_menu' => true,
+			'exclude_from_search' => true,
+			'query_var' => true,
+			'rewrite' => array(
+				'slug' => 'testimonials'
+			),
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'menu_icon' => 'dashicons-format-chat',
+			'supports' => array('title', 'editor', 'thumbnail')
 		)
 	);
 }
