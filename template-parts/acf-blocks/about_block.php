@@ -11,12 +11,12 @@ $leadership = get_sub_field('choose_leadership');
         <div class="about_block__main">
             <div class="row">
                 <div class="col-lg-6">
+                    <?php if ($title) : ?>
+                        <div class="title_block mb-40">
+                            <h2 class="h1"><?php echo $title; ?></h2>
+                        </div>
+                    <?php endif; ?>
                     <div class="about_block__inner mr-lg-auto">
-                        <?php if ($title) : ?>
-                            <div class="title_block mb-40">
-                                <h2 class="h1"><?php echo $title; ?></h2>
-                            </div>
-                        <?php endif; ?>
                         <?php if ($subtitle) : ?>
                             <div class="subtitle_block mb-60">
                                 <h3 class="h5 text-color-gray"><?php echo $subtitle; ?></h3>
@@ -28,9 +28,9 @@ $leadership = get_sub_field('choose_leadership');
                             </div>
                         <?php endif; ?>
                     </div>
-
                 </div>
-                <div class="col-lg-6 mt-2 mt-lg-0">
+
+                <div class="col-lg-6 mt-2 mt-lg-0 sticky">
                     <?php if ($leadership) :
                         $position = get_field('leadeship_position', $leadership->ID);
                         $email = get_field('leadership_email', $leadership->ID);

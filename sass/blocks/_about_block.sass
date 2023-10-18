@@ -3,6 +3,9 @@
         max-width: 720px
         +max-screen($breakpoint-lg)
             max-width: none
+    &__main
+        .row
+            position: relative
     .leadeship_block
         +max-screen($breakpoint-lg)
             max-width: 720px
@@ -72,5 +75,8 @@
                 flex-direction: column
             a
                 gap: 0 15px
+                display: flex
+                +max-screen($breakpoint-sm)
+
                 svg
                     align-self: center

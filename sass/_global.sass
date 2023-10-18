@@ -12,12 +12,12 @@
 		min-height: 0
 #main
 	width: 100%
-	overflow: hidden
+	// overflow: hidden
 	padding-top: 98px
 
 .site
 	position: relative
-	overflow: hidden
+	// overflow: hidden
 	// .section-bg
 	// 	background: $color-black
 img
@@ -110,3 +110,12 @@ img
 			background-color: $color-white
 			&::before
 				display: none
+
+.sticky
+	position: sticky !important
+	top: 0
+	height: fit-content
+	z-index: 5
+	+max-screen($breakpoint-lg)
+		position: relative !important
+		height: auto

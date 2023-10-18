@@ -3,8 +3,12 @@
         span
             color: $color-secondary
     &__main
+        .row
+            position: relative
+
         .subtitle_block
             margin-top: 20px
+
             +max-screen($breakpoint-lg)
                 margin-top: 0
             p
@@ -13,6 +17,7 @@
             +adaptive-value("margin-top", 76, 40, 0)
             ul, ol
                 color: $color-gray-1
+
     &__inner
         max-width: 812px
         margin-left: auto

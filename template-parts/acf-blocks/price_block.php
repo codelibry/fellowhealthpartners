@@ -19,7 +19,7 @@ $price_text = get_sub_field('card_text');
         <?php if ($subtitle || $content) : ?>
             <div class="price_block__main">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 sticky">
                         <?php if ($subtitle) : ?>
                             <div class="subtitle_block">
                                 <h3 class="h4 text-color-primary"><?php echo $subtitle; ?></h3>
