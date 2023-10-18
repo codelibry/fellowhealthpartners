@@ -5,7 +5,7 @@ $position = get_field('testimonials_position', $post->ID)
 
 <div class="col-lg-6">
     <div class="card card--testimonial bg--white">
-        <span class="category_type button button--sm bg--gradient-orange text-color-white font--weight--500">
+        <span class="category_type button button--small bg--gradient-orange text-color-white font--weight--500">
             <?php echo $terms[0]->name ?>
         </span>
         <?php if (get_the_content()) : ?>

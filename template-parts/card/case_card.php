@@ -10,7 +10,7 @@ $awards = get_field('awards_images');
     <div class="card card--case bg--white ">
         <div class="row">
             <div class="col-lg-8">
-                <span class="category_type button button--sm bg--secondary text-color-white font--weight--500">
+                <span class="category_type button button--small bg--secondary text-color-white font--weight--500">
                     <?php echo $terms[0]->name ?>
                 </span>
                 <div class="title_block mb-50">
