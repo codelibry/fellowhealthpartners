@@ -104,6 +104,7 @@ function create_posttypes()
 			'publicly_queryable' => true,
 			'show_ui' => true,
 			'show_in_menu' => true,
+			'show_in_nav_menus' => true,
 			'exclude_from_search' => true,
 			'query_var' => true,
 			'rewrite' => array(
