@@ -20,11 +20,13 @@
 
                     &:last-of-type
                         & > div
-                            max-width: 255px
+                            max-width: 265px
                             margin-left: auto
                             +max-screen($breakpoint-lg)
                                 max-width: none
                                 margin-left: 0
+        &-content
+            height: 100%
         .title_block
             +max-screen($breakpoint-lg)
                 margin-bottom: 30px
@@ -44,6 +46,10 @@
             justify-content: space-between
             +adaptive-value("row-gap", 40, 20, 0)
     &__form
-        input,
-        textarea
+        input
             margin-bottom: 10px
+        textarea
+            margin-bottom: 7px
+        input[type="submit"]
+            margin-bottom: 0
+            max-height: 62px
