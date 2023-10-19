@@ -75,6 +75,9 @@
 	&-150
 		+adaptive-value("margin-bottom", 150, 100, 0)
 .mt
+
+	&-40
+		+adaptive-value("margin-top", 40, 20, 0)
 	&-60
 		+adaptive-value("margin-top", 60, 30, 0)
 	&-75
@@ -86,3 +89,18 @@
 .pb
 	&-80
 	&-150
+
+.max
+	&--width
+		&--694
+			max-width: 694px
+			+max-screen($breakpoint-lg)
+				max-width: none
+		&--718
+			max-width: 718px
+			+max-screen($breakpoint-lg)
+				max-width: none
+		&--720
+			max-width: 720px
+			+max-screen($breakpoint-lg)
+				max-width: none

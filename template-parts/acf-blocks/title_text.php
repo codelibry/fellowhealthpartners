@@ -14,14 +14,14 @@ $content = get_sub_field('content');
                         <h1 class="text-color-black"><?php the_title() ?></h1>
                     <?php endif; ?>
                     <?php if ($subtitle) : ?>
-                        <p class="h5 subtitle text-color-secondary mt-1 mt-lg-0">
+                        <p class="h5 subtitle text-color-secondary mt-40">
                             <?php echo $subtitle; ?>
                         </p>
                     <?php endif; ?>
                 </div>
                 <?php if ($content) : ?>
                     <div class="col-lg-6">
-                        <div class="content-block text-color-gray">
+                        <div class="content-block text-color-gray max--width--720 ml-lg-auto">
                             <?php echo $content; ?>
                         </div>
                     </div>
