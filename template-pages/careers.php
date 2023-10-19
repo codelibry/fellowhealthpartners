@@ -11,7 +11,7 @@ $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $careers = new WP_Query(array(
     'post_type' => 'job',
-    'posts_per_page' => 2,
+    'posts_per_page' => 6,
     'orderby' => 'menu_order',
     'paged' => $current_page,
 ));
