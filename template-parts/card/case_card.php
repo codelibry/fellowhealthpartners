@@ -28,7 +28,7 @@ $awards = get_field('awards_images');
             <div class="col-lg-4 popup-image">
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="img_block">
-                        <?php the_post_thumbnail('medium'); ?>
+                        <?php the_post_thumbnail('full'); ?>
                     </div>
                 <?php endif; ?>
             </div>
