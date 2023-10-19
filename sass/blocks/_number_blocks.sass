@@ -7,23 +7,27 @@
             flex-direction: column
             gap: 20px 0
         .vertical_block
-            flex: 0 0 16.66667%
-            max-width: 16.66667%
+            flex: 0 0 15.80%
+            max-width: 15.80%
             +adaptive-value("padding", 40, 20, 0)
             +adaptive-value("min-height", 552, 100, 0)
             justify-content: space-between
             background-color: $color-gray-3
             border: 1px transparent solid
+            transition: all .5s ease-in-out
+            max-height: 552px
+            overflow: hidden
             +max-screen(1200px)
                 flex: 0 0 100%
                 max-width: 100%
             &.active
-                flex: 0 0 33.3332%
-                max-width: 33.3332%
+                flex: 0 0 31.59%
+                max-width: 31.59%
                 padding: 0
                 border: 1px $color-gray-3 solid
                 justify-content: flex-start
                 background-color: $color-white
+                transition: all .5s ease-in-out
                 +max-screen(1200px)
                     flex: 0 0 100%
                     max-width: 100%
@@ -32,7 +36,14 @@
                 .title
                     display: none
                 .content
-                    display: block
+                    position: relative
+                    opacity: 1
+                    top: auto
+                    left: auto
+                    transform: translateX(0)
+                    transition: all .5s ease-in-out
+                    z-index: 1
+                    height: 100%
                 .title_active
                     display: block
             .title
@@ -45,7 +56,15 @@
                     gap: 0 10px
                 +adaptive-value("padding", 40, 20, 0)
             .content
-                display: none
+                display: block
+                position: absolute
+                top: -200px
+                left: 0
+                opacity: 0
+                height: 0
+                transform: translateX(-100%)
+                transition: transform .5s ease-in-out
                 +adaptive-value("padding", 40, 20, 0)
+                z-index: -1
             ol
                 margin: 0
