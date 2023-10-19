@@ -7,7 +7,7 @@
                     <div class="popup__title text--size--32"></div>
                     <div class="popup__subtitle text--size--18 text-color-secondary text-uppercase"></div>
                     <div class="line"></div>
-                    <div class="bio_block d-flex popup-content-links"></div>
+                    <div class="bio_block d-flex popup-content-links_wrapper"></div>
                 </div>
             </div>
         </div>

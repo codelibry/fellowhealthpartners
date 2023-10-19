@@ -1,12 +1,12 @@
 <?php
 $post = $args['item'];
-$position = get_field('position', $post->ID);
-$employee_email = get_field('email', $post->ID);
-$bio_links = get_field('bio', $post->ID);
+$position = get_field('leadeship_position', $post->ID);
+$employee_email = get_field('leadership_email', $post->ID);
+$linkedin = get_field('leadership_linkedin', $post->ID);
 $content = get_post_field('post_content', $post->ID);
 ?>
 
-<div class="employee popup-item popup-open">
+<div class="employee popup-item">
     <div class="employee__image popup-image">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('work_img'); ?>
@@ -24,21 +24,17 @@ $content = get_post_field('post_content', $post->ID);
         </div>
     <?php endif; ?>
     <div class="line"></div>
-    <?php if ($bio_links || $employee_email) : ?>
+    <?php if ($linkedin || $employee_email || $content) : ?>
         <div class="bio_block d-flex popup-content-links">
             <?php if ($employee_email) : ?>
                 <a href="<?php echo get_href_email($employee_email); ?>">
                     <?php echo get_inline_svg('email-fill.svg'); ?>
                 </a>
             <?php endif; ?>
-            <?php if ($bio_links) : ?>
-                <?php foreach ($bio_links as $item) :
-                    $url = $item['link'];
-                    $icon = $item['icon']; ?>
-                    <a href="<?php echo $url['url']; ?>" target="<?php echo $url['target']; ?>">
-                        <img src="<?php echo $icon['url']; ?>" alt="icon">
-                    </a>
-                <?php endforeach; ?>
+            <?php if ($linkedin) : ?>
+                <a href="<?php echo $linkedin ?>" target="_blank" rel="noopener noreferrer">
+                    <?php echo get_inline_svg('/social/linkedin-orange.svg'); ?>
+                </a>
             <?php endif; ?>
             <a href="#" class="bio popup-open text--size--27 text-color-orange-2 font--weight--900 text-uppercase">
                 <span><?php _e('BIO', 'fhp'); ?></span>

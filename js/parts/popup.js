@@ -52,7 +52,7 @@ function popupListeners() {
     $(".popup__text").html(text);
     $(".popup__content-title").html(contentTitle);
     $(".popup__content").html(content);
-    $(".popup-content-links").html(links);
+    $(".popup-content-links_wrapper").html(links);
     $(".popup__referenses").html(referenses);
     $(".popup__awards").html(awards);
     $(".popup__image img")
