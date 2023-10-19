@@ -74,12 +74,14 @@
                                 "id": ""
                             },
                             "post_type": [
-                                "testimonials"
+                                "testimonials_cases"
                             ],
                             "post_status": [
                                 "publish"
                             ],
-                            "taxonomy": "",
+                            "taxonomy": [
+                                "testimonials_category:testimonials"
+                            ],
                             "return_format": "object",
                             "multiple": 1,
                             "allow_null": 0,
@@ -896,5 +898,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697717952
+    "modified": 1697728058
 }

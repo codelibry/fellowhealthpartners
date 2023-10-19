@@ -17,6 +17,8 @@
             transition: all .5s ease-in-out
             max-height: 552px
             overflow: hidden
+            +max-screen($breakpoint-xm)
+                max-height: none
             +max-screen(1200px)
                 flex: 0 0 100%
                 max-width: 100%
