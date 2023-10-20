@@ -32,6 +32,24 @@ function fellow_scripts()
     wp_enqueue_style('slick', get_template_directory_uri() . '/js/libs/slick/slick.css');
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.min.css');
     wp_enqueue_style('plyr-css', 'https://cdn.plyr.io/3.7.8/plyr.css',  array());
+
+    $categories = get_terms(array(
+        'taxonomy'   => 'category',
+        'hide_empty' => true,
+    ));
+
+    foreach ($categories as $cat) :
+        wp_localize_script(
+            'main',
+            'customjs_ajax_object_' . $cat->term_id,
+            array(
+                'ajax_url'    => admin_url('admin-ajax.php'),
+                'ajax_nonce'  => wp_create_nonce("secure_nonce_name"),
+                'cat_slug'    => $cat->slug,
+                'cat_id'      => $cat->term_id,
+            )
+        );
+    endforeach;
 }
 
 add_action('wp_enqueue_scripts', 'fellow_scripts');
@@ -43,6 +61,7 @@ function javascript_variables()
     <script type="text/javascript">
         var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
         var ajax_nonce = '<?php echo wp_create_nonce("secure_nonce_name"); ?>';
-    </script><?php
-            }
-            add_action('wp_head', 'javascript_variables');
+    </script>
+<?php
+}
+add_action('wp_head', 'javascript_variables');

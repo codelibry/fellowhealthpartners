@@ -112,7 +112,7 @@ function sliders() {
               "linear",
               reset
             );
-            console.log(slider.css("margin-left"));
+            // console.log(slider.css("margin-left"));
             slider.append(sliderwrap.clone());
           }
 
@@ -127,7 +127,7 @@ function sliders() {
               "linear",
               reset
             );
-            console.log(slider.css("margin-left"));
+            // console.log(slider.css("margin-left"));
             slider.append(sliderwrap.clone());
           }
         };

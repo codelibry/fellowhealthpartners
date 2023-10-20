@@ -5,7 +5,7 @@ function models_images() {
     $(".images_block__inner li:lt(7)").show();
     var items = $(".images_block__inner li").length;
     var shown = 7;
-    console.log(items);
+    // console.log(items);
     $(".more").click(function () {
       shown = $(".images_block__inner li:visible").length + 3;
       if (shown < items) {

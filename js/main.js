@@ -11,7 +11,7 @@ import { appearence } from "./animations/appearence";
 
 // Parts
 import { sliders } from "./parts/slider";
-import { show_more } from "./parts/ajax";
+import { show_more, load_projects } from "./parts/ajax";
 import { filter } from "./parts/filter";
 import { initPopups } from "./parts/popup";
 import { full_row } from "./parts/full_row";
@@ -28,6 +28,7 @@ appearence();
 filter();
 videoBlock();
 show_more();
+load_projects();
 sliders();
 initPopups();
 $(document).ready(function () {

@@ -5,12 +5,22 @@
 
 get_header();
 
+$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $categories = get_categories(array(
     'type' => 'post',
+    'hide_empty' => true,
 ));
 
+$count_posts = wp_count_posts();
+
 $args = [
-    'posts_per_page' => -1,
+    'type' => 'post',
+    'posts_per_page' => 3,
+    'paged' => $current_page,
+    'status' => 'publish',
+    'order_by' => 'date',
+    'order' => 'DESC',
 ];
 
 $query = new WP_Query($args);
@@ -27,14 +37,13 @@ $query = new WP_Query($args);
                         <?php if ($query->have_posts()) : ?>
                             <div class="col-lg-7">
                                 <div id="post-filters" class="post-filters d-flex mb-80">
-                                    <button class="post-filters__button filter-active" data-target="all">
-                                        <?php _e('All'); ?>
+                                    <a class="post-filters__button filter-active cat-list_item active" href="#!" data-category="">All
                                         <span class="post__counter bg--white text--size--15">
-                                            <?php echo $query->post_count; ?>
+                                            <?php echo $count_posts->publish; ?>
                                         </span>
-                                    </button>
+                                    </a>
                                     <?php foreach ($categories as $category) : ?>
-                                        <button class="post-filters__button " data-target="<?php echo $category->slug; ?>">
+                                        <a class="post-filters__button cat-list_item" data-target="<?php echo $category->slug; ?>" href="#<?= $category->slug; ?>" data-category="<?= $category->term_id; ?>">
                                             <?php if ($category->slug == 'thought-leadership-for-the-healthcare-industry') : ?>
                                                 <?php _e('Thought Leadership'); ?>
                                             <?php else : ?>
@@ -43,7 +52,7 @@ $query = new WP_Query($args);
                                             <span class="post__counter bg--white text--size--15">
                                                 <?php echo $category->count; ?>
                                             </span>
-                                        </button>
+                                        </a>
                                     <?php endforeach; ?>
                                 </div>
 
@@ -63,44 +72,31 @@ $query = new WP_Query($args);
                                         </div>
                                     </div>
                                 </div>
-                                <?php
-                                $count = 0;
-                                /* Start the Loop */
-                                while ($query->have_posts()) :
-                                    $query->the_post(); ?>
-                                    <?php if ($count < 3) : ?>
-                                        <?php $post_class = 'post-item section section--spacing--md filter-show-post show-post'; ?>
-                                    <?php else : ?>
-                                        <?php $post_class = 'post-item section section--spacing--md filter-show-post'; ?>
-                                    <?php endif; ?>
-                                    <div class="line"></div>
-                                    <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
-                                        <h3 class="post-item__title h5">
-                                            <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-                                        </h3>
-                                        <div class="content-block text-color-gray">
-                                            <?php the_excerpt(); ?>
-                                        </div><!-- .post-content -->
-                                        <div class="post-footer d-flex justify-content-between mt-2 mt-sm-4">
-                                            <span class="post-date text--size--17 text-color-gray"><?php echo get_the_date(); ?></span>
-                                            <div class="post-link">
-                                                <a href="<?php echo get_permalink(); ?>" class="button text-color-primary d-flex align-items-center p-0">
-                                                    <?php _e('Read All'); ?>
-                                                    <?php echo get_inline_svg('arrows/arrow-right.svg'); ?>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </article><!-- #post-<?php the_ID(); ?> -->
-                                    <?php $count++; ?>
-                                <?php endwhile;
-                                wp_reset_postdata(); ?>
-                                <div class="post-show-more d-flex">
-                                    <div class="show-more-btn d-flex button button--outline text-color-primary mx-auto">
-                                        <?php echo get_inline_svg('Load.svg'); ?>
-                                        <span class="btn__name"><?php _e('Show more'); ?></span>
-                                        <span class="btn__count">(<?php echo $query->post_count; ?>)</span>
-                                    </div>
+                                <div class="articles__row">
+                                    <?php
+
+                                    /* Start the Loop */
+                                    while ($query->have_posts()) :
+                                        $query->the_post(); ?>
+                                        <?php echo get_template_part('template-parts/parts/news_item'); ?>
+                                    <?php endwhile;
+                                    wp_reset_postdata(); ?>
                                 </div>
+                                <?php if ($query->max_num_pages > 1) : ?>
+                                    <script>
+                                        var ajaxurl = '<?php echo site_url(); ?>/wp-admin/admin-ajax.php';
+                                        var posts_vars = '<?php echo serialize($query->query_vars); ?>';
+                                        var current_page = <?php echo $current_page; ?>;
+                                        var max_pages = '<?php echo $query->max_num_pages; ?>';
+                                    </script>
+                                    <div class="post-show-more d-flex">
+                                        <div class="show-more-btn d-flex button button--outline text-color-primary mx-auto">
+                                            <?php echo get_inline_svg('Load.svg'); ?>
+                                            <span class="btn__name"><?php _e('Show more'); ?></span>
+                                            <span class="btn__count">(<?php echo $query->post_count; ?>)</span>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         <?php else : ?>
                             <?php echo get_template_part('template-parts/content', 'none'); ?>
@@ -123,6 +119,7 @@ $query = new WP_Query($args);
         </section>
     </div>
 </main><!-- #main -->
+
 <?php
 
 get_footer();
