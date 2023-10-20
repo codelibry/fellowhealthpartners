@@ -1,0 +1,87 @@
+.side-panel
+    position: fixed
+    top: 72px
+    right: 0
+    display: block
+    z-index: 10
+    width: 375px
+    height: 100%
+    overflow: auto
+    transition: .2s ease-out
+    transform: translateX(100%)
+    padding-left: 0
+    // border-top: 1px solid transparentize($default-text-color, 0.4)
+
+    .admin-bar
+        top: 32px
+
+    &.active
+        transform: translateX(0%)
+
+.side-inner
+    max-height: calc(100vh - 72px)
+    min-height: 100vh - 72px
+    overflow-x: scroll
+    background-color: $color-white
+
+.side-panel-overlay
+    overflow: hidden
+
+.side-panel-overlay:after
+    content: ""
+    position: fixed
+    top: 72px
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(31, 28, 28, 0.8)
+    backdrop-filter: blur(20px)
+    z-index: 2
+.admin-bar.side-panel-overlay:after,
+.admin-bar .side-panel
+    top: 104px
+
+.side_container
+    +max-screen($breakpoint-sm)
+        height: 100%
+
+.location_menu_block
+    padding-top: 26px
+    padding-left: 18px
+    padding-right: 18px
+    padding-bottom: 40px
+    .sub-menu
+        margin-top: 24px
+        margin-bottom: 0
+        li
+            &:last-of-type
+                &::before
+                    display: block
+
+    li
+        width: 100%
+        height: auto
+        &:first-of-type
+            padding-top: 0
+        &:last-of-type
+            padding-bottom: 0
+            &::before
+                display: none
+        &::before
+            position: absolute
+            content: ''
+            bottom: 0
+            height: 1px
+            width: 100%
+            background: $color-gray-2
+
+    li.menu-item-has-children
+        position: relative
+        .menu-item__parent
+            display: flex
+            justify-content: space-between
+    li.menu-item-has-children.active
+
++max-screen($breakpoint-sm)
+    .side-panel
+        width: 100%

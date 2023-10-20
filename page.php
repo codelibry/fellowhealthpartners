@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<?php if (!is_home()) : ?>
+	<?php if (!is_home() && !is_front_page()) : ?>
 		<?php get_template_part('template-parts/breadcrumbs/breadcrumbs'); ?>
 	<?php endif; ?>
 	<div class="page-blocks">

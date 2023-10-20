@@ -1,1 +1,230 @@
+.header
+    &__topbar
+    &__logo
+        +adaptive-value("padding-left", 30, 20, 0)
+        +max-screen(1200px)
+            padding-top: 14px
+            padding-bottom: 14px
+        img
+            +adaptive-value("width", 204, 112, 0)
+            +max-screen(1200px)
+                width: 112px
+    &__info
+        display: flex
+        border-left: 1px solid $color-gray-2
+        +max-screen(1200px)
+            display: none
+        #side-panel &
+            display: flex
+        &__contacts
+            align-self: center
+            +adaptive-value("padding-left", 40, 0, 0)
+            +adaptive-value("padding-right", 40, 0, 0)
+            +max-screen($breakpoint-xs)
+                max-width: 200px
+            #side-panel &
+                +max-screen($breakpoint-xs)
+                    max-width: none
+                    padding-top: 14px
+                    padding-bottom: 14px
+            p
 
+            &-tel
+                margin-top: 6px
+                transition: .3s
+                +max-screen($breakpoint-xs)
+                    width: max-content
+                #side-panel &
+                    +max-screen($breakpoint-xs)
+                        width: auto
+                &:hover
+                    color: $color-black
+                +max-screen($breakpoint-xl)
+                    +adaptive-value("font-size", 22, 12, 0)
+        a.button
+            +adaptive-value("padding-left", 40, 0, 0)
+            +adaptive-value("padding-right", 40, 0, 0)
+    &__menu
+        +max-screen(1200px)
+            display: none
+    #primary-menu
+        display: flex
+    .menu
+        li
+            position: relative
+            align-self: center
+            +adaptive-value("font-size", 17, 12, 0)
+            +adaptive-value("margin-right", 48, 0, 0)
+            +adaptive-value("padding-top", 40, 15, 0)
+            +adaptive-value("padding-bottom", 40, 15, 0)
+            +max-screen(1200px)
+                padding: 16px 0
+                font-size: 20px
+                text-transform: capitalize
+                line-height: 22.40px
+                word-wrap: break-word
+            &:last-child
+                margin-right: 0
+            &.menu-item-has-children
+                a
+                    &:hover
+                        color: $color-primary
+                span
+                    position: relative
+                    +adaptive-value("width", 20, 15, 0)
+                    +adaptive-value("height", 20, 15, 0)
+                    transition: .3s
+                    &::before
+                        content: ""
+                        width: 6.67px
+                        height: 3.33px
+                        background: $color-black
+                        position: absolute
+                        top: calc( 50% + 1px)
+                        right: -12px
+                        transform: translateY(-50%)
+                        clip-path: polygon(100% 0%,100% 0%,50% 100%,0% 0%)
+                        transition: .3s
+                        +max-screen(1200px)
+                            right: 0
+
+                &:hover
+                    .sub-menu
+                        display: flex
+                        visibility: visible
+                        opacity: 1
+                    span
+                        +max-screen(1200px)
+                            transform: rotate(180deg)
+                        &::before
+                            background: $color-primary
+
+                &.active
+                    .sub-menu
+                        display: flex
+                        visibility: visible
+                        opacity: 1
+        a
+            transition: .3s
+            &:hover
+                color: $color-primary
+    .sub-menu
+        position: absolute
+        background: $color-white
+        display: none
+        flex-direction: column
+        min-width: 330px
+        left: 0
+        z-index: 3
+        top: calc(100% - 1px)
+        opacity: 0
+        visibility: hidden
+        transition: .4s
+        box-shadow: 0px 28px 22px rgba(0, 0, 0, 0.06)
+        +adaptive-value("row-gap", 20, 10, 0)
+        +adaptive-value("padding", 20, 10, 0)
+        +max-screen(1200px)
+            position: relative
+            left: auto
+            top: auto
+            box-shadow: none
+            padding: 0
+        &::before
+            content: ""
+            width: 100%
+            height: calc( 100% - 20px )
+            position: absolute
+            top: -20px
+            left: 0
+            +max-screen(1100px)
+                position: relative
+                left: auto
+                top: auto
+                box-shadow: none
+        li
+            margin-right: 0
+            padding: 0
+            padding-left: 18px
+            align-self: flex-start
+            +adaptive-value("font-size", 17, 12, 0)
+            +max-screen(1200px)
+                font-size: 16px
+            &::before
+                position: absolute
+                content: ''
+                left: 0
+                top: 5px
+                +adaptive-value("width", 10, 8, 0)
+                +adaptive-value("height", 10, 8, 0)
+                background-color: $color-primary
+                border-radius: 50%
+                +max-screen(1200px)
+
+        a
+            background: none
+            color: $color-black
+
+#toggle
+    position: relative
+    top: auto
+    +adaptive-value("margin-right", 30, 20, 0)
+    margin-left: auto
+    display: none
+    width: 40px
+    height: 40px
+    align-self: center
+    background: none
+    border: none
+    z-index: 5
+    padding: 0
+    padding-top: 14px
+    padding-bottom: 14px
+
+    span:after,
+    span:before
+        content: ""
+        position: absolute
+        left: 0
+        top: -6px
+
+    span:after
+        top: 6px
+
+    span
+        position: relative
+        display: block
+        margin: 0 auto
+
+    span,
+    span:after,
+    span:before
+        width: 24px
+        height: 2px
+        background-color: $color-primary
+        transition: all 0.3s
+        backface-visibility: hidden
+        border-radius: 2px
+
+    &.on span
+        background-color: transparent
+
+    &.on span:before
+        transform: rotate(45deg) translate(5px, 5px)
+
+    &.on span:after
+        transform: rotate(-45deg) translate(4px,-4px)
+
+    &.on + #menu
+        opacity: 1
+        visibility: visible
+    +max-screen(1200px)
+        display: block
+
+#wpadminbar
+    +max-screen(600px)
+        position: fixed
+.admin-bar
+    .header_block
+        top: 32px
+        +max-screen($breakpoint-md)
+            top: 46px
