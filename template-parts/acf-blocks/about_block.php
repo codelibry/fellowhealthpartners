@@ -36,6 +36,7 @@ $leadership = get_sub_field('choose_leadership');
                         $email = get_field('leadership_email', $leadership->ID);
                         $phone = get_field('leadership_phone', $leadership->ID);
                         $post_title = esc_html($leadership->post_title);
+                        $card_title = get_post_field('card_title', $leadership->ID);
                         $image = get_the_post_thumbnail($leadership->ID, 'work_img'); ?>
                         <div class="about_block__inner ml-lg-auto">
                             <div class="leadeship_block">
@@ -46,7 +47,7 @@ $leadership = get_sub_field('choose_leadership');
                                 <?php endif; ?>
                                 <div class="leadeship_block__inner">
                                     <div class="leadeship_block__top bg--gradient-orange">
-                                        <h3 class="text--size--21 text-color-white text--center"><?php echo $post_title; ?></h3>
+                                        <h3 class="text--size--21 text-color-white text--center"><?php echo $card_title; ?></h3>
                                         <p class="text-color-white text--center text--uppercase"><?php echo $position; ?></p>
                                     </div>
                                     <p class="h5 text--center">For More Information Or Questions</p>
