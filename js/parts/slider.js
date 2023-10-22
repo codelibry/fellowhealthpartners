@@ -75,16 +75,35 @@ function sliders() {
     });
   });
 
-  // new code
-  var testimonialsCarousel = $(".blockquote_slider__list");
-  testimonialsCarousel.each(function () {
-    var carousel = $(this);
+  $(document).ready(function () {
+    // Slick Carousel
+    var testimonialsCarousel = $(".blockquote_slider__list");
+    testimonialsCarousel.each(function () {
+      var carousel = $(this);
 
-    carousel.slick({
-      slidesToShow: 1,
-      mobileFirst: false,
-      dots: true,
-      arrows: false,
+      carousel.slick({
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        cssEase: "linear",
+        focusOnSelect: true,
+        pauseOnHover: true,
+      });
+
+      $(".content-block").hover(
+        function () {
+          // Mouse enter event
+          $(this).find(".except").slideUp(300); // Hide .except with animation
+          $(this).find(".hide").slideDown(600); // Show .hide with animation
+        },
+        function () {
+          // Mouse leave event
+          $(this).find(".except").slideDown(300); // Show .except with animation
+          $(this).find(".hide").slideUp(600); // Hide .hide with animation
+        }
+      );
     });
   });
 
