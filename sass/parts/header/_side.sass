@@ -20,7 +20,7 @@
 
 .side-inner
     max-height: calc(100vh - 72px)
-    min-height: 100vh - 72px
+    min-height: calc(100vh - 72px)
     overflow-x: scroll
     background-color: $color-white
 
@@ -43,7 +43,8 @@
 
 .side_container
     +max-screen($breakpoint-sm)
-        height: 100%
+        max-height: calc(100vh - 72px)
+        min-height: calc(100vh - 72px)
 
 .location_menu_block
     padding-top: 26px
