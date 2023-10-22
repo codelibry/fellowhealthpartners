@@ -3,6 +3,9 @@
     position: relative
     padding-top: 18px
     padding-bottom: 29px
+    +max-screen($breakpoint-lg)
+        padding-top: 32px
+        padding-bottom: 24px
     .section-bg
         width: 25vw
         left: auto
@@ -26,6 +29,11 @@
             z-index: 1
             +max-screen($breakpoint-lg)
                 text-align: center
+                margin-top: 40px
+                max-width: 342px
+                margin-left: auto
+                margin-right: auto
+                display: block
         .empty_block
             +max-screen($breakpoint-xl)
                 width: 100px
@@ -66,7 +74,7 @@
             top: auto
             right: auto
             width: auto
-            margin-top: 10px
+            margin-top: 44px
         svg
             align-self: center
             +max-screen($breakpoint-xm)
@@ -117,6 +125,9 @@
     &__bottom
         padding-top: 35.5px
         padding-bottom: 15px
+        +max-screen($breakpoint-lg)
+            padding-top: 32px
+            padding-bottom: 32px
         &-wrap
             display: flex
             justify-content: space-between
@@ -145,14 +156,16 @@
 
         &-copyright
             margin-top: 21px
+            +max-screen($breakpoint-lg)
+                margin-top: 32px
             +max-screen($breakpoint-md)
                 flex-direction: column
             .links
                 display: flex
                 gap: 0 20px
-                +max-screen($breakpoint-md)
+                +max-screen($breakpoint-lg)
                     order: 1
-                    margin-bottom: 10px
+                    margin-bottom: 24px
                 a
                     transition: all $default-transition
                     &:hover
@@ -162,3 +175,130 @@
                 +max-screen($breakpoint-md)
                     order: 2
                     text-align: center
+    &__nav
+        #footer-menu
+            display: flex
+            justify-content: space-between
+            +max-screen($breakpoint-lg)
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                padding-top: 16px
+                padding-bottom: 16px
+        .menu
+            li
+                position: relative
+                align-self: center
+                +adaptive-value("font-size", 26, 18, 0)
+                +adaptive-value("padding-top", 20, 10, 0)
+                +adaptive-value("padding-bottom", 20, 10, 0)
+                +max-screen(1200px)
+                    font-size: 18px
+                    text-transform: capitalize
+                    line-height: 24px
+                    word-wrap: break-word
+                +max-screen($breakpoint-lg)
+                    align-self: flex-start
+                    padding-top: 16px
+                    padding-bottom: 16px
+                &:last-child
+                    margin-right: 0
+                &.menu-item-has-children
+                    a
+                        &:hover
+                            color: $color-primary
+                    span
+                        position: relative
+                        +adaptive-value("width", 20, 15, 0)
+                        +adaptive-value("height", 20, 15, 0)
+                        transition: .3s
+                        &::before
+                            content: ""
+                            width: 6.67px
+                            height: 3.33px
+                            background: $color-black
+                            position: absolute
+                            top: calc( 50% + 1px)
+                            right: -12px
+                            transform: translateY(-50%)
+                            clip-path: polygon(100% 0%,100% 0%,50% 100%,0% 0%)
+                            transition: .3s
+                            +max-screen($breakpoint-lg)
+                                // right: 0
+
+                    &:hover
+                        .sub-menu
+                            display: flex
+                            visibility: visible
+                            opacity: 1
+                        span
+                            +max-screen(1200px)
+                                transform: rotate(180deg)
+                            &::before
+                                background: $color-primary
+
+                    &.active
+                        .sub-menu
+                            display: flex
+                            visibility: visible
+                            opacity: 1
+            a
+                transition: .3s
+                &:hover
+                    color: $color-primary
+        .sub-menu
+            position: absolute
+            background: $color-white
+            display: none
+            flex-direction: column
+            min-width: 330px
+            left: 0
+            z-index: 3
+            top: calc(100% - 1px)
+            opacity: 0
+            visibility: hidden
+            transition: .4s
+            box-shadow: 0px 28px 22px rgba(0, 0, 0, 0.06)
+            +adaptive-value("row-gap", 15, 7.5, 0)
+            +adaptive-value("padding-left", 20, 10, 0)
+            +adaptive-value("padding-right", 20, 10, 0)
+            +adaptive-value("padding-top", 10, 5, 0)
+            +adaptive-value("padding-bottom", 10, 5, 0)
+            +max-screen($breakpoint-lg)
+                position: relative
+                left: auto
+                top: auto
+                box-shadow: none
+                padding: 0
+                min-width: auto
+            &::before
+                content: ""
+                width: 100%
+                height: calc( 100% - 20px )
+                position: absolute
+                top: -20px
+                left: 0
+                +max-screen($breakpoint-lg)
+                    position: relative
+                    left: auto
+                    top: auto
+                    box-shadow: none
+            li
+                margin-right: 0
+                padding: 0
+                padding-left: 18px
+                align-self: flex-start
+                +adaptive-value("font-size", 17, 12, 0)
+                &::before
+                    position: absolute
+                    content: ''
+                    left: 0
+                    top: 5px
+                    +adaptive-value("width", 10, 8, 0)
+                    +adaptive-value("height", 10, 8, 0)
+                    background-color: $color-primary
+                    border-radius: 50%
+                    +max-screen(1200px)
+
+            a
+                background: none
+                color: $color-black
