@@ -27,13 +27,18 @@
         a
             align-self: center
             display: flex
-            line-height: 100%
-            height: max-content
+            line-height: 80%
+            height: 100%
             img, svg
                 display: block
                 align-self: center
-                +adaptive-value("width", 30, 20, 0)
+                max-width: 24px
+                max-height: 24px
+                // +adaptive-value("width", 30, 20, 0)
             span
-                transform: translateY(5px)
-            svg
-                transform: translateY(3px)
+                transform: translateY(2px)
+                line-height: 80%
+                display: block
+                align-self: center
+            &.linkedin
+                transform: translateY(-1px)

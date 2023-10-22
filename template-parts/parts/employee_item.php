@@ -32,7 +32,7 @@ $content = get_post_field('post_content', $post->ID);
                 </a>
             <?php endif; ?>
             <?php if ($linkedin) : ?>
-                <a href="<?php echo $linkedin ?>" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo $linkedin ?>" class="linkedin" target="_blank" rel="noopener noreferrer">
                     <?php echo get_inline_svg('/social/linkedin-orange.svg'); ?>
                 </a>
             <?php endif; ?>
