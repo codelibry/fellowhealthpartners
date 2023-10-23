@@ -43,7 +43,7 @@ $header_btn = get_field('Contact_url', 'options');
                         </div>
                     <?php endif; ?>
                     <?php if ($header_btn) : ?>
-                        <a href="<?php echo $header_btn['url']; ?>" class="button button--lg button--sm bg--gradient-orange text-color-white" target="<?php echo $button['target']; ?>"><?php echo $header_btn['title']; ?></a>
+                        <a href="<?php echo $header_btn['url']; ?>" class="button button--lg button--sm bg--gradient-orange text-color-white" target="<?php echo $header_btn['target']; ?>"><?php echo $header_btn['title']; ?></a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -85,7 +85,7 @@ $header_btn = get_field('Contact_url', 'options');
                             </div>
                         <?php endif; ?>
                         <?php if ($header_btn) : ?>
-                            <a href="<?php echo $header_btn['url']; ?>" style="width: 100%" class="button button--lg button--sm button--fluid bg--gradient-orange text-color-white" target="<?php echo $button['target']; ?>"><?php echo $header_btn['title']; ?></a>
+                            <a href="<?php echo $header_btn['url']; ?>" style="width: 100%" class="button button--lg button--sm button--fluid bg--gradient-orange text-color-white" target="<?php echo $header_btn['target']; ?>"><?php echo $header_btn['title']; ?></a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

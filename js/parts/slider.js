@@ -3,74 +3,100 @@ import "slick-carousel";
 
 function sliders() {
   // old code
-  $(".hero-unit").each(function () {
-    let block = $(this);
-    let slider = block.find(".js-hero-unit-images");
-    let slider_2 = block.find(".js-hero-unit-slider");
-    slider.slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: false,
-      fade: true,
-      asNavFor: ".js-hero-unit-slider",
-    });
+  //   $(".hero-unit").each(function () {
+  //     let block = $(this);
+  //     let slider = block.find(".js-hero-unit-images");
+  //     let slider_2 = block.find(".js-hero-unit-slider");
+  //     slider.slick({
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       arrows: false,
+  //       dots: false,
+  //       fade: true,
+  //       asNavFor: ".js-hero-unit-slider",
+  //     });
+  //
+  //     slider_2.slick({
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       asNavFor: ".js-hero-unit-images",
+  //       dots: true,
+  //       arrows: true,
+  //       focusOnSelect: true,
+  //       fade: true,
+  //       autoplay: true,
+  //       autoplaySpeed: 5000,
+  //       appendArrows: $(".js-hero-slider-arrows"),
+  //       appendDots: $(".js-hero-slider-dots"),
+  //     });
+  //
+  //     slider.on("init", function () {
+  //       $(window).trigger("heightChanges");
+  //     });
+  //     slider_2.on("init", function () {
+  //       $(window).trigger("heightChanges");
+  //     });
+  //   });
+  //
+  //   $("#slick-clients").each(function () {
+  //     let block = $(this);
+  //
+  //     block.slick({
+  //       autoplay: false,
+  //       autoplaySpeed: 0,
+  //       slidesToShow: 5,
+  //       slidesToScroll: 1,
+  //       speed: 8000,
+  //       cssEase: "linear",
+  //       // appendArrows: '.slider-nav',
+  //       arrows: false,
+  //       autoplay: true,
+  //       autoplaySpeed: 0,
+  //       responsive: [
+  //         {
+  //           breakpoint: 1024,
+  //           settings: {
+  //             slidesToShow: 4,
+  //             slidesToScroll: 4,
+  //           },
+  //         },
+  //         {
+  //           breakpoint: 600,
+  //           settings: {
+  //             slidesToShow: 2,
+  //             slidesToScroll: 2,
+  //           },
+  //         },
+  //       ],
+  //     });
+  //
+  //     block.on("init", function () {
+  //       $(window).trigger("heightChanges");
+  //     });
+  //   });
 
-    slider_2.slick({
+  $(".hero").each(function () {
+    let slider = $(this).find(".hero__list-img").not(".slick-initialized");
+
+    slider.slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      cssEase: "linear",
+      autoplay: true,
+      speed: 900,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      asNavFor: ".js-hero-unit-images",
-      dots: true,
-      arrows: true,
-      focusOnSelect: true,
-      fade: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      appendArrows: $(".js-hero-slider-arrows"),
-      appendDots: $(".js-hero-slider-dots"),
+      appendDots: $(".dots_block"),
+      customPaging: function (slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return "0" + (i + 1);
+      },
+      dotsClass: "dots_block-list",
     });
 
     slider.on("init", function () {
-      $(window).trigger("heightChanges");
-    });
-    slider_2.on("init", function () {
-      $(window).trigger("heightChanges");
-    });
-  });
-
-  $("#slick-clients").each(function () {
-    let block = $(this);
-
-    block.slick({
-      autoplay: false,
-      autoplaySpeed: 0,
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      speed: 8000,
-      cssEase: "linear",
-      // appendArrows: '.slider-nav',
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 0,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          },
-        },
-      ],
-    });
-
-    block.on("init", function () {
       $(window).trigger("heightChanges");
     });
   });
