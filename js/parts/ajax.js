@@ -27,14 +27,16 @@ function show_more() {
 }
 
 function load_projects() {
-  let count_all = parseInt(
-    $(".post-show-more .btn__count")
-      .text()
-      .match(/\((\d+)\)/)[1]
-  );
-  let cat_counts = {}; // Object to store category counts
+  $(".news_page").each(function () {
+    let count_all = parseInt(
+      $(".post-show-more .btn__count")
+        .text()
+        .match(/\((\d+)\)/)[1]
+    );
+    let cat_counts = {}; // Object to store category counts
 
-  console.log("Total Post Count: " + count_all);
+    console.log("Total Post Count: " + count_all);
+  });
 
   // Function to subtract posts from the total count
   function subtractPostsFromTotalCount(num) {
