@@ -24,36 +24,6 @@ function show_more() {
       },
     });
   });
-
-  $(".post-show-more").click(function () {
-    var category_var = $("#post-filters .cat-list_item.active").data(
-      "category"
-    ); // Get the selected category
-    var data = {
-      action: "loadmore_news",
-      query: posts_vars,
-      page: current_page,
-      category: category_var,
-    };
-    // send Ajax
-    $.ajax({
-      url: ajaxurl,
-      data: data,
-      type: "POST",
-      beforeSend: function () {
-        console.log("show:", category_var);
-      },
-      success: function (data) {
-        if (data) {
-          $(".articles__row").append(data);
-          current_page++;
-          if (current_page == max_pages) $(".post-show-more").remove();
-        } else {
-          $(".post-show-more").remove();
-        }
-      },
-    });
-  });
 }
 
 function load_projects() {
@@ -62,7 +32,15 @@ function load_projects() {
       .text()
       .match(/\((\d+)\)/)[1]
   );
+  let cat_counts = {}; // Object to store category counts
+
   console.log("Total Post Count: " + count_all);
+
+  // Function to subtract posts from the total count
+  function subtractPostsFromTotalCount(num) {
+    count_all -= num;
+    $(".btn__count").text("(" + count_all + ")");
+  }
 
   // Function to update the post count
   function updatePostCount(category_id) {
@@ -78,6 +56,8 @@ function load_projects() {
       data: data,
       success: function (count) {
         $(".btn__count").text("(" + count + ")");
+        count = parseInt(count); // Convert to integer
+        cat_counts[category_id] = count; // Update the category count
       },
       error: function (res) {
         console.warn(res);
@@ -111,14 +91,57 @@ function load_projects() {
         // console.log(category_var);
       },
       success: function (res) {
-        setTimeout(function () {
-          $(".articles__row").html(res);
-        }, 400); // in milliseconds
+        $(".articles__row").html(res);
       },
       error: function (res) {
         console.warn(res);
       },
       complete: function () {},
+    });
+  });
+
+  // Function to subtract posts from the category count
+  function subtractPostsFromCatCount(category_var, num) {
+    if (cat_counts[category_var] !== undefined) {
+      cat_counts[category_var] -= num;
+      $(".btn__count").text("(" + cat_counts[category_var] + ")");
+    }
+  }
+
+  $(".post-show-more").click(function () {
+    var category_var = $("#post-filters .cat-list_item.active").data(
+      "category"
+    ); // Get the selected category
+    var data = {
+      action: "loadmore_news",
+      query: posts_vars,
+      page: current_page,
+      category: category_var,
+    };
+    // send Ajax
+    $.ajax({
+      url: ajaxurl,
+      data: data,
+      type: "POST",
+      beforeSend: function () {
+        console.log("show:", category_var);
+      },
+      success: function (data) {
+        if (data) {
+          $(".articles__row").append(data);
+          current_page++;
+          // Subtract the number of posts loaded via AJAX
+          if (category_var === "all") {
+            subtractPostsFromTotalCount(3); // Assuming 3 posts per page
+          } else {
+            // Call the function with the correct category_var
+            subtractPostsFromCatCount(category_var, 3); // Assuming 3 posts per page
+          }
+          if (current_page == max_pages) $(".post-show-more").remove();
+        } else {
+          $(".post-show-more").remove();
+        }
+      },
     });
   });
 }
