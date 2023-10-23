@@ -91,3 +91,14 @@ function filter_news()
 }
 add_action('wp_ajax_filter_news', 'filter_news');
 add_action('wp_ajax_nopriv_filter_news', 'filter_news');
+
+function get_category_count()
+{
+	$category_id = $_POST['category'];
+	$category = get_term($category_id, 'category');
+	echo $category->count;
+	wp_die();
+}
+
+add_action('wp_ajax_get_category_count', 'get_category_count');
+add_action('wp_ajax_nopriv_get_category_count', 'get_category_count');

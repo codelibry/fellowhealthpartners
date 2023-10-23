@@ -57,12 +57,47 @@ function show_more() {
 }
 
 function load_projects() {
+  let count_all = parseInt(
+    $(".post-show-more .btn__count")
+      .text()
+      .match(/\((\d+)\)/)[1]
+  );
+  console.log("Total Post Count: " + count_all);
+
+  // Function to update the post count
+  function updatePostCount(category_id) {
+    var data = {
+      action: "get_category_count",
+      category: category_id,
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/wp-admin/admin-ajax.php",
+      dataType: "html",
+      data: data,
+      success: function (count) {
+        $(".btn__count").text("(" + count + ")");
+      },
+      error: function (res) {
+        console.warn(res);
+      },
+    });
+  }
   $(".cat-list_item").on("click", function () {
     event.preventDefault();
     $(".cat-list_item").removeClass("active");
     $(this).addClass("active");
     var page = 1; // Set the current page to 1 when filtering by category
     var category_var = $(this).data("category");
+
+    if (category_var === "all") {
+      $(".btn__count").text("(" + count_all + ")");
+    } else {
+      // Update the post count when a category is selected
+      updatePostCount(category_var);
+    }
+
     $.ajax({
       type: "POST",
       url: "/wp-admin/admin-ajax.php",

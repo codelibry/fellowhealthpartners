@@ -37,7 +37,7 @@ $query = new WP_Query($args);
                         <?php if ($query->have_posts()) : ?>
                             <div class="col-lg-7">
                                 <div id="post-filters" class="post-filters d-flex mb-80">
-                                    <a class="post-filters__button filter-active cat-list_item active" href="#!" data-category="">All
+                                    <a class="post-filters__button filter-active cat-list_item active" href="#!" data-category="all">All
                                         <span class="post__counter bg--white text--size--15">
                                             <?php echo $count_posts->publish; ?>
                                         </span>
@@ -93,7 +93,7 @@ $query = new WP_Query($args);
                                         <div class="show-more-btn d-flex button button--outline text-color-primary mx-auto">
                                             <?php echo get_inline_svg('Load.svg'); ?>
                                             <span class="btn__name"><?php _e('Show more'); ?></span>
-                                            <span class="btn__count">(<?php echo $query->post_count; ?>)</span>
+                                            <span class="btn__count">(<?php echo $count_posts->publish; ?>)</span>
                                         </div>
                                     </div>
                                 <?php endif; ?>
