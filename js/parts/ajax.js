@@ -112,6 +112,7 @@ function load_projects() {
     var category_var = $("#post-filters .cat-list_item.active").data(
       "category"
     ); // Get the selected category
+    $(this).find("svg").addClass("rotate");
     var data = {
       action: "loadmore_news",
       query: posts_vars,
@@ -130,6 +131,7 @@ function load_projects() {
         if (data) {
           $(".articles__row").append(data);
           current_page++;
+          $(".post-show-more").find("svg").removeClass("rotate");
           // Subtract the number of posts loaded via AJAX
           if (category_var === "all") {
             subtractPostsFromTotalCount(3); // Assuming 3 posts per page
