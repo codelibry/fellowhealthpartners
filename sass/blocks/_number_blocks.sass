@@ -47,8 +47,16 @@
                     flex-direction: column
                 .number
                     display: none
+                    +max-screen($breakpoint-lg)
+                        +adaptive-value("font-size", 32, 24, 0)
+                    +max-screen($breakpoint-sm)
+                        +adaptive-value("font-size", 24, 22, 0)
                 .title
                     display: none
+                    +max-screen($breakpoint-lg)
+                        +adaptive-value("font-size", 32, 24, 0)
+                    +max-screen($breakpoint-sm)
+                        +adaptive-value("font-size", 24, 24, 0)
                 .content
                     position: relative
                     opacity: 1
@@ -63,6 +71,8 @@
             .number
                 +max-screen($breakpoint-lg)
                     align-self: center
+                    +adaptive-value("font-size", 40, 40, 0)
+
             .title
                 max-width: 90%
                 +max-screen($breakpoint-lg)
