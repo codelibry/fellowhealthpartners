@@ -56,18 +56,6 @@ $careers = new WP_Query(array(
                 <?php if ($careers->have_posts()) : ?>
                     <div class="careers__list row">
                         <?php while ($careers->have_posts()) : $careers->the_post();
-                            $the_title = get_the_title();
-
-                            $salary = 'ds';
-                            $emp = 'full';
-
-                            if ($the_title == 'Account Support Associate' || $the_title == 'Revenue Cycle Associate' ||  $the_title == 'Client Onboarding Associate') :
-                                $salary = 'hr';
-                            endif;
-
-                            if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support Associate') :
-                                $emp = 'both';
-                            endif;
                         ?>
                             <?php echo get_template_part('template-parts/card/block', 'career'); ?>
                         <?php endwhile; ?>
