@@ -1,0 +1,148 @@
+
+.application-form
+    .contact-info,
+    .position-info
+        padding: 30px
+        background: color('smoke')
+        margin-bottom: 30px
+
+    // .label
+    //     font-weight: bold
+    //     margin-bottom: 15px
+
+    .form-row
+        margin-left: ml
+        margin-right: rem-calc(-15)
+        margin-bottom: rem-calc(-40)
+        display: flex
+        flex-wrap: wrap
+
+    .form-col,
+    .form-cell
+        padding: rem-calc(0 15)
+        margin-bottom: rem-calc(40)
+        width: 100%
+
+    .form-fields
+        margin-bottom: 15px
+
+    .field-name,
+    .label
+        display: block
+        font-size: 16px
+        line-height: 20px
+        font-weight: 500
+        margin-bottom: 10px
+        color: $color-black
+        span
+            color: $color-primary
+
+    .application-link
+        display: block
+        text-align: center
+        margin: 20px 0
+
+        a
+            background: #0095b4
+            padding: 10px 25px
+            width: auto
+            border-radius: 4px
+            border: 1px solid #0095b4
+            color: #fff
+            font-family: 'Open Sans', sans-serif
+            font-size: 18px
+            font-weight: 400
+            -webkit-transition: all 0.2s ease-out
+            -moz-transition: all 0.2s ease-out
+            -ms-transition: all 0.2s ease-out
+            -o-transition: all 0.2s ease-out
+            transition: all 0.2s ease-out
+            display: inline-block
+
+        a:hover
+            background: #f36c2a
+            border: 1px solid #f36c2a
+            cursor: pointer
+
+    [type="radio"],
+    [type="checkbox"]
+            width: 20px
+            height: 20px
+            vertical-align: middle
+            margin-top: 0
+            margin-bottom: 0
+            margin-right: 5px
+
+    .form-fields.refers p
+        display: inline-block
+        margin: 0
+        vertical-align: top
+
+    h3
+        text-align: center
+
+    select
+        display: block
+        width: 100%
+        height: 30px
+        border: 1px solid darkgrey
+        padding: 0 5px
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+        &[multiple]
+            height: auto
+
+.job-title
+    text-align: center
+    font-weight: bold
+
+.application-form .form-submit
+    text-align: center
+    margin-top: 20px
+
+.application-form .form-inline-field
+    display: inline-block
+    vertical-align: top
+
+    br
+        display: none
+
+    .wpcf7-text
+        max-width: 100px
+        border: 0
+        border: 1px solid darkgrey
+        height: auto
+        margin-left: 20px
+        width: 100%
+        height: 28px
+        margin-top: 10px
+        max-width: 110px
+
+.application-form .reffers p
+    display: inline-block
+
+.application-form .refers .wpcf7-form-control-wrap
+    display: inline-block
+
+.position-info
+    .wpcf7-submit
+        display: inline-block
+        width: auto
+
+.application-form .form-cell
+    margin-bottom: rem-calc(20)
+
+.application-form .form-row
+    margin-bottom: 0
+
+@media(min-width: 769px)
+    .application-form .form-row
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        flex-wrap: nowrap
+        margin-bottom: 0
+
+    .application-form .middle
+        width: 50%
