@@ -121,13 +121,19 @@ function sliders() {
       $(".content-block").hover(
         function () {
           // Mouse enter event
-          $(this).find(".except").slideUp(300); // Hide .except with animation
-          $(this).find(".hide").slideDown(600); // Show .hide with animation
+          var $this = $(this);
+          setTimeout(function () {
+            $this.find(".except").hide(); // Hide .except with animation
+            $this.find(".hide").show(); // Show .hide with animation
+          }, 200);
         },
         function () {
           // Mouse leave event
-          $(this).find(".except").slideDown(300); // Show .except with animation
-          $(this).find(".hide").slideUp(600); // Hide .hide with animation
+          var $this = $(this);
+          setTimeout(function () {
+            $this.find(".except").show(); // Show .except with animation
+            $this.find(".hide").hide(); // Hide .hide with animation
+          }, 200);
         }
       );
     });
