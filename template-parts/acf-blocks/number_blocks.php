@@ -22,7 +22,7 @@ $numbers = get_sub_field('number_blocks');
                 foreach ($numbers as $number) :
                     $vertical_title = $number['subtitle'];
                     $content = $number['content'] ?>
-                    <div class="vertical_block d-flex flex-column">
+                    <div class="vertical_block d-flex">
                         <div class="number h3 text-color-primary">
                             <?php echo $i ?>.
                         </div>

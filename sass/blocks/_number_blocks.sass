@@ -17,11 +17,21 @@
             transition: all .5s ease-in-out
             max-height: 552px
             overflow: hidden
+            flex-direction: column
             +max-screen($breakpoint-xm)
                 max-height: none
             +max-screen(1200px)
                 flex: 0 0 100%
                 max-width: 100%
+            +max-screen($breakpoint-lg)
+                +adaptive-value("padding", 40, 16, 0)
+                min-height: 130px
+                max-height: none
+                flex-direction: row
+                justify-content: space-between
+            +max-screen($breakpoint-sm)
+                +adaptive-value("padding", 16, 16, 0)
+                min-height: 107px
             &.active
                 flex: 0 0 31.59%
                 max-width: 31.59%
@@ -33,6 +43,8 @@
                 +max-screen(1200px)
                     flex: 0 0 100%
                     max-width: 100%
+                +max-screen($breakpoint-lg)
+                    flex-direction: column
                 .number
                     display: none
                 .title
@@ -48,15 +60,30 @@
                     height: 100%
                 .title_active
                     display: block
+            .number
+                +max-screen($breakpoint-lg)
+                    align-self: center
             .title
                 max-width: 90%
+                +max-screen($breakpoint-lg)
+                    align-self: center
+                +max-screen($breakpoint-sm)
+                    max-width: 190px
                 h3
                     font-size: 21px !important
+                    +max-screen($breakpoint-lg)
+                        font-size: 18px !important
+                        align-self: center
             .title_active
                 display: none
                 p
                     gap: 0 10px
                 +adaptive-value("padding", 40, 20, 0)
+                +max-screen($breakpoint-sm)
+                    +adaptive-value("padding-top", 24, 16, 0)
+                    +adaptive-value("padding-bottom", 24, 16, 0)
+                    padding-left: 16px
+                    padding-right: 16px
             .content
                 display: block
                 position: absolute
@@ -68,5 +95,10 @@
                 transition: transform .5s ease-in-out
                 +adaptive-value("padding", 40, 20, 0)
                 z-index: -1
+                +max-screen($breakpoint-sm)
+                    +adaptive-value("padding-top", 24, 16, 0)
+                    +adaptive-value("padding-bottom", 24, 16, 0)
+                    padding-left: 16px
+                    padding-right: 16px
             ol
                 margin: 0
