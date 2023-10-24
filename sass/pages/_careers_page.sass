@@ -41,10 +41,14 @@
                         height: 100%
                 &__poster
                     background-size: cover
-
-        --plyr-control-spacing: 27px
+                .plyr__control
+                    svg
+                        width: 30px
+                        height: 45px
+                        left: -3px
+        // --plyr-control-spacing: 27px
         +max-screen($breakpoint-lg)
-            --plyr-control-spacing: 17px
+            // --plyr-control-spacing: 17px
 
         .plyr__control--overlaid
             background: $gradient-orange
