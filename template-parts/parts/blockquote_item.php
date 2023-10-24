@@ -7,12 +7,10 @@ $author_position = get_field('testimonials_position', $testimonial_item->ID);
     <blockquote class="font--italic text--size--32 text-color-black">
         <div class="text__inner">
             <div class="except">
-                <?php echo excerpt(50, $testimonial_item->ID); ?>
+                <?php echo get_post_field('post_content', $testimonial_item->ID); ?>
             </div>
-            <div class="hide">
-                <?php echo get_post_field('post_content', $testimonial_item->ID);
-                ?>
-            </div>
+            <a class="testimonial__readMore text-color-primary mt-1" href="<?php the_permalink($testimonial->ID); ?>"><?php _e('read more', 'emyoli') ?>
+            </a>
         </div>
         <footer class="bg--white">
             <span class="text--size--32 text-color-black"><?php echo get_the_title($testimonial_item->ID); ?></span>

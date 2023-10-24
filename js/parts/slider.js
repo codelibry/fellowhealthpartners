@@ -117,25 +117,6 @@ function sliders() {
         focusOnSelect: true,
         pauseOnHover: true,
       });
-
-      $(".content-block").hover(
-        function () {
-          // Mouse enter event
-          var $this = $(this);
-          setTimeout(function () {
-            $this.find(".except").hide(); // Hide .except with animation
-            $this.find(".hide").show(); // Show .hide with animation
-          }, 200);
-        },
-        function () {
-          // Mouse leave event
-          var $this = $(this);
-          setTimeout(function () {
-            $this.find(".except").show(); // Show .except with animation
-            $this.find(".hide").hide(); // Hide .hide with animation
-          }, 200);
-        }
-      );
     });
   });
 
