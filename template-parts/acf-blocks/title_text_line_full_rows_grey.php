@@ -4,7 +4,7 @@ $second_title = get_sub_field('top_content');
 $bottom_content_left = get_sub_field('bottom_title');
 $bottom_content = get_sub_field('bottom_content');
 ?>
-<section class="title_text_line section section--spacing--lg mb-150">
+<section class="title_text_line section pt-2 pb-100">
     <div class="container">
         <div class="title_text_line__top">
             <div class="row">
@@ -14,8 +14,8 @@ $bottom_content = get_sub_field('bottom_content');
                     <?php endif; ?>
                 </div>
                 <?php if ($second_title) : ?>
-                    <div class="col-lg-6">
-                        <h3 class="text-color-black h4 max--width--740 ml-lg-auto">
+                    <div class="col-lg-6 d-lg-flex">
+                        <h3 class="text-color-black h4 max--width--740 mr-lg-auto align-self-lg-end">
                             <?php echo $second_title; ?>
                         </h3>
                     </div>

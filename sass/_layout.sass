@@ -72,6 +72,8 @@
 		+adaptive-value("margin-bottom", 75, 40, 0)
 	&-80
 		+adaptive-value("margin-bottom", 80, 40, 0)
+	&-100
+		+adaptive-value("margin-bottom", 100, 50, 0)
 	&-120
 		+adaptive-value("margin-bottom", 120, 60, 0)
 	&-150
@@ -104,5 +106,9 @@
 				max-width: none
 		&--720
 			max-width: 720px
+			+max-screen($breakpoint-lg)
+				max-width: none
+		&--740
+			max-width: 740px
 			+max-screen($breakpoint-lg)
 				max-width: none
