@@ -131,6 +131,32 @@
                                     "mime_types": "",
                                     "preview_size": "medium",
                                     "parent_repeater": "field_6536576f08aa5"
+                                },
+                                {
+                                    "key": "field_6538fe893d8ed",
+                                    "label": "Image (mobile)",
+                                    "name": "image_mobile",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_6536576f08aa5"
                                 }
                             ]
                         }
@@ -1105,5 +1131,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698224588
+    "modified": 1698234016
 }

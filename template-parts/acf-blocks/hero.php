@@ -9,13 +9,15 @@ $bottom_text = get_sub_field('bottom_text');
             <div class="hero__main__list">
                 <?php foreach ($img_list as $img) :
                     $image = $img['image'];
+                    $image_small = $img['image_mobile'];
                     $title = $img['title'];
                     $subtitle = $img['subtitle'];
                     $size = 'full'; ?>
                     <div class="hero__main__slide">
                         <div class="image">
                             <div class="animate__animated">
-                                <?php echo wp_get_attachment_image($image, $size); ?>
+                                <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'desktop')); ?>
+                                <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'mob')); ?>
                             </div>
                         </div>
                         <div class="title_block">
