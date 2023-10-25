@@ -1,6 +1,6 @@
 .hero
     position: relative
-
+    --header_header
     &__main
         position: relative
         &__text
@@ -10,41 +10,74 @@
                 justify-content: space-between
                 min-height: calc(100vh - 72px)
                 max-height: 1080px
-    &__list
-        &-img
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
+        &__list
+        &__slide
+            position: relative
             height: 100%
-            .slick-track,
-            .slick-list
+            .image
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
                 height: 100%
-            .slick-list
-                margin: 0
-            .slick-slide
-                margin: 0
-                &>div
-                    height: 100%
-            img
-                height: 100%
-                display: block
-                object-fit: cover
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.20) 100%)
                 +max-screen($breakpoint-sm)
-                    object-position: right
+                    background: none
+                &::after
+                    +max-screen($breakpoint-sm)
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.20) 100%)
+                .animate__animated
+                    height: 100%
+                img
+                    height: 100% !important
+                    display: block
+                    object-fit: cover
+        .slick-list
+            margin: 0
+        .slick-slide
+            margin: 0
+            height: calc(100vh - var(--header_header))
+            &>div
+                height: 100% !important
+    .slick-dotted.slick-slider
+        margin-bottom: 0
     .title_block
-        +adaptive-value("padding-top", 174, 100, 0)
+        position: relative
+        z-index: 2
+        width: 100%
+        +adaptive-value("padding-top", 174, 32, 0)
         +adaptive-value("padding-bottom", 327, 187, 0)
         +max-screen($breakpoint-lg)
             margin-left: 30px
         +max-screen($breakpoint-sm)
             padding-top: 32px
             padding-bottom: 0
+            width: 85%
         span:first-of-type
             +adaptive-value-minus("margin-left", -45, -30, 0)
             +max-screen($breakpoint-lg)
                 margin-left: -30px
+            +max-screen($breakpoint-sm)
+                +adaptive-value-minus("margin-left", -30, -24, 0)
+        br
+            +max-screen($breakpoint-sm)
+                display: none
+        .container
+            padding-left: 0
+            padding-right: 0
+        .h1
+            +max-screen($breakpoint-sm)
+                +adaptive-value("font-size", 40, 30, 0)
     .bottom_block
+        position: absolute
+        left: 0
+        width: 100%
+        bottom: 0
         border-top: 1px $color-white solid
         +adaptive-value("padding-top", 27, 10, 0)
         +adaptive-value("padding-bottom", 26, 10, 0)

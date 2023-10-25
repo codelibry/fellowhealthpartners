@@ -76,14 +76,31 @@ function sliders() {
   //   });
 
   $(".hero").each(function () {
-    let slider = $(this).find(".hero__list-img").not(".slick-initialized");
+    let slider = $(this).find(".hero__main__list").not(".slick-initialized");
+    // Function to set the CSS variable --header_header with the header height
+    function setHeaderHeightVariable() {
+      var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
+      document.documentElement.style.setProperty(
+        "--header_header",
+        headerHeight + "px"
+      );
+    }
+
+    // Set the initial header height variable
+    setHeaderHeightVariable();
+
+    // Update the variable when the window is resized
+    $(window).resize(function () {
+      setHeaderHeightVariable();
+    });
 
     slider.slick({
       dots: true,
       arrows: false,
-      infinite: true,
+      // infinite: true,
       cssEase: "linear",
       autoplay: true,
+      vertical: true, // Set vertical to true
       speed: 900,
       autoplaySpeed: 5000,
       slidesToShow: 1,
