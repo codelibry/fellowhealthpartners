@@ -71,6 +71,8 @@
             padding-left: 0
             padding-right: 0
         .h1
+            +max-screen($breakpoint-xm)
+                +adaptive-value("font-size", 80, 30, 0)
             +max-screen($breakpoint-sm)
                 +adaptive-value("font-size", 40, 30, 0)
     .bottom_block

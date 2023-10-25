@@ -227,20 +227,21 @@
 
                     &:hover
                         .sub-menu
-                            display: flex
+                            +min-screen(1200px)
+                                display: flex
+                                visibility: visible
+                                opacity: 1
+                        span
+                            &::before
+                                background: $color-primary
+                    &.opened
+                        .sub-menu
+
                             visibility: visible
                             opacity: 1
                         span
                             +max-screen(1200px)
                                 transform: rotate(180deg)
-                            &::before
-                                background: $color-primary
-
-                    &.active
-                        .sub-menu
-                            display: flex
-                            visibility: visible
-                            opacity: 1
             a
                 transition: .3s
                 &:hover
@@ -298,6 +299,8 @@
                     background-color: $color-primary
                     border-radius: 50%
                     +max-screen(1200px)
+                    +max-screen($breakpoint-sm)
+                        top: 7px
 
             a
                 background: none

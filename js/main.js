@@ -3,7 +3,7 @@ import $ from "jquery";
 // import { lottie } from './lottie';
 
 import { header } from "./template-parts/header/header";
-
+import { footer } from "./template-parts/footer/footer";
 // Animations
 import { appearence } from "./animations/appearence";
 
@@ -18,7 +18,9 @@ import { full_row } from "./parts/full_row";
 import { videoBlock } from "./parts/video";
 import { numberBlock } from "./template-parts/blocks/number_block";
 import { testimonialBlock } from "./template-parts/blocks/testimonial";
+
 header();
+footer();
 
 //animations
 appearence();

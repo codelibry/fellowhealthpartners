@@ -41,6 +41,16 @@ function header() {
       $("body").removeClass("side-panel-overlay");
     }
   });
+
+  $("#primary-menu-mobile .menu-item-has-children .menu-item__parent").click(
+    function () {
+      $(this).parent().toggleClass("opened");
+      $(this).parent().find(".sub-menu").slideToggle();
+    }
+  );
+  $("#primary-menu-mobile .menu-item__parent").on("click", function () {
+    event.preventDefault();
+  });
 }
 
 export { header };

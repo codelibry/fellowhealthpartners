@@ -81,7 +81,11 @@
         .menu-item__parent
             display: flex
             justify-content: space-between
-    li.menu-item-has-children.active
+    li.menu-item-has-children
+        &.opened
+            .sub-menu
+                visibility: visible
+                opacity: 1
 
 +max-screen($breakpoint-sm)
     .side-panel
