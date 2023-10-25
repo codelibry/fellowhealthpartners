@@ -1,0 +1,13 @@
+.title_text_line
+    &.two_titles
+        .title_text_line
+            &__top,
+            &__bottom
+                .row
+                    +min-screen($breakpoint-xs)
+                        margin-left: -40px
+                        margin-right: -40px
+                        // +adaptive-value("column-gap", 80, 20, 0)
+                        & > div
+                            padding-left: 40px
+                            padding-right: 40px
