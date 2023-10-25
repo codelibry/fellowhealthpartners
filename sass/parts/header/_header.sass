@@ -1,6 +1,11 @@
 .header
     &__topbar
+        position: relative
+        z-index: 2
         border-bottom: 1px $color-gray-2 solid
+        background-color: $color-white
+        .home &
+            border-bottom: none
     &__logo
         +adaptive-value("padding-left", 30, 20, 0)
         +max-screen(1200px)
@@ -107,6 +112,7 @@
                             background: $color-primary
         a
             transition: .3s
+            text-transform: capitalize
             &:hover
                 color: $color-primary
     .sub-menu

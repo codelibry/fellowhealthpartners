@@ -1,10 +1,13 @@
 .employee
     display: flex
     flex-direction: column
-    +adaptive-value("width", 350, 250, 0)
-    +adaptive-value("padding-left", 30, 25, 0)
-    +adaptive-value("padding-right", 30, 25, 0)
-    +adaptive-value("padding-bottom", 59, 40, 0)
+    +adaptive-value("width", 350, 200, 0)
+    +adaptive-value("padding-left", 30, 10, 0)
+    +adaptive-value("padding-right", 30, 10, 0)
+    +adaptive-value("padding-bottom", 59, 30, 0)
+    +max-screen($breakpoint-xm)
+        +adaptive-value("padding-left", 15, 10, 0)
+        +adaptive-value("padding-right", 15, 10, 0)
     // padding: 0 35px 59px
     &__image
         border-radius: 50%
