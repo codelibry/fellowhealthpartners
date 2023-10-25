@@ -277,8 +277,12 @@ h6,.h6
 		+adaptive-value("margin-top", 40, 20, 0)
 		+adaptive-value("margin-bottom", 40, 20, 0)
 		position: relative
-		+adaptive-value("padding", 60, 30, 0)
 		border: 2px $color-orange-2 solid
+		.testimonials__listItem
+			+adaptive-value("padding", 60, 30, 0)
+			+max-screen($breakpoint-xm)
+				+adaptive-value("padding", 40, 20, 0)
+
 		p
 			margin-bottom: 10px
 			font-style: italic

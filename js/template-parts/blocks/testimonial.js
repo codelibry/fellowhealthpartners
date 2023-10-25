@@ -1,19 +1,31 @@
 import $ from "jquery";
 
 function testimonialBlock() {
-  $(".testimonial__readMore").click(function (event) {
-    event.preventDefault();
-    console.log("click");
-    const blockquote = $(this).parent().parent().find(".text__inner");
-    blockquote.toggleClass("opened");
+  var spacingHeight = 90;
+  var spacingHeightHover = 110;
+  $(".blockquote_slider__list blockquote").hover(
+    function () {
+      var hiddenTextHeight = $(this)
+        .find(".testimonials__listItem__hiddenText")
+        .height();
+      var textHeight = $(this).find(".testimonials__listItem__text").height();
 
-    // Change the text of the "Read More" button based on the blockquote's visibility
-    if (blockquote.hasClass("opened")) {
-      $(this).text("read less");
-    } else {
-      $(this).text("read more");
+      var itemHeight = $(this).outerHeight();
+      if (hiddenTextHeight > textHeight) {
+        $(this)
+          .find(".testimonials__listItem")
+          .animate({ height: hiddenTextHeight + spacingHeightHover }, 400);
+        $(this).find(".testimonials__listItem").addClass("hover");
+      }
+    },
+    function () {
+      var textHeight = $(this).find(".testimonials__listItem__text").height();
+      $(this)
+        .find(".testimonials__listItem")
+        .animate({ height: textHeight + spacingHeight }, 400);
+      $(this).find(".testimonials__listItem").removeClass("hover");
     }
-  });
+  );
 }
 
 export { testimonialBlock };
