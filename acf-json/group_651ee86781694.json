@@ -628,26 +628,6 @@
                             "label": "Second title (Right)",
                             "name": "top_content",
                             "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_6539494754d03",
-                            "label": "Bottom Left Content",
-                            "name": "bottom_title",
-                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -658,10 +638,30 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "new_lines": "",
                             "maxlength": "",
-                            "rows": 4,
                             "placeholder": "",
-                            "new_lines": "br"
+                            "rows": ""
+                        },
+                        {
+                            "key": "field_6539494754d03",
+                            "label": "Bottom Left Content",
+                            "name": "bottom_title",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
                         },
                         {
                             "key": "field_6539494754d04",
@@ -1221,5 +1221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698253522
+    "modified": 1698253682
 }
