@@ -597,6 +597,96 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6539494754d00": {
+                    "key": "layout_6539494754d00",
+                    "name": "title_text_line_full_rows_grey",
+                    "label": "2 Title & Text Blocks with Grey Line | Home Page",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6539494754d01",
+                            "label": "Top Title (Left)",
+                            "name": "top_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_6539494754d02",
+                            "label": "Second title (Right)",
+                            "name": "top_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6539494754d03",
+                            "label": "Bottom Left Content",
+                            "name": "bottom_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_6539494754d04",
+                            "label": "Bottom Right Content",
+                            "name": "bottom_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65240a595fe89": {
                     "key": "layout_65240a595fe89",
                     "name": "number_blocks",
@@ -1131,5 +1221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698234016
+    "modified": 1698253522
 }
