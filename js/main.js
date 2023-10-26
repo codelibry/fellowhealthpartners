@@ -18,6 +18,7 @@ import { full_row } from "./parts/full_row";
 import { videoBlock } from "./parts/video";
 import { numberBlock } from "./template-parts/blocks/number_block";
 import { testimonialBlock } from "./template-parts/blocks/testimonial";
+import { vertical_Tabs } from "./template-parts/blocks/vertical_tabs";
 
 header();
 footer();
@@ -36,3 +37,4 @@ sliders();
 initPopups();
 numberBlock();
 testimonialBlock();
+vertical_Tabs();

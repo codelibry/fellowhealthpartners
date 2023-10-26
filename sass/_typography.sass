@@ -108,6 +108,11 @@ h6,.h6
 	&--size--50,&--size--50 *
 		font-size: 50px
 		+adaptive-value("font-size", 50, 28, 0)
+	&--size--70,&--size--70 *
+		font-size: 70px
+		+adaptive-value("font-size", 70, 8, 0)
+		+max-screen(1100px)
+			+adaptive-value("font-size", 60, 50, 0)
 	&--size--100,&--size--100 *
 		font-size: 100px
 		+adaptive-value("font-size", 100, 40, 0)

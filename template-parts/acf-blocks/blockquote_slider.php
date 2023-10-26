@@ -25,7 +25,8 @@ $choose_testimonial = get_sub_field('choose_testimonial');
             <div class="blockquote_slider__list">
                 <?php foreach ($choose_testimonial as $row) : ?>
                     <?php get_template_part('template-parts/parts/blockquote_item', '', array('item' => $row)); ?>
-                <?php endforeach; ?>
+                <?php endforeach;
+                wp_reset_postdata() ?>
             </div>
         <?php endif; ?>
     </div>
