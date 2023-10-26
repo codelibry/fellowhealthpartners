@@ -6,7 +6,7 @@ $bottom_text = get_sub_field('bottom_text');
 <?php if ($img_list) : ?>
     <section class="hero">
         <div class="hero__main">
-            <div class="hero__main__list">
+            <div class="hero__main__list hero__main__list--img">
                 <?php foreach ($img_list as $img) :
                     $image = $img['image'];
                     $image_small = $img['image_mobile'];

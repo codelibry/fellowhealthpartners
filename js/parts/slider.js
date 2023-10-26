@@ -2,82 +2,10 @@ import $ from "jquery";
 import "slick-carousel";
 
 function sliders() {
-  // old code
-  //   $(".hero-unit").each(function () {
-  //     let block = $(this);
-  //     let slider = block.find(".js-hero-unit-images");
-  //     let slider_2 = block.find(".js-hero-unit-slider");
-  //     slider.slick({
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       arrows: false,
-  //       dots: false,
-  //       fade: true,
-  //       asNavFor: ".js-hero-unit-slider",
-  //     });
-  //
-  //     slider_2.slick({
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       asNavFor: ".js-hero-unit-images",
-  //       dots: true,
-  //       arrows: true,
-  //       focusOnSelect: true,
-  //       fade: true,
-  //       autoplay: true,
-  //       autoplaySpeed: 5000,
-  //       appendArrows: $(".js-hero-slider-arrows"),
-  //       appendDots: $(".js-hero-slider-dots"),
-  //     });
-  //
-  //     slider.on("init", function () {
-  //       $(window).trigger("heightChanges");
-  //     });
-  //     slider_2.on("init", function () {
-  //       $(window).trigger("heightChanges");
-  //     });
-  //   });
-  //
-  //   $("#slick-clients").each(function () {
-  //     let block = $(this);
-  //
-  //     block.slick({
-  //       autoplay: false,
-  //       autoplaySpeed: 0,
-  //       slidesToShow: 5,
-  //       slidesToScroll: 1,
-  //       speed: 8000,
-  //       cssEase: "linear",
-  //       // appendArrows: '.slider-nav',
-  //       arrows: false,
-  //       autoplay: true,
-  //       autoplaySpeed: 0,
-  //       responsive: [
-  //         {
-  //           breakpoint: 1024,
-  //           settings: {
-  //             slidesToShow: 4,
-  //             slidesToScroll: 4,
-  //           },
-  //         },
-  //         {
-  //           breakpoint: 600,
-  //           settings: {
-  //             slidesToShow: 2,
-  //             slidesToScroll: 2,
-  //           },
-  //         },
-  //       ],
-  //     });
-  //
-  //     block.on("init", function () {
-  //       $(window).trigger("heightChanges");
-  //     });
-  //   });
 
   $(".hero").each(function () {
-    let slider = $(this).find(".hero__main__list").not(".slick-initialized");
-    let sliderBg = $(this).find(".hero__main__list--bg").not(".slick-initialized");
+    let slider = $(this).find(".hero__main__list--img");
+    let sliderBg = $(this).find(".hero__main__list--bg");
     // Function to set the CSS variable --header_header with the header height
     function setHeaderHeightVariable() {
       var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
@@ -131,14 +59,19 @@ function sliders() {
       autoplay: true,
       vertical: true, // Set vertical to true
       speed: 900,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1, // it was -1
       pauseOnHover: false
-    });
+    });  
 
-  
+    slider.on('afterChange', function(event, slick, currentSlide) {
+      // Use the slickGoTo method to set the same slide in the second slider
+      console.log('goto');
+      sliderBg.slick('slickGoTo', currentSlide);
+    });
   });
+
 
   $(document).ready(function () {
     // Slick Carousel
