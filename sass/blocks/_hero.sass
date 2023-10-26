@@ -12,6 +12,22 @@
                 height: calc(100vh - 72px)
                 max-height: 1080px
         &__list
+            .img-absolute
+                // opacity: .5
+            .hero-slider
+                &__inner
+                    // opacity: .75
+                    width: 100%
+                    height: 100%
+
+                    transition: 0.9s linear
+                    .animation &
+                        width: 80%
+                        height: 80%
+                    .title_block
+                        max-width: 80%
+                        margin-left: auto
+                        margin-right: auto
         &__slide
             position: relative
             height: 100%
@@ -88,6 +104,8 @@
                 +adaptive-value("font-size", 40, 30, 0)
     .bottom_block
         position: absolute
+
+        z-index: 15
         left: 0
         width: 100%
         bottom: 0
@@ -119,6 +137,8 @@
         &-list
             display: flex
             +adaptive-value("column-gap", 53, 34, 0)
+            &:nth-child(2)
+                display: none !important
             li
                 font-size: 22px
                 position: relative
@@ -136,3 +156,64 @@
                     opacity: 0.3
                 &.slick-active
                     opacity: 1
+
+.slick-slide
+    .hero-slider__inner
+        animation-name: zoomIn
+        animation-duration: 5.9s // autoplaySpeed + speed
+        animation-fill-mode: both
+        animation-iteration-count: infinite
+    .slide-down
+        //animation-name: slideDown
+        animation-duration: 6.8s // autoplaySpeed + speed + speed
+        animation-fill-mode: both
+        animation-iteration-count: infinite
+        animation-delay: 
+.hero__main__list
+    z-index: 10
+    // opacity: 0
+.hero__main__list--bg
+
+    // opacity: 1
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+    z-index: 8
+
+    transform: rotate(180deg) // Make slider reverse direction
+    .slick-slide 
+        transform: rotate(-180deg) // Make slider reverse direction
+    img
+        filter: blur(5px)
+
+
+@keyframes zoomIn
+    0%
+        transform: translate(-50%, -50%) scale(0.8)
+    15.25% // speed * 100 / autoplaySpeed
+        transform: translate(-50%, -50%) scale(0.8)
+    30.5% // speed * 100 / autoplaySpeed
+        transform: translate(-50%, -50%) scale(1)
+    69.5% // speed * 100 / autoplaySpeed
+        transform: translate(-50%, -50%) scale(1)
+    84.75% // 100 - (speed * 100 / autoplaySpeed)
+        transform: translate(-50%, -50%) scale(0.8)
+    100%
+        transform: translate(-50%, -50%) scale(.8)
+
+@keyframes slideDown
+    0%
+        transform: translateY(100%)
+    15.25% // speed * 100 / autoplaySpeed
+        transform: translateY(100%)
+    30.5% // speed * 100 / autoplaySpeed
+        transform: translateY(0%)
+    69.5% // speed * 100 / autoplaySpeed
+        transform: translateY(0%)
+    84.75% // 100 - (speed * 100 / autoplaySpeed)
+        transform: translateY(100%)
+    100%
+        transform: translateY(100%)

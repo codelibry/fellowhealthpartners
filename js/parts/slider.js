@@ -77,6 +77,7 @@ function sliders() {
 
   $(".hero").each(function () {
     let slider = $(this).find(".hero__main__list").not(".slick-initialized");
+    let sliderBg = $(this).find(".hero__main__list--bg").not(".slick-initialized");
     // Function to set the CSS variable --header_header with the header height
     function setHeaderHeightVariable() {
       var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
@@ -94,17 +95,26 @@ function sliders() {
       setHeaderHeightVariable();
     });
 
+    slider.on("init", function () {
+      $(window).trigger("heightChanges");
+    });
+
+    sliderBg.on("init", function () {
+      $(window).trigger("heightChanges");
+    });
+
     slider.slick({
       dots: true,
       arrows: false,
       // infinite: true,
       cssEase: "linear",
-      // autoplay: true,
+      autoplay: true,
       vertical: true, // Set vertical to true
       speed: 900,
-      // autoplaySpeed: 5000,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      pauseOnHover: false,
       appendDots: $(".dots_block"),
       customPaging: function (slider, i) {
         var thumb = $(slider.$slides[i]).data();
@@ -113,9 +123,21 @@ function sliders() {
       dotsClass: "dots_block-list",
     });
 
-    slider.on("init", function () {
-      $(window).trigger("heightChanges");
+    sliderBg.slick({
+      dots: false,
+      arrows: false,
+      // infinite: true,
+      cssEase: "linear",
+      autoplay: true,
+      vertical: true, // Set vertical to true
+      speed: 900,
+      autoplaySpeed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1, // it was -1
+      pauseOnHover: false
     });
+
+  
   });
 
   $(document).ready(function () {

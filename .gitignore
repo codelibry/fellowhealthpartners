@@ -63,3 +63,6 @@ inc/.DS_Store
 js/.DS_Store
 sass/.DS_Store
 *.DS_Store
+dist/vendors.min.js.gz
+dist/vendors.min.js.LICENSE.txt
+dist/vendors.min.js.LICENSE.txt.gz

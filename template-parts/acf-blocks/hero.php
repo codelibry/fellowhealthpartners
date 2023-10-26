@@ -14,22 +14,34 @@ $bottom_text = get_sub_field('bottom_text');
                     $subtitle = $img['subtitle'];
                     $size = 'full'; ?>
                     <div class="hero__main__slide">
-                        <div class="image">
-                            <div class="animate__animated">
-                                <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'desktop')); ?>
-                                <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'mob')); ?>
+
+                        <!-- Section to be smaller -->
+                        <div class="hero-slider__inner position-absolute position-absolute--center">
+                            <!-- Same image as above -->
+                            <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute')); ?>
+                            <div class="title_block">
+                                <div class="container">
+                                    <p class="text--size--113">
+                                        <?php echo $title; ?>
+                                    </p>
+                                    <p class="h1">
+                                        <?php echo $subtitle; ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="title_block">
-                            <div class="container">
-                                <p class="text--size--113">
-                                    <?php echo $title; ?>
-                                </p>
-                                <p class="h1">
-                                    <?php echo $subtitle; ?>
-                                </p>
-                            </div>
-                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="hero__main__list hero__main__list--bg">
+                <?php foreach ($img_list as $img) :
+                    $image = $img['image'];
+                    $size = 'full'; ?>
+                    <div class="hero__main__slide">
+
+                        <!-- Bg image to slide up -->
+                        <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute slide-down')); ?>
+
                     </div>
                 <?php endforeach; ?>
             </div>

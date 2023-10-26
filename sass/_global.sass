@@ -40,8 +40,19 @@ img
 	width: 100%
 	border: 1px $color-gray-2 solid
 
-// .ui__block
-// 	background: grey
+.img-absolute
+	position: absolute
+	width: 100%
+	height: 100%
+	inset: 0
+	object-fit: cover
+
+.position-absolute 
+	// position: absolute - this is already included
+	&--center
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
 
 .bg
 	&--primary
