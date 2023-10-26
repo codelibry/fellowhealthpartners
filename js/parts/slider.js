@@ -99,10 +99,10 @@ function sliders() {
       arrows: false,
       // infinite: true,
       cssEase: "linear",
-      autoplay: true,
+      // autoplay: true,
       vertical: true, // Set vertical to true
       speed: 900,
-      autoplaySpeed: 5000,
+      // autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       appendDots: $(".dots_block"),
