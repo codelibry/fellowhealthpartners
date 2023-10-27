@@ -1,8 +1,24 @@
 .title_text_line
+    .h4
+        +min-screen($breakpoint-lg)
+            +max-screen(1600px)
+                font-size: 28px
+        +max-screen(1600px)
+            br
+                display: none
+    .h3
+        +min-screen($breakpoint-lg)
+            +max-screen(1600px)
+                font-size: 32px
+        +max-screen(1600px)
+            br
+                display: none
+
     &.two_titles
         .title_text_line
             &__top,
             &__bottom
+                
                 .row
                     +min-screen($breakpoint-xs)
                         margin-left: -40px

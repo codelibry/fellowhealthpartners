@@ -80,10 +80,17 @@
                     transition: .35s
                     transition-delay: 0.15s
                     background-image: linear-gradient(113.99deg, #FF851F 34.6%, #FAE331 100%)
+                .h5
+                    +min-screen($breakpoint-lg)
+                        +max-screen(1600px)
+                            font-size: 20px
             &__content-wrapper
                 position: relative
             &__footer
                 +adaptive-value("padding", 40, 20, 0)
+                +max-screen($breakpoint-xl)
+                    +min-screen($breakpoint-lg)
+                        padding: 20px
                 +max-screen($breakpoint-lg)
                     +adaptive-value("padding", 40, 16, 0)
                 +max-screen($breakpoint-sm)
@@ -104,9 +111,16 @@
                 +max-screen($breakpoint-sm)
                     max-width: 190px
                 h3
-                    font-size: 21px !important
+                    font-size: 21px
+                    +max-screen(1600px)
+                        font-size: 18px
+                    +max-screen($breakpoint-xl)
+                        font-size: 16px
+                    +min-screen(1300px)
+                        +max-screen(1200px)
+                            font-size: 14px
                     +max-screen($breakpoint-lg)
-                        font-size: 18px !important
+                        font-size: 18px
                         align-self: center
             .title_active
                 position: relative

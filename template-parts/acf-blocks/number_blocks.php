@@ -8,7 +8,7 @@ $numbers = get_sub_field('number_blocks');
         <?php if ($title) : ?>
             <div class="number_blocks__top mb-80">
                 <div class="row">
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12">
                         <div class="title_block">
                             <h2><?php echo $title; ?></h2>
                         </div>
