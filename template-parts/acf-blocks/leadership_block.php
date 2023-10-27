@@ -32,6 +32,9 @@ $workers = get_sub_field('workers');
                 <?php foreach ($workers as $item) : ?>
                     <?php get_template_part('template-parts/parts/employee_item', '', array('item' => $item)); ?>
                 <?php endforeach; ?>
+                <?php
+                wp_reset_postdata()
+                ?>
             </div>
         <?php endif; ?>
     </div>
