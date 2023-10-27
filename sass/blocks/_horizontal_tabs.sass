@@ -1,0 +1,116 @@
+.horizontal_tabs
+    &__top
+        h2
+            +max-screen($breakpoint-lg)
+                margin-bottom: 32px
+    ul#tabs-nav
+        list-style: none
+        padding: 0
+        li
+            cursor: pointer
+
+            svg
+                display: block
+                transition: all $default-transition
+                margin: 0 auto
+                width: 100px
+                height: auto
+                position: relative
+                z-index: 2
+                +adaptive-value("width", 100, 30, 0)
+                +max-screen($breakpoint-lg)
+                    width: 40px
+
+        li.active
+            svg
+                align-self: center
+                transform: scale(2.0)
+                +max-screen($breakpoint-sm)
+                path
+                    fill: $color-primary
+            a
+                flex-direction: row
+                border-top: 15px $color-primary solid
+                box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09)
+                +max-screen($breakpoint-lg)
+                    border-top: 10px $color-primary solid
+                +max-screen($breakpoint-sm)
+                    border-top: 5px $color-primary solid
+                &::before
+                    position: absolute
+                    content: ''
+                    left: 0
+                    bottom: -30px
+                    height: 60px
+                    width: 100%
+                    background-color: $color-white
+                    z-index: 2
+            p
+                display: none
+
+        a
+            position: relative
+            display: flex
+            flex-direction: column
+            height: 100%
+            width: 100%
+            text-decoration: none
+            // padding: 26px 0
+            +adaptive-value("padding-top", 26, 16, 0)
+            +adaptive-value("padding-bottom", 26, 16, 0)
+
+        p
+            margin-top: 20px
+            +max-screen($breakpoint-sm)
+                margin-top: 8px
+                font-size: 16px
+    .tab-content
+        position: relative
+        +adaptive-value("padding", 60, 10, 0)
+        box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09)
+        background-color: $color-white
+        +max-screen($breakpoint-sm)
+            padding: 24px 16px
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            top: 0px
+            height: 60px
+            width: 100%
+            background-color: $color-white
+            z-index: 1
+        &> *
+            position: relative
+            z-index: 2
+        .content-block
+            margin-top: 20px
+            +max-screen($breakpoint-sm)
+                margin-top: 16px
+        .persents
+            &_row
+                justify-content: space-between
+                +max-screen($breakpoint-md)
+                    width: 700px
+                +max-screen($breakpoint-sm)
+                    width: 627px
+            &_col
+                +max-screen($breakpoint-sm)
+                    width: 193px
+                .text--size--42
+                    +max-screen($breakpoint-sm)
+                        font-size: 20px
+                .text--size--18,
+                .text--size--24
+                    +max-screen($breakpoint-sm)
+                        font-size: 16px
+
+            .color_text
+                +adaptive-value("padding-left", 20, 10, 0)
+                +adaptive-value("padding-right", 20, 10, 0)
+                width: max-content
+                margin: 0 auto
+                margin-top: 7px
+        .scroll
+            +max-screen($breakpoint-md)
+                overflow-x: auto

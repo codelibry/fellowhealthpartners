@@ -111,11 +111,13 @@ h6,.h6
 	&--size--70,&--size--70 *
 		font-size: 70px
 		+adaptive-value("font-size", 70, 8, 0)
-		+max-screen(1100px)
+		+max-screen($breakpoint-lg)
 			+adaptive-value("font-size", 60, 50, 0)
 	&--size--100,&--size--100 *
 		font-size: 100px
 		+adaptive-value("font-size", 100, 40, 0)
+		+max-screen($breakpoint-sm)
+			+adaptive-value("font-size", 60, 50, 0)
 	&--size--113,&--size--113 *
 		font-size: 113px
 		+adaptive-value("font-size", 113, 43, 0)

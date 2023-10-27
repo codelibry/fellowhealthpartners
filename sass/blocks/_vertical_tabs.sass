@@ -1,11 +1,21 @@
 .vertical_tabs
+    h2
+        +max-screen($breakpoint-lg)
+            margin-bottom: 32px
     .tabs
         display: flex
         margin-right: -32px
         margin-left: -32px
+        +max-screen(1100px)
+            margin-right: -16px
+            margin-left: -16px
+
         .col-lg-6
             padding-left: 32px
             padding-right: 32px
+            +max-screen(1100px)
+                padding-left: 16px
+                padding-right: 16px
         ul
             list-style-type: none
             margin: 0
@@ -57,10 +67,12 @@
                                 transform: none
 
                         ~.link-body
-                            display: block
+                            +max-screen($breakpoint-lg)
+                                display: block
                             &>*
-                                opacity: 1
-                                transform: translateY(0)
+                                +max-screen($breakpoint-lg)
+                                    opacity: 1
+                                    transform: translateY(0)
 
                 img
                     height: auto
@@ -169,9 +181,10 @@
             margin-right: -16px
             margin-left: -16px
             +max-screen($breakpoint-lg)
-                width: 627px
                 margin-right: -12px
                 margin-left: -12px
+            +max-screen($breakpoint-md)
+                width: 627px
             .col-4
                 padding-left: 16px
                 padding-right: 16px
@@ -193,5 +206,5 @@
                 -webkit-line-clamp: 2
                 min-height: 54px
     .scroll
-        +max-screen($breakpoint-lg)
+        +max-screen($breakpoint-md)
             overflow-x: auto
