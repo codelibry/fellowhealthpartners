@@ -1,0 +1,122 @@
+.circle_blocks
+    &__top
+        .primary-line
+            border-left: 5px $color-primary solid
+            padding-left: 40px
+        .arrows_text
+            span
+                display: inline-block
+                position: relative
+                width: 47px
+                height: 47px
+                vertical-align: sub
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    left: 0
+                    width: 47px
+                    height: 47px
+                    background-image: url('../assets/icons/arrows/arrow_top.svg')
+                    background-position: center
+                    background-size: contain
+                    background-repeat: no-repeat
+                &.down
+                    &::before
+                        background-image: url('../assets/icons/arrows/arrow_bottom.svg')
+    &__list
+        margin-top: 117px
+        margin-bottom: 200px
+        & > *
+
+            &:hover
+                &::after
+                    transform: rotate(90deg)
+                &::before
+                    height: calc(50% + 10px)
+                    width: calc(100% + 10px)
+                .dotted
+                    transform: rotate(90deg)
+
+            &:nth-child(1)
+                &::after
+                    border-color: $color-secondary
+                .dotted
+                    &::before
+                        border-bottom-color: $color-secondary
+                    &::after
+                        border-color: $color-secondary
+    &__inner
+        position: relative
+        width: 193px
+        height: 193px
+        border-radius: 9999px
+        border: 6px $color-white solid
+        z-index: 1
+        &::after
+            content: ""
+            position: absolute
+            top: -3px
+            right: -4px
+            width: calc(100% + 6px)
+            height: calc(100% + 6px)
+            border: 8px solid
+            box-sizing: border-box
+            z-index: -1
+            border-radius: 9999px
+        &::before
+            content: ""
+            position: absolute
+            top: -5px
+            left: -5px
+            width: calc(50% + 10px)
+            height: calc(100% + 10px)
+            background-color: $color-white
+
+        .dotted
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            &::before
+                position: absolute
+                content: ''
+                top: calc( 50% - 20px )
+                right: -32px
+                width: 40px
+                height: 32px
+                border-left: 20px solid transparent
+                border-right: 20px solid transparent
+                border-bottom: 32px solid
+                clip-path: polygon(50% 0, 0 100%, 100% 100%)
+                transform: rotate(90deg)
+
+            &::after
+                position: absolute
+                content: ''
+                top: -3px
+                left: -3px
+                width: 188px
+                height: 188px
+                border-radius: 9999px
+                border: 3px dotted
+        .bg
+            position: absolute
+            top: 6px
+            left: 6px
+            width: calc(100% - 12px)
+            height: calc(100% - 12px)
+            border-radius: 9999px
+            z-index: 0
+            img
+                width: 100%
+                height: 100%
+        .number
+            position: absolute
+        .title
+            position: relative
+            max-width: 140px
+            margin: 0 auto
+            z-index: 2
