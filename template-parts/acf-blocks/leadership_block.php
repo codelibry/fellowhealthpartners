@@ -28,7 +28,7 @@ $workers = get_sub_field('workers');
             </div>
         <?php endif; ?>
         <?php if ($workers) : ?>
-            <div class="leadership__list">
+            <div class="leadership__list row">
                 <?php foreach ($workers as $item) : ?>
                     <?php get_template_part('template-parts/parts/employee_item', '', array('item' => $item)); ?>
                 <?php endforeach; ?>
