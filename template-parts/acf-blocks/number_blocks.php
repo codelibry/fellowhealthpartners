@@ -22,19 +22,29 @@ $numbers = get_sub_field('number_blocks');
                 foreach ($numbers as $number) :
                     $vertical_title = $number['subtitle'];
                     $content = $number['content'] ?>
-                    <div class="vertical_block d-flex">
-                        <div class="number h3 text-color-primary">
-                            <?php echo $i ?>.
+                    <div class="vertical_block <?php if ($i == 1) : echo 'active'; endif?>">
+
+                        <div class="vertical_block__header">
+
+                            <div class="title_active bg--gradient-orange content-block">
+                                <p class="text-color-white h5 d-flex"><span><?php echo $i ?>.</span> <?php echo $vertical_title; ?></p>
+                            </div>
+
+                            <div class="number h3 text-color-primary">
+                                <?php echo $i ?>.
+                            </div>
+                            <div class="title">
+                                <h3 class="text--size--21 font--weight--800"><?php echo $vertical_title; ?></h3>
+                            </div>
+                            
                         </div>
-                        <div class="title">
-                            <h3 class="text--size--21 font--weight--800"><?php echo $vertical_title; ?></h3>
+                        
+                        <div class="vertical_block__content-wrapper">
+                            <div class="vertical_block__content content text-color-gray content-block">
+                                <?php echo $content; ?>
+                            </div>
                         </div>
-                        <div class="title_active bg--gradient-orange content-block">
-                            <p class="text-color-white h5 d-flex"><span><?php echo $i ?>.</span> <?php echo $vertical_title; ?></p>
-                        </div>
-                        <div class="content text-color-gray content-block">
-                            <?php echo $content; ?>
-                        </div>
+                        
                     </div>
                 <?php $i++;
                 endforeach; ?>
