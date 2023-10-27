@@ -33,15 +33,21 @@ $numbers = get_sub_field('number_blocks');
                             <div class="number h3 text-color-primary">
                                 <?php echo $i ?>.
                             </div>
-                            <div class="title">
-                                <h3 class="text--size--21 font--weight--800"><?php echo $vertical_title; ?></h3>
-                            </div>
+                            
                             
                         </div>
                         
                         <div class="vertical_block__content-wrapper">
                             <div class="vertical_block__content content text-color-gray content-block">
                                 <?php echo $content; ?>
+                            </div>
+                        </div>
+
+                        <div class="vertical_block__footer-wrapper">
+                            <div class="vertical_block__footer">
+                                <div class="title">
+                                    <h3 class="text--size--21 font--weight--800"><?php echo $vertical_title; ?></h3>
+                                </div>
                             </div>
                         </div>
                         

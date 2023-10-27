@@ -24,17 +24,17 @@
                 flex: 0 0 100%
                 max-width: 100%
             +max-screen($breakpoint-lg)
-                +adaptive-value("padding", 40, 16, 0)
+                // +adaptive-value("padding", 40, 16, 0)
                 min-height: 130px
                 max-height: none
                 flex-direction: row
                 justify-content: space-between
             +max-screen($breakpoint-sm)
-                +adaptive-value("padding", 16, 16, 0)
+                // +adaptive-value("padding", 16, 16, 0)
                 min-height: 107px
             &:hover,
             &.active
-                flex: 3
+                flex: 2.1
                 cursor: pointer
                 background-color: $color-white
                 border: 1px $color-gray-3 solid
@@ -46,7 +46,7 @@
                     p
                         opacity: 1
                         transition: 0.5s all
-                        transition-delay: .4s
+                        transition-delay: .5s
                         z-index: 1
                 .vertical_block
                     &__header
@@ -80,19 +80,25 @@
                     transition: .35s
                     transition-delay: 0.15s
                     background-image: linear-gradient(113.99deg, #FF851F 34.6%, #FAE331 100%)
-
-                
             &__content-wrapper
                 position: relative
+            &__footer
+                +adaptive-value("padding", 40, 20, 0)
+                +max-screen($breakpoint-lg)
+                    +adaptive-value("padding", 40, 16, 0)
+                +max-screen($breakpoint-sm)
+                    +adaptive-value("padding", 16, 16, 0)
+                &-wrapper
+                    position: absolute
+                    bottom: 0
+
             .number
                 +max-screen($breakpoint-lg)
                     align-self: center
                     +adaptive-value("font-size", 40, 40, 0)
 
             .title
-                max-width: 90%
                 transition: all .15s ease-in-out
-                height: 0
                 +max-screen($breakpoint-lg)
                     align-self: center
                 +max-screen($breakpoint-sm)
