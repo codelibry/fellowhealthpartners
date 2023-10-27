@@ -1,6 +1,13 @@
 .hero
     position: relative
     --header_header
+    .desktop
+        +max-screen($breakpoint-sm)
+            display: none
+    .mob
+        display: none
+        +max-screen($breakpoint-sm)
+            display: block
     &__main
         position: relative
         &__text
@@ -50,13 +57,7 @@
                         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.20) 100%)
                 .animate__animated
                     height: 100%
-                    .desktop
-                        +max-screen($breakpoint-sm)
-                            display: none
-                    .mob
-                        display: none
-                        +max-screen($breakpoint-sm)
-                            display: block
+                    
                 img
                     height: 100% !important
                     display: block
