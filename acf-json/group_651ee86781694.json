@@ -2034,7 +2034,7 @@
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": "33",
+                                                "width": "25",
                                                 "class": "",
                                                 "id": ""
                                             },
@@ -2055,7 +2055,7 @@
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": "33",
+                                                "width": "25",
                                                 "class": "",
                                                 "id": ""
                                             },
@@ -2071,20 +2071,20 @@
                                             "label": "Bottom Text",
                                             "name": "bottom_text",
                                             "aria-label": "",
-                                            "type": "text",
+                                            "type": "textarea",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": "33",
+                                                "width": "50",
                                                 "class": "",
                                                 "id": ""
                                             },
                                             "default_value": "",
                                             "maxlength": "",
+                                            "rows": 2,
                                             "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
+                                            "new_lines": "br",
                                             "parent_repeater": "field_653fb3c5b6471"
                                         }
                                     ],
@@ -2263,5 +2263,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698675684
+    "modified": 1698684066
 }

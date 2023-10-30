@@ -29,158 +29,178 @@
         +adaptive-value("margin-top", 117, 60, 0)
         +adaptive-value("margin-bottom", 412, 200, 0)
         & > *
-
-            &:hover
-                &::after
-                    transform: rotate(90deg)
-                &::before
-                    opacity: 0
-                    height: calc(50% + 10px)
-                    width: calc(100% + 10px)
-                .dotted
-                    transform: rotate(90deg)
+            .circle_blocks__inner
+                &:hover
                     &::after
-                        border: 3px solid
-                .number
-                    border: 1px solid $color-white
-                .title
-                    color: $color-white
-                .bg
-                    &_color
-                        opacity: 1
-                    img
-                        opacity: 0
-                .circle_blocks__content
-                    opacity: 1
-                    visibility: visible
-                    z-index: 2
-            &:nth-child(1)
-                z-index: 7
-                &::after
-                    border-color: $color-secondary
-                .dotted
+                        transform: rotate(90deg)
                     &::before
-                        border-bottom-color: $color-secondary
+                        opacity: 0
+                        height: calc(50% + 10px)
+                        width: calc(100% + 10px)
+                    .dotted
+                        transform: rotate(90deg)
+                        &::after
+                            border: 3px solid
+                    .number
+                        border: 1px solid $color-white
+                    .title
+                        color: $color-white
+                    .bg
+                        &_color
+                            opacity: 1
+                        img
+                            opacity: 0
+                    .circle_blocks__content
+                        opacity: 1
+                        visibility: visible
+                        z-index: 2
+            &:nth-child(1)
+                .circle_blocks__inner
+                    // z-index: 7
                     &::after
                         border-color: $color-secondary
-                .number
-                    background-color: $color-secondary
-                .bg_color
-                    background: $color-secondary
-                .content-block
-                    border-color: $color-secondary
-                    li
-                        &::marker
-                            color: $color-secondary
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-secondary
+                        &::after
+                            border-color: $color-secondary
+                    .number
+                        background-color: $color-secondary
+                    .bg_color
+                        background: $color-secondary
+                    .content-block
+                        border-color: $color-secondary
+                        li
+                            &::marker
+                                color: $color-secondary
 
             &:nth-child(2)
-                z-index: 6
-                &::after
-                    border-color: $color-secondary-medium-dark
-                .dotted
-                    &::before
-                        border-bottom-color: $color-secondary-medium-dark
+                .circle_blocks__inner
+                    // z-index: 6
                     &::after
                         border-color: $color-secondary-medium-dark
-                .number
-                    background-color: $color-secondary-medium-dark
-                .bg_color
-                    background: $color-secondary-medium-dark
-                .content-block
-                    border-color: $color-secondary-medium-dark
-                    li
-                        &::marker
-                            color: $color-secondary-medium-dark
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-secondary-medium-dark
+                        &::after
+                            border-color: $color-secondary-medium-dark
+                    .number
+                        background-color: $color-secondary-medium-dark
+                    .bg_color
+                        background: $color-secondary-medium-dark
+                    .content-block
+                        border-color: $color-secondary-medium-dark
+                        left: 50%
+                        transform: translateX(-40%)
+                        li
+                            &::marker
+                                color: $color-secondary-medium-dark
             &:nth-child(3)
-                z-index: 5
-                &::after
-                    border-color: $color-secondary-dark
-                .dotted
-                    &::before
-                        border-bottom-color: $color-secondary-dark
+                .circle_blocks__inner
+                    // z-index: 5
                     &::after
                         border-color: $color-secondary-dark
-                .number
-                    background-color: $color-secondary-dark
-                .bg_color
-                    background: $color-secondary-dark
-                .content-block
-                    border-color: $color-secondary-dark
-                    li
-                        &::marker
-                            color: $color-secondary-dark
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-secondary-dark
+                        &::after
+                            border-color: $color-secondary-dark
+                    .number
+                        background-color: $color-secondary-dark
+                    .bg_color
+                        background: $color-secondary-dark
+                    .content-block
+                        border-color: $color-secondary-dark
+                        left: 50%
+                        transform: translateX(-50%)
+                        li
+                            &::marker
+                                color: $color-secondary-dark
             &:nth-child(4)
-                z-index: 4
-                &::after
-                    border-color: $color-gold
-                .dotted
-                    &::before
-                        border-bottom-color: $color-gold
+                .circle_blocks__inner
+                    // z-index: 4
                     &::after
                         border-color: $color-gold
-                .number
-                    background-color: $color-gold
-                .bg_color
-                    background: $color-gold
-                .content-block
-                    border-color: $color-gold
-                    li
-                        &::marker
-                            color: $color-gold
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-gold
+                        &::after
+                            border-color: $color-gold
+                    .number
+                        background-color: $color-gold
+                    .bg_color
+                        background: $color-gold
+                    .content-block
+                        border-color: $color-gold
+                        left: 50%
+                        transform: translateX(-50%)
+                        li
+                            &::marker
+                                color: $color-gold
             &:nth-child(5)
-                z-index: 3
-                &::after
-                    border-color: $color-orange
-                .dotted
-                    &::before
-                        border-bottom-color: $color-orange
+                .circle_blocks__inner
+                    // z-index: 3
                     &::after
                         border-color: $color-orange
-                .number
-                    background-color: $color-orange
-                .bg_color
-                    background: $color-orange
-                .content-block
-                    border-color: $color-orange
-                    li
-                        &::marker
-                            color: $color-orange
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-orange
+                        &::after
+                            border-color: $color-orange
+                    .number
+                        background-color: $color-orange
+                    .bg_color
+                        background: $color-orange
+                    .content-block
+                        left: 50%
+                        transform: translateX(-27%)
+                        border-color: $color-orange
+                        li
+                            &::marker
+                                color: $color-orange
             &:nth-child(6)
-                z-index: 2
-                &::after
-                    border-color: $color-orange-2
-                .dotted
-                    &::before
-                        border-bottom-color: $color-orange-2
+                .circle_blocks__inner
+                    // z-index: 2
                     &::after
                         border-color: $color-orange-2
-                .number
-                    background-color: $color-orange-2
-                .bg_color
-                    background: $color-orange-2
-                .content-block
-                    border-color: $color-orange-2
-                    li
-                        &::marker
-                            color: $color-orange-2
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-orange-2
+                        &::after
+                            border-color: $color-orange-2
+                    .number
+                        background-color: $color-orange-2
+                    .bg_color
+                        background: $color-orange-2
+                    .content-block
+                        left: 50%
+                        transform: translateX(-55%)
+                        border-color: $color-orange-2
+                        li
+                            &::marker
+                                color: $color-orange-2
             &:nth-child(7)
-                &::after
-                    border-color: $color-orange-3
-                .dotted
-                    &::before
-                        border-bottom-color: $color-orange-3
+                .circle_blocks__inner
                     &::after
                         border-color: $color-orange-3
-                .number
-                    background-color: $color-orange-3
-                .bg_color
-                    background: $color-orange-3
-                .content-block
-                    border-color: $color-orange-3
-                    li
-                        &::marker
-                            color: $color-orange-3
-
+                    .dotted
+                        &::before
+                            border-bottom-color: $color-orange-3
+                        &::after
+                            border-color: $color-orange-3
+                    .number
+                        background-color: $color-orange-3
+                    .bg_color
+                        background: $color-orange-3
+                    .content-block
+                        left: auto
+                        right: 0
+                        border-color: $color-orange-3
+                        li
+                            &::marker
+                                color: $color-orange-3
+    &__inner-main
+        position: relative
     &__inner
         position: relative
         width: 193px
@@ -257,8 +277,8 @@
 
         .bg
             position: absolute
-            top: 6px
-            left: 6px
+            top: 6.5px
+            left: 7px
             width: calc(100% - 12px)
             height: calc(100% - 12px)
             border-radius: 9999px
@@ -289,6 +309,7 @@
             +adaptive-value("height", 60, 15, 0)
             border-radius: 50%
             transition: border $default-transition
+            z-index: 6
             span
                 display: block
                 width: 100%
@@ -307,12 +328,12 @@
         left: 0
         width: 100%
         height: 100%
-        z-index: 0
+        z-index: -1
         svg
-            width: 115% !important
+            width: 100% !important
     &__content
         position: absolute
-        top: calc( 100% + 10px )
+        top: calc( 100% + 30px )
         left: 0
         width: 750px
         height: max-content
@@ -334,6 +355,8 @@
         p
             margin-bottom: 10px
             +adaptive-value("font-size", 18, 14, 0)
+        a
+            color: $color-black
         ul
             list-style-type: disc !important
             padding-left: 14px !important

@@ -99,45 +99,48 @@ $persent_row = get_sub_field('persent_row_for_main_page');
                             break;
                     }
                 ?>
-                    <div class="circle_blocks__inner d-flex">
-                        <div class="dotted"></div>
-                        <div class="bg">
-                            <div class="bg_color">
+                    <div class="circle_blocks__inner-main">
+                        <div class="circle_blocks__inner d-flex">
+                            <div class="dotted"></div>
+                            <div class="bg">
+                                <div class="bg_color">
+                                </div>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
                             </div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
-                        </div>
-                        <div class="number text-color-white d-flex">
-                            <span class="align-self-center text--center h5"><?php echo $i; ?></span>
-                        </div>
-                        <div class="title d-flex">
-                            <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
+                            <div class="number text-color-white d-flex">
+                                <span class="align-self-center text--center h5"><?php echo $i; ?></span>
+                            </div>
+                            <div class="title d-flex">
+                                <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
+                            </div>
+
+                            <?php if ($content) : ?>
+                                <div class="circle_blocks__content content-block">
+                                    <?php echo $content; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($persent_row_inner) : ?>
+                                <div class="circle_blocks__persents_row d-none">
+                                    <?php foreach ($persent_row_inner as $col) :
+                                        $top_subtitle = $col['top_subtitle'];
+                                        $top_text = $col['top_text'];
+                                        $small_text = $col['small_text'];
+                                        $persent_number = $col['persent_number'];
+                                        $bottom_text = $col['bottom_text']; ?>
+                                        <div class="persents_col text--center">
+                                            <p class="text--size--42"><?php echo $top_subtitle; ?></p>
+                                            <p class="color_text text--size--42 text-color-white <?php echo $bgColorClass; ?>"><?php echo $top_text; ?></p>
+                                            <p class="text--size--18 text-color-gray"><?php echo $small_text; ?></p>
+                                            <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
+                                            <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="circle_blocks__mirror-img">
                             <?php echo get_inline_svg_assets('/images/mirror_' . $i . '.svg'); ?>
                         </div>
-                        <?php if ($content) : ?>
-                            <div class="circle_blocks__content content-block">
-                                <?php echo $content; ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($persent_row_inner) : ?>
-                            <div class="circle_blocks__persents_row d-none">
-                                <?php foreach ($persent_row_inner as $col) :
-                                    $top_subtitle = $col['top_subtitle'];
-                                    $top_text = $col['top_text'];
-                                    $small_text = $col['small_text'];
-                                    $persent_number = $col['persent_number'];
-                                    $bottom_text = $col['bottom_text']; ?>
-                                    <div class="persents_col text--center">
-                                        <p class="text--size--42"><?php echo $top_subtitle; ?></p>
-                                        <p class="color_text text--size--42 text-color-white <?php echo $bgColorClass; ?>"><?php echo $top_text; ?></p>
-                                        <p class="text--size--18 text-color-gray"><?php echo $small_text; ?></p>
-                                        <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
-                                        <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?>
                     </div>
                 <?php $i++;
                 endforeach; ?>
