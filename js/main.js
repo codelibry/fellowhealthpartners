@@ -39,3 +39,16 @@ numberBlock();
 testimonialBlock();
 vertical_Tabs();
 horizontal_Tabs();
+
+$(".circle_blocks__inner").hover(
+  function () {
+    var content = $(this).find(".circle_blocks__persents_row").html();
+    var bgColor = $(content).find(".bg_color").css("background-color");
+    $(".circle_blocks__bottom .persents_row").html(content);
+    $(".circle_blocks__bottom .persents_row .color_text").css(
+      "background-color",
+      bgColor
+    );
+  },
+  function () {}
+);

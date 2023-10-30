@@ -87,30 +87,30 @@
             margin-top: 20px
             +max-screen($breakpoint-sm)
                 margin-top: 16px
-        .persents
-            &_row
-                justify-content: space-between
-                +max-screen($breakpoint-md)
-                    width: 700px
-                +max-screen($breakpoint-sm)
-                    width: 627px
-            &_col
-                +max-screen($breakpoint-sm)
-                    width: 193px
-                .text--size--42
-                    +max-screen($breakpoint-sm)
-                        font-size: 20px
-                .text--size--18,
-                .text--size--24
-                    +max-screen($breakpoint-sm)
-                        font-size: 16px
-
-                .color_text
-                    +adaptive-value("padding-left", 20, 10, 0)
-                    +adaptive-value("padding-right", 20, 10, 0)
-                    width: max-content
-                    margin: 0 auto
-                    margin-top: 7px
         .scroll
             +max-screen($breakpoint-md)
                 overflow-x: auto
+.persents
+    &_row
+        justify-content: space-between
+        +max-screen($breakpoint-md)
+            width: 700px
+            +max-screen($breakpoint-sm)
+                width: 627px
+    &_col
+        +max-screen($breakpoint-sm)
+            width: 193px
+        .text--size--42
+            +max-screen($breakpoint-sm)
+                font-size: 20px
+        .text--size--18,
+        .text--size--24
+            +max-screen($breakpoint-sm)
+                font-size: 16px
+
+        .color_text
+            +adaptive-value("padding-left", 20, 10, 0)
+            +adaptive-value("padding-right", 20, 10, 0)
+            width: max-content
+            margin: 0 auto
+            margin-top: 7px
