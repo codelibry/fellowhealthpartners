@@ -27,12 +27,12 @@ $content = get_post_field('post_content', $post->ID);
     <?php if ($linkedin || $employee_email || $content) : ?>
         <div class="bio_block d-flex popup-content-links">
             <?php if ($employee_email) : ?>
-                <a href="<?php echo get_href_email($employee_email); ?>">
+                <a href="<?php echo get_href_email($employee_email); ?>" class="bio_block__email">
                     <?php echo get_inline_svg('email-fill.svg'); ?>
                 </a>
             <?php endif; ?>
             <?php if ($linkedin) : ?>
-                <a href="<?php echo $linkedin ?>" class="linkedin" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo $linkedin ?>" class="bio_block__linkedin linkedin" target="_blank" rel="noopener noreferrer">
                     <?php echo get_inline_svg('/social/linkedin-orange.svg'); ?>
                 </a>
             <?php endif; ?>

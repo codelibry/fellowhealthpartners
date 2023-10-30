@@ -20,6 +20,7 @@ import { numberBlock } from "./template-parts/blocks/number_block";
 import { testimonialBlock } from "./template-parts/blocks/testimonial";
 import { vertical_Tabs } from "./template-parts/blocks/vertical_tabs";
 import { horizontal_Tabs } from "./template-parts/blocks/horizontal_tabs";
+import { parrallax_images } from "./animations/parallax";
 header();
 footer();
 
@@ -39,6 +40,7 @@ numberBlock();
 testimonialBlock();
 vertical_Tabs();
 horizontal_Tabs();
+parrallax_images();
 
 $(".circle_blocks__inner").hover(
   function () {
