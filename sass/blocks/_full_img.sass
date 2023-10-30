@@ -1,4 +1,13 @@
 .full_img
+    position: relative
+    padding-bottom: 32%
+    overflow: hidden
     img
         display: block
         object-fit: cover
+    .parallax-img
+        position: absolute
+        left: 0
+        +min-screen($breakpoint-lg)
+            top: -40%
+            height: 140%
