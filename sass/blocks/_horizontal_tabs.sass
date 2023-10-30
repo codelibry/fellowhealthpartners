@@ -20,6 +20,13 @@
                 +adaptive-value("width", 100, 0, 0)
                 +max-screen($breakpoint-lg)
                     width: 40px
+        & > *
+            &:nth-child(2),
+            &:nth-child(3)
+                &.active
+                    svg
+                        transform: scale(1.48)
+                        max-width: 148px
 
         li.active
             svg
