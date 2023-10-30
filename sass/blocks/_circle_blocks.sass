@@ -27,6 +27,7 @@
     &__list
         margin-top: 117px
         margin-bottom: 200px
+        display: flex
         & > *
 
             &:hover
@@ -46,6 +47,69 @@
                         border-bottom-color: $color-secondary
                     &::after
                         border-color: $color-secondary
+                .number
+                    background-color: $color-secondary
+            &:nth-child(2)
+                &::after
+                    border-color: $color-secondary-medium-dark
+                .dotted
+                    &::before
+                        border-bottom-color: $color-secondary-medium-dark
+                    &::after
+                        border-color: $color-secondary-medium-dark
+                .number
+                    background-color: $color-secondary-medium-dark
+            &:nth-child(3)
+                &::after
+                    border-color: $color-secondary-dark
+                .dotted
+                    &::before
+                        border-bottom-color: $color-secondary-dark
+                    &::after
+                        border-color: $color-secondary-dark
+                .number
+                    background-color: $color-secondary-dark
+            &:nth-child(4)
+                &::after
+                    border-color: $color-gold
+                .dotted
+                    &::before
+                        border-bottom-color: $color-gold
+                    &::after
+                        border-color: $color-gold
+                .number
+                    background-color: $color-gold
+            &:nth-child(5)
+                &::after
+                    border-color: $color-orange
+                .dotted
+                    &::before
+                        border-bottom-color: $color-orange
+                    &::after
+                        border-color: $color-orange
+                .number
+                    background-color: $color-orange
+            &:nth-child(6)
+                &::after
+                    border-color: $color-orange-2
+                .dotted
+                    &::before
+                        border-bottom-color: $color-orange-2
+                    &::after
+                        border-color: $color-orange-2
+                .number
+                    background-color: $color-orange-2
+            &:nth-child(7)
+                &::after
+                    border-color: $color-orange-3
+                .dotted
+                    &::before
+                        border-bottom-color: $color-orange-3
+                    &::after
+                        border-color: $color-orange-3
+                .number
+                    background-color: $color-orange-3
+
     &__inner
         position: relative
         width: 193px
@@ -53,6 +117,7 @@
         border-radius: 9999px
         border: 6px $color-white solid
         z-index: 1
+        margin-right: 20px
         &::after
             content: ""
             position: absolute
@@ -80,6 +145,7 @@
             left: 0
             width: 100%
             height: 100%
+            transition: all $default-transition
             &::before
                 position: absolute
                 content: ''
@@ -102,6 +168,7 @@
                 height: 188px
                 border-radius: 9999px
                 border: 3px dotted
+
         .bg
             position: absolute
             top: 6px
@@ -115,6 +182,14 @@
                 height: 100%
         .number
             position: absolute
+            top: -30px
+            left: calc( 50% - 30px )
+            width: 60px
+            height: 60px
+            border-radius: 50%
+            span
+                display: block
+                width: 100%
         .title
             position: relative
             max-width: 140px

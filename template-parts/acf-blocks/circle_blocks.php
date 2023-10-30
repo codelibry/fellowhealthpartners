@@ -70,7 +70,7 @@ $circle_blocks = get_sub_field('circle_blocks');
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
                         </div>
                         <div class="number text-color-white d-flex">
-                            <span class="align-self-center"><?php echo $i; ?></span>
+                            <span class="align-self-center text--center h5"><?php echo $i; ?></span>
                         </div>
                         <div class="title d-flex">
                             <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
