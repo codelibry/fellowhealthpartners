@@ -67,6 +67,8 @@ $circle_blocks = get_sub_field('circle_blocks');
                     <div class="circle_blocks__inner d-flex">
                         <div class="dotted"></div>
                         <div class="bg">
+                            <div class="bg_color">
+                            </div>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
                         </div>
                         <div class="number text-color-white d-flex">
@@ -74,6 +76,9 @@ $circle_blocks = get_sub_field('circle_blocks');
                         </div>
                         <div class="title d-flex">
                             <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
+                        </div>
+                        <div class="circle_blocks__mirror-img">
+                            <?php echo get_inline_svg_assets('/images/mirror_' . $i . '.svg'); ?>
                         </div>
                     </div>
                 <?php $i++;
