@@ -133,3 +133,14 @@ add_action('widgets_init', 'fellow_widgets_init');
 add_filter('excerpt_more', function ($more) {
 	return '...';
 });
+
+
+/* Redirect from Leadership single page */
+
+add_action( 'template_redirect', 'redirect_product_single' );
+function redirect_product_single(){
+    if ( ! is_singular( 'leadership' ) )
+        return;
+        wp_redirect( get_home_url() . '/', 301 );
+    exit;
+}
