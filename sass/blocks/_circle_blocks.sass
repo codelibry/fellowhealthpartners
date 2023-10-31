@@ -243,9 +243,13 @@
             +max-screen($breakpoint-md)
                 width: 100%
                 max-width: calc(100vw - 30px)
+            +max-screen($breakpoint-sm)
+                max-width: calc(100vw - 16px)
             div
                 padding: 32px
                 border-top: 5px solid
+                +max-screen($breakpoint-sm)
+                    padding: 24px 16px
 
             .color
                 &-1
