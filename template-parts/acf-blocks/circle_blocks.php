@@ -14,7 +14,7 @@ $persent_row = get_sub_field('persent_row_for_main_page');
 
 <section class="circle_blocks mt-130">
     <div class="container">
-        <div class="circle_blocks__top">
+        <div class="circle_blocks__top" id="what_we_do">
             <div class="row">
                 <div class="col-lg-7 mb-2 mb-lg-0">
                     <?php if ($top_title) : ?>

@@ -4,7 +4,7 @@ $top_content  = get_sub_field('subtitle');
 $tabs = get_sub_field('tabs');
 ?>
 
-<section class="horizontal_tabs section section--spacing--md">
+<section id="who_we_serve" class="horizontal_tabs section section--spacing--md">
     <div class="container">
         <?php if ($title && $top_content) : ?>
             <div class="horizontal_tabs__top mb-60">

@@ -4,7 +4,7 @@ $subtitle = get_sub_field('subtitle');
 $tabs = get_sub_field('tabs');
 ?>
 
-<section class="vertical_tabs section">
+<section id="how_we_do_it" class="vertical_tabs section">
     <div class="container">
         <?php if ($title && $subtitle) : ?>
             <div class="vertical_tabs__top">
