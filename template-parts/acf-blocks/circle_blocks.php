@@ -62,88 +62,94 @@ $persent_row = get_sub_field('persent_row_for_main_page');
                     </div>
                 </div>
             <?php endif; ?>
-            <div class="circle_blocks__list">
-                <?php $i = 1;
-                foreach ($circle_blocks as $block) :
-                    $block_title = $block['title'];
-                    $persent_row_inner = $block['persent_row'];
-                    $content = $block['content'];
-                    $bgColorClass = ''; // Initialize the class variable
+            <div class="scroll">
+                <div class="circle_blocks__list">
+                    <?php $i = 1;
+                    foreach ($circle_blocks as $block) :
+                        $block_title = $block['title'];
+                        $persent_row_inner = $block['persent_row'];
+                        $content = $block['content'];
+                        $bgColorClass = ''; // Initialize the class variable
 
-                    // Use a switch statement to determine the class based on the value of $i
-                    switch ($i) {
-                        case 1:
-                            $bgColorClass = 'bg--secondary';
-                            break;
-                        case 2:
-                            $bgColorClass = 'bg--secondary-2';
-                            break;
-                        case 3:
-                            $bgColorClass = 'bg--secondary-3';
-                            break;
-                        case 4:
-                            $bgColorClass = 'bg--gold';
-                            break;
-                        case 5:
-                            $bgColorClass = 'bg--orange';
-                            break;
-                        case 6:
-                            $bgColorClass = 'bg--orange-2';
-                            break;
-                        case 7:
-                            $bgColorClass = 'bg--orange-3';
-                            break;
-                        default:
-                            // Default class if $i doesn't match any case
-                            $bgColorClass = 'bg--primary';
-                            break;
-                    }
-                ?>
-                    <div class="circle_blocks__inner-main">
-                        <div class="circle_blocks__inner d-flex">
-                            <div class="dotted"></div>
-                            <div class="bg">
-                                <div class="bg_color">
+                        // Use a switch statement to determine the class based on the value of $i
+                        switch ($i) {
+                            case 1:
+                                $bgColorClass = 'bg--secondary';
+                                break;
+                            case 2:
+                                $bgColorClass = 'bg--secondary-2';
+                                break;
+                            case 3:
+                                $bgColorClass = 'bg--secondary-3';
+                                break;
+                            case 4:
+                                $bgColorClass = 'bg--gold';
+                                break;
+                            case 5:
+                                $bgColorClass = 'bg--orange';
+                                break;
+                            case 6:
+                                $bgColorClass = 'bg--orange-2';
+                                break;
+                            case 7:
+                                $bgColorClass = 'bg--orange-3';
+                                break;
+                            default:
+                                // Default class if $i doesn't match any case
+                                $bgColorClass = 'bg--primary';
+                                break;
+                        }
+                    ?>
+                        <div class="circle_blocks__inner-main">
+                            <div class="circle_blocks__inner d-flex">
+                                <div class="dotted"></div>
+                                <div class="bg">
+                                    <div class="bg_color">
+                                    </div>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
                                 </div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/circle_bg.svg" alt="">
-                            </div>
-                            <div class="number text-color-white d-flex">
-                                <span class="align-self-center text--center h5"><?php echo $i; ?></span>
-                            </div>
-                            <div class="title d-flex">
-                                <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
-                            </div>
+                                <div class="number text-color-white d-flex">
+                                    <span class="align-self-center text--center h5"><?php echo $i; ?></span>
+                                </div>
+                                <div class="title d-flex">
+                                    <h4 class="text--size--18 align-self-center text--center"><?php echo $block_title; ?></h4>
+                                </div>
 
-                            <?php if ($content) : ?>
-                                <div class="circle_blocks__content content-block">
-                                    <?php echo $content; ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($persent_row_inner) : ?>
-                                <div class="circle_blocks__persents_row d-none">
-                                    <?php foreach ($persent_row_inner as $col) :
-                                        $top_subtitle = $col['top_subtitle'];
-                                        $top_text = $col['top_text'];
-                                        $small_text = $col['small_text'];
-                                        $persent_number = $col['persent_number'];
-                                        $bottom_text = $col['bottom_text']; ?>
-                                        <div class="persents_col text--center">
-                                            <p class="text--size--42"><?php echo $top_subtitle; ?></p>
-                                            <p class="color_text text--size--42 text-color-white <?php echo $bgColorClass; ?>"><?php echo $top_text; ?></p>
-                                            <p class="text--size--18 text-color-gray"><?php echo $small_text; ?></p>
-                                            <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
-                                            <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
+                                <?php if ($content) : ?>
+                                    <div class="circle_blocks__content content-block">
+                                        <div class="color-<?php echo $i; ?>">
+                                            <?php echo $content; ?>
                                         </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($persent_row_inner) : ?>
+                                    <div class="circle_blocks__persents_row d-none">
+                                        <?php foreach ($persent_row_inner as $col) :
+                                            $top_subtitle = $col['top_subtitle'];
+                                            $top_text = $col['top_text'];
+                                            $small_text = $col['small_text'];
+                                            $persent_number = $col['persent_number'];
+                                            $bottom_text = $col['bottom_text']; ?>
+                                            <div class="persents_col text--center">
+                                                <p class="text--size--42"><?php echo $top_subtitle; ?></p>
+                                                <p class="color_text text--size--42 text-color-white <?php echo $bgColorClass; ?>"><?php echo $top_text; ?></p>
+                                                <p class="text--size--18 text-color-gray"><?php echo $small_text; ?></p>
+                                                <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
+                                                <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="circle_blocks__mirror-img">
+                                <?php echo get_inline_svg_assets('/images/mirror_' . $i . '.svg'); ?>
+                            </div>
                         </div>
-                        <div class="circle_blocks__mirror-img">
-                            <?php echo get_inline_svg_assets('/images/mirror_' . $i . '.svg'); ?>
-                        </div>
-                    </div>
-                <?php $i++;
-                endforeach; ?>
+                    <?php $i++;
+                    endforeach; ?>
+                </div>
+            </div>
+            <div class="circle_blocks__content content-block show">
             </div>
         </div>
         <?php if ($persent_row) : ?>

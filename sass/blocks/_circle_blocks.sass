@@ -24,10 +24,20 @@
                 &.down
                     &::before
                         background-image: url('../assets/icons/arrows/arrow_bottom.svg')
+    &__center
+        position: relative
+    .scroll
+        +max-screen($breakpoint-xs)
+            overflow-x: auto
+            overflow-y: hidden
     &__list
         display: flex
         +adaptive-value("margin-top", 117, 60, 0)
         +adaptive-value("margin-bottom", 412, 200, 0)
+        +max-screen($breakpoint-xs)
+            width: max-content
+            +adaptive-value("margin-bottom", 412, 300, 0)
+
         & > *
             .circle_blocks__inner
                 &:hover
@@ -92,6 +102,9 @@
                         border-color: $color-secondary-medium-dark
                         left: 50%
                         transform: translateX(-40%)
+                        +max-screen($breakpoint-xs)
+                            left: 0
+                            transform: none
                         li
                             &::marker
                                 color: $color-secondary-medium-dark
@@ -113,6 +126,9 @@
                         border-color: $color-secondary-dark
                         left: 50%
                         transform: translateX(-50%)
+                        +max-screen($breakpoint-xs)
+                            left: 0
+                            transform: none
                         li
                             &::marker
                                 color: $color-secondary-dark
@@ -134,6 +150,9 @@
                         border-color: $color-gold
                         left: 50%
                         transform: translateX(-50%)
+                        +max-screen($breakpoint-xs)
+                            left: 0
+                            transform: none
                         li
                             &::marker
                                 color: $color-gold
@@ -155,6 +174,9 @@
                         left: 50%
                         transform: translateX(-27%)
                         border-color: $color-orange
+                        +max-screen($breakpoint-xs)
+                            left: 0
+                            transform: none
                         li
                             &::marker
                                 color: $color-orange
@@ -176,6 +198,9 @@
                         left: 50%
                         transform: translateX(-55%)
                         border-color: $color-orange-2
+                        +max-screen($breakpoint-xs)
+                            left: 0
+                            transform: none
                         li
                             &::marker
                                 color: $color-orange-2
@@ -196,9 +221,68 @@
                         left: auto
                         right: 0
                         border-color: $color-orange-3
+                        +max-screen($breakpoint-xs)
+                            right: auto
+                            transform: none
                         li
                             &::marker
                                 color: $color-orange-3
+    .show
+        display: none
+        opacity: 0
+        visibility: hidden
+        &.active
+            +max-screen($breakpoint-xs)
+                display: block
+                opacity: 1
+                visibility: visible
+                top: auto
+                bottom: 0
+                padding: 0 !important
+                border-top: none !important
+            +max-screen($breakpoint-md)
+                width: 100%
+                max-width: calc(100vw - 30px)
+            div
+                padding: 32px
+                border-top: 5px solid
+
+            .color
+                &-1
+                    border-color: $color-secondary
+                    li
+                        &::marker
+                            color: $color-secondary
+                &-2
+                    border-color: $color-secondary-medium-dark
+                    li
+                        &::marker
+                            color: $color-secondary-medium-dark
+                &-3
+                    border-color: $color-secondary-dark
+                    li
+                        &::marker
+                            color: $color-secondary-dark
+                &-4
+                    border-color: $color-gold
+                    li
+                        &::marker
+                            color: $color-gold
+                &-5
+                    border-color: $color-orange
+                    li
+                        &::marker
+                            color: $color-orange
+                &-6
+                    border-color: $color-orange-2
+                    li
+                        &::marker
+                            color: $color-orange-2
+                &-7
+                    border-color: $color-orange-3
+                    li
+                        &::marker
+                            color: $color-orange-3
     &__inner-main
         position: relative
     &__inner
@@ -214,6 +298,10 @@
         +adaptive-value("margin-right", 20, 0, 0)
         +max-screen($breakpoint-xm)
             +adaptive-value("margin-right", 10, 0, 0)
+        +max-screen($breakpoint-xs)
+            width: 183px
+            height: 183px
+            margin-right: 17px
         &::after
             content: ""
             position: absolute
@@ -225,6 +313,8 @@
             box-sizing: border-box
             z-index: -1
             border-radius: 9999px
+            +max-screen($breakpoint-xs)
+                border: 13px solid
         &::before
             content: ""
             position: absolute
@@ -274,6 +364,12 @@
                 +adaptive-value("height", 188, 65, 0)
                 border-radius: 9999px
                 border: 3px dotted
+                +max-screen($breakpoint-xs)
+                    width: 179px
+                    height: 179px
+                    top: -4px
+                    left: -4px
+                    border: 2px dotted
 
         .bg
             position: absolute
@@ -284,6 +380,12 @@
             border-radius: 9999px
             overflow: hidden
             z-index: 0
+            +max-screen($breakpoint-xs)
+                top: 11.5px
+                left: 12.5px
+                width: calc(100% - 23px)
+                height: calc(100% - 23px)
+                border-radius: 50%
 
             &_color
                 position: absolute
@@ -310,6 +412,10 @@
             border-radius: 50%
             transition: border $default-transition
             z-index: 6
+            +max-screen($breakpoint-xs)
+                width: 44px
+                height: 44px
+                top: -22px
             span
                 display: block
                 width: 100%
@@ -321,7 +427,12 @@
             +adaptive-value("max-width", 140, 70, 0)
             margin: 0 auto
             z-index: 2
-            // transition: all $default-transition
+            +max-screen($breakpoint-md)
+                max-width: 130px
+
+            .h4
+                +max-screen($breakpoint-xs)
+                    font-size: 16px
     &__mirror-img
         position: absolute
         bottom: -100%
@@ -345,6 +456,13 @@
         background-color: $color-white
         border-top: 5px solid
         transition: all $default-transition
+        .color_bg
+            display: none
+        +max-screen($breakpoint-xs)
+            width: 720px
+            padding: 32px
+
+            display: none
         h2,h3,h4,h5,h6
             margin-top: 10px
             margin-bottom: 10px
@@ -355,13 +473,17 @@
         p
             margin-bottom: 10px
             +adaptive-value("font-size", 18, 14, 0)
+            +max-screen($breakpoint-xs)
+                font-size: 18px
         a
             color: $color-black
         ul
             list-style-type: disc !important
             padding-left: 14px !important
-            margin: 10px 0
+            margin: 10px 0 0
             +adaptive-value("font-size", 18, 14, 0)
+            +max-screen($breakpoint-xs)
+                font-size: 18px
         li
             margin-bottom: 8px
             display: list-item !important
@@ -373,3 +495,7 @@
                 margin-bottom: 0
     &__bottom
         +adaptive-value("margin-bottom", 168, 60, 0)
+        +max-screen($breakpoint-md)
+            overflow-x: auto
+            overflow-y: hidden
+            padding-bottom: 30px
