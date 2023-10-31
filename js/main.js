@@ -21,6 +21,8 @@ import { testimonialBlock } from "./template-parts/blocks/testimonial";
 import { vertical_Tabs } from "./template-parts/blocks/vertical_tabs";
 import { horizontal_Tabs } from "./template-parts/blocks/horizontal_tabs";
 import { parrallax_images } from "./animations/parallax";
+import { circle_blocks } from "./template-parts/blocks/circle_blocks";
+
 header();
 footer();
 
@@ -41,16 +43,4 @@ testimonialBlock();
 vertical_Tabs();
 horizontal_Tabs();
 parrallax_images();
-
-$(".circle_blocks__inner").hover(
-  function () {
-    var content = $(this).find(".circle_blocks__persents_row").html();
-    var bgColor = $(content).find(".bg_color").css("background-color");
-    $(".circle_blocks__bottom .persents_row").html(content);
-    $(".circle_blocks__bottom .persents_row .color_text").css(
-      "background-color",
-      bgColor
-    );
-  },
-  function () {}
-);
+circle_blocks();
