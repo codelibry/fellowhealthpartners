@@ -6,7 +6,12 @@ import { header } from "./template-parts/header/header";
 import { footer } from "./template-parts/footer/footer";
 // Animations
 import { appearence } from "./animations/appearence";
-
+import {
+  scrollToAnchor,
+  scrollToHash,
+  requestQuoteLink,
+  smooth_scroll,
+} from "./animations/scroll-to-anchor";
 // Blocks
 
 // Parts
@@ -29,6 +34,7 @@ footer();
 //animations
 appearence();
 
+smooth_scroll();
 //blocks
 
 // Parts
