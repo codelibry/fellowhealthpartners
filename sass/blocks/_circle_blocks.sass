@@ -3,6 +3,7 @@
         .primary-line
             border-left: 5px $color-primary solid
             padding-left: 40px
+            margin-left: 5px
         .arrows_text
             span
                 display: inline-block
@@ -10,6 +11,8 @@
                 width: 47px
                 height: 47px
                 vertical-align: sub
+                +adaptive-value("width", 47, 20, 0)
+                +adaptive-value("height", 47, 20, 0)
                 &::before
                     position: absolute
                     content: ''
@@ -17,6 +20,8 @@
                     left: 0
                     width: 47px
                     height: 47px
+                    +adaptive-value("width", 47, 20, 0)
+                    +adaptive-value("height", 47, 20, 0)
                     background-image: url('../assets/icons/arrows/arrow_top.svg')
                     background-position: center
                     background-size: contain
