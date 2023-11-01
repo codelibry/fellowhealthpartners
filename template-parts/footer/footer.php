@@ -60,7 +60,7 @@ $footer_logos = get_field('footer_logos', 'options');
         <?php
 
         if ($footer_logos) : ?>
-            <div class='site-footer__bottom bg--secondary'>
+            <div class='site-footer__bottom'>
                 <div class='container'>
                     <div class='site-footer__bottom-wrap'>
                         <?php foreach ($footer_logos as $logo) : ?>
