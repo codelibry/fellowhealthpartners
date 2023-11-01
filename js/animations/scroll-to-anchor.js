@@ -49,7 +49,7 @@ function requestQuoteLink() {
 function smooth_scroll() {
   jQuery(document).ready(function () {
     // Scrolling for anchor links in within the same page
-    jQuery('a[href*="#"]:not([href="#"])').click(function () {
+    jQuery('.menu-item a[href*="#"]:not([href="#"])').click(function () {
       _hash = this.hash;
       _scroll_it(_hash);
     });
