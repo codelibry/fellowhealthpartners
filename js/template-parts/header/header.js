@@ -10,21 +10,11 @@ function header() {
     e.preventDefault();
   });
 
-  //   function movePortalLink() {
-  //     if ($(window).width() < 992) {
-  //       if ($(".mega-toggle-blocks-left .button").length == 0) {
-  //         if ($(".site-header__info .button").length) {
-  //           $(".mega-toggle-blocks-left").append(
-  //             $(".site-header__info .button").clone()
-  //           );
-  //         }
-  //       }
-  //     }
-  //   }
-  //
-  //   movePortalLink();
-
-  // $(window).on("resize", movePortalLink);
+  var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
+  document.documentElement.style.setProperty(
+    "--header_header",
+    headerHeight + "px"
+  );
 
   $("#toggle").on("click", function () {
     $(this).toggleClass("on");
