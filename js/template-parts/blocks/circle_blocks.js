@@ -19,9 +19,18 @@ function circle_blocks() {
             "background-color",
             bgColor
           );
-          $(this)
-            .parents(".circle_blocks__list")
-            .css("margin-bottom", contentHeight + 50);
+          var $circleBlocksList = $(this).parents(".circle_blocks__list");
+          var currentMarginBottom = parseInt(
+            $circleBlocksList.css("margin-bottom"),
+            10
+          );
+          console.log(currentMarginBottom);
+          if (currentMarginBottom < contentHeight) {
+            $(this)
+              .parents(".circle_blocks__list")
+              .css("margin-bottom", contentHeight + 50);
+          }
+
           // Check if the screen width is smaller than 1368px
           if ($(window).width() < 1368) {
             $(".circle_blocks__center .show").html(circleContent);
@@ -39,6 +48,14 @@ function circle_blocks() {
           // This is the mouseout handler; you can add code here if needed.
         }
       );
+    // Find the span within p.text--size--100
+    var $textSize100 = $(".text--size--100 span");
+
+    // Get the font-size value from the span
+    var fontSize = $textSize100.css("font-size");
+
+    // Apply the font-size to p.text--size--100
+    $textSize100.parent().css("font-size", fontSize);
   });
 }
 export { circle_blocks };

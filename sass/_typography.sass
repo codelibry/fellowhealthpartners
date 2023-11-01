@@ -18,7 +18,7 @@ h1,
 	+adaptive-value("font-size", 80, 20, 0)
 	line-height: 1.2
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 40, 40, 0)
 
 h2,.h2
@@ -26,7 +26,7 @@ h2,.h2
 	+adaptive-value("font-size", 60, 20, 0)
 	line-height: 1.16
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 30, 30, 0)
 
 h3,.h3
@@ -34,7 +34,7 @@ h3,.h3
 	+adaptive-value("font-size", 49, 17, 0)
 	line-height: 1.2
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 27, 27, 0)
 
 h4,.h4
@@ -42,7 +42,7 @@ h4,.h4
 	+adaptive-value("font-size", 42, 14, 0)
 	line-height: 1.2
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 24, 24, 0)
 
 h5,.h5
@@ -50,7 +50,7 @@ h5,.h5
 	+adaptive-value("font-size", 32, 10, 0)
 	line-height: 1.2 // I am not 100% sure
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 20, 20, 0)
 
 h6,.h6
@@ -58,7 +58,7 @@ h6,.h6
 	+adaptive-value("font-size", 24, 14, 0)
 	line-height: 1.5
 	font-weight: 500
-	+max-screen($breakpoint-sm)
+	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 18, 18, 0)
 
 .text
@@ -128,6 +128,8 @@ h6,.h6
 	&--size--100,&--size--100 *
 		font-size: 100px
 		+adaptive-value("font-size", 100, 40, 0)
+		span
+			+adaptive-value("font-size", 58, 20, 0)
 		+max-screen($breakpoint-sm)
 			+adaptive-value("font-size", 60, 50, 0)
 	&--size--113,&--size--113 *

@@ -1,6 +1,10 @@
 .partner
     background: linear-gradient(92deg, #7EB6CA 0%, rgba(61.71, 150.99, 180.62, 0.94) 100%)
     .title_block
+        h2
+            +max-screen($breakpoint-xm)
+                +min-screen($breakpoint-xl)
+                    +adaptive-value("font-size", 60, 10, 0)
         +max-screen($breakpoint-lg)
             text-align: center
     .top_content
