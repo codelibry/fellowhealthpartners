@@ -1,4 +1,9 @@
 .header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 99
     &__topbar
         position: relative
         z-index: 2
@@ -231,7 +236,7 @@
     +max-screen(600px)
         position: fixed
 .admin-bar
-    .header_block
+    .header
         top: 32px
         +max-screen($breakpoint-md)
             top: 46px
