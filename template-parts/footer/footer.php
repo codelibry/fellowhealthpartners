@@ -17,7 +17,9 @@ $footer_logos = get_field('footer_logos', 'options');
         <div class="inner d-flex align-items-center justify-content-between">
             <?php if ($footer_logo) : ?>
                 <div class="pre-footer__logo">
-                    <img src="<?php echo $footer_logo['url']; ?>" alt="">
+                    <a href="<?php echo get_home_url() ?>">
+                        <img src="<?php echo $footer_logo['url']; ?>" alt="">
+                    </a>
                 </div>
             <?php endif; ?>
             <?php if ($footer_contact_text) : ?>
