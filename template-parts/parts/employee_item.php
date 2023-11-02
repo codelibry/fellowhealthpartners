@@ -36,9 +36,9 @@ $content = get_post_field('post_content', $post->ID);
                     <?php echo get_inline_svg('/social/linkedin-orange.svg'); ?>
                 </a>
             <?php endif; ?>
-            <a href="#" class="bio popup-open text--size--27 text-color-orange-2 font--weight--900 text-uppercase">
+            <div class="bio popup-open text--size--27 text-color-orange-2 font--weight--900 text-uppercase">
                 <span><?php _e('BIO', 'fhp'); ?></span>
-            </a>
+            </div>
         </div>
     <?php endif; ?>
     <div class="employee__text__content popup-text">
