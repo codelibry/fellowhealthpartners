@@ -117,3 +117,28 @@
             display: flex
             img
                 align-self: center
+
+.blog-header
+    margin-bottom: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +max-screen($breakpoint-lg)
+
+    .fellow-heading
+        margin-right: 15px
+        margin-bottom: 20px
+        +max-screen($breakpoint-lg)
+        margin-bottom: 0
+
+    .socials
+        display: flex
+        align-self: flex-end
+        a
+            height: 100%
+            display: flex
+            margin-right: 15px
+        svg
+            width: 24px
+            height: 24px
+            align-self: center
