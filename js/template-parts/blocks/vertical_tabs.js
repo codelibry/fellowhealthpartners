@@ -1,51 +1,59 @@
 import $ from "jquery";
 
 function vertical_Tabs() {
-  // Variables
-  const tabLinks = document.querySelectorAll("#tabs-section .tab-link");
-  const tabBodies = document.querySelectorAll("#tabs-section .tab-body");
-  let timerOpacity;
+  function initializeTabbedInterface() {
+    const $tabLinks = $("#tabs-section .tab-link");
+    const $tabBodies = $("#tabs-section .tab-body");
+    let timerOpacity;
 
-  // Toggle Class
-  const init = () => {
-    // Menu Click or Hover
-    tabLinks.forEach((link) => {
-      link.addEventListener("click", toggleTab);
-      link.addEventListener("mouseover", toggleTab);
-    });
-  };
+    if ($(window).width() > 992) {
+      // Toggle Class
+      const init = () => {
+        // Menu Click or Hover
+        $tabLinks.on("click mouseover", toggleTab);
+      };
 
-  const toggleTab = function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+      const toggleTab = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    // Clear Timers
-    window.clearTimeout(timerOpacity);
+        // Clear Timers
+        clearTimeout(timerOpacity);
 
-    // Toggle Class Logic
-    // Remove Active Classes
-    tabLinks.forEach((link) => link.classList.remove("active"));
-    tabBodies.forEach((body) => {
-      body.classList.remove("active");
-      body.classList.remove("active-content");
-    });
+        // Toggle Class Logic
+        // Remove Active Classes
+        $tabLinks.removeClass("active");
+        $tabBodies.removeClass("active active-content");
 
-    // Add Active Classes
-    this.classList.add("active");
-    document.querySelector(this.getAttribute("href")).classList.add("active");
+        // Add Active Classes
+        $(this).addClass("active");
+        $($(this).attr("href")).addClass("active");
 
-    // Opacity Transition Class
-    timerOpacity = setTimeout(() => {
-      document
-        .querySelector(this.getAttribute("href"))
-        .classList.add("active-content");
-    }, 50);
-  };
+        // Opacity Transition Class
+        timerOpacity = setTimeout(() => {
+          $($(this).attr("href")).addClass("active-content");
+        }, 50);
+      };
 
-  // Document Ready
-  document.addEventListener("DOMContentLoaded", function () {
-    init();
-  });
+      init();
+    } else {
+      $("#tab-list li:first-child .link-body").addClass("active");
+      $("#tabs-section .tab-link").click(function (e) {
+        e.preventDefault();
+        $("#tabs-section .tab-link").removeClass("active");
+        $(this).addClass("active");
+        $(this).parent("li").find(".link-body").slideToggle();
+        $(this).parent("li").prevAll("li").find(".link-body").slideUp();
+        $(this).parent("li").nextAll("li").find(".link-body").slideUp();
+      });
+    }
+  }
+
+  // Initialize when the document is ready
+  $(document).ready(initializeTabbedInterface);
+
+  // Initialize when the window is resized
+  $(window).resize(initializeTabbedInterface);
 }
 
 export { vertical_Tabs };

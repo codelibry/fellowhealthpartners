@@ -66,13 +66,9 @@
                                 right: auto
                                 transform: none
 
-                        ~.link-body
-                            +max-screen($breakpoint-lg)
-                                display: block
-                            &>*
-                                +max-screen($breakpoint-lg)
-                                    opacity: 1
-                                    transform: translateY(0)
+                        // ~.link-body
+                        //     +max-screen($breakpoint-lg)
+                        //         display: block
 
                 img
                     height: auto
@@ -97,8 +93,7 @@
 
             li:not(:last-child)
 
-        section.tab-body,
-        .link-body
+        section.tab-body
             display: none
             word-wrap: break-word
 
@@ -175,7 +170,10 @@
                 opacity: 1
                 transform: translateY(0)
         .link-body
+            display: none
             margin-top: 32px
+            &.active
+                display: block
     .persents
         &_row
             margin-right: -16px
@@ -183,7 +181,7 @@
             +max-screen($breakpoint-lg)
                 margin-right: -12px
                 margin-left: -12px
-            +max-screen($breakpoint-md)
+            +max-screen(628px)
                 width: 627px
             .col-4
                 padding-left: 16px
@@ -200,11 +198,13 @@
                 -webkit-line-clamp: 2
                 min-height: 54px
                 margin-bottom: 5px
+                +max-screen($breakpoint-lg)
+                    min-height: auto
             p
                 margin-bottom: 5px
             .bottom_text
                 -webkit-line-clamp: 2
                 min-height: 54px
     .scroll
-        +max-screen($breakpoint-md)
+        +max-screen(628px)
             overflow-x: auto
