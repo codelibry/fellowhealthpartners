@@ -12,7 +12,7 @@
                     &:first-of-type
 
                         & > div
-                            max-width: 306px
+                            // max-width: 306px
                             margin-right: auto
                             +max-screen($breakpoint-lg)
                                 max-width: none
@@ -27,6 +27,12 @@
                                 margin-left: 0
         &-content
             height: 100%
+        .content-block
+            +max-screen(1600px)
+                +min-screen($breakpoint-lg)
+                    +adaptive-value("font-size", 19, 16, 0)
+                    br
+                        display: none
         .title_block
             +max-screen($breakpoint-lg)
                 margin-bottom: 30px
@@ -38,6 +44,9 @@
             a
                 display: flex
                 gap: 0 15px
+                +max-screen(1600px)
+                    +min-screen($breakpoint-lg)
+                        +adaptive-value("font-size", 19, 16, 0)
                 svg, span
                     align-self: center
         &-content
@@ -46,6 +55,10 @@
             justify-content: space-between
             +adaptive-value("row-gap", 40, 20, 0)
     &__form
+        .content-block
+            +max-screen(1600px)
+                +min-screen($breakpoint-lg)
+                    +adaptive-value("font-size", 19, 16, 0)
         input
             margin-bottom: 10px
         textarea

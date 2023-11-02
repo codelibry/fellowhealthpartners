@@ -9,7 +9,7 @@
  */
 
 get_header();
-
+$content = get_the_content();
 ?>
 
 <main id="primary" class="site-main">
@@ -37,7 +37,8 @@ get_header();
 							<?php
 							if (!post_password_required()) :
 								// Your custom code should here
-								the_acf_loop_post();
+								get_template_part('template-parts/page/content', 'page');
+								the_acf_loop();
 							else :
 								// we will show password form here
 								echo get_the_password_form();
