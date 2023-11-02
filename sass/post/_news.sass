@@ -2,6 +2,11 @@
     .post
         &-filters
             +adaptive-value("column-gap", 40, 20, 0)
+            +max-screen($breakpoint-sm)
+                flex-direction: column
+                column-gap: 0
+                +adaptive-value("row-gap", 20, 20, 0)
+
             &__titles
                 .filter-title
                     display: none
@@ -24,6 +29,8 @@
                 &:hover
                     background: $gradient-orange
                     color: $color-white
+                    span
+                        color: $color-primary
                 .post__counter
                     display: flex
                     border-radius: 70px
