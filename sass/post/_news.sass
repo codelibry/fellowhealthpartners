@@ -149,3 +149,37 @@
             width: 24px
             height: 24px
             align-self: center
+
+.wp-pagenavi
+    display: flex
+    align-items: center
+    margin-bottom: 60px
+
+    .pages
+        display: none
+
+    a, span
+        font-size: 16px
+        font-weight: bold
+        border: 0
+        padding: 0
+        color: color('text')
+        margin: 0 12px
+
+    .previouspostslink,
+    .nextpostslink
+        font-size: 0
+        width: 7
+        height: 12
+        display: block
+        background-size: contain
+        background-repeat: no-repeat
+
+    &
+        background-image: svg-uri('<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="#A1A7B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+    .previouspostslink
+        background-image: svg-uri('<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 11L1 6L6 1" stroke="#A1A7B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+    .current
+        color: $color-primary
