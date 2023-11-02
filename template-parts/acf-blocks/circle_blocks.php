@@ -152,26 +152,14 @@ $persent_row = get_sub_field('persent_row_for_main_page');
             <div class="circle_blocks__content content-block show">
             </div>
         </div>
-        <?php if ($persent_row) : ?>
-            <div class="circle_blocks__bottom">
-                <div class="numbers_row">
-                    <div class="persents_row mt-60 d-flex">
-                        <?php foreach ($persent_row as $col) :
-                            $top_subtitle = $col['top_subtitle'];
-                            $top_text = $col['top_text'];
-                            $persent_number = $col['persent_number'];
-                            $bottom_text = $col['bottom_text']; ?>
-                            <div class="persents_col text--center">
-                                <p class="text--size--42"><?php echo $top_subtitle; ?></p>
-                                <p class="color_text text--size--42 text-color-white bg--primary "><?php echo $top_text; ?></p>
-                                <p class="text--size--18 text-color-gray"><?php _e('up to', 'fhp'); ?></p>
-                                <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
-                                <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+
+        <div class="circle_blocks__bottom">
+            <div class="numbers_row">
+                <div class="persents_row mt-60 d-flex">
+
                 </div>
             </div>
-        <?php endif; ?>
+        </div>
+
     </div>
 </section>

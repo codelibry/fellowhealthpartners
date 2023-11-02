@@ -2,6 +2,27 @@ import $ from "jquery";
 
 function circle_blocks() {
   $(".circle_blocks").each(function () {
+    let circle_first = $(
+      ".circle_blocks__inner-main:nth-child(1) .circle_blocks__inner"
+    )
+      .find(".circle_blocks__persents_row")
+      .html();
+    let circleContent_first = $(
+      ".circle_blocks__inner-main:nth-child(1) .circle_blocks__inner"
+    )
+      .find(".circle_blocks__content")
+      .html();
+
+    $(".circle_blocks__inner-main:nth-child(1) .circle_blocks__inner").addClass(
+      "active"
+    );
+    $(".circle_blocks__bottom .persents_row").html(circle_first);
+
+    // Check if the screen width is smaller than 1368px
+    if ($(window).width() < 1368) {
+      $(".circle_blocks__center .show").html(circleContent_first);
+      $(".circle_blocks__center .show").addClass("active");
+    }
     $(this)
       .find(".circle_blocks__inner")
       .hover(
@@ -9,22 +30,26 @@ function circle_blocks() {
           let contentHeight = $(this)
             .find(".circle_blocks__content")
             .outerHeight();
-          var content = $(this).find(".circle_blocks__persents_row").html();
-          var bgColor = $(this).find(".bg_color").css("background-color");
-
+          let content = $(this).find(".circle_blocks__persents_row").html();
+          let bgColor = $(this).find(".bg_color").css("background-color");
           let circleContent = $(this).find(".circle_blocks__content").html();
+          let $circleBlocksList = $(this).parents(".circle_blocks__list");
+          let currentMarginBottom = parseInt(
+            $circleBlocksList.css("margin-bottom"),
+            10
+          );
 
+          $(
+            ".circle_blocks__inner-main:nth-child(1) .circle_blocks__inner"
+          ).removeClass("active");
           $(".circle_blocks__bottom .persents_row").html(content);
           $(".circle_blocks__bottom .persents_row .color_text").css(
             "background-color",
             bgColor
           );
-          var $circleBlocksList = $(this).parents(".circle_blocks__list");
-          var currentMarginBottom = parseInt(
-            $circleBlocksList.css("margin-bottom"),
-            10
-          );
+
           console.log(currentMarginBottom);
+
           if (currentMarginBottom < contentHeight) {
             $(this)
               .parents(".circle_blocks__list")
@@ -34,6 +59,12 @@ function circle_blocks() {
           // Check if the screen width is smaller than 1368px
           if ($(window).width() < 1368) {
             $(".circle_blocks__center .show").html(circleContent);
+            // Remove the "active" class if it exists
+            if ($(".circle_blocks__center .show").hasClass("active")) {
+              $(".circle_blocks__center .show").removeClass("active");
+            } else {
+              $(".circle_blocks__center .show").addClass("active");
+            }
             $(".circle_blocks__center .show").addClass("active");
             let contentHeight_new = $(this)
               .parents(".circle_blocks__center")
