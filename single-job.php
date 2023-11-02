@@ -51,7 +51,7 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
                         <section>
                             <h3 class="h4 text-color--black_new"><?php _e('Primary Responsibilities', 'fhp'); ?></h3>
                             <div class="line"></div>
-                            <div class="content-block text-color-gray text--size--26">
+                            <div class="content-block text-color-gray">
                                 <?php echo get_field('job_primary_responsibilities'); ?>
                             </div>
                         </section>
@@ -61,7 +61,7 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
                         <section class="pt-2 pt-lg-10">
                             <h3 class="h4 text-color--black_new"><?php _e('Education/Experience', 'fhp'); ?></h3>
                             <div class="line"></div>
-                            <div class="content-block text-color-gray text--size--26">
+                            <div class="content-block text-color-gray">
                                 <?php echo  get_field('job_educationexperience'); ?>
                             </div>
                         </section>
@@ -73,7 +73,7 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
                         <section>
                             <h3 class="h4 text-color--black_new"><?php _e('Skills/Qualifications', 'fhp'); ?></h3>
                             <div class="line"></div>
-                            <div class="content-block text-color-gray text--size--26">
+                            <div class="content-block text-color-gray">
                                 <?php echo get_field('job_skillsqualifications'); ?>
                             </div>
                         </section>
@@ -82,9 +82,9 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
             </div>
 
             <footer class="job-footer pb-4 pb-lg-10">
-                <div class="row pb-4">
+                <!-- <div class="row pb-4">
                     <div class="line"></div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-12 col-lg-6 job-description">
                         <div class="content-block text-color-black text--size--19">
