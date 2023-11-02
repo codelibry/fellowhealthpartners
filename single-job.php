@@ -82,9 +82,9 @@ if ($the_title == 'Revenue Cycle Associate' || $the_title == 'Account Support As
             </div>
 
             <footer class="job-footer pb-4 pb-lg-10">
-                <!-- <div class="row pb-4">
+                <div class="row pb-4">
                     <div class="line"></div>
-                </div> -->
+                </div>
                 <div class="row">
                     <div class="col-12 col-lg-6 job-description">
                         <div class="content-block text-color-black text--size--19">
