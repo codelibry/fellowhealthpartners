@@ -45,7 +45,7 @@ load_projects();
 sliders();
 initPopups();
 numberBlock();
-// testimonialBlock();
+testimonialBlock();
 vertical_Tabs();
 horizontal_Tabs();
 parrallax_images();

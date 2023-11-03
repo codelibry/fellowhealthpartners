@@ -18,6 +18,7 @@ function testimonialBlock() {
         $(this).find(".testimonials__listItem").addClass("hover");
       }
     },
+
     function () {
       var textHeight = $(this).find(".testimonials__listItem__text").height();
       $(this)
