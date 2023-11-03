@@ -2,6 +2,12 @@
     position: relative
     --header_header
     .desktop
+        +max-screen($breakpoint-lg)
+            display: none
+    .tablet
+        display: none
+        +max-screen($breakpoint-lg)
+            display: block
         +max-screen($breakpoint-sm)
             display: none
     .mob

@@ -10,6 +10,7 @@ $bottom_text = get_sub_field('bottom_text');
                 <?php foreach ($img_list as $img) :
                     $image = $img['image'];
                     $image_small = $img['image_mobile'];
+                    $image_tablet = $img['image_tablet'];
                     $title = $img['title'];
                     $subtitle = $img['subtitle'];
                     $size = 'full'; ?>
@@ -20,6 +21,7 @@ $bottom_text = get_sub_field('bottom_text');
                             <!-- Same image as above -->
                             <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute desktop')); ?>
                             <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute mob')); ?>
+                            <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute tablet')); ?>
                             <div class="title_block">
                                 <div class="container">
                                     <p class="text--size--113">
