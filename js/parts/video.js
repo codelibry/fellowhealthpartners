@@ -17,7 +17,7 @@ function videoBlock() {
     });
     setTimeout(() => {
       player.poster = acfPosterImage;
-    }, 100);
+    }, 0);
   });
 }
 

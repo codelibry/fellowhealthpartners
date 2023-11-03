@@ -29,11 +29,12 @@ $content = get_the_content();
 						<div class="single-post-date mb-2 mb-sm-4 text--size--17 text-color-gray"><?php echo get_the_date(); ?></div>
 						<div class="single-post-content">
 							<?php
-							if (has_post_thumbnail()) : ?>
+							if (has_post_thumbnail() && empty($content)) : ?>
 								<div class="single-post-image mb-2 mb-sm-4">
 									<?php echo the_post_thumbnail('full'); ?>
 								</div>
 							<?php endif; ?>
+
 							<?php
 							if (!post_password_required()) :
 								// Your custom code should here

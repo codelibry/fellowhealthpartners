@@ -67,12 +67,16 @@
     +max-screen($breakpoint-xxs)
         margin-left: 30px
     +max-screen($breakpoint-lg)
-        max-width: 600px
+        max-width: none
         margin-left: auto
         margin-right: auto
         margin-top: 60px
 
     form
+        +max-screen($breakpoint-lg)
+            max-width: 600px
+            margin-left: auto
+            margin-right: auto
         background: $color-gray-3
         +adaptive-value("padding", 60, 30, 0)
         h2

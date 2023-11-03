@@ -26,8 +26,8 @@ $content = get_sub_field('content');
                 <?php if ($subtitle) : ?>
                     <div class="col-lg-6">
                         <div class="button_block">
-                            <div class="button button--sm bg--gradient-orange text-color-white">
-                                <p><?php echo $subtitle; ?></p>
+                            <div class="button button--sm button--lg bg--gradient-orange text-color-white">
+                                <?php echo $subtitle; ?>
                                 <?php echo get_inline_svg('/arrows/arrow-right-s-line.svg'); ?>
                             </div>
                         </div>

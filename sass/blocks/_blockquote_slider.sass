@@ -18,6 +18,8 @@
                 margin-right: auto
     .content-block
         blockquote
+            position: relative
+            z-index: 2
         // +adaptive-value("margin-top", 0, 0, 0)
         // +adaptive-value("margin-bottom", 0, 0, 0)
         .testimonials__listItem
@@ -31,6 +33,8 @@
                 display: -webkit-box
                 -webkit-line-clamp: 3
                 transition: .3s
+                position: relative
+                z-index: 1
             &__hiddenText
                 transition: .3s
                 opacity: 0
@@ -38,6 +42,7 @@
                 left: 0
                 top: 0
                 right: 0
+                z-index: -1
                 +adaptive-value("top", 60, 30, 0)
                 +adaptive-value("left", 60, 30, 0)
                 +adaptive-value("right", 60, 30, 0)
@@ -50,10 +55,12 @@
 
                     .testimonials__listItem__text
                         opacity: 0
+                        z-index: -1
                     .testimonials__listItem__hiddenText
                         opacity: 1
                 &.showText
                     .testimonials__listItem__text
                         opacity: 0
+                        z-index: -1
                     .testimonials__listItem__hiddenText
                         opacity: 1
