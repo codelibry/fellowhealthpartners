@@ -1,6 +1,6 @@
 <?php
 $title = get_sub_field('title');
-$btn = get_sub_field('btn');
+$subtitle = get_sub_field('subtitle');
 $content = get_sub_field('content');
 ?>
 <section class="title_text_button section section--spacing--sm pb-0">
@@ -23,13 +23,13 @@ $content = get_sub_field('content');
                 <?php endif; ?>
             </div>
             <div class="row mt-2 mt-lg-0">
-                <?php if ($btn) : ?>
+                <?php if ($subtitle) : ?>
                     <div class="col-lg-6">
                         <div class="button_block">
-                            <a href="<?php echo $btn['url']; ?>" target="<?php echo $btn['target']; ?>" class="button button--sm bg--gradient-orange text-color-white">
-                                <?php echo $btn['title']; ?>
+                            <div class="button button--sm bg--gradient-orange text-color-white">
+                                <p><?php echo $subtitle; ?></p>
                                 <?php echo get_inline_svg('/arrows/arrow-right-s-line.svg'); ?>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>

@@ -836,10 +836,10 @@
                         },
                         {
                             "key": "field_65251c7000d2e",
-                            "label": "Button",
-                            "name": "btn",
+                            "label": "Subtitle",
+                            "name": "subtitle",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -848,7 +848,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_65251c7000d2f",
@@ -2164,5 +2168,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699002480
+    "modified": 1699003551
 }
