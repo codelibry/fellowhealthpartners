@@ -1,23 +1,13 @@
 import $ from "jquery";
-import Plyr from "plyr";
 
 function videoBlock() {
   $(".video-block").each(function () {
-    const acfPosterImage = customjs_ajax_object.getAcfPosterImage;
-
-    const player = new Plyr(".player-main", {
-      hideControls: false,
-      captions: { active: true },
+    jQuery(document).on("click tap", ".player-main .vid", function () {
+      console.log("playing");
+      jQuery("#video-iframe")
+        .attr("src", jQuery(this).attr("video-url") + "&autoplay=1")
+        .fadeIn(0);
     });
-
-    player.toggleControls(false);
-
-    player.on("play", (event) => {
-      player.toggleControls(true);
-    });
-    setTimeout(() => {
-      player.poster = acfPosterImage;
-    }, 0);
   });
 }
 

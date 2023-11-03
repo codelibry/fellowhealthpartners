@@ -14,7 +14,7 @@ function fellow_scripts()
     wp_enqueue_script('vendors', get_template_directory_uri() . '/dist/vendors.min.js', false, false, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.min.js', array('jquery'), false, true);
     //send PHP variables to JS
-    $poster_img = get_field('poster_img');
+
     wp_localize_script(
         'main',
         'customjs_ajax_object',
@@ -23,7 +23,6 @@ function fellow_scripts()
             'ajax_nonce' => wp_create_nonce("secure_nonce_name"),
             'site_url' => get_site_url(),
             'theme_url' => get_template_directory_uri(),
-            'getAcfPosterImage' => $poster_img
         )
     );
 
