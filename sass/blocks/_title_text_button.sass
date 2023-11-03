@@ -1,7 +1,16 @@
 .title_text_button
     .button_block
-        a
+        .button
             display: inline-flex
-
+            line-height: 115%
+            +max-screen(1720px)
+                padding-left: 20px
+                padding-right: 20px
+            +max-screen(1590px)
+                display: inline-block
+                text-align: center
+                padding-left: 40px
+                padding-right: 40px
             svg
                 align-self: center
+                vertical-align: middle
