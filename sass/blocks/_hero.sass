@@ -167,10 +167,10 @@
 
 .slick-slide
     .hero-slider__inner
-        animation-name: zoomIn
-        animation-duration: 5.9s // autoplaySpeed + speed
-        animation-fill-mode: both
-        animation-iteration-count: infinite
+        // animation-name: zoomIn
+        // animation-duration: 5.9s // autoplaySpeed + speed
+        // animation-fill-mode: both
+        // animation-iteration-count: infinite
     .slide-down
         //animation-name: slideDown
         animation-duration: 6.8s // autoplaySpeed + speed + speed
@@ -179,6 +179,19 @@
         animation-delay:
 .hero__main__list
     z-index: 10
+.hero__main__list--img
+    // opacity: 0
+    .hero__main__slide
+        z-index: 100
+    .slick-slide
+        .hero-slider__inner
+            overflow: hidden
+        .title_block
+            //transform: translateY(-100%)
+            //animation-name: fadeUpIn
+            animation-duration: 5.9s // autoplaySpeed + speed
+            animation-fill-mode: both
+            animation-iteration-count: infinite
 .hero__main__list--bg
     position: absolute
     left: 0
@@ -187,12 +200,44 @@
     height: 100%
 
     z-index: 8
-
-    transform: rotate(180deg) // Make slider reverse direction
+    opacity: 1
+    //transform: rotate(180deg) // Make slider reverse direction
     .slick-slide
-        transform: rotate(-180deg) // Make slider reverse direction
+        //transform: rotate(-180deg) // Make slider reverse direction
     img
         filter: blur(5px)
+
+@keyframes fadeUpIn
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    15.25% // speed * 100 / autoplaySpeed
+        transform: translateY(0%)
+        opacity: 1
+    // 34.75%
+    //     transform: translateY(0%)
+    //     opacity: 1
+    84.75%
+        transform: translateY(0%)
+        opacity: 1
+    100%
+        transform: translateY(-50%)
+        opacity: 0
+    // 30.5% // speed * 100 / autoplaySpeed
+    //     transform: translateY(0%)
+    //     opacity: 1
+    // 69.5% // speed * 100 / autoplaySpeed
+    //     transform: translateY(0%)
+    //     opacity: 1
+    // 84.75% // 100 - (speed * 100 / autoplaySpeed)
+    //     transform: translateY(0%)
+    //     opacity: 1
+    // 92.375%
+    // //     transform: translateY(-100%)
+    // //     opacity: 0
+    // 100%
+    //     transform: translateY(-100%)
+        //opacity: 0
 
 @keyframes zoomIn
     0%

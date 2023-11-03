@@ -19,9 +19,7 @@ $bottom_text = get_sub_field('bottom_text');
                         <!-- Section to be smaller -->
                         <div class="hero-slider__inner position-absolute position-absolute--center">
                             <!-- Same image as above -->
-                            <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute desktop')); ?>
-                            <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute mob')); ?>
-                            <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute tablet')); ?>
+                            
                             <div class="title_block">
                                 <div class="container">
                                     <p class="text--size--113">
@@ -43,7 +41,9 @@ $bottom_text = get_sub_field('bottom_text');
                     <div class="hero__main__slide">
 
                         <!-- Bg image to slide up -->
-                        <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute slide-down')); ?>
+                        <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute desktop')); ?>
+                        <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute mob')); ?>
+                        <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute tablet')); ?>
 
                     </div>
                 <?php endforeach; ?>
