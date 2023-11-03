@@ -19,8 +19,12 @@
                 margin-top: 30px
                 height: auto
             iframe
-                width: 100% !important
+                width: calc( 100% - 30px )
+                left: 30px !important
                 +adaptive-value("height", 521, 360, 0)
+                +max-screen($breakpoint-lg)
+                    width: 100%
+                    left: auto !important
             .vid:hover
                 cursor: pointer
             .vid
