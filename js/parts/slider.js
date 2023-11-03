@@ -54,15 +54,15 @@ function sliders() {
     sliderBg.slick({
       dots: false,
       arrows: false,
-      // infinite: true,
-      cssEase: "linear",
-      autoplay: true,
-      vertical: true, // Set vertical to true
       speed: 900,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
       autoplaySpeed: 5000,
+      pauseOnHover: false,
       slidesToShow: 1,
-      slidesToScroll: 1, // it was -1
-      pauseOnHover: false
+      slidesToScroll: 1
+
     });  
 
     slider.on('afterChange', function(event, slick, currentSlide) {
