@@ -15,8 +15,5 @@ function backButton() {
       });
     });
   }
-  
-  export { backButton };
-  
 
 export {backButton}
