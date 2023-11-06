@@ -33,3 +33,8 @@
                 width: auto
             &.second
                 +adaptive-value("max-width", 80, 50, 0)
+    &__main
+        color: red
+        .title_block
+            +min-screen($breakpoint-lg)
+                padding-right: 50px
