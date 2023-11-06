@@ -27,6 +27,7 @@ import { vertical_Tabs } from "./template-parts/blocks/vertical_tabs";
 import { horizontal_Tabs } from "./template-parts/blocks/horizontal_tabs";
 import { parrallax_images } from "./animations/parallax";
 import { circle_blocks } from "./template-parts/blocks/circle_blocks";
+import { backButton } from "./parts/back-button";
 
 header();
 footer();
@@ -50,3 +51,4 @@ vertical_Tabs();
 horizontal_Tabs();
 parrallax_images();
 circle_blocks();
+backButton();
