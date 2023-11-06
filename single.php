@@ -18,7 +18,7 @@ $content = get_the_content();
 		<div class="single-post_page mt-80 mb-150">
 			<div class="row has-sidebar">
 				<div class="col-lg-7">
-					<a href="/news/" class="back-to-category text-color-orange font--weight--500">
+					<a href="<?php echo get_the_permalink(get_option('page_for_posts'));?>" class="back-to-category text-color-orange font--weight--500">
 						<?php _e('Back to News', 'fhp'); ?>
 						<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.08349 9.08398L1.3335 5.33398M1.3335 5.33398L5.08349 1.58398M1.3335 5.33398H11.3335C13.1744 5.33398 14.6668 6.82637 14.6668 8.66731V8.66731C14.6668 10.5083 13.1744 12.0006 11.3335 12.0006H9.66682" stroke="#FF851F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -27,6 +27,11 @@ $content = get_the_content();
 					<div class="main-content mt-80">
 						<h1 class="h3 single-post-title mb-40"><?php the_title(); ?></h1>
 						<div class="single-post-date mb-2 mb-sm-4 text--size--17 text-color-gray"><?php echo get_the_date(); ?></div>
+						<?php if (get_the_post_thumbnail_url()) : ?>
+						<div class="single-post-image">
+							<?php the_post_thumbnail();?>
+						</div>
+						<?php endif; ?>
 						<div class="single-post-content">
 							<?php
 							if (has_post_thumbnail() && empty($content)) : ?>
