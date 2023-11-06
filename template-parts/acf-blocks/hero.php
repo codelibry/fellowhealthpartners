@@ -3,6 +3,8 @@ $img_list = get_sub_field('img_list');
 $bottom_text = get_sub_field('bottom_text');
 ?>
 
+
+
 <?php if ($img_list) : ?>
     <section class="hero">
         <div class="hero__main">
@@ -16,38 +18,50 @@ $bottom_text = get_sub_field('bottom_text');
                     $size = 'full'; ?>
                     <div class="hero__main__slide">
 
-                        <!-- Section to be smaller -->
-                        <div class="hero-slider__inner position-absolute position-absolute--center">
-                            <!-- Same image as above -->
-                            
-                            <div class="title_block">
-                                <div class="container">
-                                    <p class="text--size--113">
-                                        <?php echo $title; ?>
-                                    </p>
-                                    <p class="h1">
-                                        <?php echo $subtitle; ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <div class="hero__main__list hero__main__list--bg">
-                <?php foreach ($img_list as $img) :
-                    $image = $img['image'];
-                    $size = 'full'; ?>
-                    <div class="hero__main__slide">
-
                         <!-- Bg image to slide up -->
                         <?php echo wp_get_attachment_image($image, $size, false, array('class' => 'img-absolute desktop')); ?>
                         <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute mob')); ?>
                         <?php echo wp_get_attachment_image($image_small, $size, false, array('class' => 'img-absolute tablet')); ?>
 
+                        <!-- Section to be smaller -->
+                        <div class="hero-slider__inner position-absolute position-absolute--center ">
+                            <!-- Same image as above -->
+                            
+                            <div class="title_block__wrapper" style="opacity: 0;height: 0;">
+                            
+                                <div class="title_block">
+                                    <div class="container">
+                                        <p class="text--size--113">
+                                            <?php echo $title; ?>
+                                        </p>
+                                        <p class="h1">
+                                            <?php echo $subtitle; ?>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <!-- text swapper container -->
+
+            <div class="hero-slider__inner position-absolute position-absolute--center text-swapper__wrapper">
+
+                <div class="text-swapper">
+
+                    <div class="text-swapper--current"></div>
+
+                </div>
+
+            </div>
+            
+            
             <div class="bottom_block">
                 <div class="container">
                     <div class="row">

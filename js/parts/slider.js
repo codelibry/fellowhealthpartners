@@ -3,9 +3,11 @@ import "slick-carousel";
 
 function sliders() {
 
+  
+
   $(".hero").each(function () {
     let slider = $(this).find(".hero__main__list--img");
-    let sliderBg = $(this).find(".hero__main__list--bg");
+    // let sliderBg = $(this).find(".hero__main__list--bg");
     // Function to set the CSS variable --header_header with the header height
     function setHeaderHeightVariable() {
       var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
@@ -23,13 +25,20 @@ function sliders() {
       setHeaderHeightVariable();
     });
 
+    let swapper = $('.text-swapper');
+
+    //let next = swapper.find('.text-swapper--next');
+    let current = swapper.find('.text-swapper--current');
+
     slider.on("init", function () {
       $(window).trigger("heightChanges");
+      //current.html($('.slick-slide[data-slick-index="' + currentSlide + '"] .title_block').html());
+      current.html(slider.find('.slick-active .title_block__wrapper').html());
     });
 
-    sliderBg.on("init", function () {
-      $(window).trigger("heightChanges");
-    });
+    // sliderBg.on("init", function () {
+    //   $(window).trigger("heightChanges");
+    // });
 
     slider.slick({
       dots: true,
@@ -37,8 +46,9 @@ function sliders() {
       // infinite: true,
       cssEase: "linear",
       autoplay: true,
-      vertical: true, // Set vertical to true
-      speed: 900,
+      //vertical: true, // Set vertical to true
+      speed: 300,
+      fade: true,
       autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -51,25 +61,47 @@ function sliders() {
       dotsClass: "dots_block-list",
     });
 
-    sliderBg.slick({
-      dots: false,
-      arrows: false,
-      speed: 900,
-      fade: true,
-      cssEase: 'linear',
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
+    // sliderBg.slick({
+    //   dots: false,
+    //   arrows: false,
+    //   speed: 300,
+    //   fade: true,
+    //   cssEase: 'linear',
+    //   autoplay: true,
+    //   autoplaySpeed: 5000,
+    //   pauseOnHover: false,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1
 
-    });  
+    // });  
+
+    // Count text
+
+    
+
+    //current.html(next.html);
+
+    // Add the "next-slide" class to the next slide
+    slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $('.slick-slide').removeClass('next-slide'); // Remove the class from all slides
+      $('.slick-slide[data-slick-index="' + nextSlide + '"]').addClass('next-slide'); // Add the class to the next slide
+      //next.html($('.slick-slide[data-slick-index="' + nextSlide + '"] .title_block__wrapper').html());
+      current.html($('.slick-slide[data-slick-index="' + nextSlide + '"] .title_block__wrapper').html());
+      console.log('nextSlide' + nextSlide);
+    });
 
     slider.on('afterChange', function(event, slick, currentSlide) {
       // Use the slickGoTo method to set the same slide in the second slider
-      console.log('goto');
-      sliderBg.slick('slickGoTo', currentSlide);
+      //console.log('goto');
+      //sliderBg.slick('slickGoTo', currentSlide);
     });
+
+
+    
+      
+  
+
+
   });
 
 

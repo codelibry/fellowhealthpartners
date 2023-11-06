@@ -37,10 +37,7 @@
                     .animation &
                         width: 80%
                         height: 80%
-                    .title_block
-                        max-width: 80%
-                        margin-left: auto
-                        margin-right: auto
+                    
         &__slide
             position: relative
             height: 100%
@@ -84,6 +81,9 @@
         position: relative
         z-index: 2
         width: 100%
+        max-width: 80%
+        margin-left: auto
+        margin-right: auto
         +adaptive-value("padding-top", 174, 32, 0)
         +adaptive-value("padding-bottom", 327, 187, 0)
         +max-screen($breakpoint-lg)
@@ -144,7 +144,7 @@
         &-list
             display: flex
             +adaptive-value("column-gap", 53, 34, 0)
-            pointer-events: none
+            //pointer-events: none
             &:nth-child(2)
                 display: none !important
             li
@@ -165,104 +165,38 @@
                 &.slick-active
                     opacity: 1
 
-.slick-slide
-    .hero-slider__inner
-        // animation-name: zoomIn
-        // animation-duration: 5.9s // autoplaySpeed + speed
-        // animation-fill-mode: both
-        // animation-iteration-count: infinite
-    .slide-down
-        //animation-name: slideDown
-        animation-duration: 6.8s // autoplaySpeed + speed + speed
-        animation-fill-mode: both
-        animation-iteration-count: infinite
-        animation-delay:
 .hero__main__list
     z-index: 10
-.hero__main__list--img
-    // opacity: 0
-    .hero__main__slide
-        z-index: 100
-    .slick-slide
-        .hero-slider__inner
-            overflow: hidden
-        .title_block
-            //transform: translateY(-100%)
-            //animation-name: fadeUpIn
-            animation-duration: 5.9s // autoplaySpeed + speed
-            animation-fill-mode: both
-            animation-iteration-count: infinite
-.hero__main__list--bg
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
 
-    z-index: 8
-    opacity: 1
-    //transform: rotate(180deg) // Make slider reverse direction
-    .slick-slide
-        //transform: rotate(-180deg) // Make slider reverse direction
-    img
-        filter: blur(5px)
+.text-swapper
+    &__wrapper
+        width: 100%
+        height: 100%
 
-@keyframes fadeUpIn
+        z-index: 50
+    &--current
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-100%)
+        animation-name: fadeUpOut
+        animation-duration: 5.3s // autoplaySpeed + speed
+        animation-fill-mode: forwards
+        animation-iteration-count: infinite
+
+@keyframes fadeUpOut
     0%
-        opacity: 0
         transform: translateY(-100%)
     15.25% // speed * 100 / autoplaySpeed
         transform: translateY(0%)
-        opacity: 1
+        // opacity: 1
     // 34.75%
     //     transform: translateY(0%)
     //     opacity: 1
     84.75%
         transform: translateY(0%)
-        opacity: 1
+        // opacity: 1
     100%
-        transform: translateY(-50%)
-        opacity: 0
-    // 30.5% // speed * 100 / autoplaySpeed
-    //     transform: translateY(0%)
-    //     opacity: 1
-    // 69.5% // speed * 100 / autoplaySpeed
-    //     transform: translateY(0%)
-    //     opacity: 1
-    // 84.75% // 100 - (speed * 100 / autoplaySpeed)
-    //     transform: translateY(0%)
-    //     opacity: 1
-    // 92.375%
-    // //     transform: translateY(-100%)
-    // //     opacity: 0
-    // 100%
-    //     transform: translateY(-100%)
-        //opacity: 0
-
-@keyframes zoomIn
-    0%
-        transform: translate(-50%, -50%) scale(0.8)
-    15.25% // speed * 100 / autoplaySpeed
-        transform: translate(-50%, -50%) scale(0.8)
-    30.5% // speed * 100 / autoplaySpeed
-        transform: translate(-50%, -50%) scale(1)
-    69.5% // speed * 100 / autoplaySpeed
-        transform: translate(-50%, -50%) scale(1)
-    84.75% // 100 - (speed * 100 / autoplaySpeed)
-        transform: translate(-50%, -50%) scale(0.8)
-    100%
-        transform: translate(-50%, -50%) scale(.8)
-
-@keyframes slideDown
-    0%
-        transform: translateY(100%)
-    15.25% // speed * 100 / autoplaySpeed
-        transform: translateY(100%)
-    30.5% // speed * 100 / autoplaySpeed
-        transform: translateY(0%)
-    69.5% // speed * 100 / autoplaySpeed
-        transform: translateY(0%)
-    84.75% // 100 - (speed * 100 / autoplaySpeed)
-        transform: translateY(100%)
-    100%
-        transform: translateY(100%)
+        transform: translateY(-100%)
+        // opacity: 0
