@@ -66,6 +66,7 @@
                     height: 100% !important
                     display: block
                     object-fit: cover
+                    
         .slick-list
             margin: 0
         .slick-slide
@@ -106,7 +107,7 @@
                 display: none
         .container
             *
-                max-width: 80%
+                max-width: 75%
         .h1
             +max-screen($breakpoint-xm)
                 +adaptive-value("font-size", 80, 30, 0)
@@ -170,6 +171,10 @@
 
 .hero__main__list
     z-index: 10
+    .slick-slide
+        img
+            +min-screen($breakpoint-lg)
+                object-position: right
 
 .text-swapper
     width: 100%
