@@ -46,14 +46,7 @@ $content = get_the_content();
 							endif;
 							?>
 
-							<!-- <a href="javascript:void(0);" class="mt-3 d-block back-to-category text-color-orange font--weight--500">
-								<?php _e('Back to News', 'fhp'); ?>
-								<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M5.08349 9.08398L1.3335 5.33398M1.3335 5.33398L5.08349 1.58398M1.3335 5.33398H11.3335C13.1744 5.33398 14.6668 6.82637 14.6668 8.66731V8.66731C14.6668 10.5083 13.1744 12.0006 11.3335 12.0006H9.66682" stroke="#FF851F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</a> -->
-
-							<button onclick="history.back()" class="mt-3 button button--back"><?php _e('Back to Articles', 'fellowhealthpartners');?></button>
+							<button class="mt-3 button button--back"><?php _e('Back to Articles', 'fellowhealthpartners');?></button>
 
 						</div><!-- .post-content -->
 					</div>
