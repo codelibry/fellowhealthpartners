@@ -29,14 +29,14 @@ $bottom_content = get_sub_field('bottom_content');
                 <div class="row">
                     <div class="col-lg-6 mb-2 mb-lg-0">
                         <?php if ($bottom_content_left) : ?>
-                            <div class="content-block text--size--18 text-color-gray max--width--740 mr-lg-auto">
+                            <div class="content-block text-color-gray max--width--740 mr-lg-auto">
                                 <?php echo $bottom_content_left; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                     <?php if ($bottom_content) : ?>
                         <div class="col-lg-6">
-                            <div class="content-block text--size--18 text-color-gray max--width--740 mr-lg-auto">
+                            <div class="content-block text-color-gray max--width--740 mr-lg-auto">
                                 <?php echo $bottom_content; ?>
                             </div>
                         </div>

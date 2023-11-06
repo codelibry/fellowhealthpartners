@@ -5,7 +5,7 @@ $author_position = get_sub_field('author_position'); ?>
 
 <?php if ($text_content) : ?>
     <div class="content-block text-color-gray mb-2 mb-sm-4">
-        <blockquote xlass="font--italic text--size--32 text-color-black">
+        <blockquote xlass="font--italic text-color-black">
             <div class="testimonials__listItem">
                 <?php echo $text_content; ?>
             </div>
