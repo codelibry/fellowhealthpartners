@@ -23,6 +23,31 @@ function circle_blocks() {
       $(".circle_blocks__center .show").html(circleContent_first);
       $(".circle_blocks__center .show").addClass("active");
     }
+
+    let active_content_height = $(".circle_blocks__center")
+      .find(".active.show")
+      .outerHeight();
+    let active_list_margin = parseInt(
+      $(".circle_blocks__center")
+        .find(".circle_blocks__list")
+        .css("margin-bottom"),
+      10
+    );
+
+    if (active_list_margin < active_content_height) {
+      $(".circle_blocks__center")
+        .find(".circle_blocks__list")
+        .css("margin-bottom", active_content_height + 50);
+      // Check if the screen width is smaller than 1368px
+      if ($(window).width() < 1368) {
+        $(".circle_blocks__center")
+          .find(".circle_blocks__list")
+          .css("margin-bottom", active_content_height + 30);
+      }
+    }
+
+    console.log(active_list_margin);
+
     $(this)
       .find(".circle_blocks__inner")
       .hover(
@@ -72,7 +97,7 @@ function circle_blocks() {
               .outerHeight();
             $(this)
               .parents(".circle_blocks__list")
-              .css("margin-bottom", contentHeight_new + 50);
+              .css("margin-bottom", contentHeight_new + 30);
           }
         },
         function () {
