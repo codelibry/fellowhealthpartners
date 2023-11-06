@@ -58,7 +58,7 @@ $tabs = get_sub_field('tabs');
                                     <p class="subtitle h5 text-color-primary"><?php echo $subtitle; ?></p>
                                 <?php endif; ?>
                                 <?php if ($content_block) : ?>
-                                    <div class="content-block text--size--18 text-color-gray">
+                                    <div class="content-block text-color-gray">
                                         <?php echo $content_block; ?>
                                     </div>
                                 <?php endif; ?>
