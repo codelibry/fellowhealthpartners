@@ -27,11 +27,6 @@ $content = get_the_content();
 					<div class="main-content mt-80">
 						<h1 class="h3 single-post-title mb-40"><?php the_title(); ?></h1>
 						<div class="single-post-date mb-2 mb-sm-4 text--size--17 text-color-gray"><?php echo get_the_date(); ?></div>
-						<?php if (get_the_post_thumbnail_url()) : ?>
-						<div class="single-post-image">
-							<?php the_post_thumbnail();?>
-						</div>
-						<?php endif; ?>
 						<div class="single-post-content">
 							<?php
 							if (has_post_thumbnail() && empty($content)) : ?>
@@ -58,7 +53,7 @@ $content = get_the_content();
 								</svg>
 							</a> -->
 
-							<button onclick="history.back()" class="mt-3 button button--back">Back to previous page</button>
+							<button onclick="history.back()" class="mt-3 button button--back"><?php _e('Back to Articles', 'fellowhealthpartners');?></button>
 
 						</div><!-- .post-content -->
 					</div>
