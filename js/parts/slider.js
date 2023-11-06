@@ -45,11 +45,11 @@ function sliders() {
       arrows: false,
       // infinite: true,
       cssEase: "linear",
-      autoplay: true,
+      //autoplay: true,
       //vertical: true, // Set vertical to true
       speed: 300,
       fade: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 4000,
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnHover: false,
