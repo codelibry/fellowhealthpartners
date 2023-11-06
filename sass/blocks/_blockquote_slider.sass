@@ -27,7 +27,9 @@
             position: relative
             display: flex
             flex-direction: column
-            min-height: 200px
+            min-height: 140px
+            +max-screen($breakpoint-lg)
+                min-height: auto
             &__text
                 overflow: hidden
                 display: -webkit-box
