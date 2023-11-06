@@ -7,7 +7,6 @@ function sliders() {
 
   $(".hero").each(function () {
     let slider = $(this).find(".hero__main__list--img");
-    // let sliderBg = $(this).find(".hero__main__list--bg");
     // Function to set the CSS variable --header_header with the header height
     function setHeaderHeightVariable() {
       var headerHeight = $("#masthead").outerHeight(); // Replace with your actual header selector
@@ -36,20 +35,16 @@ function sliders() {
       current.html(slider.find('.slick-active .title_block__wrapper').html());
     });
 
-    // sliderBg.on("init", function () {
-    //   $(window).trigger("heightChanges");
-    // });
-
     slider.slick({
       dots: true,
       arrows: false,
       // infinite: true,
       cssEase: "linear",
-      //autoplay: true,
+      autoplay: true,
       //vertical: true, // Set vertical to true
       speed: 300,
       fade: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnHover: false,
@@ -61,26 +56,6 @@ function sliders() {
       dotsClass: "dots_block-list",
     });
 
-    // sliderBg.slick({
-    //   dots: false,
-    //   arrows: false,
-    //   speed: 300,
-    //   fade: true,
-    //   cssEase: 'linear',
-    //   autoplay: true,
-    //   autoplaySpeed: 5000,
-    //   pauseOnHover: false,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1
-
-    // });  
-
-    // Count text
-
-    
-
-    //current.html(next.html);
-
     // Add the "next-slide" class to the next slide
     slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
       $('.slick-slide').removeClass('next-slide'); // Remove the class from all slides
@@ -90,16 +65,6 @@ function sliders() {
       console.log('nextSlide' + nextSlide);
     });
 
-    slider.on('afterChange', function(event, slick, currentSlide) {
-      // Use the slickGoTo method to set the same slide in the second slider
-      //console.log('goto');
-      //sliderBg.slick('slickGoTo', currentSlide);
-    });
-
-
-    
-      
-  
 
 
   });
