@@ -81,7 +81,7 @@
             "label": "Video block",
             "name": "video_block",
             "aria-label": "",
-            "type": "oembed",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -90,8 +90,8 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_6543971a79e83",
@@ -142,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698928837
+    "modified": 1699020003
 }

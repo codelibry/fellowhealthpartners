@@ -7,6 +7,7 @@
             +max-screen($breakpoint-lg)
                 text-align: center
         .video-block
+            position: relative
             width: 100%
             height: 100%
             padding-left: 30px
@@ -17,42 +18,73 @@
                 padding-left: 0
                 margin-top: 30px
                 height: auto
+            iframe
+                width: calc( 100% - 30px )
+                left: 30px !important
+                +adaptive-value("height", 521, 360, 0)
+                +max-screen($breakpoint-lg)
+                    width: 100%
+                    left: auto !important
+            .vid:hover
+                cursor: pointer
+            .vid
+                // position: relative
+                img
+                    display: block
+                    height: 521px
+                    +adaptive-value("height", 521, 360, 0)
+                    object-fit: cover
+            .play
+                display: flex
+                position: absolute
+                left: calc( 50% - 44px )
+                top: calc( 50% - 44px )
+                width: 88px
+                height: 88px
+                background: linear-gradient(114deg, #FF851F 0%, #FAE331 100%)
+                border-radius: 80px
+                transition: all ease 250ms
+                svg
+                    display: block
+                    align-self: center
+                    margin: 0 auto
+            .vid:hover
 
-            .plyr
-                +min-screen($breakpoint-lg)
-                    height: 100%
-
-                &__video-wrapper
-                    +min-screen($breakpoint-lg)
-                        height: 100%
-                        aspect-ratio: 16 / 9
-
-                &__video-embed
-                    +min-screen($breakpoint-lg)
-                        display: flex
-                        justify-content: center
-                        align-items: center
-
-                &__video-embed iframe
-                    +min-screen($breakpoint-lg)
-                        margin: 0
-                        padding: 0
-                        border: none
-                        width: 100%
-                        height: 100%
-                &__poster
-                    background-size: cover
-                .plyr__control.plyr__control--overlaid
-                    svg
-                        width: 30px
-                        height: 45px
-                        left: -3px
-
-        +max-screen($breakpoint-lg)
-            // --plyr-control-spacing: 17px
-
-        .plyr__control--overlaid
-            background: $gradient-orange
+//             .plyr
+//                 +min-screen($breakpoint-lg)
+//                     height: 100%
+// 
+//                 &__video-wrapper
+//                     +min-screen($breakpoint-lg)
+//                         height: 100%
+//                         aspect-ratio: 16 / 9
+// 
+//                 &__video-embed
+//                     +min-screen($breakpoint-lg)
+//                         display: flex
+//                         justify-content: center
+//                         align-items: center
+// 
+//                 &__video-embed iframe
+//                     +min-screen($breakpoint-lg)
+//                         margin: 0
+//                         padding: 0
+//                         border: none
+//                         width: 100%
+//                         height: 100%
+//                 &__poster
+//                     background-size: cover
+//                 .plyr__control.plyr__control--overlaid
+//                     svg
+//                         width: 30px
+//                         height: 45px
+//                         left: -3px
+// 
+//         +max-screen($breakpoint-lg)
+//             // --plyr-control-spacing: 17px
+// 
+//         .plyr__control--overlaid
+//             background: $gradient-orange
     &__main
         padding-bottom: 80px
         .title_block

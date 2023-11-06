@@ -6,7 +6,7 @@ get_header();
 $hero_title = get_field('title_block') ? get_field('title_block') : get_the_title();
 $hero_content = get_field('content_block');
 $hero_video = get_field('video_block');
-
+$poster_img = get_field('poster_img');
 $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $careers = new WP_Query(array(
@@ -41,7 +41,13 @@ $careers = new WP_Query(array(
                         <div class="col-12 col-lg-6">
                             <div class="video-block">
                                 <div class="player-main">
-                                    <?php echo $hero_video; ?>
+                                    <div class="vid" video-url="<?php echo $hero_video; ?>">
+                                        <img src="<?php echo $poster_img ?>">
+                                        <div class="play">
+                                            <?php echo get_inline_svg('white_play.svg'); ?>
+                                        </div>
+                                    </div>
+                                    <iframe id="video-iframe" width="100%" style="display:none; position:absolute; top:0; left:0; right:0; bottom:0;" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
