@@ -50,46 +50,12 @@
                     margin: 0 auto
             .vid:hover
 
-//             .plyr
-//                 +min-screen($breakpoint-lg)
-//                     height: 100%
-// 
-//                 &__video-wrapper
-//                     +min-screen($breakpoint-lg)
-//                         height: 100%
-//                         aspect-ratio: 16 / 9
-// 
-//                 &__video-embed
-//                     +min-screen($breakpoint-lg)
-//                         display: flex
-//                         justify-content: center
-//                         align-items: center
-// 
-//                 &__video-embed iframe
-//                     +min-screen($breakpoint-lg)
-//                         margin: 0
-//                         padding: 0
-//                         border: none
-//                         width: 100%
-//                         height: 100%
-//                 &__poster
-//                     background-size: cover
-//                 .plyr__control.plyr__control--overlaid
-//                     svg
-//                         width: 30px
-//                         height: 45px
-//                         left: -3px
-// 
-//         +max-screen($breakpoint-lg)
-//             // --plyr-control-spacing: 17px
-// 
-//         .plyr__control--overlaid
-//             background: $gradient-orange
     &__main
         padding-bottom: 80px
         .title_block
             margin-bottom: 60px
             +adaptive-value("margin-bottom", 60, 20, 0)
+
             +max-screen($breakpoint-lg)
                 text-align: center
         .button__block
