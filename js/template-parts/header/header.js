@@ -23,6 +23,13 @@ function header() {
     return false;
   });
 
+  // close side panel on any link click
+  $("#side-panel .menu-item a").click(function () {
+    $("#side-panel").toggleClass("active");
+    $("#toggle").toggleClass("on");
+    $("body").toggleClass("side-panel-overlay");
+  });
+
   $(document).click(function (event) {
     let $target = $(event.target);
     if (!$target.closest(".side-panel").length) {

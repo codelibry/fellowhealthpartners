@@ -161,6 +161,7 @@
             +adaptive-value("font-size", 17, 12, 0)
             +max-screen(1200px)
                 font-size: 16px
+                margin-bottom: 16px
             &::before
                 position: absolute
                 content: ''
@@ -170,6 +171,8 @@
                 +adaptive-value("height", 10, 8, 0)
                 background-color: $color-primary
                 border-radius: 50%
+                +max-screen(1200px)
+            &:last-of-type
                 +max-screen(1200px)
 
         a
