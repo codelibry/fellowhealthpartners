@@ -142,6 +142,7 @@ $persent_row = get_sub_field('persent_row_for_main_page');
                                 <?php endif; ?>
                             </div>
                             <div class="circle_blocks__mirror-img">
+                                <div class="dotted"></div>
                                 <?php echo get_inline_svg_assets('/images/mirror_' . $i . '.svg'); ?>
                             </div>
                         </div>

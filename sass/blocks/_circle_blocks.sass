@@ -4,6 +4,13 @@
             border-left: 5px $color-primary solid
             padding-left: 40px
             margin-left: 5px
+            +max-screen($breakpoint-sm)
+                padding-left: 20px
+        .content-block
+            br
+                +max-screen($breakpoint-sm)
+                    display: none
+
         .arrows_text
             span
                 display: inline-block
@@ -112,6 +119,10 @@
                         li
                             &::marker
                                 color: $color-secondary
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-secondary
 
             &:nth-child(2)
                 .circle_blocks__inner
@@ -137,6 +148,10 @@
                         li
                             &::marker
                                 color: $color-secondary-medium-dark
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-secondary-medium-dark
             &:nth-child(3)
                 .circle_blocks__inner
                     z-index: 5
@@ -161,6 +176,10 @@
                         li
                             &::marker
                                 color: $color-secondary-dark
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-secondary-dark
             &:nth-child(4)
                 .circle_blocks__inner
                     z-index: 4
@@ -185,6 +204,10 @@
                         li
                             &::marker
                                 color: $color-gold
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-gold
             &:nth-child(5)
                 .circle_blocks__inner
                     z-index: 3
@@ -209,6 +232,10 @@
                         li
                             &::marker
                                 color: $color-orange
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-orange
             &:nth-child(6)
                 .circle_blocks__inner
                     z-index: 2
@@ -233,6 +260,10 @@
                         li
                             &::marker
                                 color: $color-orange-2
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-orange-2
             &:nth-child(7)
                 .circle_blocks__inner
                     &::after
@@ -256,6 +287,10 @@
                         li
                             &::marker
                                 color: $color-orange-3
+                .circle_blocks__mirror-img
+                    .dotted
+                        &::after
+                            border-color: $color-orange-3
     .show
         display: none
         opacity: 0
@@ -269,6 +304,8 @@
                 bottom: 0
                 padding: 0 !important
                 border-top: none !important
+            +max-screen($breakpoint-lg)
+                bottom: 10px
             +max-screen($breakpoint-md)
                 width: 100%
                 max-width: calc(100vw - 30px)
@@ -474,11 +511,28 @@
         width: 100%
         height: 100%
         z-index: -1
-        +max-screen($breakpoint-sm)
-            bottom: -95%
-
+        +max-screen($breakpoint-lg)
+            bottom: -100%
+        .dotted
+            display: none
+            width: 183px
+            height: 183px
+            position: relative
+            +max-screen($breakpoint-lg)
+                display: block
+            &::after
+                position: absolute
+                content: ''
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                border: 2px dotted
         svg
             width: 100% !important
+            +max-screen($breakpoint-sm)
+                display: none
     &__content
         position: absolute
         top: calc( 100% + 40px )
