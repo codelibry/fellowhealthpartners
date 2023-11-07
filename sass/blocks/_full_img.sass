@@ -2,12 +2,19 @@
     position: relative
     padding-bottom: 32%
     overflow: hidden
+    +max-screen($breakpoint-sm)
+        padding-bottom: 0
     img
         display: block
         object-fit: cover
+        +max-screen($breakpoint-sm)
+            min-height: 200px
     .parallax-img
         position: absolute
         left: 0
         +min-screen($breakpoint-lg)
             top: -40%
             height: 140%
+        +max-screen($breakpoint-sm)
+            position: relative
+            left: auto
