@@ -62,6 +62,10 @@
         overflow: hidden
         padding: 107px
         +adaptive-value("margin-bottom", 163, 80, 0)
+        +max-screen($breakpoint-xm)
+            padding: 80px
+        +max-screen($breakpoint-lg)
+            padding: 50px
 
 .sidebar
     width: 100%
@@ -129,6 +133,9 @@
             height: 112px
             margin-right: 20px
             display: flex
+            +max-screen($breakpoint-sm)
+                width: 168px
+                height: auto
             img
                 align-self: center
 

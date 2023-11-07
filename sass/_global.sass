@@ -5,11 +5,6 @@
 	&::before
 		box-sizing: border-box
 
-// #app
-// 	min-height: calc(100vh - 260px)
-// 	box-sizing: border-box
-// 	+max-screen(769px)
-// 		min-height: 0
 #primary
 	padding-top: calc(var(--header_header) - 2px)
 	overflow: hidden
@@ -143,3 +138,20 @@ img
 	+max-screen($breakpoint-lg)
 		position: relative !important
 		height: auto
+
+body
+	#cookie-notice
+		background-color: $color-gray-3 !important
+		font-family: $font-family-base
+		.cookie-notice-container
+			+max-screen($breakpoint-sm)
+				padding: 15px 35px
+			#cn-notice-text
+				color: $color-gray-1
+		.cn-button:not(.cn-button-custom)
+			background: $color-primary !important
+			font-family: $font-family-base !important
+		.cn-close-icon
+			+max-screen($breakpoint-sm)
+				right: 10px
+				top: 15px
