@@ -12,16 +12,16 @@
     .label
         font-weight: bold !important
     .form-row
-        margin-left: ml
-        margin-right: rem-calc(-15)
-        margin-bottom: rem-calc(-40)
+        // margin-left: ml
+        // margin-right: rem-calc(-15)
+        // margin-bottom: rem-calc(-40)
         display: flex
         flex-wrap: wrap
 
     .form-col,
     .form-cell
-        padding: rem-calc(0 15)
-        margin-bottom: rem-calc(40)
+        // padding: rem-calc(0 15)
+        // margin-bottom: rem-calc(40)
         width: 100%
 
     .form-fields
@@ -94,9 +94,22 @@
 
         &[multiple]
             height: auto
-    .wpcf7-list-item 
+    .wpcf7-checkbox
+        margin-left: -15px
+        margin-right: -15px
+        display: flex
+        flex-wrap: wrap
+        .wpcf7-list-item
+            padding-left: 15px
+            padding-right: 15px
+            margin-left: 0
+    .wpcf7-list-item
         &.first
             margin-left: 0
+    .wpcf7-form-control-wrap[data-name="about"]
+            .wpcf7-list-item
+                +max-screen($breakpoint-sm)
+                    width: calc(100% / 3)
 
 .job-title
     text-align: center
@@ -139,8 +152,10 @@
             width: 100%
 
 
-.application-form .form-cell
-    margin-bottom: rem(20px)
+
+
+// .application-form .form-cell
+//     margin-bottom: rem(20px)
 
 .application-form .form-row
     margin-bottom: 0
