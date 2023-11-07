@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="popup__textWrapper">
-            <div class="popup__text content-block text--size--26 text-color-gray">
+            <div class="popup__text content-block text-color-gray">
             </div>
         </div>
     </div>
