@@ -95,7 +95,7 @@ $select_form = get_sub_field('select_form');
 
     var salaryTitle = findGetParameter('salaryType');
     if (salaryTitle == 'hr') {
-        document.getElementById('salary-label').innerHTML = 'Desired Hourly Rate';
+        document.getElementById('salary-label').innerHTML = 'Desired Hourly Rate $';
 
     }
 </script>

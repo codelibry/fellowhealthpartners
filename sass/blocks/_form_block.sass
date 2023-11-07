@@ -2,9 +2,12 @@
 .application-form
     .contact-info,
     .position-info
-        padding: 30px
+        // padding: 30px
         background: color('smoke')
         margin-bottom: 30px
+
+    .position-info
+        margin-top: 60px
 
     .label
         font-weight: bold !important
@@ -90,6 +93,9 @@
 
         &[multiple]
             height: auto
+    .wpcf7-list-item 
+        &.first
+            margin-left: 0
 
 .job-title
     text-align: center
@@ -125,8 +131,12 @@
 
 .position-info
     .wpcf7-submit
-        display: inline-block
-        width: auto
+        display: block
+        width: 150px
+        max-width: 100%
+        +max-screen($breakpoint-sm)
+            width: 100%
+
 
 .application-form .form-cell
     margin-bottom: rem-calc(20)
