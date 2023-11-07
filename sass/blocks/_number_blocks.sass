@@ -9,7 +9,7 @@
         .vertical_block
             position: relative
             flex: 1
-            +adaptive-value("min-height", 552, 100, 0)
+            +adaptive-value("min-height", 522, 200, 0)
             justify-content: space-between
             background-color: $color-gray-3
             border: 1px transparent solid
@@ -22,13 +22,13 @@
                 max-height: none
             +max-screen(1200px)
                 flex: 0 0 100%
-                max-width: 100%
-            +max-screen($breakpoint-lg)
-                // +adaptive-value("padding", 40, 16, 0)
                 min-height: auto !important
                 max-height: none
                 flex-direction: row
                 justify-content: space-between
+            +max-screen($breakpoint-lg)
+                // +adaptive-value("padding", 40, 16, 0)
+
             +max-screen($breakpoint-sm)
                 // +adaptive-value("padding", 16, 16, 0)
                 min-height: 107px !important
@@ -68,7 +68,7 @@
                         transition-delay: .5s
 
                         &.content
-                            +max-screen($breakpoint-lg)
+                            +max-screen(1200px)
                                 position: relative
                             +max-screen($breakpoint-sm)
 
@@ -77,10 +77,12 @@
                         &-wrapper
                             +max-screen($breakpoint-sm)
                                 max-height: 300px
+                    &__footer-wrapper
+                        height: 0
             &__header
                 position: relative
                 +adaptive-value("padding", 40, 20, 0)
-                +max-screen($breakpoint-lg)
+                +max-screen(1200px)
                     +adaptive-value("padding", 40, 16, 0)
                 +max-screen($breakpoint-sm)
                     +adaptive-value("padding", 16, 16, 0)
@@ -116,28 +118,28 @@
             &__footer
                 +adaptive-value("padding", 40, 20, 0)
                 +max-screen($breakpoint-xl)
-                    +min-screen($breakpoint-lg)
+                    +min-screen(1200px)
                         padding: 20px
-                +max-screen($breakpoint-lg)
+                +max-screen(1200px)
                     +adaptive-value("padding", 40, 16, 0)
                 +max-screen($breakpoint-sm)
                     +adaptive-value("padding", 16, 16, 0)
                 &-wrapper
                     position: absolute
                     bottom: 0
-                    +max-screen($breakpoint-lg)
+                    +max-screen(1200px)
                         right: 0
                         bottom: 50%
                         transform: translateY(50%)
 
             .number
-                +max-screen($breakpoint-lg)
+                +max-screen(1200px)
                     align-self: center
                     +adaptive-value("font-size", 40, 40, 0)
 
             .title
                 transition: all .15s ease-in-out
-                +max-screen($breakpoint-lg)
+                +max-screen(1200px)
                     align-self: center
                 +max-screen($breakpoint-sm)
                     max-width: 190px
