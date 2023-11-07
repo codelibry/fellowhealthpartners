@@ -34,6 +34,10 @@
                 margin-left: auto
                 margin-right: auto
                 display: block
+            br
+                display: none
+                +max-screen($breakpoint-lg)
+                    display: block
         .empty_block
             +max-screen($breakpoint-xl)
                 width: 100px
@@ -49,6 +53,10 @@
             width: 100%
             +adaptive-value("width", 227, 140, 0)
             max-width: 227px
+            +max-screen($breakpoint-sm)
+                width: 100%
+                max-width: 205px
+
     &__contacts
         display: flex
         position: absolute
@@ -135,6 +143,8 @@
             +max-screen($breakpoint-lg)
                 flex-wrap: wrap
                 gap: 15px
+            +max-screen($breakpoint-sm)
+                gap: 7px
             &>div,
             &>a
                 display: flex
@@ -148,12 +158,20 @@
                     max-width: calc( 33% - 15px )
                     flex: 0 0 33%
                     height: auto
+                +max-screen($breakpoint-sm)
+                    max-width: calc( 50% - 3.5px )
+                    flex: 0 0 50%
+                    height: auto
 
             img
                 align-self: center
                 width: max-content
                 +max-screen($breakpoint-xm)
                     width: 100%
+                +max-screen($breakpoint-sm)
+                    max-width: 168px
+                    margin: 0 auto
+                    display: block
 
         &-copyright
             margin-top: 21px
@@ -169,13 +187,16 @@
                     margin-bottom: 24px
                 a
                     transition: all $default-transition
+                    color: transparentize($color-white, 0.3)
                     &:hover
-                        color: $color-primary
+                        color: $color-white
 
             div:not(.links)
                 +max-screen($breakpoint-md)
                     order: 2
                     text-align: center
+                p
+                    color: transparentize($color-white, 0.2)
     &__nav
         #footer-menu
             display: flex
