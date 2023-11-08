@@ -13,9 +13,11 @@
 
 .site
 	position: relative
-	// overflow: hidden
+	overflow: hidden
 	// .section-bg
 	// 	background: $color-black
+	.page-template-training &
+		overflow: visible
 img
 	width: 100%
 	height: auto
@@ -132,12 +134,15 @@ img
 
 .sticky
 	position: sticky !important
-	top: 0
+	top: 130px
 	height: fit-content
 	z-index: 5
+	+max-screen($breakpoint-xm)
+		top: 110px
 	+max-screen($breakpoint-lg)
 		position: relative !important
 		height: auto
+		top: auto
 
 body
 	#cookie-notice
