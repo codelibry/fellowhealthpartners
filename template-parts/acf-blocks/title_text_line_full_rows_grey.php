@@ -15,7 +15,7 @@ $bottom_content = get_sub_field('bottom_content');
                 </div>
                 <?php if ($second_title) : ?>
                     <div class="col-lg-6 d-lg-flex">
-                        <h3 class="text-color-black h4 max--width--740 mr-lg-auto align-self-lg-end">
+                        <h3 class="h4 text-color-black max--width--740 mr-lg-auto align-self-lg-end">
                             <?php echo $second_title; ?>
                         </h3>
                     </div>
