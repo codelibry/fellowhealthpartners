@@ -8,14 +8,14 @@ $bottom_content = get_sub_field('bottom_content');
     <div class="container">
         <div class="title_text_line__top">
             <div class="row">
-                <div class="col-lg-6 mb-2 mb-lg-0">
+                <div class="col-lg-7 mb-2 mb-lg-0">
                     <?php if ($title) : ?>
-                        <h2 class="h1 text-color-black max--width--740 mr-lg-auto"><?php echo $title; ?></h2>
+                        <h2 class="h1 text-color-black max--width--700 mr-lg-auto"><?php echo $title; ?></h2>
                     <?php endif; ?>
                 </div>
                 <?php if ($second_title) : ?>
-                    <div class="col-lg-6 d-lg-flex">
-                        <h3 class="h4 text-color-black max--width--740 mr-lg-auto align-self-lg-end">
+                    <div class="col-lg-5 d-lg-flex">
+                        <h3 class="h4 text-color-black max--width--623 mr-lg-auto align-self-lg-end">
                             <?php echo $second_title; ?>
                         </h3>
                     </div>
@@ -27,16 +27,16 @@ $bottom_content = get_sub_field('bottom_content');
         <?php if ($bottom_content_left || $bottom_content) : ?>
             <div class="title_text_line__bottom">
                 <div class="row">
-                    <div class="col-lg-6 mb-2 mb-lg-0">
+                    <div class="col-lg-7 mb-2 mb-lg-0">
                         <?php if ($bottom_content_left) : ?>
-                            <div class="content-block text-color-gray max--width--740 mr-lg-auto">
+                            <div class="content-block text-color-gray max--width--700 mr-lg-auto">
                                 <?php echo $bottom_content_left; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                     <?php if ($bottom_content) : ?>
-                        <div class="col-lg-6">
-                            <div class="content-block text-color-gray max--width--740 mr-lg-auto">
+                        <div class="col-lg-5">
+                            <div class="content-block text-color-gray max--width--623 mr-lg-auto">
                                 <?php echo $bottom_content; ?>
                             </div>
                         </div>
