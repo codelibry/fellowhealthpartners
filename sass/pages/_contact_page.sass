@@ -54,6 +54,8 @@
             flex-direction: column
             justify-content: space-between
             +adaptive-value("row-gap", 40, 20, 0)
+            +min-screen($breakpoint-xxl)
+                row-gap: 40px
     &__form
         .content-block
             +max-screen(1600px)

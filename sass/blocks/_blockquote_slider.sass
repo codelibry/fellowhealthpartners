@@ -4,6 +4,8 @@
         max-width: 1228px
         margin-left: auto
         margin-right: auto
+        +min-screen($breakpoint-xxl)
+            margin-top: 57px
     &__title
         +max-screen($breakpoint-sm)
             text-align: center
@@ -48,6 +50,10 @@
                 +adaptive-value("top", 60, 30, 0)
                 +adaptive-value("left", 60, 30, 0)
                 +adaptive-value("right", 60, 30, 0)
+                +min-screen($breakpoint-xxl)
+                    top: 60px
+                    left: 60px
+                    right: 60px
                 +max-screen($breakpoint-xm)
                     +adaptive-value("top", 40, 20, 0)
                     +adaptive-value("left", 40, 20, 0)

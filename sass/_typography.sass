@@ -11,6 +11,8 @@ body
 	-webkit-backface-visibility: hidden
 	-webkit-tap-highlight-color: transparent
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 21px
 
 h1,
 .h1
@@ -279,6 +281,8 @@ h6,.h6
 				display: inline-block
 				left: 0
 				+adaptive-value("top", 14, 12, 0)
+				+min-screen($breakpoint-xxl)
+					top: 14px
 			ol
 				margin: rem(10px 0)
 			ul
@@ -328,8 +332,13 @@ h6,.h6
 		+adaptive-value("margin-bottom", 40, 20, 0)
 		position: relative
 		border: 2px $color-orange-2 solid
+		+min-screen($breakpoint-xxl)
+			margin-top: 40px
+			margin-bottom: 40px
 		.testimonials__listItem
 			+adaptive-value("padding", 60, 30, 0)
+			+min-screen($breakpoint-xxl)
+				padding: 60px
 			+max-screen($breakpoint-xm)
 				+adaptive-value("padding", 40, 20, 0)
 
@@ -339,6 +348,8 @@ h6,.h6
 			+adaptive-value("font-size", 32, 18, 0)
 			font-weight: 400
 			color: $color-black
+			+min-screen($breakpoint-xxl)
+				font-size: 32px
 			&:last-of-type
 				margin-bottom: 0
 		cite
@@ -353,6 +364,9 @@ h6,.h6
 			+adaptive-value-minus("bottom", -60, -40, 0)
 			+adaptive-value("right", 40, 20, 0)
 			margin-bottom: 10px
+			+min-screen($breakpoint-xxl)
+				right: 40px
+				bottom: -60px
 			+max-screen($breakpoint-lg)
 				margin-bottom: 0
 		+max-screen($breakpoint-md)

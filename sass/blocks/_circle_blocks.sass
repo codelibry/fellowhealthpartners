@@ -20,6 +20,9 @@
                 vertical-align: sub
                 +adaptive-value("width", 47, 20, 0)
                 +adaptive-value("height", 47, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    width: 47px
+                    height: 47px
                 &::before
                     position: absolute
                     content: ''
@@ -33,6 +36,9 @@
                     background-position: center
                     background-size: contain
                     background-repeat: no-repeat
+                    +min-screen($breakpoint-xxl)
+                        width: 47px
+                        height: 47px
                 &.down
                     &::before
                         background-image: url('../assets/icons/arrows/arrow_bottom.svg')
@@ -46,6 +52,8 @@
         display: flex
         +adaptive-value("margin-top", 117, 60, 0)
         margin-bottom: 412px
+        +min-screen($breakpoint-xxl)
+            margin-top: 117px
         +max-screen($breakpoint-xs)
             width: max-content
             margin-bottom: 412px
@@ -368,6 +376,10 @@
         +adaptive-value("width", 193, 70, 0)
         +adaptive-value("height", 193, 70, 0)
         +adaptive-value("margin-right", 20, 0, 0)
+        +min-screen($breakpoint-xxl)
+            width: 193px
+            height: 193px
+            margin-right: 20px
         +max-screen($breakpoint-xm)
             +adaptive-value("margin-right", 10, 0, 0)
         +max-screen($breakpoint-xs)
@@ -436,6 +448,9 @@
                 +adaptive-value("height", 188, 65, 0)
                 border-radius: 9999px
                 border: 3px dotted
+                +min-screen($breakpoint-xxl)
+                    width: 188px
+                    height: 188px
                 +max-screen($breakpoint-xs)
                     width: 179px
                     height: 179px
@@ -484,6 +499,10 @@
             border-radius: 50%
             transition: border $default-transition
             z-index: 6
+            +min-screen($breakpoint-xxl)
+                top: -30px
+                width: 60px
+                height: 60px
             +max-screen($breakpoint-xs)
                 width: 44px
                 height: 44px
@@ -499,6 +518,8 @@
             +adaptive-value("max-width", 140, 70, 0)
             margin: 0 auto
             z-index: 2
+            +min-screen($breakpoint-xxl)
+                max-width: 140px
             +max-screen($breakpoint-md)
                 max-width: 130px
 
@@ -565,6 +586,8 @@
         p
             margin-bottom: 10px
             +adaptive-value("font-size", 18, 14, 0)
+            +min-screen($breakpoint-xxl)
+                font-size: 18px
             +max-screen($breakpoint-xs)
                 font-size: 18px
         a
@@ -574,6 +597,8 @@
             padding-left: 14px !important
             margin: 10px 0 0
             +adaptive-value("font-size", 18, 14, 0)
+            +min-screen($breakpoint-xxl)
+                font-size: 18px
             +max-screen($breakpoint-xs)
                 font-size: 18px
         li
@@ -587,6 +612,8 @@
                 margin-bottom: 0
     &__bottom
         +adaptive-value("margin-bottom", 168, 60, 0)
+        +min-screen($breakpoint-xxl)
+            margin-bottom: 168px
         +max-screen($breakpoint-md)
             overflow-x: auto
             overflow-y: hidden

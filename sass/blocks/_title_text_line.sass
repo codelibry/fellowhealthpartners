@@ -26,6 +26,9 @@
                     vertical-align: sub
                     +adaptive-value("width", 47, 20, 0)
                     +adaptive-value("height", 47, 20, 0)
+                    +min-screen($breakpoint-xxl)
+                        width: 47px
+                        height: 47px
                     &::before
                         position: absolute
                         content: ''
@@ -39,6 +42,9 @@
                         background-position: center
                         background-size: contain
                         background-repeat: no-repeat
+                        +min-screen($breakpoint-xxl)
+                            width: 47px
+                            height: 47px
                     &.down
                         &::before
                             background-image: url('../assets/icons/arrows/arrow_bottom.svg')

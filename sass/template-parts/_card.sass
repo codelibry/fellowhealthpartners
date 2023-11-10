@@ -7,6 +7,10 @@
     +adaptive-value("column-gap", 40, 20, 0)
     box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09)
     height: 100%
+    +min-screen($breakpoint-xxl)
+        padding: 40px
+        row-gap: 40px
+        column-gap: 40px
     &--careers
         justify-content: flex-start
         +max-screen($breakpoint-md)
@@ -25,6 +29,8 @@
         +adaptive-value("padding", 30, 20, 0)
         height: auto
         row-gap: 0
+        +min-screen($breakpoint-xxl)
+            padding: 30px
         span
             display: block
             margin-left: auto
@@ -53,6 +59,8 @@
         span
             width: max-content
             +adaptive-value("margin-bottom", 24, 15, 0)
+            +min-screen($breakpoint-xxl)
+                margin-bottom: 24px
         .title_block
             display: flex
             flex-direction: column
@@ -87,3 +95,5 @@
         +adaptive-value("padding-right", 30, 10, 0)
         gap: 0
         flex-direction: row
+        +min-screen($breakpoint-xxl)
+            padding: 20px 30px

@@ -8,8 +8,9 @@
         +max-screen($breakpoint-lg)
             text-align: center
     .top_content
-        margin-bottom: 38px
         +adaptive-value("margin-bottom", 38, 30, 0)
+        +min-screen($breakpoint-xxl)
+            margin-bottom: 38px
 
     .top_content,.bottom_content
         max-width: 700px
@@ -18,21 +19,27 @@
             margin-right: auto
     .images_list
         justify-content: flex-start
-        margin-top: 102px
         align-self: center
         flex-wrap: wrap
         +adaptive-value("margin-top", 102, 40, 0)
         +adaptive-value("column-gap", 42, 30, 0)
+        +min-screen($breakpoint-xxl)
+            margin-top: 102px
+            column-gap: 42px
         +max-screen($breakpoint-lg)
             margin-bottom: 30px
             justify-content: center
         img
             width: max-content
             +adaptive-value("max-width", 201, 130, 0)
+            +min-screen($breakpoint-xxl)
+                max-width: 201px
             +max-screen($breakpoint-xl)
                 width: auto
             &.second
                 +adaptive-value("max-width", 80, 50, 0)
+                +min-screen($breakpoint-xxl)
+                    max-width: 80px
     &__main
         color: red
         .title_block

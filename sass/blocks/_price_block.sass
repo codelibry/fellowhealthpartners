@@ -16,8 +16,12 @@
                 margin-top: 0
             p
                 +adaptive-value("margin-top", 36, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    margin-top: 36px
         .content-block
             +adaptive-value("margin-top", 76, 40, 0)
+            +min-screen($breakpoint-xxl)
+                margin-top: 76px
             ul, ol
                 color: $color-gray-1
 

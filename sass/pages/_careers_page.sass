@@ -2,8 +2,9 @@
     &__hero
         --plyr-control-spacing: 15px
         .title_block
-            margin-bottom: 60px
             +adaptive-value("margin-bottom", 60, 20, 0)
+            +min-screen($breakpoint-xxl)
+                margin-bottom: 60px
             +max-screen($breakpoint-lg)
                 text-align: center
         .video-block
@@ -22,6 +23,8 @@
                 width: calc( 100% - 30px )
                 left: 30px !important
                 +adaptive-value("height", 521, 360, 0)
+                +min-screen($breakpoint-xxl)
+                    height: 521px
                 +max-screen($breakpoint-lg)
                     width: 100%
                     left: auto !important
@@ -31,8 +34,9 @@
                 // position: relative
                 img
                     display: block
-                    height: 521px
                     +adaptive-value("height", 521, 360, 0)
+                    +min-screen($breakpoint-xxl)
+                        height: 521px
                     object-fit: cover
             .play
                 display: flex
@@ -55,7 +59,8 @@
         .title_block
             margin-bottom: 60px
             +adaptive-value("margin-bottom", 60, 20, 0)
-
+            +min-screen($breakpoint-xxl)
+                margin-bottom: 60px
             +max-screen($breakpoint-lg)
                 text-align: center
         .button__block
