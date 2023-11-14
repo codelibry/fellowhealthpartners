@@ -123,14 +123,14 @@ $persent_row = get_sub_field('persent_row_for_main_page');
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($persent_row_inner) : ?>
-                                    <div class="circle_blocks__persents_row d-none">
+                                    <div class="circle_blocks__persents_row d-none row">
                                         <?php foreach ($persent_row_inner as $col) :
                                             $top_subtitle = $col['top_subtitle'];
                                             $top_text = $col['top_text'];
                                             $small_text = $col['small_text'];
                                             $persent_number = $col['persent_number'];
                                             $bottom_text = $col['bottom_text']; ?>
-                                            <div class="persents_col text--center">
+                                            <div class="persents_col col-4 text--center">
                                                 <p class="text--size--42"><?php echo $top_subtitle; ?></p>
                                                 <p class="color_text text--size--42 text-color-white <?php echo $bgColorClass; ?>"><?php echo $top_text; ?></p>
                                                 <p class="text--size--18 text-color-gray"><?php echo $small_text; ?></p>

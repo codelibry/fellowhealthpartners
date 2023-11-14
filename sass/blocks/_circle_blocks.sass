@@ -611,9 +611,12 @@
             &:last-of-type
                 margin-bottom: 0
     &__bottom
-        +adaptive-value("margin-bottom", 168, 60, 0)
+        +adaptive-value("margin-bottom", 138, 60, 0)
+        min-height: 333px
         +min-screen($breakpoint-xxl)
             margin-bottom: 168px
+        +max-screen($breakpoint-xl)
+            min-height: 300px
         +max-screen($breakpoint-md)
             overflow-x: auto
             overflow-y: hidden
