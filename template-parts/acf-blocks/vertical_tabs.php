@@ -82,7 +82,7 @@ $tabs = get_sub_field('tabs');
                                 endforeach; ?>
                             </ul>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 content_right">
                             <div class="max--width--700 ml-lg-auto ">
                                 <?php $i = 1;
                                 foreach ($tabs as $tab) :

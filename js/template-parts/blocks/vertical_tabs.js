@@ -36,6 +36,41 @@ function vertical_Tabs() {
       };
 
       init();
+
+      window.onload = function () {
+        function setMaxHeight() {
+          var heights = []; // Array to store heights of each block
+
+          // Loop through each .content_right block
+          $(".content_right").each(function () {
+            // Get the height of each block
+            var currentHeight = $(this).outerHeight();
+
+            // Store the height in the array
+            heights.push(currentHeight);
+
+            // Log the height of each block
+            console.log("Height: " + currentHeight);
+          });
+
+          // Find the maximum height from the array
+          var maxHeight = Math.max.apply(null, heights);
+
+          // Set the CSS variable --highest_block with the maxHeight value
+          document.documentElement.style.setProperty(
+            "--highest_block",
+            maxHeight + "px"
+          );
+        }
+
+        // Set max height on initial load
+        setMaxHeight();
+
+        // Listen for window resize event and recalculate max height
+        window.addEventListener("resize", function () {
+          setMaxHeight();
+        });
+      };
     } else {
       $("#tab-list li:first-child .link-body").addClass("active");
       $("#tabs-section .tab-link").click(function (e) {

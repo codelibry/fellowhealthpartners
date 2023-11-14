@@ -88,6 +88,5 @@ $tabs = get_sub_field('tabs');
                 </div> <!-- END tabs -->
             <?php endif; ?>
         <?php endif; ?>
-
     </div>
 </section>

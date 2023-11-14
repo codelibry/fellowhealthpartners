@@ -9,6 +9,7 @@
         display: flex
         margin-right: -32px
         margin-left: -32px
+
         +max-screen(1100px)
             margin-right: -16px
             margin-left: -16px
@@ -19,6 +20,10 @@
             +max-screen(1100px)
                 padding-left: 16px
                 padding-right: 16px
+        .content_right
+            +min-screen($breakpoint-lg)
+                max-height: var(--highest_block)
+                overflow-y: scroll
         ul
             list-style-type: none
             margin: 0
