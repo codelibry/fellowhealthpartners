@@ -27,6 +27,11 @@
             +adaptive-value("padding-top", 70, 40, 0)
             +adaptive-value("padding-bottom", 40, 20, 0)
             border: 2px $color-primary solid
+            +min-screen($breakpoint-xxl)
+                padding-left: 60px
+                padding-right: 60px
+                padding-top: 70px
+                padding-bottom: 40px
             p
                 margin-bottom: 10px
                 max-width: 530px
@@ -53,6 +58,11 @@
             +adaptive-value("padding-bottom", 16, 10, 0)
             left: 50%
             transform: translateX(-50%)
+            +min-screen($breakpoint-xxl)
+                padding-left: 11px
+                padding-right: 110px
+                padding-top: 16px
+                padding-bottom: 16px
             +max-screen($breakpoint-xl)
                 top: -75px
             +max-screen($breakpoint-lg)

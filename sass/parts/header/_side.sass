@@ -2,7 +2,6 @@
     position: fixed
     top: 72px
     right: 0
-    display: block
     z-index: 100
     width: 375px
     height: 100%
@@ -11,7 +10,9 @@
     transform: translateX(100%)
     padding-left: 0
     // border-top: 1px solid transparentize($default-text-color, 0.4)
-
+    display: none
+    +max-screen(1200px)
+        display: block
     .admin-bar
         top: 32px
 

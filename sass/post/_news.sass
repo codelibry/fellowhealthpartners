@@ -2,6 +2,8 @@
     .post
         &-filters
             +adaptive-value("column-gap", 40, 20, 0)
+            +min-screen($breakpoint-xxl)
+                column-gap: 40px
             +max-screen($breakpoint-sm)
                 flex-direction: column
                 column-gap: 0
@@ -44,11 +46,13 @@
 
         &-item
             &__title
-                margin-bottom: 40px
                 +adaptive-value("margin-bottom", 40, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    margin-bottom: 40px
             .content-block
-                margin-bottom: 40px
                 +adaptive-value("margin-bottom", 40, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    margin-bottom: 40px
     .show-more-btn
         gap: 0 10px
         cursor: pointer
@@ -62,6 +66,8 @@
         overflow: hidden
         padding: 107px
         +adaptive-value("margin-bottom", 163, 80, 0)
+        +min-screen($breakpoint-xxl)
+            margin-bottom: 163px
         +max-screen($breakpoint-xm)
             padding: 80px
         +max-screen($breakpoint-lg)
@@ -86,8 +92,12 @@
             margin-right: auto
         background: $color-gray-3
         +adaptive-value("padding", 60, 30, 0)
+        +min-screen($breakpoint-xxl)
+            padding: 60px
         h2
             +adaptive-value("margin-bottom", 40, 20, 0)
+            +min-screen($breakpoint-xxl)
+                margin-bottom: 40px
         input[type=submit]
             margin-top: 20px
 

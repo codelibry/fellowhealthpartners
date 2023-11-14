@@ -5,6 +5,10 @@
     +adaptive-value("padding-left", 30, 10, 0)
     +adaptive-value("padding-right", 30, 10, 0)
     +adaptive-value("padding-bottom", 59, 30, 0)
+    +min-screen($breakpoint-xxl)
+        width: 350px
+        padding-left: 30px
+        padding-bottom: 59px
     +max-screen($breakpoint-xm)
         +adaptive-value("padding-left", 15, 10, 0)
         +adaptive-value("padding-right", 15, 10, 0)
@@ -18,6 +22,8 @@
         margin-right: auto
         +adaptive-value("max-width", 280, 200, 0)
         aspect-ratio: 1 / 1
+        +min-screen($breakpoint-xxl)
+            max-width: 280px
         img
             width: 100%
             object-fit: cover
@@ -52,6 +58,9 @@
                 // max-height: 24px
                 +adaptive-value("width", 30, 20, 0)
                 +adaptive-value("height", 30, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    width: 30px
+                    height: 30px
             span
                 transform: translateY(2px)
                 line-height: 80%

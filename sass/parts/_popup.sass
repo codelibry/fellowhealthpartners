@@ -1,5 +1,7 @@
 .popup
     +adaptive-value("padding", 80, 40, 0)
+    +min-screen($breakpoint-xxl)
+        padding: 80px
     &Wrapper
         width: 47%
         position: fixed
@@ -43,6 +45,8 @@
             opacity: 0
             transition: .3s
             +adaptive-value("min-width", 200, 80, 0)
+            +min-screen($breakpoint-xxl)
+                min-width: 200px
             +max-screen($breakpoint-md)
 
         &.active-image
@@ -199,12 +203,16 @@
                 display: block
                 align-self: center
                 +adaptive-value("width", 30, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    width: 30px
             &__email
                 margin-bottom: -1px
     &--cases
         display: flex
         flex-direction: column
         +adaptive-value("row-gap", 40, 20, 0)
+        +min-screen($breakpoint-xxl)
+            row-gap: 40px
         .popup__image
             img
                 width: max-content
@@ -222,6 +230,11 @@
                 +adaptive-value("padding-right", 30, 15, 0)
                 +adaptive-value("padding-top", 10, 10, 0)
                 +adaptive-value("padding-bottom", 25, 15, 0)
+                +min-screen($breakpoint-xxl)
+                    padding-left: 30px
+                    padding-right: 30px
+                    padding-top: 10px
+                    padding-bottom: 25px
         .popup__awards
             max-width: 200px
             +max-screen($breakpoint-lg)

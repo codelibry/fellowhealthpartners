@@ -27,14 +27,17 @@
             li
                 display: block
                 +adaptive-value("margin-bottom", 20, 10, 0)
+                +min-screen($breakpoint-xxl)
+                    margin-bottom: 20px
                 &:last-of-type
                     margin-bottom: 0
                 a
-                    min-height: 146px
                     display: flex
                     height: 100%
                     position: relative
                     +adaptive-value("min-height", 146, 96, 0)
+                    +min-screen($breakpoint-xxl)
+                        min-height: 146px
                     +max-screen($breakpoint-xm)
                     +max-screen($breakpoint-lg)
                         min-height: 80px
@@ -197,6 +200,9 @@
         &_col
             +adaptive-value("padding-top", 20, 10, 0)
             +adaptive-value("padding-bottom", 20, 10, 0)
+            +min-screen($breakpoint-xxl)
+                padding-top: 20px
+                padding-bottom: 20px
             border-top: 5px $color-primary solid
 
             h4

@@ -11,37 +11,43 @@ body
 	-webkit-backface-visibility: hidden
 	-webkit-tap-highlight-color: transparent
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 21px
 
 h1,
 .h1
-	font-size: 80px
 	+adaptive-value("font-size", 80, 20, 0)
 	line-height: 1.2
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 80px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 40, 40, 0)
 
 h2,.h2
-	font-size: 60px
 	+adaptive-value("font-size", 60, 20, 0)
 	line-height: 1.16
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 60px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 30, 30, 0)
 
 h3,.h3
-	font-size: 49px
 	+adaptive-value("font-size", 49, 17, 0)
 	line-height: 1.2
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 49px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 27, 27, 0)
 
 h4,.h4
-	font-size: 42px
 	+adaptive-value("font-size", 42, 14, 0)
 	line-height: 1.2
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 42px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 24, 24, 0)
 
@@ -50,6 +56,8 @@ h5,.h5
 	+adaptive-value("font-size", 32, 10, 0)
 	line-height: 1.2 // I am not 100% sure
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 32px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 20, 20, 0)
 
@@ -58,6 +66,8 @@ h6,.h6
 	+adaptive-value("font-size", 24, 14, 0)
 	line-height: 1.5
 	font-weight: 500
+	+min-screen($breakpoint-xxl)
+		font-size: 24px
 	+max-screen($breakpoint-md)
 		+adaptive-value("font-size", 18, 18, 0)
 
@@ -80,68 +90,85 @@ h6,.h6
 	&--size--13,&--size--13 *
 		font-size: 13px
 		+adaptive-value("font-size", 13, 13, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 13px
 	&--size--15,&--size--15 *
-		font-size: 15px
 		+adaptive-value("font-size", 15, 13, 0)
-
+		+min-screen($breakpoint-xxl)
+			font-size: 15px
 	&--size--17,&--size--17 *
-		font-size: 17px
 		+adaptive-value("font-size", 17, 15, 0)
-
+		+min-screen($breakpoint-xxl)
+			font-size: 17px
 	&--size--18,&--size--18 *
 		font-size: 18px
 		+adaptive-value("font-size", 18, 14, 0)
-
+		+min-screen($breakpoint-xxl)
+			font-size: 13px
 	&--size--19,&--size--19 *
-		font-size: 19px
 		+adaptive-value("font-size", 19, 16, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 19px
 	&--size--21,&--size--21 *
-		font-size: 21px
 		+adaptive-value("font-size", 21, 15, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 21px
 	&--size--22,&--size--22 *
-		font-size: 22px
 		+adaptive-value("font-size", 22, 18, 0)
-
+		+min-screen($breakpoint-xxl)
+			font-size: 22px
 	&--size--24,&--size--24 *
-		font-size: 24px
 		+adaptive-value("font-size", 24, 20, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 24px
 	&--size--26,&--size--26 *
-		font-size: 26px
 		+adaptive-value("font-size", 26, 22, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 26px
 	&--size--27,&--size--27 *
-		font-size: 27px
 		+adaptive-value("font-size", 27, 23, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 27px
 	&--size--32,&--size--32 *
-		font-size: 32px
 		+adaptive-value("font-size", 32, 20, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 32px
 	&--size--42,&--size--42 *
-		font-size: 42px
 		+adaptive-value("font-size", 42, 28, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 42px
 	&--size--50,&--size--50 *
-		font-size: 50px
 		+adaptive-value("font-size", 50, 28, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 50px
 	&--size--70,&--size--70 *
-		font-size: 70px
 		+adaptive-value("font-size", 70, 8, 0)
+		+min-screen($breakpoint-xxl)
+			font-size: 70px
 		+max-screen($breakpoint-lg)
 			+adaptive-value("font-size", 60, 50, 0)
 	&--size--100,&--size--100 *
-		font-size: 100px
 		+adaptive-value("font-size", 100, 40, 0)
 		span
 			+adaptive-value("font-size", 58, 20, 0)
+			+min-screen($breakpoint-xxl)
+				font-size: 58px
+		+min-screen($breakpoint-xxl)
+			font-size: 100px
 		+max-screen($breakpoint-sm)
 			+adaptive-value("font-size", 60, 50, 0)
 	&--size--113,&--size--113 *
-		font-size: 113px
 		line-height: 1.1
 		+adaptive-value("font-size", 113, 43, 1)
+		+min-screen($breakpoint-xxl)
+			font-size: 113px
 		+max-screen(1700px)
 			+adaptive-value("font-size", 83, 23, 1)
 		+max-screen($breakpoint-sm)
 			+adaptive-value("font-size", 38, 38, 1)
 	&--size--190,&--size--190 *
-		font-size: 190px
+		+min-screen($breakpoint-xxl)
+			font-size: 190px
 		+adaptive-value("font-size", 190, 43, 0)
 .font
 
@@ -254,6 +281,8 @@ h6,.h6
 				display: inline-block
 				left: 0
 				+adaptive-value("top", 14, 12, 0)
+				+min-screen($breakpoint-xxl)
+					top: 14px
 			ol
 				margin: rem(10px 0)
 			ul
@@ -303,8 +332,13 @@ h6,.h6
 		+adaptive-value("margin-bottom", 40, 20, 0)
 		position: relative
 		border: 2px $color-orange-2 solid
+		+min-screen($breakpoint-xxl)
+			margin-top: 40px
+			margin-bottom: 40px
 		.testimonials__listItem
 			+adaptive-value("padding", 60, 30, 0)
+			+min-screen($breakpoint-xxl)
+				padding: 60px
 			+max-screen($breakpoint-xm)
 				+adaptive-value("padding", 40, 20, 0)
 
@@ -314,6 +348,8 @@ h6,.h6
 			+adaptive-value("font-size", 32, 18, 0)
 			font-weight: 400
 			color: $color-black
+			+min-screen($breakpoint-xxl)
+				font-size: 32px
 			&:last-of-type
 				margin-bottom: 0
 		cite
@@ -328,6 +364,9 @@ h6,.h6
 			+adaptive-value-minus("bottom", -60, -40, 0)
 			+adaptive-value("right", 40, 20, 0)
 			margin-bottom: 10px
+			+min-screen($breakpoint-xxl)
+				right: 40px
+				bottom: -60px
 			+max-screen($breakpoint-lg)
 				margin-bottom: 0
 		+max-screen($breakpoint-md)

@@ -18,6 +18,8 @@
             max-height: 552px
             overflow: hidden
             flex-direction: column
+            +min-screen($breakpoint-xxl)
+                min-height: 522px
             +max-screen($breakpoint-xm)
                 max-height: none
             +max-screen(1200px)
@@ -82,6 +84,8 @@
             &__header
                 position: relative
                 +adaptive-value("padding", 40, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    padding: 40px
                 +max-screen(1200px)
                     +adaptive-value("padding", 40, 16, 0)
                 +max-screen($breakpoint-sm)
@@ -117,6 +121,8 @@
                     transition: max-height 0.5s ease-in-out
             &__footer
                 +adaptive-value("padding", 40, 20, 0)
+                +min-screen($breakpoint-xxl)
+                    padding: 40px
                 +max-screen($breakpoint-xl)
                     +min-screen(1200px)
                         padding: 20px
@@ -173,6 +179,8 @@
                 opacity: 0
                 +adaptive-value("padding", 40, 20, 0)
                 z-index: -1
+                +min-screen($breakpoint-xxl)
+                    padding: 40px
                 +max-screen($breakpoint-sm)
                     +adaptive-value("padding-top", 24, 16, 0)
                     +adaptive-value("padding-bottom", 24, 16, 0)

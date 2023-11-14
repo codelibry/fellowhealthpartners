@@ -1,8 +1,8 @@
 .title_text_line
     .h4
-        +min-screen($breakpoint-lg)
-            +max-screen(1600px)
-                font-size: 28px
+        // +min-screen($breakpoint-lg)
+        //     +max-screen(1600px)
+        //         font-size: 28px
         +max-screen($breakpoint-lg)
             br
                 display: none
@@ -26,27 +26,33 @@
                     vertical-align: sub
                     +adaptive-value("width", 47, 20, 0)
                     +adaptive-value("height", 47, 20, 0)
+                    +min-screen($breakpoint-xxl)
+                        width: 47px
+                        height: 47px
                     &::before
                         position: absolute
                         content: ''
                         top: 0
                         left: 0
-                        width: 47px
-                        height: 47px
+                        width: 40px
+                        height: 40px
                         +adaptive-value("width", 47, 20, 0)
                         +adaptive-value("height", 47, 20, 0)
                         background-image: url('../assets/icons/arrows/arrow_top.svg')
                         background-position: center
                         background-size: contain
                         background-repeat: no-repeat
+                        +min-screen($breakpoint-xxl)
+                            width: 47px
+                            height: 47px
                     &.down
                         &::before
                             background-image: url('../assets/icons/arrows/arrow_bottom.svg')
                 .row
                     +min-screen($breakpoint-xs)
-                        margin-left: -40px
-                        margin-right: -40px
-                        // +adaptive-value("column-gap", 80, 20, 0)
-                        & > div
-                            padding-left: 40px
-                            padding-right: 40px
+                        // margin-left: -40px
+                        // margin-right: -40px
+                        // // +adaptive-value("column-gap", 80, 20, 0)
+                        // & > div
+                        //     padding-left: 40px
+                        //     padding-right: 40px

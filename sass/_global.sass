@@ -5,6 +5,17 @@
 	&::before
 		box-sizing: border-box
 
+body
+	width: 1920px
+	max-width: 100%
+	margin: 0 auto
+	overflow-x: hidden
+
+body
+	position: relative
+	&.page-template-training
+		overflow: visible
+
 #primary
 	padding-top: calc(var(--header_header) - 2px)
 	overflow: hidden
@@ -146,9 +157,16 @@ img
 
 body
 	#cookie-notice
+		max-width: 1920px !important
+		min-width: auto
+		width: 100%
+		margin: 0 auto
+		left: 50%
+		transform: translateX(-50%)
 		background-color: $color-gray-3 !important
 		font-family: $font-family-base
 		.cookie-notice-container
+
 			+max-screen($breakpoint-sm)
 				padding: 15px 35px
 			#cn-notice-text
@@ -160,3 +178,7 @@ body
 			+max-screen($breakpoint-sm)
 				right: 10px
 				top: 15px
+sup
+	font-size: 18px
+	+max-screen($breakpoint-sm)
+		font-size: 14px

@@ -18,6 +18,8 @@
                 position: relative
                 z-index: 2
                 +adaptive-value("width", 100, 0, 0)
+                +min-screen($breakpoint-xxl)
+                    width: 100px
                 +max-screen($breakpoint-lg)
                     width: 40px
         & > *
@@ -65,6 +67,9 @@
             // padding: 26px 0
             +adaptive-value("padding-top", 26, 16, 0)
             +adaptive-value("padding-bottom", 26, 16, 0)
+            +min-screen($breakpoint-xxl)
+                padding-top: 26px
+                padding-bottom: 26px
 
         p
             margin-top: 20px
@@ -76,6 +81,8 @@
         +adaptive-value("padding", 60, 10, 0)
         box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.09)
         background-color: $color-white
+        +min-screen($breakpoint-xxl)
+        padding: 60px
         +max-screen($breakpoint-sm)
             padding: 24px 16px
         &::before
@@ -121,3 +128,6 @@
             width: max-content
             margin: 0 auto
             margin-top: 7px
+            +min-screen($breakpoint-xxl)
+                padding-left: 20px
+                padding-right: 20px

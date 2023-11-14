@@ -53,6 +53,8 @@
             width: 100%
             +adaptive-value("width", 227, 140, 0)
             max-width: 227px
+            +min-screen($breakpoint-xxl)
+                width: 227px
             +max-screen($breakpoint-sm)
                 width: 100%
                 max-width: 205px
@@ -214,6 +216,10 @@
                 +adaptive-value("font-size", 26, 18, 0)
                 +adaptive-value("padding-top", 20, 10, 0)
                 +adaptive-value("padding-bottom", 20, 10, 0)
+                +min-screen($breakpoint-xxl)
+                    padding-top: 20px
+                    padding-bottom: 20px
+                    font-size: 26px
                 +max-screen(1200px)
                     font-size: 18px
                     text-transform: capitalize
@@ -234,6 +240,9 @@
                         +adaptive-value("width", 20, 15, 0)
                         +adaptive-value("height", 20, 15, 0)
                         transition: .3s
+                        +min-screen($breakpoint-xxl)
+                            width: 20px
+                            height: 20px
                         &::before
                             content: ""
                             width: 6.67px
@@ -287,6 +296,12 @@
             +adaptive-value("padding-right", 20, 10, 0)
             +adaptive-value("padding-top", 10, 5, 0)
             +adaptive-value("padding-bottom", 10, 5, 0)
+            +min-screen($breakpoint-xxl)
+                row-gap: 15px
+                padding-left: 20px
+                padding-right: 20px
+                padding-top: 10px
+                padding-bottom: 10px
             +max-screen($breakpoint-lg)
                 position: relative
                 left: auto
@@ -312,6 +327,8 @@
                 padding-left: 18px
                 align-self: flex-start
                 +adaptive-value("font-size", 17, 12, 0)
+                +min-screen($breakpoint-xxl)
+                    font-size: 17px
                 &::before
                     position: absolute
                     content: ''
@@ -321,6 +338,9 @@
                     +adaptive-value("height", 10, 8, 0)
                     background-color: $color-primary
                     border-radius: 50%
+                    +min-screen($breakpoint-xxl)
+                        width: 10px
+                        height: 10px
                     +max-screen(1200px)
                     +max-screen($breakpoint-sm)
                         top: 7px
