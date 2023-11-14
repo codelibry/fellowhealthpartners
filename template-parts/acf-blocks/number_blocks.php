@@ -3,7 +3,7 @@ $title = get_sub_field('title');
 $numbers = get_sub_field('number_blocks');
 ?>
 
-<div class="number_blocks mb-75">
+<div class="number_blocks mb-75 max-width">
     <div class="container">
         <?php if ($title) : ?>
             <div class="number_blocks__top mb-80">
@@ -22,7 +22,8 @@ $numbers = get_sub_field('number_blocks');
                 foreach ($numbers as $number) :
                     $vertical_title = $number['subtitle'];
                     $content = $number['content'] ?>
-                    <div class="vertical_block <?php if ($i == 1) : echo 'active'; endif?>">
+                    <div class="vertical_block <?php if ($i == 1) : echo 'active';
+                                                endif ?>">
 
                         <div class="vertical_block__header">
 
@@ -33,10 +34,10 @@ $numbers = get_sub_field('number_blocks');
                             <div class="number h3 text-color-primary">
                                 <?php echo $i ?>.
                             </div>
-                            
-                            
+
+
                         </div>
-                        
+
                         <div class="vertical_block__content-wrapper">
                             <div class="vertical_block__content content text-color-gray content-block">
                                 <?php echo $content; ?>
@@ -50,7 +51,7 @@ $numbers = get_sub_field('number_blocks');
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 <?php $i++;
                 endforeach; ?>

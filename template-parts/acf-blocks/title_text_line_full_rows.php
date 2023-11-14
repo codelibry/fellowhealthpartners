@@ -2,7 +2,7 @@
 $title = get_sub_field('top_title');
 $bottom_content = get_sub_field('bottom_content');
 ?>
-<section class="title_text_line section section--spacing--md">
+<section class="title_text_line section section--spacing--md max-width">
     <div class="container">
         <div class="title_text_line__top">
             <div class="row">

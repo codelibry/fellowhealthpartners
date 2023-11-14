@@ -5,7 +5,8 @@ $top_content = get_sub_field('top_content');
 $bottom_content = get_sub_field('bottom_content');
 ?>
 <?php if ($title || $images || $top_content) : ?>
-    <section class="partner section">
+    <section class="partner section ">
+        <div class="section-bg"></div>
         <div class="container">
             <div class="partner__main">
                 <div class="row">

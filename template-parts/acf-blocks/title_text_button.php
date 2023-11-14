@@ -3,7 +3,7 @@ $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $content = get_sub_field('content');
 ?>
-<section class="title_text_button section section--spacing--sm pb-0">
+<section class="title_text_button section section--spacing--sm pb-0 max-width">
     <div class="container">
         <div class="title_text_button__main">
             <div class="row mb-74">

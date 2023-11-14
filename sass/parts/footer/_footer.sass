@@ -1,11 +1,16 @@
 .pre-footer
-    overflow: hidden
     position: relative
     padding-top: 18px
     padding-bottom: 29px
     +max-screen($breakpoint-lg)
         padding-top: 32px
         padding-bottom: 24px
+    &_inner
+        overflow: hidden
+        position: relative
+        max-width: 1920px
+        margin: 0 auto
+
     .section-bg
         width: 25vw
         left: auto

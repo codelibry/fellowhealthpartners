@@ -13,33 +13,36 @@ $footer_logos = get_field('footer_logos', 'options');
 
 <div class="pre-footer bg--primary">
     <div class="section-bg bg--gradient-orange"></div>
-    <div class="container ">
-        <div class="inner d-flex align-items-center justify-content-between">
-            <?php if ($footer_logo) : ?>
-                <div class="pre-footer__logo">
-                    <a href="<?php echo get_home_url() ?>">
-                        <img src="<?php echo $footer_logo['url']; ?>" alt="">
-                    </a>
-                </div>
-            <?php endif; ?>
-            <?php if ($footer_contact_text) : ?>
-                <h2 class="pre-footer__title text--size--32 font--weight--500 text-color-white"><?php echo $footer_contact_text; ?></h2>
-            <?php endif; ?>
-            <div class="empty_block"></div>
-            <?php if ($phone_number || $linkedin_url || $footer_email) : ?>
-                <div class="pre-footer__contacts ">
-                    <div class="pre-footer__contacts-call text--size--32 font--weight--800 text-color-white">
-                        <?php echo get_inline_svg_social('phone-fill.svg'); ?>
-                        <a href="<?php echo get_href_phone($phone_number) ?>"><?php echo $phone_number; ?></a>
+    <div class="pre-footer_inner">
+        <div class="container ">
+            <div class="inner d-flex align-items-center justify-content-between">
+                <?php if ($footer_logo) : ?>
+                    <div class="pre-footer__logo">
+                        <a href="<?php echo get_home_url() ?>">
+                            <img src="<?php echo $footer_logo['url']; ?>" alt="">
+                        </a>
                     </div>
-                    <ul class="pre-footer__socials text--color--white">
-                        <li><a href="<?php echo $linkedin_url['url']; ?>" target="<?php echo $linkedin_url['target']; ?>"><?php echo get_inline_svg_social('linkedin.svg'); ?></a></li>
-                        <li><a href="<?php echo get_href_email($footer_email) ?>"><?php echo get_inline_svg_social('mail.svg'); ?></a></li>
-                    </ul>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+                <?php if ($footer_contact_text) : ?>
+                    <h2 class="pre-footer__title text--size--32 font--weight--500 text-color-white"><?php echo $footer_contact_text; ?></h2>
+                <?php endif; ?>
+                <div class="empty_block"></div>
+                <?php if ($phone_number || $linkedin_url || $footer_email) : ?>
+                    <div class="pre-footer__contacts ">
+                        <div class="pre-footer__contacts-call text--size--32 font--weight--800 text-color-white">
+                            <?php echo get_inline_svg_social('phone-fill.svg'); ?>
+                            <a href="<?php echo get_href_phone($phone_number) ?>"><?php echo $phone_number; ?></a>
+                        </div>
+                        <ul class="pre-footer__socials text--color--white">
+                            <li><a href="<?php echo $linkedin_url['url']; ?>" target="<?php echo $linkedin_url['target']; ?>"><?php echo get_inline_svg_social('linkedin.svg'); ?></a></li>
+                            <li><a href="<?php echo get_href_email($footer_email) ?>"><?php echo get_inline_svg_social('mail.svg'); ?></a></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
+
 </div>
 
 <footer id="colophon" class="site-footer">

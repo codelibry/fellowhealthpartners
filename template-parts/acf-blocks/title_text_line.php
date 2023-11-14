@@ -4,7 +4,7 @@ $content = get_sub_field('top_content');
 $bottom_title = get_sub_field('bottom_title');
 $bottom_content = get_sub_field('bottom_content');
 ?>
-<section class="title_text_line section section--spacing--lg mb-150">
+<section class="title_text_line section section--spacing--lg mb-150 max-width">
     <div class="container">
         <div class="title_text_line__top">
             <div class="row">

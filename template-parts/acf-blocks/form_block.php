@@ -2,7 +2,7 @@
 $select_form = get_sub_field('select_form');
 
 ?>
-<section class="form_block section section--spacing--md">
+<section class="form_block section section--spacing--md max-width">
     <div class="container">
         <div class="row">
             <?php if ($select_form) : ?>

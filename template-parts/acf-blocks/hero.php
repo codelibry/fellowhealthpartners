@@ -6,7 +6,7 @@ $bottom_text = get_sub_field('bottom_text');
 
 
 <?php if ($img_list) : ?>
-    <section class="hero">
+    <section class="hero max-width">
         <div class="hero__main">
             <div class="hero__main__list hero__main__list--img">
                 <?php foreach ($img_list as $img) :
@@ -26,9 +26,9 @@ $bottom_text = get_sub_field('bottom_text');
                         <!-- Section to be smaller -->
                         <div class="hero-slider__inner position-absolute position-absolute--center ">
                             <!-- Same image as above -->
-                            
+
                             <div class="title_block__wrapper" style="opacity: 0;height: 0;">
-                            
+
                                 <div class="title_block">
                                     <div class="container">
                                         <p class="text--size--113">
@@ -44,7 +44,7 @@ $bottom_text = get_sub_field('bottom_text');
 
                         </div>
 
-                        
+
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -60,8 +60,8 @@ $bottom_text = get_sub_field('bottom_text');
                 </div>
 
             </div>
-            
-            
+
+
             <div class="bottom_block">
                 <div class="container">
                     <div class="row">

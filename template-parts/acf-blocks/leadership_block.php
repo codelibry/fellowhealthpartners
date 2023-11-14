@@ -3,7 +3,7 @@ $title = get_sub_field('title');
 $block_content  = get_sub_field('content');
 $workers = get_sub_field('workers');
 ?>
-<section id="leadership" class="leadership mb-40">
+<section id="leadership" class="leadership mb-40 max-width">
     <div class="container">
         <?php if ($title || $block_content) : ?>
             <div class="leadership__top mb-120">

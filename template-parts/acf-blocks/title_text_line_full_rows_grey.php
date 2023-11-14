@@ -4,7 +4,7 @@ $second_title = get_sub_field('top_content');
 $bottom_content_left = get_sub_field('bottom_title');
 $bottom_content = get_sub_field('bottom_content');
 ?>
-<section class="title_text_line two_titles section pt-2 pb-100">
+<section class="title_text_line two_titles section pt-2 pb-100 max-width">
     <div class="container">
         <div class="title_text_line__top">
             <div class="row">

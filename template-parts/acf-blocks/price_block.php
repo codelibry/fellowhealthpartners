@@ -6,7 +6,7 @@ $content = get_sub_field('main_content');
 $price = get_sub_field('card_price');
 $price_text = get_sub_field('card_text');
 ?>
-<section class="price_block section section--spacing--lg mt-75">
+<section class="price_block section section--spacing--lg mt-75 max-width">
     <div class="container">
         <?php if ($title) : ?>
             <div class="price_block__top">

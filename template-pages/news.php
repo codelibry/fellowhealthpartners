@@ -115,7 +115,9 @@ $query = new WP_Query($args);
         </div>
         <section class="list_logos">
             <div class="section-bg bg--secondary"></div>
-            <?php echo do_shortcode('[as-seen-in-list]'); ?>
+            <div class="list_logos-inner">
+                <?php echo do_shortcode('[as-seen-in-list]'); ?>
+            </div>
         </section>
     </div>
 </main><!-- #main -->
