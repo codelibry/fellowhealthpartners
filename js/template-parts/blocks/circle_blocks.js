@@ -67,6 +67,10 @@ function circle_blocks() {
           $(
             ".circle_blocks__inner-main:nth-child(1) .circle_blocks__inner"
           ).removeClass("active");
+
+          $(".circle_blocks__inner").removeClass("active");
+          $(this).addClass("active");
+
           $(".circle_blocks__bottom .persents_row").html(content);
           $(".circle_blocks__bottom .persents_row .color_text").css(
             "background-color",
@@ -101,7 +105,8 @@ function circle_blocks() {
           }
         },
         function () {
-          // This is the mouseout handler; you can add code here if needed.
+          // $(".circle_blocks__inner").removeClass("active");
+          // $(this).addClass("active");
         }
       );
     // Find the span within p.text--size--100
