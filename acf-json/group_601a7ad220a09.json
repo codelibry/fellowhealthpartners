@@ -1,0 +1,50 @@
+{
+    "key": "group_601a7ad220a09",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_601a7ad851f37",
+            "label": "Position",
+            "name": "testimonials_position",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonials_cases"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "testimonials_category:testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1700052538
+}
