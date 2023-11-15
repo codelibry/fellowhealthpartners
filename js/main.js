@@ -9,7 +9,6 @@ import { appearence } from "./animations/appearence";
 import {
   scrollToAnchor,
   scrollToHash,
-  requestQuoteLink,
   smooth_scroll,
 } from "./animations/scroll-to-anchor";
 // Blocks
@@ -19,7 +18,6 @@ import { sliders } from "./parts/slider";
 import { show_more, load_projects } from "./parts/ajax";
 import { filter } from "./parts/filter";
 import { initPopups } from "./parts/popup";
-import { full_row } from "./parts/full_row";
 //import { videoBlock } from "./parts/video";
 import { numberBlock } from "./template-parts/blocks/number_block";
 import { testimonialBlock } from "./template-parts/blocks/testimonial";
@@ -35,6 +33,8 @@ footer();
 //animations
 appearence();
 
+scrollToAnchor();
+scrollToHash();
 smooth_scroll();
 //blocks
 

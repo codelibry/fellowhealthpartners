@@ -2,26 +2,28 @@ import $ from "jquery";
 import { gsap } from "gsap";
 
 function scrollToAnchor() {
-  $('a[href^="#"]:not(.slider-arrow, .quote--button)').click(function (e) {
-    e.preventDefault();
-    let href = $(this).attr("href");
-    // Get the top position of the target element and subtract 100 pixels
-    let targetOffset = $(href).offset().top - 100;
-    // Set the scrollTop to the targetOffset
-    $("html, body").scrollTop(targetOffset);
-  });
+  $('a[href^="#"]:not(.slider-arrow, .quote--button, .tab-link)').click(
+    function (e) {
+      e.preventDefault();
+      let href = $(this).attr("href");
+      // Get the top position of the target element and subtract 100 pixels
+      let targetOffset = $(href).offset().top - 200;
+      // Set the scrollTop to the targetOffset
+      $("html, body").scrollTop(targetOffset);
+    }
+  );
 }
 
 function scrollToHash() {
   let hash = window.location.hash.substr(1);
   if (hash && $("#" + hash).length) {
     $("html, body").animate(
-      { scrollTop: $("#" + hash).offset().top - 100 },
+      { scrollTop: $("#" + hash).offset().top - 200 },
       100
     );
     $(window).on("carouselInited", function () {
       $("html, body").animate(
-        { scrollTop: $("#" + hash).offset().top - 100 },
+        { scrollTop: $("#" + hash).offset().top - 200 },
         100
       );
     });
@@ -49,10 +51,12 @@ function requestQuoteLink() {
 function smooth_scroll() {
   jQuery(document).ready(function () {
     // Scrolling for anchor links in within the same page
-    jQuery('.menu-item a[href*="#"]:not([href="#"])').click(function () {
-      _hash = this.hash;
-      _scroll_it(_hash);
-    });
+    jQuery('.menu-item a[href*="#"]:not([href="#"]), .images_list a').click(
+      function () {
+        _hash = this.hash;
+        _scroll_it(_hash);
+      }
+    );
 
     // scrolling for anchor links coming from a different page
     var _hash = window.location.hash;
@@ -67,7 +71,7 @@ function smooth_scroll() {
     function _scroll_it(_hash) {
       jQuery("html,body").animate(
         {
-          scrollTop: jQuery(_hash).offset().top,
+          scrollTop: jQuery(_hash).offset().top - 200,
         },
         800
       );
