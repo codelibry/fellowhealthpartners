@@ -16,15 +16,17 @@ $bottom_content = get_sub_field('bottom_content');
                                 <h2 class="text-color-white"><?php echo $title; ?></h2>
                             </div>
                             <div class="images_list d-flex">
-                                <?php
-                                foreach ($images as $index => $image) :
+                                <?php foreach ($images as $index => $image) : ?>
+                                    <?php
                                     $icon = $image['image'];
+                                    $url = $image['url'];
                                     $class = ($index === 1) ? 'second' : ''; // Add 'second' class to the second image
-                                    // Output the image with the class
-                                ?>
-                                    <img src="<?php echo $icon['url']; ?>" alt="" class="<?php echo $class; ?>">
+                                    $svg_content = file_get_contents(get_attached_file($icon['id']));
+                                    ?>
+                                    <a href="<?php echo $url; ?>" class="<?php echo esc_attr($class); ?>">
+                                        <?php echo $svg_content; ?>
+                                    </a>
                                 <?php endforeach; ?>
-
                             </div>
                         </div>
                     <?php endif; ?>

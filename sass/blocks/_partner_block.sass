@@ -30,14 +30,21 @@
         +max-screen($breakpoint-lg)
             margin-bottom: 30px
             justify-content: center
-        img
+        img, svg
             width: max-content
             +adaptive-value("max-width", 201, 130, 0)
             +min-screen($breakpoint-xxl)
                 max-width: 201px
             +max-screen($breakpoint-xl)
                 width: auto
-            &.second
+        svg
+            path
+                transition: all $default-transition
+            &:hover
+                path
+                    fill: $color-primary
+        a.second
+            img, svg
                 +adaptive-value("max-width", 80, 50, 0)
                 +min-screen($breakpoint-xxl)
                     max-width: 80px
