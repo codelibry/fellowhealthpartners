@@ -36,10 +36,10 @@ $tabs = get_sub_field('tabs');
                             $title = $tab['title'];
                         ?>
                             <li class="col-4">
-                                <a href="#tab<?php echo $i; ?>">
+                                <div data-tab="tab<?php echo $i; ?>" class="tabs-nav_link">
                                     <?php echo get_inline_svg_by_path($image); ?>
                                     <p class="h5 text--center"><?php echo $title; ?></p>
-                                </a>
+                                </div>
                             </li>
                         <?php $i++;
                         endforeach; ?>
