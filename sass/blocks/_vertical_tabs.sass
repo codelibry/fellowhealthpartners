@@ -9,7 +9,8 @@
         display: flex
         margin-right: -32px
         margin-left: -32px
-
+        +min-screen($breakpoint-lg)
+            min-height: var(--highest_block)
         +max-screen(1100px)
             margin-right: -16px
             margin-left: -16px
@@ -21,9 +22,7 @@
                 padding-left: 16px
                 padding-right: 16px
         .content_right
-            +min-screen($breakpoint-lg)
-                max-height: var(--highest_block)
-                overflow-y: scroll
+
         ul
             list-style-type: none
             margin: 0
@@ -105,7 +104,10 @@
             li:not(:last-child)
 
         section.tab-body
-            display: none
+            display: block
+            position: absolute
+            opacity: 0
+            z-index: -1
             word-wrap: break-word
 
             & > *
@@ -174,6 +176,10 @@
                     transition-delay: 2.1s
             &.active
                 display: block
+                position: relative
+                opacity: 1
+                z-index: auto
+
                 +max-screen($breakpoint-lg)
                     display: none !important
 
@@ -204,11 +210,13 @@
                     padding-right: 12px
         &_col
             +adaptive-value("padding-top", 20, 10, 0)
-            +adaptive-value("padding-bottom", 20, 10, 0)
+            padding-bottom: 0
+            border-top: 5px $color-primary solid
             +min-screen($breakpoint-xxl)
                 padding-top: 20px
                 padding-bottom: 20px
-            border-top: 5px $color-primary solid
+            +max-screen($breakpoint-lg)
+                +adaptive-value("padding-bottom", 20, 10, 0)
 
             h4
                 -webkit-line-clamp: 2

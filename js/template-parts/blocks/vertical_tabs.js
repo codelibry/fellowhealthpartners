@@ -42,7 +42,7 @@ function vertical_Tabs() {
           var heights = []; // Array to store heights of each block
 
           // Loop through each .content_right block
-          $(".content_right").each(function () {
+          $(".tab-body").each(function () {
             // Get the height of each block
             var currentHeight = $(this).outerHeight();
 
@@ -55,7 +55,8 @@ function vertical_Tabs() {
 
           // Find the maximum height from the array
           var maxHeight = Math.max.apply(null, heights);
-
+          // Log the height of each block
+          console.log("maxHeight: " + maxHeight);
           // Set the CSS variable --highest_block with the maxHeight value
           document.documentElement.style.setProperty(
             "--highest_block",
