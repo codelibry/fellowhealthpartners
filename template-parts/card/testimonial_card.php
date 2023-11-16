@@ -1,6 +1,7 @@
 <?php
 $terms = get_the_terms($post->ID, 'testimonials_category');
-$position = get_field('testimonials_position', $post->ID)
+$position = get_field('testimonials_position', $post->ID);
+$location = get_field('testimonials_location', $post->ID);
 ?>
 
 <div class="col-lg-6">
@@ -17,6 +18,9 @@ $position = get_field('testimonials_position', $post->ID)
             <h3 class="h5 text-color-black"><?php the_title(); ?></h3>
             <?php if ($position) : ?>
                 <p class="position text--size--18 text-color-secondary text--uppercase"><?php echo $position; ?></p>
+            <?php endif; ?>
+            <?php if ($location) : ?>
+                <p class="location text--size--18 text-color-secondary text--uppercase"><?php echo $location; ?></p>
             <?php endif; ?>
         </div>
     </div>
