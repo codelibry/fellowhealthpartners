@@ -41,7 +41,7 @@ function sliders() {
       //vertical: true, // Set vertical to true
       speed: 300,
       fade: true,
-      autoplaySpeed: 3800,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnHover: false,

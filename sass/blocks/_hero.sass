@@ -131,7 +131,7 @@
             +min-screen($breakpoint-xxl)
                 font-size: 70px
             +max-screen(1700px)
-                +adaptive-value("font-size", 33, 26, 0)
+                +adaptive-value("font-size", 60, 26, 0)
     .bottom_block
         position: absolute
 
@@ -211,16 +211,16 @@
     .animation-2
         opacity: 1
         animation-name: fadeUpOut-2 !important
-        animation-duration: 4.3s // autoplaySpeed + speed
+        animation-duration: 5.3s // autoplaySpeed + speed
         animation-fill-mode: both
         animation-iteration-count: 1
 
 @keyframes fadeUpOut
     0%
         transform: translateY(-700px)
-    15.25% // speed * 100 / autoplaySpeed
+    5% // speed * 100 / autoplaySpeed
         transform: translateY(0%)
-    84.75%
+    95%
         transform: translateY(0%)
     100%
         transform: translateY(-700px)
@@ -228,9 +228,9 @@
 @keyframes fadeUpOut-2
     0%
         transform: translateY(-700px)
-    15.25% // speed * 100 / autoplaySpeed
+    7% // speed * 100 / autoplaySpeed
         transform: translateY(0%)
-    84.75%
+    93%
         transform: translateY(0%)
     100%
         transform: translateY(-700px)
