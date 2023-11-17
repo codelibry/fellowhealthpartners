@@ -27,9 +27,9 @@ $bottom_text = get_sub_field('bottom_text');
                         <div class="hero-slider__inner position-absolute position-absolute--center ">
                             <!-- Same image as above -->
 
-                            <div class="title_block__wrapper" style="opacity: 0;height: 0;">
+                            <div class="title_block__wrapper" style="width: 100%">
 
-                                <div class="title_block">
+                                <div class="title_block animation-2">
                                     <div class="container">
                                         <p class="text--size--113">
                                             <?php echo $title; ?>
@@ -47,18 +47,6 @@ $bottom_text = get_sub_field('bottom_text');
 
                     </div>
                 <?php endforeach; ?>
-            </div>
-
-            <!-- text swapper container -->
-
-            <div class="hero-slider__inner position-absolute position-absolute--center text-swapper__wrapper">
-
-                <div class="text-swapper">
-
-                    <div class="text-swapper--current"></div>
-
-                </div>
-
             </div>
 
 

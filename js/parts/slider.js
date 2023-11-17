@@ -65,6 +65,14 @@ function sliders() {
       console.log('nextSlide' + nextSlide);
     });
 
+    // $(window).on('resize', function() {
+    //   current.toggleClass('animation-2');
+    // })
+
+    // $('body').on("click",".dots_block-list", function(){
+    //   current.toggleClass('animation-2');
+    // })
+
 
 
   });
