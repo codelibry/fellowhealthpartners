@@ -79,7 +79,8 @@
         .slick-slide
             margin: 0
             
-            height: calc(100vh - var(--header_header) - 2px)
+            height: calc(100vh - var(--header_header))
+            max-height: 900px
             +min-screen($breakpoint-lg)
                 +adaptive-value("height", 880, 708, 0)
             +min-screen($breakpoint-xxl)
