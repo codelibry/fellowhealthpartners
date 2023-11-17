@@ -2,9 +2,6 @@ import $ from "jquery";
 import "slick-carousel";
 
 function sliders() {
-
-  
-
   $(".hero").each(function () {
     let slider = $(this).find(".hero__main__list--img");
     // Function to set the CSS variable --header_header with the header height
@@ -24,15 +21,15 @@ function sliders() {
       setHeaderHeightVariable();
     });
 
-    let swapper = $('.text-swapper');
+    let swapper = $(".text-swapper");
 
     //let next = swapper.find('.text-swapper--next');
-    let current = swapper.find('.text-swapper--current');
+    let current = swapper.find(".text-swapper--current");
 
     slider.on("init", function () {
       $(window).trigger("heightChanges");
       //current.html($('.slick-slide[data-slick-index="' + currentSlide + '"] .title_block').html());
-      current.html(slider.find('.slick-active .title_block__wrapper').html());
+      current.html(slider.find(".slick-active .title_block__wrapper").html());
     });
 
     slider.slick({
@@ -44,7 +41,7 @@ function sliders() {
       //vertical: true, // Set vertical to true
       speed: 300,
       fade: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3800,
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnHover: false,
@@ -57,12 +54,20 @@ function sliders() {
     });
 
     // Add the "next-slide" class to the next slide
-    slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      $('.slick-slide').removeClass('next-slide'); // Remove the class from all slides
-      $('.slick-slide[data-slick-index="' + nextSlide + '"]').addClass('next-slide'); // Add the class to the next slide
+    slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+      $(".slick-slide").removeClass("next-slide"); // Remove the class from all slides
+      $('.slick-slide[data-slick-index="' + nextSlide + '"]').addClass(
+        "next-slide"
+      ); // Add the class to the next slide
       //next.html($('.slick-slide[data-slick-index="' + nextSlide + '"] .title_block__wrapper').html());
-      current.html($('.slick-slide[data-slick-index="' + nextSlide + '"] .title_block__wrapper').html());
-      console.log('nextSlide' + nextSlide);
+      current.html(
+        $(
+          '.slick-slide[data-slick-index="' +
+            nextSlide +
+            '"] .title_block__wrapper'
+        ).html()
+      );
+      console.log("nextSlide" + nextSlide);
     });
 
     // $(window).on('resize', function() {
@@ -72,11 +77,7 @@ function sliders() {
     // $('body').on("click",".dots_block-list", function(){
     //   current.toggleClass('animation-2');
     // })
-
-
-
   });
-
 
   $(document).ready(function () {
     // Slick Carousel
