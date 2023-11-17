@@ -158,8 +158,8 @@ h6,.h6
 		+max-screen($breakpoint-sm)
 			+adaptive-value("font-size", 60, 50, 0)
 	&--size--113,&--size--113 *
+		font-size: clamp(50px, 5.9vw, 113px)
 		line-height: 1.1
-		+adaptive-value("font-size", 113, 43, 1)
 		+min-screen($breakpoint-xxl)
 			font-size: 113px
 		+max-screen(1700px)
