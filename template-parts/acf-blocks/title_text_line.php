@@ -30,7 +30,7 @@ $bottom_content = get_sub_field('bottom_content');
                 <div class="row">
                     <div class="col-lg-6 mb-2 mb-lg-0">
                         <?php if ($bottom_title) : ?>
-                            <h2 class="h4 text-color-primary max--width--718 mr-lg-auto"><?php echo $bottom_title; ?></h2>
+                            <h2 class="h4 text-color-primary max--width--718 mr-lg-auto pr-lg-2"><?php echo $bottom_title; ?></h2>
                         <?php endif; ?>
                     </div>
                     <?php if ($bottom_content) : ?>
