@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 function scrollToAnchor() {
   $(
-    'a[href^="#"]:not(.slider-arrow, .quote--button, .tab-link, .post-filters__button)'
+    'a[href^="#"]:not(.slider-arrow, .quote--button, .tab-link, .post-filters__button, .no-click)'
   ).click(function (e) {
     e.preventDefault();
     let href = $(this).attr("href");
@@ -51,12 +51,12 @@ function requestQuoteLink() {
 function smooth_scroll() {
   jQuery(document).ready(function () {
     // Scrolling for anchor links in within the same page
-    jQuery('.menu-item a[href*="#"]:not([href="#"]), .images_list a').click(
-      function () {
-        _hash = this.hash;
-        _scroll_it(_hash);
-      }
-    );
+    jQuery(
+      '.menu-item a[href*="#"]:not([href="#"], .no-click), .images_list a'
+    ).click(function () {
+      _hash = this.hash;
+      _scroll_it(_hash);
+    });
 
     // scrolling for anchor links coming from a different page
     var _hash = window.location.hash;
