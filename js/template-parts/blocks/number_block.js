@@ -12,40 +12,34 @@ function verticalBlockHeight() {
 }
 
 function numberBlock() {
-  $(document).ready(function () {
-    function activateOnClick() {
-      $(".number_blocks__main").on("click", function () {
-        // Check if window width is less than 1200px
-        if ($(window).width() <= 1200) {
-          $(".vertical_block:first-child").toggleClass("active");
-        }
-      });
-    }
-
-    // When you hover over the element with class "block"
-    function verticalBlockHeight() {
-      $(".number_blocks__main").hover(
-        function () {
-          // Add the "highlight" class
-          $(".vertical_block:first-child").removeClass("active");
-        },
-        function () {
-          // When you leave, remove the "highlight" class
-          $(".vertical_block:first-child").addClass("active");
-        }
-      );
-    }
-
-    activateOnClick();
-    verticalBlockHeight();
-  });
-
-  $(window).on("resize", function () {
+  function handleBlockInteraction() {
     if ($(window).width() <= 1200) {
-      activateOnClick();
+      // If window width is less than or equal to 1200px
+      $(".vertical_block").on("click", function () {
+        $(".vertical_block").removeClass("active");
+        $(this).toggleClass("active");
+      });
     } else {
-      verticalBlockHeight();
+      // If window width is greater than 1200px
+      $(".number_blocks__main")
+        .off("click")
+        .hover(
+          function () {
+            $(".vertical_block:first-child").removeClass("active");
+          },
+          function () {
+            $(".vertical_block:first-child").addClass("active");
+          }
+        );
     }
+  }
+
+  $(document).ready(function () {
+    handleBlockInteraction(); // Initial setup
+
+    $(window).on("resize", function () {
+      handleBlockInteraction(); // Update on window resize
+    });
   });
 }
 export { numberBlock };
