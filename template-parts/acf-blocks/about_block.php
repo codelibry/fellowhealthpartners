@@ -6,7 +6,7 @@ $leadership = get_sub_field('choose_leadership');
 
 ?>
 
-<section class="about_block mb-150 max-width">
+<section class="about_block mb-150 max-width overflow--visible">
     <div class="container">
         <div class="about_block__main">
             <div class="row">
