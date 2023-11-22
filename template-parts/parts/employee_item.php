@@ -6,7 +6,7 @@ $linkedin = get_field('leadership_linkedin', $post->ID);
 $content = get_post_field('post_content', $post->ID);
 ?>
 
-<div class="employee popup-item col-xl-3 col-6 col-md-4">
+<div class="employee popup-item col-lg-3 col-6 col-md-4">
     <div class="employee__image popup-image">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('work_img'); ?>
