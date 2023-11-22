@@ -13,6 +13,10 @@
         +max-screen(1600px)
             br
                 display: none
+    h2
+        br
+            +max-screen($breakpoint-xl)
+                display: none
 
     &.two_titles
         .title_text_line
@@ -50,9 +54,3 @@
                             background-image: url('../assets/icons/arrows/arrow_bottom.svg')
                 .row
                     +min-screen($breakpoint-xs)
-                        // margin-left: -40px
-                        // margin-right: -40px
-                        // // +adaptive-value("column-gap", 80, 20, 0)
-                        // & > div
-                        //     padding-left: 40px
-                        //     padding-right: 40px

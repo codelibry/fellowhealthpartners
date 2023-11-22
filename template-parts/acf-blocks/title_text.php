@@ -7,7 +7,7 @@ $content = get_sub_field('content');
     <div class="container">
         <div class="title_text__main">
             <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-between mb-2 mb-lg-0">
+                <div class="col-lg-6 d-flex flex-column mb-2 mb-lg-0">
                     <?php if ($title) : ?>
                         <h1 class="text-color-black"><?php echo $title; ?></h1>
                     <?php else : ?>
