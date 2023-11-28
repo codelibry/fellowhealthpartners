@@ -12,7 +12,11 @@
     +max-screen($breakpoint-xm)
         +adaptive-value("padding-left", 15, 10, 0)
         +adaptive-value("padding-right", 15, 10, 0)
-    // padding: 0 35px 59px
+    &:last-of-type
+        .employee__title
+            margin-bottom: 0
+            +max-screen($breakpoint-xl)
+                margin-bottom: auto
     &__image
         border-radius: 50%
         overflow: hidden
@@ -28,11 +32,19 @@
             width: 100%
             object-fit: cover
     &__title
-        min-height: 72px
-        margin-bottom: 10px
+        display: -webkit-box
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        overflow: hidden
+        margin-bottom: auto
+        min-height: 102px
+        // margin-bottom: 10px
+        +max-screen($breakpoint-xm)
+            min-height: 92px
         +max-screen($breakpoint-sm)
             min-height: 50px
-
+        & > *
+            width: 100%
     &__position
         margin-bottom: 10px
         +max-screen($breakpoint-sm)
