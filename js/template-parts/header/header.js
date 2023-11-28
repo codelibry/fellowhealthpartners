@@ -45,12 +45,9 @@ function header() {
       $(this).parent().find(".sub-menu").slideToggle();
     }
   );
-  $("#primary-menu-mobile .menu-item__parent, .no-click").on(
-    "click",
-    function () {
-      event.preventDefault();
-    }
-  );
+  $("#primary-menu-mobile .menu-item__parent").on("click", function () {
+    event.preventDefault();
+  });
 }
 
 export { header };
