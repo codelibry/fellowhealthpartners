@@ -64,18 +64,20 @@ $tabs = get_sub_field('tabs');
                                 <?php endif; ?>
                                 <?php if ($persent_row) : ?>
                                     <div class="scroll">
-                                        <div class="persents_row mt-60 d-flex">
+                                        <div class="persents_row row mt-60 d-flex">
                                             <?php foreach ($persent_row as $col) :
                                                 $top_subtitle = $col['top_subtitle'];
                                                 $top_text = $col['top_text'];
                                                 $persent_number = $col['persent_number'];
                                                 $bottom_text = $col['bottom_text']; ?>
-                                                <div class="persents_col text--center">
-                                                    <p class="text--size--42"><?php echo $top_subtitle; ?></p>
-                                                    <p class="color_text text--size--42 text-color-white bg--primary "><?php echo $top_text; ?></p>
-                                                    <p class="text--size--18 text-color-gray"><?php _e('up to', 'fhp'); ?></p>
-                                                    <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
-                                                    <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
+                                                <div class="col-4">
+                                                    <div class="persents_col text--center">
+                                                        <p class="text--size--42"><?php echo $top_subtitle; ?></p>
+                                                        <p class="color_text text--size--42 text-color-white bg--primary "><?php echo $top_text; ?></p>
+                                                        <p class="text--size--18 text-color-gray"><?php _e('up to', 'fhp'); ?></p>
+                                                        <p class="text--size--100 font--weight--900"><?php echo $persent_number; ?></p>
+                                                        <p class="text--size--24 bottom_text text-color-gray"><?php echo $bottom_text; ?></p>
+                                                    </div>
                                                 </div>
                                             <?php endforeach; ?>
                                         </div>
