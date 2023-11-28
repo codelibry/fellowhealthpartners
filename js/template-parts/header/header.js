@@ -24,7 +24,7 @@ function header() {
   });
 
   // close side panel on any link click
-  $("#side-panel .menu-item a").click(function () {
+  $("#side-panel .menu-item:not(.no-click) a").click(function () {
     $("#side-panel").toggleClass("active");
     $("#toggle").toggleClass("on");
     $("body").toggleClass("side-panel-overlay");
@@ -45,9 +45,12 @@ function header() {
       $(this).parent().find(".sub-menu").slideToggle();
     }
   );
-  $("#primary-menu-mobile .menu-item__parent").on("click", function () {
-    event.preventDefault();
-  });
+  $("#primary-menu-mobile .menu-item__parent, .no-click").on(
+    "click",
+    function () {
+      event.preventDefault();
+    }
+  );
 }
 
 export { header };

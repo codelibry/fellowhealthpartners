@@ -3,7 +3,7 @@
         <div class="popup__image"><img src="#" alt=""></div>
         <div class="popup__titleWrapper">
             <div class="popup__textWrapper">
-                <div class="popup__title text--size--32"></div>
+                <div class="popup__title"></div>
 
             </div>
         </div>

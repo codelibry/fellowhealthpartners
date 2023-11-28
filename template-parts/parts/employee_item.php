@@ -1,5 +1,6 @@
 <?php
 $post = $args['item'];
+$leadeship_subtitle = get_field('leadeship_subtitle', $post->ID);
 $position = get_field('leadeship_position', $post->ID);
 $employee_email = get_field('leadership_email', $post->ID);
 $linkedin = get_field('leadership_linkedin', $post->ID);
@@ -14,8 +15,11 @@ $content = get_post_field('post_content', $post->ID);
             <img src="/" alt="">
         <?php endif; ?>
     </div>
-    <div class="employee__title popup-title">
-        <h3 class="text--size--27 text--center"><?php the_title(); ?></h3>
+    <div class="employee__title popup-title text--center">
+        <h3 class="h5"><?php the_title(); ?></h3>
+        <?php if ($leadeship_subtitle) : ?>
+            <p class="text--size--18 text-uppercase leadeship_subtitle font--weight--500"><?php echo $leadeship_subtitle; ?></p>
+        <?php endif; ?>
     </div>
 
     <?php if ($position) : ?>

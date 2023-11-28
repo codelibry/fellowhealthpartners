@@ -187,6 +187,26 @@
             "maxlength": ""
         },
         {
+            "key": "field_6565efe2f008b",
+            "label": "Subtitle (For main page)",
+            "name": "leadeship_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_601ffb3e952b1",
             "label": "Linkedin",
             "name": "leadership_linkedin",
@@ -265,5 +285,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697992945
+    "modified": 1701179400
 }
