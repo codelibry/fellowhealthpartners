@@ -1,7 +1,7 @@
 <div class="popupWrapper">
     <div class="popup popup--leadership">
         <div class="popup__top">
-            <div class="popup__image"><img src="" alt=""></div>
+            <div class="popup__image"><img src="#" alt=""></div>
             <div class="popup__titleWrapper">
                 <div class="popup__textWrapper">
                     <div class="popup__title text--size--32"></div>

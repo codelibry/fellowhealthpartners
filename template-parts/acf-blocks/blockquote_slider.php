@@ -15,7 +15,7 @@ $choose_testimonial = get_sub_field('choose_testimonial');
                     <?php endif; ?>
                     <?php if ($button) : ?>
                         <div class="col-lg-5 blockquote_slider__button d-flex">
-                            <a href="<?php echo $button['url']; ?>" class="button button--outline text-color-primary" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+                            <a href="<?php echo $button['url']; ?>" class="button button--outline text-color-primary"><?php echo $button['title']; ?></a>
                         </div>
                     <?php endif; ?>
                 </div>

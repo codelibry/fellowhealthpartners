@@ -97,7 +97,7 @@ $footer_logos = get_field('footer_logos', 'options');
                                 <div class="text--size--21 font--weight--500 text-color-white d-md-flex links">
                                     <?php foreach ($bottom_links as $link) :
                                         $url = $link['link']; ?>
-                                        <p><a href="<?php echo $url['url']; ?>" target="<?php echo $url['target']; ?>"><?php echo $url['title']; ?></a></p>
+                                        <p><a href="<?php echo $url['url']; ?>" <?php if ($url['target']) : ?>target="<?php echo $url['target']; ?>" <?php endif; ?>><?php echo $url['title']; ?></a></p>
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
