@@ -17,7 +17,8 @@ get_header();
                 <div class="col-12">
                     <div class="main-content mt-80 mb-80">
                         <h1 class="h3 single-post-title mb-40"><?php the_title(); ?></h1>
-                        <div class="single-post-date mb-2 mb-sm-2 text--size--17 text-color-gray"><?php echo get_the_date(); ?></div>
+                        <!-- <div class="single-post-date mb-2 mb-sm-2 text--size--17 text-color-gray"><?php //echo get_the_date(); 
+                                                                                                        ?></div> -->
                         <div class="line"></div>
                         <div class="single-post-content">
                             <?php
