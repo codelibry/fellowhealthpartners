@@ -3,7 +3,7 @@ $block_title = get_sub_field('block_title');
 $button = get_sub_field('button');
 $choose_testimonial = get_sub_field('choose_testimonial');
 ?>
-<section class="blockquote_slider mb-150 max-width">
+<section class="blockquote_slider mt-75 mb-150 max-width">
     <div class="container">
         <?php if ($block_title || $button) : ?>
             <div class="blockquote_slider__top">
