@@ -364,6 +364,11 @@ h6,.h6
 			+adaptive-value-minus("bottom", -60, -40, 0)
 			+adaptive-value("right", 40, 20, 0)
 			margin-bottom: 10px
+			&.two_line
+				+adaptive-value-minus("bottom", -90, -40, 0)
+				margin-bottom: 0
+				+max-screen($breakpoint-sm)
+					bottom: -60px
 			+min-screen($breakpoint-xxl)
 				right: 40px
 				bottom: -60px
