@@ -33,8 +33,8 @@ footer();
 //animations
 appearence();
 
-scrollToAnchor();
-scrollToHash();
+// scrollToAnchor();
+// scrollToHash();
 smooth_scroll();
 //blocks
 

@@ -8,7 +8,7 @@ function scrollToAnchor() {
     e.preventDefault();
     let href = $(this).attr("href");
     // Get the top position of the target element and subtract 100 pixels
-    let targetOffset = $(href).offset().top - 200;
+    let targetOffset = $(href).offset().top - 100;
     // Set the scrollTop to the targetOffset
     $("html, body").scrollTop(targetOffset);
   });
@@ -18,12 +18,12 @@ function scrollToHash() {
   let hash = window.location.hash.substr(1);
   if (hash && $("#" + hash).length) {
     $("html, body").animate(
-      { scrollTop: $("#" + hash).offset().top - 200 },
+      { scrollTop: $("#" + hash).offset().top - 100 },
       100
     );
     $(window).on("carouselInited", function () {
       $("html, body").animate(
-        { scrollTop: $("#" + hash).offset().top - 200 },
+        { scrollTop: $("#" + hash).offset().top - 100 },
         100
       );
     });
@@ -71,7 +71,7 @@ function smooth_scroll() {
     function _scroll_it(_hash) {
       jQuery("html,body").animate(
         {
-          scrollTop: jQuery(_hash).offset().top - 200,
+          scrollTop: jQuery(_hash).offset().top - 50,
         },
         800
       );

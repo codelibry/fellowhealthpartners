@@ -141,7 +141,11 @@
 .pb
 	&-80
 	&-150
-
+.pt
+	&-130
+		+adaptive-value("padding-top", 130, 60, 0)
+		+min-screen($breakpoint-xxl)
+			padding-top: 130px
 .max
 	&--width
 		&--623
