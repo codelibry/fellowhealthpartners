@@ -2,15 +2,20 @@ import $ from "jquery";
 import { gsap } from "gsap";
 
 function scrollToAnchor() {
-  $(
-    'a[href^="#"]:not(.slider-arrow, .quote--button, .tab-link, .post-filters__button, .no-click)'
-  ).click(function (e) {
+  $('a[href^="#"]:not(.slider-arrow, .quote--button, .tab-link, .post-filters__button, .no-click)'
+).click(function (e) {
     e.preventDefault();
+    
     let href = $(this).attr("href");
+    console.log(href);
     // Get the top position of the target element and subtract 100 pixels
     let targetOffset = $(href).offset().top - 100;
     // Set the scrollTop to the targetOffset
-    $("html, body").scrollTop(targetOffset);
+    // $("html, body").scrollTop(targetOffset);
+    $("html, body").animate(
+      { scrollTop: $(href).offset().top - 100 },
+      100
+    );
   });
 }
 
